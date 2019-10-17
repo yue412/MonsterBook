@@ -1,0 +1,22 @@
+COMPILER MonsterBook
+
+CHARACTERS
+digit = "0123456789".
+letter = 'a'..'z'+'A'..'Z'.
+
+TOKENS
+ident = letter{digit|letter}.
+number = digit{digit}['.'{digit}].
+
+COMMENTS FROM "/*" TO "*/" NESTED
+COMMENTS FROM "//" TO '\r'
+
+IGNORE '\t' + '\r' + '\n'
+
+PRODUCTIONS
+MonsterBook = Expr.
+Expr = Term | Expr '+' Term | Expr '-' Term.
+Term = Factor | Term '*' Factor | Term '/' Factor.
+Factor = number.
+
+END MonsterBook.
