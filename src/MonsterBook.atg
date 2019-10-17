@@ -1,4 +1,8 @@
+#include <string>
+
 COMPILER MonsterBook
+
+double m_dResult;
 
 CHARACTERS
 digit = "0123456789".
@@ -14,9 +18,24 @@ COMMENTS FROM "//" TO '\r'
 IGNORE '\t' + '\r' + '\n'
 
 PRODUCTIONS
-MonsterBook = Expr.
-Expr = Term | Expr '+' Term | Expr '-' Term.
-Term = Factor | Term '*' Factor | Term '/' Factor.
-Factor = number.
+MonsterBook = Expr<m_dResult>.
+Expr<double& dVal> = (. double dV1; .) 
+    Term<dV1> 
+    {
+        '+' (. double dV2; .) Term<dV2> (. dV1 += dV2; .)
+        | 
+        '-' (. double dV2; .) Term<dV2> (. dV1 -= dV2; .)
+    } (. dVal = dV1; .). 
+Term<double& dVal> = 
+    Factor<dVal>
+    { 
+        '*' (. double dV2; .) Factor<dV2> (. dVal *= dV2; .)
+        | 
+        '/' (. double dV2; .) Factor<dV2> (. dVal /= dV2; .)
+    }.
+Factor<double& dVal> = 
+    number (. dVal = std::stod(t->val); .)
+    | '-' number (. dVal = - std::stod(t->val); .)
+    | '(' Expr<dVal> ')'.
 
 END MonsterBook.

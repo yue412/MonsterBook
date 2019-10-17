@@ -62,39 +62,58 @@ bool Parser::WeakSeparator(int n, int syFol, int repFol) {
 }
 
 void Parser::MonsterBook() {
-		Expr();
+		Expr(m_dResult);
 }
 
-void Parser::Expr() {
+void Parser::Expr(double& dVal) {
+		double dV1; 
+		Term(dV1);
+		while (la->kind == 3 /* "+" */ || la->kind == 4 /* "-" */) {
+			if (la->kind == 3 /* "+" */) {
+				Get();
+				double dV2; 
+				Term(dV2);
+				dV1 += dV2; 
+			} else {
+				Get();
+				double dV2; 
+				Term(dV2);
+				dV1 -= dV2; 
+			}
+		}
+		dVal = dV1; 
+}
+
+void Parser::Term(double& dVal) {
+		Factor(dVal);
+		while (la->kind == 5 /* "*" */ || la->kind == 6 /* "/" */) {
+			if (la->kind == 5 /* "*" */) {
+				Get();
+				double dV2; 
+				Factor(dV2);
+				dVal *= dV2; 
+			} else {
+				Get();
+				double dV2; 
+				Factor(dV2);
+				dVal /= dV2; 
+			}
+		}
+}
+
+void Parser::Factor(double& dVal) {
 		if (la->kind == _number) {
-			Term();
-		} else if (la->kind == _number) {
-			Expr();
-			Expect(3 /* "+" */);
-			Term();
-		} else if (la->kind == _number) {
-			Expr();
-			Expect(4 /* "-" */);
-			Term();
-		} else SynErr(8);
-}
-
-void Parser::Term() {
-		if (la->kind == _number) {
-			Factor();
-		} else if (la->kind == _number) {
-			Term();
-			Expect(5 /* "*" */);
-			Factor();
-		} else if (la->kind == _number) {
-			Term();
-			Expect(6 /* "/" */);
-			Factor();
-		} else SynErr(9);
-}
-
-void Parser::Factor() {
-		Expect(_number);
+			Get();
+			dVal = std::stod(t->val); 
+		} else if (la->kind == 4 /* "-" */) {
+			Get();
+			Expect(_number);
+			dVal = - std::stod(t->val); 
+		} else if (la->kind == 7 /* "(" */) {
+			Get();
+			Expr(dVal);
+			Expect(8 /* ")" */);
+		} else SynErr(10);
 }
 
 
@@ -198,7 +217,7 @@ void Parser::Parse() {
 }
 
 Parser::Parser(Scanner *scanner) {
-	maxT = 7;
+	maxT = 9;
 
 	ParserInitCaller<Parser>::CallInit(this);
 	dummyToken = NULL;
@@ -213,8 +232,8 @@ bool Parser::StartOf(int s) {
 	const bool T = true;
 	const bool x = false;
 
-	static bool set[1][9] = {
-		{T,x,x,x, x,x,x,x, x}
+	static bool set[1][11] = {
+		{T,x,x,x, x,x,x,x, x,x,x}
 	};
 
 
@@ -242,9 +261,10 @@ void Errors::SynErr(int line, int col, int n) {
 			case 4: s = coco_string_create(L"\"-\" expected"); break;
 			case 5: s = coco_string_create(L"\"*\" expected"); break;
 			case 6: s = coco_string_create(L"\"/\" expected"); break;
-			case 7: s = coco_string_create(L"??? expected"); break;
-			case 8: s = coco_string_create(L"invalid Expr"); break;
-			case 9: s = coco_string_create(L"invalid Term"); break;
+			case 7: s = coco_string_create(L"\"(\" expected"); break;
+			case 8: s = coco_string_create(L"\")\" expected"); break;
+			case 9: s = coco_string_create(L"??? expected"); break;
+			case 10: s = coco_string_create(L"invalid Factor"); break;
 
 		default:
 		{

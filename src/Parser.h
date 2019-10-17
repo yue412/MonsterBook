@@ -3,6 +3,7 @@
 #if !defined(COCO_PARSER_H__)
 #define COCO_PARSER_H__
 
+#include <string>
 
 
 #include "Scanner.h"
@@ -49,6 +50,8 @@ public:
 	Token *t;			// last recognized token
 	Token *la;			// lookahead token
 
+double m_dResult;
+
 
 
 	Parser(Scanner *scanner);
@@ -56,9 +59,9 @@ public:
 	void SemErr(const wchar_t* msg);
 
 	void MonsterBook();
-	void Expr();
-	void Term();
-	void Factor();
+	void Expr(double& dVal);
+	void Term(double& dVal);
+	void Factor(double& dVal);
 
 	void Parse();
 
