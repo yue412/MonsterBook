@@ -2,6 +2,7 @@
 #include "Parser.h"
 #include <string>
 #include <iostream>
+#include "MBFunctions.h"
 
 int main(int argc, char* argv[])
 {
@@ -14,6 +15,10 @@ int main(int argc, char* argv[])
         Parser oParser(&oScanner);
         double a = 4.0;
         oParser.addSymbol("a", dtDouble, skVar, &a);
+        MBTest func; MBTest1 func1; MBTest2 func2;
+        oParser.addSymbol("bb", dtDouble, skFunc, &func);
+        oParser.addSymbol("sqr", dtDouble, skFunc, &func1);
+        oParser.addSymbol("product", dtDouble, skFunc, &func2);
         oParser.Parse();
         if (oParser.errors->count == 0)
         {

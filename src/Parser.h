@@ -6,6 +6,7 @@
 #include <string>
 #include <map>
 #include "Symbol.h"
+#include "Function.h"
 
 
 #include "Scanner.h"

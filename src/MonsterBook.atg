@@ -1,6 +1,7 @@
 #include <string>
 #include <map>
 #include "Symbol.h"
+#include "Function.h"
 
 COMPILER MonsterBook
 
@@ -68,16 +69,62 @@ Factor<double& dVal> =
 	| ident 
 		(. 
 			auto pSymbol = findSymbol(coco_string_create_char(t->val));
-			if(pSymbol && pSymbol->kind == skVar && pSymbol->type == dtDouble)
-			{
-				dVal = *((double*)pSymbol->adr);
-			}
-			else
-			{
-				std::wstring str = L"Symbol " + std::wstring(t->val) + L" undefine!";
-				errors->Exception(str.c_str());
-			}
+            if (pSymbol)
+            {
+                if (la->val[0] != '(')
+                {
+                    if (pSymbol->kind == skVar && pSymbol->type == dtDouble)
+                    {
+                        dVal = *((double*)pSymbol->adr);
+                    }
+                    else
+                    {
+                        std::wstring str = L"Symbol " + std::wstring(t->val) + L" not double var!";
+                        errors->Exception(str.c_str());
+                    }
+                }
+            }
+            else
+            {
+                std::wstring str = L"Symbol " + std::wstring(t->val) + L" undefine!";
+                errors->Exception(str.c_str());
+            }
 		.)
+	['(' 
+		(. 
+            if (pSymbol->kind != skFunc)
+			{
+                std::wstring str = L"Function " + std::wstring(t->val) + L" undefine!";
+                errors->Exception(str.c_str());
+            }
+			double dTemp;
+		.)
+		Expr<dTemp> 
+		(.
+			((Function*)pSymbol->adr)->addParam(dTemp);
+		.)
+		{',' 
+		Expr<dTemp>
+		(.
+			((Function*)pSymbol->adr)->addParam(dTemp);
+		.)
+		} ')' 
+		(.
+			dVal = ((Function*)pSymbol->adr)->execute();
+		.)
+		| "()" 
+		(. 
+            if (pSymbol->kind == skFunc)
+            {
+                dVal = ((Function*)pSymbol->adr)->execute();
+            }
+            else
+            {
+                std::wstring str = L"Function " + std::wstring(t->val) + L" undefine!";
+                errors->Exception(str.c_str());
+            }
+		.)
+	] 
     | '(' Expr<dVal> ')'.
 
 END MonsterBook.

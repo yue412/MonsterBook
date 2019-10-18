@@ -420,8 +420,8 @@ Scanner::~Scanner() {
 void Scanner::Init() {
 	EOL    = '\n';
 	eofSym = 0;
-	maxT = 9;
-	noSym = 9;
+	maxT = 11;
+	noSym = 11;
 	int i;
 	for (i = 65; i <= 90; ++i) start.set(i, 1);
 	for (i = 97; i <= 122; ++i) start.set(i, 1);
@@ -430,7 +430,8 @@ void Scanner::Init() {
 	start.set(45, 5);
 	start.set(42, 6);
 	start.set(47, 7);
-	start.set(40, 8);
+	start.set(40, 11);
+	start.set(44, 8);
 	start.set(41, 9);
 		start.set(Buffer::EoF, -1);
 
@@ -639,9 +640,16 @@ Token* Scanner::NextToken() {
 		case 7:
 			{t->kind = 6; break;}
 		case 8:
-			{t->kind = 7; break;}
-		case 9:
 			{t->kind = 8; break;}
+		case 9:
+			{t->kind = 9; break;}
+		case 10:
+			case_10:
+			{t->kind = 10; break;}
+		case 11:
+			recEnd = pos; recKind = 7;
+			if (ch == L')') {AddCh(); goto case_10;}
+			else {t->kind = 7; break;}
 
 	}
 	AppendVal(t);

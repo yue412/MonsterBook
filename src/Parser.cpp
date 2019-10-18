@@ -112,21 +112,68 @@ void Parser::Factor(double& dVal) {
 		} else if (la->kind == _ident) {
 			Get();
 			auto pSymbol = findSymbol(coco_string_create_char(t->val));
-			if(pSymbol && pSymbol->kind == skVar && pSymbol->type == dtDouble)
-			{
-			dVal = *((double*)pSymbol->adr);
-			}
-			else
-			{
-			std::wstring str = L"Symbol " + std::wstring(t->val) + L" undefine!";
-			errors->Exception(str.c_str());
-			}
+			        if (pSymbol)
+			        {
+			            if (la->val[0] != '(')
+			            {
+			                if (pSymbol->kind == skVar && pSymbol->type == dtDouble)
+			                {
+			                    dVal = *((double*)pSymbol->adr);
+			                }
+			                else
+			                {
+			                    std::wstring str = L"Symbol " + std::wstring(t->val) + L" not double var!";
+			                    errors->Exception(str.c_str());
+			                }
+			            }
+			        }
+			        else
+			        {
+			            std::wstring str = L"Symbol " + std::wstring(t->val) + L" undefine!";
+			            errors->Exception(str.c_str());
+			        }
 			
+			if (la->kind == 7 /* "(" */ || la->kind == 10 /* "()" */) {
+				if (la->kind == 7 /* "(" */) {
+					Get();
+					if (pSymbol->kind != skFunc)
+					{
+					   std::wstring str = L"Function " + std::wstring(t->val) + L" undefine!";
+					   errors->Exception(str.c_str());
+					}
+					double dTemp;
+					
+					Expr(dTemp);
+					((Function*)pSymbol->adr)->addParam(dTemp);
+					
+					while (la->kind == 8 /* "," */) {
+						Get();
+						Expr(dTemp);
+						((Function*)pSymbol->adr)->addParam(dTemp);
+						
+					}
+					Expect(9 /* ")" */);
+					dVal = ((Function*)pSymbol->adr)->execute();
+					
+				} else {
+					Get();
+					if (pSymbol->kind == skFunc)
+					{
+					   dVal = ((Function*)pSymbol->adr)->execute();
+					}
+					else
+					{
+					   std::wstring str = L"Function " + std::wstring(t->val) + L" undefine!";
+					   errors->Exception(str.c_str());
+					}
+					
+				}
+			}
 		} else if (la->kind == 7 /* "(" */) {
 			Get();
 			Expr(dVal);
-			Expect(8 /* ")" */);
-		} else SynErr(10);
+			Expect(9 /* ")" */);
+		} else SynErr(12);
 }
 
 
@@ -230,7 +277,7 @@ void Parser::Parse() {
 }
 
 Parser::Parser(Scanner *scanner) {
-	maxT = 9;
+	maxT = 11;
 
 	ParserInitCaller<Parser>::CallInit(this);
 	dummyToken = NULL;
@@ -245,8 +292,8 @@ bool Parser::StartOf(int s) {
 	const bool T = true;
 	const bool x = false;
 
-	static bool set[1][11] = {
-		{T,x,x,x, x,x,x,x, x,x,x}
+	static bool set[1][13] = {
+		{T,x,x,x, x,x,x,x, x,x,x,x, x}
 	};
 
 
@@ -275,9 +322,11 @@ void Errors::SynErr(int line, int col, int n) {
 			case 5: s = coco_string_create(L"\"*\" expected"); break;
 			case 6: s = coco_string_create(L"\"/\" expected"); break;
 			case 7: s = coco_string_create(L"\"(\" expected"); break;
-			case 8: s = coco_string_create(L"\")\" expected"); break;
-			case 9: s = coco_string_create(L"??? expected"); break;
-			case 10: s = coco_string_create(L"invalid Factor"); break;
+			case 8: s = coco_string_create(L"\",\" expected"); break;
+			case 9: s = coco_string_create(L"\")\" expected"); break;
+			case 10: s = coco_string_create(L"\"()\" expected"); break;
+			case 11: s = coco_string_create(L"??? expected"); break;
+			case 12: s = coco_string_create(L"invalid Factor"); break;
 
 		default:
 		{
