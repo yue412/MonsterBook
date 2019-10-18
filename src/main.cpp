@@ -6,10 +6,14 @@
 int main(int argc, char* argv[])
 {
     //std::string sCode = "-1+1*2-3*-6+4\0";
-    if (argc > 1)
+    while (true)
     {
-        Scanner oScanner((const unsigned char*)argv[1], strlen(argv[1]));
+        std::string str;
+        std::getline(std::cin, str);
+        Scanner oScanner((const unsigned char*)str.c_str(), str.length());
         Parser oParser(&oScanner);
+        double a = 4.0;
+        oParser.addSymbol("a", dtDouble, skVar, &a);
         oParser.Parse();
         if (oParser.errors->count == 0)
         {

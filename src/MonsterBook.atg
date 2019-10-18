@@ -1,8 +1,37 @@
 #include <string>
+#include <map>
+#include "Symbol.h"
 
 COMPILER MonsterBook
 
 double m_dResult;
+std::map<std::string, Symbol*> m_oSymbolTable;
+
+Symbol* addSymbol(const std::string& name, EnDataType type, EnSymbolKind kind, void* adr)
+{
+	if(findSymbol(name) == nullptr)
+	{
+		Symbol* pSymbol = new Symbol();
+		pSymbol->name = name;
+		pSymbol->type = type;
+		pSymbol->kind = kind;
+		pSymbol->adr = adr;
+		m_oSymbolTable.insert(std::make_pair(name, pSymbol));
+		return pSymbol;
+	}
+	else
+		return nullptr;
+}
+
+Symbol* findSymbol(const std::string& name)
+{
+	auto itr = m_oSymbolTable.find(name);
+	if(itr == m_oSymbolTable.end())
+		return nullptr;
+	else
+		return itr->second;
+
+}
 
 CHARACTERS
 digit = "0123456789".
@@ -36,6 +65,19 @@ Term<double& dVal> =
 Factor<double& dVal> = 
     number (. dVal = std::stod(t->val); .)
     | '-' number (. dVal = - std::stod(t->val); .)
+	| ident 
+		(. 
+			auto pSymbol = findSymbol(coco_string_create_char(t->val));
+			if(pSymbol && pSymbol->kind == skVar && pSymbol->type == dtDouble)
+			{
+				dVal = *((double*)pSymbol->adr);
+			}
+			else
+			{
+				std::wstring str = L"Symbol " + std::wstring(t->val) + L" undefine!";
+				errors->Exception(str.c_str());
+			}
+		.)
     | '(' Expr<dVal> ')'.
 
 END MonsterBook.

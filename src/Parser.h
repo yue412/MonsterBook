@@ -4,6 +4,8 @@
 #define COCO_PARSER_H__
 
 #include <string>
+#include <map>
+#include "Symbol.h"
 
 
 #include "Scanner.h"
@@ -51,6 +53,33 @@ public:
 	Token *la;			// lookahead token
 
 double m_dResult;
+std::map<std::string, Symbol*> m_oSymbolTable;
+
+Symbol* addSymbol(const std::string& name, EnDataType type, EnSymbolKind kind, void* adr)
+{
+	if(findSymbol(name) == nullptr)
+	{
+		Symbol* pSymbol = new Symbol();
+		pSymbol->name = name;
+		pSymbol->type = type;
+		pSymbol->kind = kind;
+		pSymbol->adr = adr;
+		m_oSymbolTable.insert(std::make_pair(name, pSymbol));
+		return pSymbol;
+	}
+	else
+		return nullptr;
+}
+
+Symbol* findSymbol(const std::string& name)
+{
+	auto itr = m_oSymbolTable.find(name);
+	if(itr == m_oSymbolTable.end())
+		return nullptr;
+	else
+		return itr->second;
+
+}
 
 
 

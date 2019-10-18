@@ -109,6 +109,19 @@ void Parser::Factor(double& dVal) {
 			Get();
 			Expect(_number);
 			dVal = - std::stod(t->val); 
+		} else if (la->kind == _ident) {
+			Get();
+			auto pSymbol = findSymbol(coco_string_create_char(t->val));
+			if(pSymbol && pSymbol->kind == skVar && pSymbol->type == dtDouble)
+			{
+			dVal = *((double*)pSymbol->adr);
+			}
+			else
+			{
+			std::wstring str = L"Symbol " + std::wstring(t->val) + L" undefine!";
+			errors->Exception(str.c_str());
+			}
+			
 		} else if (la->kind == 7 /* "(" */) {
 			Get();
 			Expr(dVal);
