@@ -111,11 +111,12 @@ void Parser::Factor(double& dVal) {
 			dVal = - std::stod(t->val); 
 		} else if (la->kind == _ident) {
 			Get();
-			auto pSymbol = findSymbol(coco_string_create_char(t->val));
-			        if (pSymbol)
+			std::string sIdent = coco_string_create_char(t->val);
+			        if (la->kind == _EOF || la->val[0] != '(')
 			        {
-			            if (la->val[0] != '(')
-			            {
+			auto pSymbol = findSymbol(sIdent);
+			if (pSymbol)
+			{
 			                if (pSymbol->kind == skVar && pSymbol->type == dtDouble)
 			                {
 			                    dVal = *((double*)pSymbol->adr);
@@ -126,46 +127,47 @@ void Parser::Factor(double& dVal) {
 			                    errors->Exception(str.c_str());
 			                }
 			            }
-			        }
-			        else
-			        {
-			            std::wstring str = L"Symbol " + std::wstring(t->val) + L" undefine!";
-			            errors->Exception(str.c_str());
+			else
+			{
+				std::wstring str = L"Symbol " + std::wstring(t->val) + L" undefine!";
+				errors->Exception(str.c_str());
+			}
 			        }
 			
 			if (la->kind == 7 /* "(" */ || la->kind == 10 /* "()" */) {
 				if (la->kind == 7 /* "(" */) {
 					Get();
-					if (pSymbol->kind != skFunc)
+					auto pFactory = m_oFuncTable.find(sIdent);
+					        if (!pFactory)
 					{
-					   std::wstring str = L"Function " + std::wstring(t->val) + L" undefine!";
-					   errors->Exception(str.c_str());
-					}
+					            std::wstring str = L"Function " + std::wstring(t->val) + L" undefine!";
+					            errors->Exception(str.c_str());
+					        }
 					double dTemp;
+					std::auto_ptr<Function> pFunc(pFactory->create());
 					
 					Expr(dTemp);
-					((Function*)pSymbol->adr)->addParam(dTemp);
+					pFunc->addParam(dTemp);
 					
 					while (la->kind == 8 /* "," */) {
 						Get();
 						Expr(dTemp);
-						((Function*)pSymbol->adr)->addParam(dTemp);
+						pFunc->addParam(dTemp);
 						
 					}
 					Expect(9 /* ")" */);
-					dVal = ((Function*)pSymbol->adr)->execute();
+					dVal = pFunc->execute();
 					
 				} else {
 					Get();
-					if (pSymbol->kind == skFunc)
+					auto pFactory = m_oFuncTable.find(sIdent);
+					        if (!pFactory)
 					{
-					   dVal = ((Function*)pSymbol->adr)->execute();
-					}
-					else
-					{
-					   std::wstring str = L"Function " + std::wstring(t->val) + L" undefine!";
-					   errors->Exception(str.c_str());
-					}
+					            std::wstring str = L"Function " + std::wstring(t->val) + L" undefine!";
+					            errors->Exception(str.c_str());
+					        }
+					std::auto_ptr<Function> pFunc(pFactory->create());
+					        dVal = pFunc->execute();
 					
 				}
 			}

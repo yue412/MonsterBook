@@ -21,5 +21,9 @@ public:
     virtual double execute();
 };
 
+G_DEC_FACTORY(MBTest)
+G_DEC_FACTORY(MBTest1)
+G_DEC_FACTORY(MBTest2)
+
 #endif // !MBFUNCTION_H
 

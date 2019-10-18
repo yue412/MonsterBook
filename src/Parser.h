@@ -5,6 +5,7 @@
 
 #include <string>
 #include <map>
+#include <memory>
 #include "Symbol.h"
 #include "Function.h"
 
@@ -55,6 +56,7 @@ public:
 
 double m_dResult;
 std::map<std::string, Symbol*> m_oSymbolTable;
+FunctionFactoryTable m_oFuncTable;
 
 Symbol* addSymbol(const std::string& name, EnDataType type, EnSymbolKind kind, void* adr)
 {
