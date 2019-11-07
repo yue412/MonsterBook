@@ -1,33 +1,43 @@
-#include "Scanner.h"
-#include "Parser.h"
 #include <string>
 #include <iostream>
-#include "MBFunctions.h"
+#include "armadillo"
+#include "Game.h"
+#include "Config.h"
+#include "Challenge.h"
+#include "Monster.h"
+
+void output(std::vector<CSolution*>& oResultList)
+{
+    for (auto itr = oResultList.begin(); itr != oResultList.end(); itr++)
+    {
+        auto nIndex = itr - oResultList.begin() + 1;
+        std::wcout << L"Solution " << nIndex << L":" << std::endl;
+        for each (auto pair in **itr)
+        {
+            std::wcout << pair.first->getName() << L"[";
+            for each (auto pMonster in *pair.second)
+            {
+                std::wcout << pMonster->getName() << L",";
+            }
+            std::wcout << L"]" << std::endl;
+        }
+    }
+}
 
 int main(int argc, char* argv[])
 {
-    //std::string sCode = "-1+1*2-3*-6+4\0";
-    while (true)
-    {
-        std::string str;
-        std::getline(std::cin, str);
-        Scanner oScanner((const unsigned char*)str.c_str(), str.length());
-        Parser oParser(&oScanner);
-        double a = 4.0;
-        oParser.addSymbol("a", dtDouble, skVar, &a);
-        oParser.m_oFuncTable.add("bb", new MBTestFactory);
-        oParser.m_oFuncTable.add("sqr", new MBTest1Factory);
-        oParser.m_oFuncTable.add("product", new MBTest2Factory);
-
-        oParser.Parse();
-        if (oParser.errors->count == 0)
-        {
-            std::cout << "Result: " << oParser.m_dResult << std::endl;
-        }
-        else
-        {
-            std::cout << oParser.errors->count << " errors detected" << std::endl;
-        }
-    }
+    CGame oGame;
+    CConfig::init(&oGame);
+    std::vector<CSolution*> oResultList;
+    oGame.play(oResultList);
+    output(oResultList);
+    //arma::vec vec;
+    //arma::mat mat;
+    //std::cout << mat*vec <<std::endl;
+    //v.print();
+    //arma::vec vec = "1,0,0";
+    //arma::mat mat = "1,0,0,0,1,0,0,0,1";
+    //arma::mat v = mat*vec;
+    //v.print();
     return 0;
 }

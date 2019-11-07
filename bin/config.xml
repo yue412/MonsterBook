@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MonsterBook>
+	<Monsters>
+		<Monster name="" class="">
+			<Features></Features>
+			<Skills>
+				<Skill name="">
+				</Skill>
+			</Skills>
+		</Monster>
+	</Monsters>
+	<Challenges>
+		<Challenge name="" min="0" max="8">
+			<FeaturesRequired></FeaturesRequired>
+		</Challenge>
+	</Challenges>
+</MonsterBook>
