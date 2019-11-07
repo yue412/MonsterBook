@@ -2,7 +2,7 @@
 
 
 
-CChallenge::CChallenge()
+CChallenge::CChallenge() : m_nMin(0), m_nMax(8)
 {
 }
 

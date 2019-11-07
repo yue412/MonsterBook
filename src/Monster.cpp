@@ -2,7 +2,7 @@
 
 
 
-CMonster::CMonster()
+CMonster::CMonster() : m_nClass(EC_WOOD)
 {
 }
 

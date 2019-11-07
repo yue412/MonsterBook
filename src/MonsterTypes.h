@@ -13,6 +13,8 @@ enum EnElementClass
     EC_DARK
 };
 
+const std::wstring g_sClassNames[] = { L"Ä¾", L"ÍÁ", L"Ë®", L"»ð", L"¹â", L"°µ" };
+
 enum EnFeatures
 {
     EF_POWER,
@@ -26,6 +28,7 @@ enum EnFeatures
 class CMonster;
 typedef std::vector<CMonster*> CTeam;
 
+const std::size_t c_nFeatureCount = 6;
 
 #endif // !MONSTERTYPES_H
 
