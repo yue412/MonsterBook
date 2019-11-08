@@ -5,12 +5,20 @@
 #include "Monster.h"
 #include "Challenge.h"
 #include <algorithm>
+#include <memory>
+#include "SkillFactory.h"
+
+typedef std::shared_ptr<CSkillFactory> CSkillFactoryPtr;
+std::vector<CSkillFactoryPtr> g_oSkillFactory = { 
+    CSkillFactoryPtr(new CGreenPlumBambooHorseSkillFactroy), 
+    CSkillFactoryPtr(new CIncreaseFeatureSkillFactory)
+};
 
 void CConfig::init(CGame * pGame)
 {
 	auto sConfig = getExePath() + L"\\config.xml";
 	TiXmlDocument oDocument;
-	if (oDocument.LoadFile(toString(sConfig)))
+	if (oDocument.LoadFile(toString(sConfig), TIXML_ENCODING_UTF8))
 	{
 		auto pRoot = oDocument.RootElement();
 		if (!pRoot)
@@ -23,8 +31,8 @@ void CConfig::init(CGame * pGame)
 			{
 				auto pMonster = new CMonster;
 				pGame->m_oMonsterList.push_back(pMonster);
-				pMonster->m_sName = toWstring(pMonsterNode->Attribute("name"));
-				pMonster->m_nClass = Name2Class(toWstring(pMonsterNode->Attribute("class")));
+				pMonster->m_sName = Utf8ToUnicode(pMonsterNode->Attribute("name"));
+				pMonster->m_nClass = Name2Class(Utf8ToUnicode(pMonsterNode->Attribute("class")));
 				// Features
 				initFeatures(pMonsterNode, "Features", pMonster->m_nFeatures);
 				// Skills
@@ -34,7 +42,7 @@ void CConfig::init(CGame * pGame)
 					auto pSkillNode = pSkillsNode->FirstChildElement();
 					while (pSkillNode)
 					{
-						std::wstring sSkillName = toWstring(pSkillNode->Attribute("name"));
+						std::wstring sSkillName = Utf8ToUnicode(pSkillNode->Attribute("name"));
 						pMonster->m_oSkills.push_back(createSkill(sSkillName, pSkillNode));
 						pSkillNode = pSkillNode->NextSiblingElement();
 					}
@@ -51,41 +59,48 @@ void CConfig::init(CGame * pGame)
 			{
 				auto pChallenge = new CChallenge;
 				pGame->m_oChallengeList.push_back(pChallenge);
-				pChallenge->m_sName = toWstring(pChallengeNode->Attribute("name"));
+				pChallenge->m_sName = Utf8ToUnicode(pChallengeNode->Attribute("name"));
 				pChallengeNode->Attribute("min", &pChallenge->m_nMin);
 				pChallengeNode->Attribute("max", &pChallenge->m_nMax);
 				// Features
-				initFeatures(pChallengeNode, "FeaturesRequired", pChallenge->m_nRequired);
+                auto pFeaturesRequiredNode = pChallengeNode->FirstChildElement("FeaturesRequired");
+                while (pFeaturesRequiredNode)
+                {
+                    auto nFeature = Name2Feature(Utf8ToUnicode(pFeaturesRequiredNode->Attribute("feature")));
+                    int nValue = 0;
+                    pFeaturesRequiredNode->Attribute("limit", &nValue);
+                    for (int i = 0; i < EF_ALL; i++)
+                    {
+                        pChallenge->m_nRequired[i] = nFeature == EF_ALL || i == nFeature ? nValue : 0;
+                    }
+                    pFeaturesRequiredNode = pFeaturesRequiredNode->NextSiblingElement("FeaturesRequired");
+                }
+
 				pChallengeNode = pChallengeNode->NextSiblingElement();
 			}
 		}
 	}
 }
 
-EnElementClass CConfig::Name2Class(std::wstring& sName)
-{
-	auto itr = std::find(g_sClassNames, g_sClassNames + 6, sName);
-	int n = itr - g_sClassNames;
-	return (EnElementClass)n;
-}
-
 CSkill* CConfig::createSkill(std::wstring& sName, TiXmlElement* pSkillNode)
 {
-	return nullptr;
+    auto itr = std::find_if(g_oSkillFactory.begin(), g_oSkillFactory.end(), 
+        [sName](CSkillFactoryPtr pFactory) { return pFactory->getName() == sName; });
+	return itr != g_oSkillFactory.end() ? (*itr)->create(pSkillNode) : nullptr;
 }
 
-void CConfig::initFeatures(TiXmlElement* pNode, const std::string& sName, int* nFeatures)
+void CConfig::initFeatures(TiXmlElement* pNode, const std::string& sName, double* dFeatures)
 {
 	auto pFeaturesNode = pNode->FirstChildElement(sName);
 	std::wstring sText;
 	if (pFeaturesNode)
 	{
-		sText = toWstring(pFeaturesNode->GetText());
+		sText = Utf8ToUnicode(pFeaturesNode->GetText());
 	}
 	std::vector<std::wstring> oStringList;
 	split(sText, L',', oStringList);
-	for (std::size_t i = 0; i < c_nFeatureCount; i++)
+	for (std::size_t i = 0; i < EF_ALL; i++)
 	{
-		nFeatures[i] = i < oStringList.size() ? std::stoi(oStringList[i]) : 0;
+		dFeatures[i] = i < oStringList.size() ? std::stoi(oStringList[i]) : 0;
 	}
 }

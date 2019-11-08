@@ -14,12 +14,12 @@ public:
     std::wstring getName() { return m_sName; }
 	int getMin() { return m_nMin; }
 	int getMax() { return m_nMax; }
-	int* featuresRequired() { return m_nRequired; }
+	double* featuresRequired() { return m_nRequired; }
 private:
     std::wstring m_sName;
 	int m_nMin;
 	int m_nMax;
-	int m_nRequired[c_nFeatureCount];
+    double m_nRequired[EF_ALL];
 };
 
 #endif // !CHALLENGE_H

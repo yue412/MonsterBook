@@ -29,5 +29,8 @@ add_executable(${PROJECT_NAME} ${SRC_FILES} ${HEAD_FILES})
 
 #set_target_properties(${PROJECT_NAME} PROPERTIES DEBUG_POSTFIX d)
 
-#target_link_libraries(${PROJECT_NAME} debug armadillo optimized armadillo)
+target_link_libraries(${PROJECT_NAME} debug armadillo optimized armadillo)
+target_link_libraries(${PROJECT_NAME} debug libblas optimized libblas)
+target_link_libraries(${PROJECT_NAME} debug liblapack optimized liblapack)
+target_link_libraries(${PROJECT_NAME} debug liblapacke optimized liblapacke)
 target_link_libraries(${PROJECT_NAME} debug tinyxmld optimized tinyxml)

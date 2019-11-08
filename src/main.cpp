@@ -1,12 +1,11 @@
 #include <string>
 #include <iostream>
-#include "armadillo"
 #include "Game.h"
 #include "Config.h"
 #include "Challenge.h"
 #include "Monster.h"
 
-void output(std::vector<CSolution*>& oResultList)
+void output(std::vector<CSolutionPtr>& oResultList)
 {
     for (auto itr = oResultList.begin(); itr != oResultList.end(); itr++)
     {
@@ -26,17 +25,19 @@ void output(std::vector<CSolution*>& oResultList)
 
 int main(int argc, char* argv[])
 {
+
     CGame oGame;
     CConfig::init(&oGame);
-    std::vector<CSolution*> oResultList;
+    std::vector<CSolutionPtr> oResultList;
     oGame.play(oResultList);
     output(oResultList);
+
     //arma::vec vec;
     //arma::mat mat;
     //std::cout << mat*vec <<std::endl;
     //v.print();
     //arma::vec vec = "1,0,0";
-    //arma::mat mat = "1,0,0,0,1,0,0,0,1";
+    //arma::mat mat = "1,0,0;2,1,0;0,0,1";
     //arma::mat v = mat*vec;
     //v.print();
     return 0;

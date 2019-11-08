@@ -1,17 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MonsterBook>
 	<Monsters>
-		<Monster name="" class="">
-			<Features></Features>
+		<Monster name="竹马王子" class="木">
+			<Features>193,76,210,54,162,54</Features>
 			<Skills>
-				<Skill name="">
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+				<Skill name="GreenPlumBambooHorse">
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="树魅" class="木">
+			<Features>48,134,48,61,48,88</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
 	</Monsters>
 	<Challenges>
-		<Challenge name="" min="0" max="8">
-			<FeaturesRequired></FeaturesRequired>
+		<Challenge name="捕鱼" min="0" max="8">
+			<FeaturesRequired feature="速" limit="620"/>
+		</Challenge>
+		<Challenge name="森林" min="0" max="8">
+			<FeaturesRequired feature="魅" limit="40"/>
+		</Challenge>
+		<Challenge name="小溪" min="0" max="8">
+			<FeaturesRequired feature="智" limit="110"/>
+		</Challenge>
+		<Challenge name="肉铺" min="0" max="8">
+			<FeaturesRequired feature="力" limit="150"/>
+		</Challenge>
+		<Challenge name="碑林" min="0" max="8">
+			<FeaturesRequired feature="速" limit="590"/>
+		</Challenge>
+		<Challenge name="药房" min="0" max="8">
+			<FeaturesRequired feature="速" limit="460"/>
+		</Challenge>
+		<Challenge name="饰品店" min="0" max="8">
+			<FeaturesRequired feature="智" limit="1105"/>
+			<FeaturesRequired feature="魅" limit="1305"/>
 		</Challenge>
 	</Challenges>
 </MonsterBook>

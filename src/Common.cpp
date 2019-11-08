@@ -190,3 +190,18 @@ void split(const std::wstring& sValue, wchar_t chr, std::vector<std::wstring>& o
 		nIndex = sTemp.find(chr, nStart);
 	}
 }
+
+
+EnElementClass Name2Class(std::wstring& sName)
+{
+    auto itr = std::find(g_sClassNames, g_sClassNames + EC_ALL + 1, sName);
+    int n = itr - g_sClassNames;
+    return (EnElementClass)n;
+}
+
+EnFeatures Name2Feature(std::wstring & sName)
+{
+    auto itr = std::find(g_sFeatureNames, g_sFeatureNames + EF_ALL + 1, sName);
+    int n = itr - g_sFeatureNames;
+    return (EnFeatures)n;
+}

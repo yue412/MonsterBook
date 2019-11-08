@@ -4,6 +4,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include "MonsterTypes.h"
 
 std::wstring FormatWstring(const wchar_t *lpcwszFormat, ...);
 std::wstring FormatWstring(const std::wstring sFormat, ...);
@@ -21,5 +22,8 @@ std::fstream& operator<<(std::fstream& out, const std::wstring& s);
 std::fstream& operator<<(std::fstream& out, const wchar_t* s);
 bool fileExists(const std::wstring& sFile);
 void split(const std::wstring& sValue, wchar_t chr, std::vector<std::wstring>& oStringList);
+
+EnElementClass Name2Class(std::wstring& sName);
+EnFeatures Name2Feature(std::wstring& sName);
 
 #endif // !COMMON_H
