@@ -1,15 +1,21 @@
 #include <string>
 #include <iostream>
+#include <algorithm>
 #include "Game.h"
 #include "Config.h"
 #include "Challenge.h"
 #include "Monster.h"
+#include <Windows.h>
 
 void output(std::vector<CSolutionPtr>& oResultList)
 {
     for (auto itr = oResultList.begin(); itr != oResultList.end(); itr++)
     {
         auto nIndex = itr - oResultList.begin() + 1;
+		if (nIndex > 10)
+		{
+			break;
+		}
         std::wcout << L"Solution " << nIndex << L":" << std::endl;
         for each (auto pair in **itr)
         {
@@ -25,20 +31,16 @@ void output(std::vector<CSolutionPtr>& oResultList)
 
 int main(int argc, char* argv[])
 {
-
+	auto nTime = GetTickCount();
     CGame oGame;
     CConfig::init(&oGame);
     std::vector<CSolutionPtr> oResultList;
     oGame.play(oResultList);
+	std::wcout << L"play: " << GetTickCount() - nTime << std::endl;
+	std::sort(oResultList.begin(), oResultList.end(), [](CSolutionPtr pSolution1, CSolutionPtr pSolution2){
+		return pSolution1->size() > pSolution2->size();
+	});
     output(oResultList);
 
-    //arma::vec vec;
-    //arma::mat mat;
-    //std::cout << mat*vec <<std::endl;
-    //v.print();
-    //arma::vec vec = "1,0,0";
-    //arma::mat mat = "1,0,0;2,1,0;0,0,1";
-    //arma::mat v = mat*vec;
-    //v.print();
     return 0;
 }

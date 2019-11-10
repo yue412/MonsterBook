@@ -30,4 +30,18 @@ public:
     virtual CSkill* create(TiXmlElement* pSkillNode);
 };
 
+class CProductFeatureSkillFactroy : public CSkillFactory
+{
+public:
+	virtual std::wstring getName() { return L"ProductFeature"; }
+	virtual CSkill* create(TiXmlElement* pSkillNode);
+};
+
+class CIncreaseSelfFeatureByCountSkillFactroy : public CSkillFactory
+{
+public:
+	virtual std::wstring getName() { return L"IncreaseSelfFeatureByCount"; }
+	virtual CSkill* create(TiXmlElement* pSkillNode);
+};
+
 #endif // !SKILLFACTORY_H

@@ -28,6 +28,158 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="肉迷" class="木">
+			<Features>205,76,102,86,102,94</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="偃月刀灵" class="木">
+			<Features>103,34,52,39,30,34</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="荞似" class="木">
+			<Features>27,42,31,69,34,88</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="青荷" class="木">
+			<Features>90,187,73,73,60,60</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>智</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="关羽" class="木">
+			<Features>146,46,146,92,46,72</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="春丽" class="木">
+			<Features>82,110,82,178,138,66</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="小龙人" class="木">
+			<Features>70,45,139,56,45,70</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="冲冲侠" class="木">
+			<Features>73,89,139,40,44,40</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>速</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="青梅公举" class="木">
+			<Features>68,82,68,203,178,150</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>魅</Feature>
+					<Value>2</Value>
+				</Skill>
+				<Skill name="GreenPlumBambooHorse">
+				</Skill>				
+			</Skills>
+		</Monster>
+		<Monster name="藏犬屋" class="火">
+			<Features>166,54,144,59,59,54</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="蜡犬" class="火">
+			<Features>30,33,94,30,34,83</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="艳灵" class="火">
+			<Features>16,30,19,56,31,23</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="翼火蛇" class="火">
+			<Features>98,122,164,82,82,98</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>速</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="布布" class="火">
+			<Features>19,39,36,100,31,71</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>火</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="喵公子" class="火">
+			<Features>70,50,40,60,142,66</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 	</Monsters>
 	<Challenges>
 		<Challenge name="捕鱼" min="0" max="8">

@@ -1,29 +1,31 @@
 #include "Skill.h"
 #include "Monster.h"
+#include <algorithm>
+#include "Common.h"
 
 CSkill::~CSkill()
 {
 }
 
-void CIncreaseFeatureSkill::affect(const CTeam & oTeam, arma::rowvec6& oResult)
+void CIncreaseFeatureSkill::affect(const CTeam & oTeam, double* oResult)
 {
     int nCount = m_nClass == EC_ALL ? oTeam.size() : std::count_if(oTeam.begin(), oTeam.end(),
         [this](CMonster* pMonster) { return pMonster->getClass() == this->m_nClass; });
     int nVal = m_nValue * nCount;
     if (m_nFeature == EF_ALL)
     {
-        oResult.fill(nVal);
+		fill(oResult, nVal);
     }
     else
     {
-        oResult.zeros();
+		fill(oResult, 0.0);
         oResult[m_nFeature] = nVal;
     }
 }
 
-void CGreenPlumBambooHorseSkill::affect(const CTeam & oTeam, arma::rowvec6& oResult)
+void CGreenPlumBambooHorseSkill::affect(const CTeam & oTeam, double* oResult)
 {
-    oResult.zeros();
+	fill(oResult, 0.0);
     auto itr = std::find_if(oTeam.begin(), oTeam.end(), [](CMonster* pMonster) { return pMonster->getName() == L"ÇàÃ·¹«¾Ù"; });
     if (itr != oTeam.end())
     {
@@ -35,21 +37,32 @@ void CGreenPlumBambooHorseSkill::affect(const CTeam & oTeam, arma::rowvec6& oRes
     }
 }
 
-void CProductFeatureSkill::affect(const CTeam & oTeam, arma::rowvec6 & oResult)
+void CProductFeatureSkill::affect(const CTeam & oTeam, double* oResult)
 {
-    arma::mat oClassMat(oTeam.size(), EC_ALL, arma::fill::zeros);
-    for each (auto pMonster in oTeam)
-        oClassMat[pMonster->getClass()] = 1.0;
-    arma::vec oClassVec(oTeam.size(), arma::fill::zeros);
-    if (m_nClass == EC_ALL)
-        oClassVec.ones();
-    else
-        oClassVec[m_nClass] = 1.0;
-    arma::vec oVec = oClassMat * oClassVec;
-    arma::mat oFilterMat(oTeam.size(), oTeam.size(), arma::fill::zeros);
-    for (arma::uword i = 0; i < oVec.n_rows; i++)
-    {
-        if (oVec[i] > g_dEpsilon)
-            oFilterMat(i, i) = 1.0;
-    }
+	fill(oResult, 0.0);
+	for each (auto pMonster in oTeam)
+	{
+		if (m_nClass == EC_ALL || pMonster->getClass() == m_nClass)
+		{
+			for (int i = 0; i < EF_ALL; i++)
+			{
+				oResult[i] += m_nFeature == EF_ALL || m_nFeature == i ? pMonster->getFeature((EnFeatures)i) * (m_dValue - 1) : 0.0;
+ 			}
+		}
+	}
+}
+
+void CIncreaseSelfFeatureByCountSkill::affect(const CTeam & oTeam, double* oResult)
+{
+	fill(oResult, 0.0);
+	for each (auto pMonster in oTeam)
+	{
+		if (m_nClass == EC_ALL || pMonster->getClass() == m_nClass)
+		{
+			for (int i = 0; i < EF_ALL; i++)
+			{
+				oResult[i] += m_nFeature == EF_ALL || m_nFeature == i ? m_dValue : 0.0;
+			}
+		}
+	}
 }

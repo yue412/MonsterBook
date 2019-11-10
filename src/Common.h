@@ -25,5 +25,8 @@ void split(const std::wstring& sValue, wchar_t chr, std::vector<std::wstring>& o
 
 EnElementClass Name2Class(std::wstring& sName);
 EnFeatures Name2Feature(std::wstring& sName);
+void fill(double arr[], double dVal);
+void addVec(double vec1[], double vec2[], double result[]);
+double sum(double arr[]);
 
 #endif // !COMMON_H

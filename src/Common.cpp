@@ -205,3 +205,29 @@ EnFeatures Name2Feature(std::wstring & sName)
     int n = itr - g_sFeatureNames;
     return (EnFeatures)n;
 }
+
+void fill(double arr[], double dVal)
+{
+	for (int i = 0; i < EF_ALL; i++)
+	{
+		arr[i] = dVal;
+	}
+}
+
+void addVec(double vec1[], double vec2[], double result[])
+{
+	for (int i = 0; i < EF_ALL; i++)
+	{
+		result[i] = vec1[i] + vec2[i];
+	}
+}
+
+double sum(double arr[])
+{
+	double dResult = 0.0;
+	for (int i = 0; i < EF_ALL; i++)
+	{
+		dResult += arr[i];
+	}
+	return dResult;
+}

@@ -13,7 +13,7 @@ CMonster::~CMonster()
 
 double CMonster::getFeatureSum(const std::set<EnFeatures>& oFeatureSet)
 {
-    double dResult;
+    double dResult = 0.0;
     for each (auto nFeature in oFeatureSet)
     {
         dResult += m_nFeatures[nFeature];

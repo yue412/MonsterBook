@@ -3,8 +3,8 @@
 #include "Monster.h"
 #include <algorithm>
 #include <set>
-#include "armadillo"
 #include "Skill.h"
+#include "Common.h"
 
 CGame::CGame()
 {
@@ -20,9 +20,7 @@ void CGame::play(std::vector<CSolutionPtr>& oSolutionList)
 {
     std::sort(m_oChallengeList.begin(), m_oChallengeList.end(), 
         [](CChallenge* pChallenge1, CChallenge* pChallenge2) {
-            auto vec1 = arma::rowvec6(pChallenge1->featuresRequired());
-            auto vec2 = arma::rowvec6(pChallenge2->featuresRequired());
-            return arma::sum(vec1) < arma::sum(vec2) - g_dEpsilon;
+			return sum(pChallenge1->featuresRequired()) > sum(pChallenge2->featuresRequired()) + g_dEpsilon;
         });
     CSolution oSolution;
     play(0, m_oMonsterList, oSolution, oSolutionList);
@@ -30,15 +28,16 @@ void CGame::play(std::vector<CSolutionPtr>& oSolutionList)
 
 bool CGame::play(CChallenge * pChallenge, CTeam & oTeam)
 {
-    arma::rowvec6 oTotal(arma::fill::zeros);
+    double oTotal[EF_ALL];
+	fill(oTotal, 0.0);
     for each (auto pMonster in oTeam)
     {
-        oTotal += arma::rowvec6(pMonster->getFeatures());
+		addVec(oTotal, pMonster->getFeatures(), oTotal);
         for (int i = 0; i < pMonster->getSkillCount(); i++)
         {
-            arma::rowvec6 incV;
+            double incV[EF_ALL];
             pMonster->getSkill(i)->affect(oTeam, incV);
-            oTotal += incV;
+			addVec(oTotal, incV, oTotal);
         }
     }
     for (int i = 0; i < EF_ALL; i++)
@@ -57,9 +56,9 @@ void CGame::play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterL
     {
         oTeam.push_back(oMonsterList[i]);
         if (play(pChallenge, oTeam))
-            oTeamList.push_back(CTeamPtr(new CTeam(oTeam))); // ÓÐÄÚ´æÐ¹Â©
+            oTeamList.push_back(CTeamPtr(new CTeam(oTeam)));
         else
-            play(pChallenge, oMonsterList, nStartIndex + 1, nCount - 1, oTeam, oTeamList);
+			play(pChallenge, oMonsterList, i + 1, nCount - 1, oTeam, oTeamList);
         oTeam.pop_back();
     }
 }
@@ -68,7 +67,10 @@ void CGame::play(int nChallengeIndex, const std::vector<CMonster*>& oMonsterList
 {
     if (nChallengeIndex >= (int)m_oChallengeList.size() || oMonsterList.empty())
     {
-        oSolutionList.push_back(CSolutionPtr(new CSolution(oSolution)));
+		if (oSolution.size() > 0)
+		{
+			oSolutionList.push_back(CSolutionPtr(new CSolution(oSolution)));
+		}
         return;
     }
     std::vector<CTeamPtr> oTeamList;
@@ -82,7 +84,7 @@ void CGame::play(int nChallengeIndex, const std::vector<CMonster*>& oMonsterList
             oFeatureSet.insert((EnFeatures)i);
     }
     std::sort(oMonsters.begin(), oMonsters.end(), [oFeatureSet](CMonster* pMonster1, CMonster* pMonster2) {
-        return pMonster1->getFeatureSum(oFeatureSet) < pMonster2->getFeatureSum(oFeatureSet) - g_dEpsilon;
+        return pMonster1->getFeatureSum(oFeatureSet) > pMonster2->getFeatureSum(oFeatureSet) + g_dEpsilon;
     });
 
     play(m_oChallengeList[nChallengeIndex], oMonsters, 0, m_oChallengeList[nChallengeIndex]->getMax(), oTeam, oTeamList);

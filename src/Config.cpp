@@ -11,7 +11,9 @@
 typedef std::shared_ptr<CSkillFactory> CSkillFactoryPtr;
 std::vector<CSkillFactoryPtr> g_oSkillFactory = { 
     CSkillFactoryPtr(new CGreenPlumBambooHorseSkillFactroy), 
-    CSkillFactoryPtr(new CIncreaseFeatureSkillFactory)
+    CSkillFactoryPtr(new CIncreaseFeatureSkillFactory),
+	CSkillFactoryPtr(new CProductFeatureSkillFactroy),
+	CSkillFactoryPtr(new CIncreaseSelfFeatureByCountSkillFactroy)
 };
 
 void CConfig::init(CGame * pGame)
@@ -86,6 +88,7 @@ CSkill* CConfig::createSkill(std::wstring& sName, TiXmlElement* pSkillNode)
 {
     auto itr = std::find_if(g_oSkillFactory.begin(), g_oSkillFactory.end(), 
         [sName](CSkillFactoryPtr pFactory) { return pFactory->getName() == sName; });
+	assert(itr != g_oSkillFactory.end());
 	return itr != g_oSkillFactory.end() ? (*itr)->create(pSkillNode) : nullptr;
 }
 
