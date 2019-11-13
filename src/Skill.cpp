@@ -12,7 +12,11 @@ void CIncreaseFeatureSkill::affect(const CTeam & oTeam, double* oResult)
     int nCount = m_nClass == EC_ALL ? oTeam.size() : std::count_if(oTeam.begin(), oTeam.end(),
         [this](CMonster* pMonster) { return pMonster->getClass() == this->m_nClass; });
     int nVal = m_nValue * nCount;
-    if (m_nFeature == EF_ALL)
+    if (nCount < m_nTrigger)
+    {
+        fill(oResult, 0.0);
+    }
+    else if (m_nFeature == EF_ALL)
     {
 		fill(oResult, nVal);
     }
@@ -65,4 +69,17 @@ void CIncreaseSelfFeatureByCountSkill::affect(const CTeam & oTeam, double* oResu
 			}
 		}
 	}
+}
+
+void CIncreaseSelfFeatureSkill::affect(const CTeam & oTeam, double * oResult)
+{
+    if (m_nFeature == EF_ALL)
+    {
+        fill(oResult, m_dValue);
+    }
+    else
+    {
+        fill(oResult, 0);
+        oResult[m_nFeature] = m_dValue;
+    }
 }

@@ -94,7 +94,7 @@ std::wstring getExePath()
 	GetModuleFileName(NULL, exeFullPath, MAX_PATH);
 	char *p = /*wcsrchr*/strrchr(exeFullPath, '\\');
 	*p = 0x00;
-	return  toWstring(exeFullPath);
+	return  ToUnicode(exeFullPath);
 }
 
 bool isRelativePath(const std::wstring & sPath)
@@ -157,6 +157,40 @@ std::wstring Utf8ToUnicode(const std::string& str)
 	return sResult;
 }
 
+std::wstring ToUnicode(const std::string& str)
+{
+    //UTF8 to Unicode
+    //预转换，得到所需空间的大小
+    int wcsLen = ::MultiByteToWideChar(CP_ACP, NULL, str.c_str(), strlen(str.c_str()), NULL, 0);
+    //分配空间要给'\0'留个空间，MultiByteToWideChar不会给'\0'空间
+    wchar_t* wszString = new wchar_t[wcsLen + 1];
+    //转换
+    ::MultiByteToWideChar(CP_ACP, NULL, str.c_str(), strlen(str.c_str()), wszString, wcsLen);
+    //最后加上'\0'
+    wszString[wcsLen] = '\0';
+    std::wstring sResult = wszString;
+    delete[] wszString;
+    return sResult;
+}
+
+std::string ToString(const std::wstring & str)
+{
+    // unicode to UTF8
+    //预转换，得到所需空间的大小，这次用的函数和上面名字相反
+    int u8Len = ::WideCharToMultiByte(CP_ACP, NULL, str.c_str(), wcslen(str.c_str()), NULL, 0, NULL, NULL);
+    //同上，分配空间要给'\0'留个空间
+    //UTF8虽然是Unicode的压缩形式，但也是多字节字符串，所以可以以char的形式保存
+    char* szU8 = new char[u8Len + 1];
+    //转换
+    //unicode版对应的strlen是wcslen
+    ::WideCharToMultiByte(CP_ACP, NULL, str.c_str(), wcslen(str.c_str()), szU8, u8Len, NULL, NULL);
+    //最后加上'\0'
+    szU8[u8Len] = '\0';
+    std::string sResult = szU8;
+    delete[] szU8;
+    return sResult;
+}
+
 std::fstream & operator<<(std::fstream & out, const std::wstring & s)
 {
 	out << UnicodeToUtf8(s);
@@ -185,7 +219,7 @@ void split(const std::wstring& sValue, wchar_t chr, std::vector<std::wstring>& o
 	auto nIndex = sTemp.find(chr, nStart);
 	while (nIndex != std::wstring::npos)
 	{
-		oStringList.push_back(sTemp.substr(nStart, nIndex));
+		oStringList.push_back(sTemp.substr(nStart, nIndex - nStart));
 		nStart = nIndex + 1;
 		nIndex = sTemp.find(chr, nStart);
 	}

@@ -44,4 +44,11 @@ public:
 	virtual CSkill* create(TiXmlElement* pSkillNode);
 };
 
+class CIncreaseSelfFeatureSkillFactroy : public CSkillFactory
+{
+public:
+    virtual std::wstring getName() { return L"IncreaseSelfFeature"; }
+    virtual CSkill* create(TiXmlElement* pSkillNode);
+};
+
 #endif // !SKILLFACTORY_H

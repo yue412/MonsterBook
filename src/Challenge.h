@@ -7,6 +7,7 @@
 class CChallenge
 {
 	friend class CConfig;
+    friend int main(int argc, char* argv[]);
 public:
     CChallenge();
     ~CChallenge();

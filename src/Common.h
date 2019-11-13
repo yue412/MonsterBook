@@ -18,6 +18,8 @@ std::wstring getFullPath(const std::wstring& sPath);
 wchar_t * getWC(const char *c);
 std::string UnicodeToUtf8(const std::wstring& str);
 std::wstring Utf8ToUnicode(const std::string& str);
+std::wstring ToUnicode(const std::string& str);
+std::string ToString(const std::wstring & str);
 std::fstream& operator<<(std::fstream& out, const std::wstring& s);
 std::fstream& operator<<(std::fstream& out, const wchar_t* s);
 bool fileExists(const std::wstring& sFile);

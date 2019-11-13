@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include "MonsterTypes.h"
+#include "Result.h"
 
 class CChallenge;
 class CMonster;
@@ -17,10 +18,15 @@ public:
     ~CGame();
 public:
     void play(std::vector<CSolutionPtr>& oSolutionList);
+    void play(CChallenge* pChallenge, CResult& oResult);
+    void simulator(std::vector<std::wstring>& oMonsterList, int* nResult);
+    int m_nCount;
 private:
     // ÃÙ’Ω“ªπÿ
-    bool play(CChallenge* pChallenge, CTeam& oTeam);
-    void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, std::size_t nStartIndex, std::size_t nCount, CTeam& oTeam, std::vector<CTeamPtr>& oTeamList);
+    void calc(CTeam& oTeam, double* oResult);
+    bool success(double* dChallengeRequired, double* dTeam);
+    void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, CResult& oResult);
+    void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, std::size_t nStartIndex, std::size_t nCount, CTeam& oTeam, CResult& oResult);
     void play(int nChallengeIndex, const std::vector<CMonster*>& oMonsterList, CSolution& oSolution, std::vector<CSolutionPtr>& oSolutionList);
     void removeMonster(std::vector<CMonster*>& oMonsterList, CTeamPtr pTeam);
     void clear();

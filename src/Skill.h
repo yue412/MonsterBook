@@ -14,12 +14,13 @@ protected:
 class CIncreaseFeatureSkill: public CSkill
 {
 public:
-    CIncreaseFeatureSkill(EnElementClass nClass, EnFeatures nFeature, int nValue): m_nClass(nClass), m_nFeature(nFeature), m_nValue(nValue) {}
+    CIncreaseFeatureSkill(EnElementClass nClass, EnFeatures nFeature, int nValue, int nTrigger = 0): m_nClass(nClass), m_nFeature(nFeature), m_nValue(nValue), m_nTrigger(nTrigger){}
 	virtual void affect(const CTeam& oTeam, double* oResult);
 private:
     EnElementClass m_nClass;
     EnFeatures m_nFeature;
     int m_nValue;
+    int m_nTrigger;
 };
 
 class CProductFeatureSkill : public CSkill
@@ -42,6 +43,16 @@ private:
 	EnElementClass m_nClass;
 	EnFeatures m_nFeature;
 	double m_dValue;
+};
+
+class CIncreaseSelfFeatureSkill : public CSkill
+{
+public:
+    CIncreaseSelfFeatureSkill(EnFeatures nFeature, double dValue) : m_nFeature(nFeature), m_dValue(dValue) {}
+    virtual void affect(const CTeam& oTeam, double* oResult);
+private:
+    EnFeatures m_nFeature;
+    double m_dValue;
 };
 
 class CGreenPlumBambooHorseSkill : public CSkill

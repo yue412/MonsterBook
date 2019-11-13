@@ -38,6 +38,25 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="草头" class="木">
+			<Features>79,34,34,88,34,40</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>			<Monster name="那家" class="木">
+			<Features>82,50,124,258,309,61</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
 		<Monster name="偃月刀灵" class="木">
 			<Features>103,34,52,39,30,34</Features>
 			<Skills>
@@ -48,13 +67,53 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="荞似" class="木">
-			<Features>27,42,31,69,34,88</Features>
+		<Monster name="荞静" class="木">
+			<Features>52,78,58,130,64,163</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>魅</Feature>
 					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="松果" class="木">
+			<Features>14,19,21,58,18,38</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="藤坠" class="木">
+			<Features>75,25,71,39,25,52</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="油侠" class="木">
+			<Features>192,68,101,54,68,62</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="智多星吴用" class="木">
+			<Features>68,238,68,84,84,118</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>智</Feature>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -75,6 +134,26 @@
 					<ElementClass>木</ElementClass>
 					<Feature>力</Feature>
 					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="樵有山" class="木">
+			<Features>129,47,42,47,42,117</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="蛇猿" class="木">
+			<Features>46,164,146,45,46,92</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.3</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -178,6 +257,569 @@
 					<Feature>运</Feature>
 					<Value>30</Value>
 				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="芭蕉叶" class="火">
+			<Features>34,34,48,67,84,147</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>速</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="卷娃" class="火">
+			<Features>107,118,136,136,180,90</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="羽腾" class="火">
+			<Features>48,44,31,63,42,63</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="丸烧" class="火">
+			<Features>21,27,82,38,44,82</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>火</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="惊毛" class="火">
+			<Features>58,54,63,58,44,138</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>火</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="松狮球" class="火">
+			<Features>36,86,50,217,160,115</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="赤红小鬼" class="火">
+			<Features>34,87,34,88,34,28</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="吃蚊兽" class="火">
+			<Features>215,59,115,92,68,115</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="未融" class="火">
+			<Features>89,272,96,306,108,68</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>魅</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="暖宝" class="火">
+			<Features>84,200,228,91,76,73</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>智</Feature>
+					<Value>100</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="渔常在" class="水">
+			<Features>46,114,45,46,46,130</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>技</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="呵" class="水">
+			<Features>50,23,23,23,23,23</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>全</Feature>
+					<Value>1</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="雪毛" class="水">
+			<Features>81,44,50,44,54,154</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>运</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="扑天雕李应" class="水">
+			<Features>157,94,198,54,62,78</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>速</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="某海龙王" class="水">
+			<Features>74,84,241,84,210,176</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>速</Feature>
+					<Value>50</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="乘风" class="水">
+			<Features>138,59,52,76,84,138</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="洞箫" class="水">
+			<Features>42,58,27,155,58,71</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>魅</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="珍藏" class="水">
+			<Features>36,36,92,113,46,92</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>速</Feature>
+					<Value>50</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="别浪" class="水">
+			<Features>188,56,188,84,62,89</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="箕水豹" class="水">
+			<Features>234,99,66,107,74,166</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="瓶守" class="水">
+			<Features>48,38,63,31,23,90</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="月光兰" class="水">
+			<Features>63,50,88,50,19,23</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="般若娘" class="光">
+			<Features>40,83,40,101,118,44</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="虎娃" class="光">
+			<Features>81,40,60,122,40,81</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>			
+		<Monster name="放晴女" class="光">
+			<Features>44,112,44,150,134,56</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>智</Feature>
+					<Value>50</Value>
+				</Skill>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>光</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="白求恩" class="光">
+			<Features>152,42,136,42,54,114</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="娄金狗" class="光">
+			<Features>176,84,139,70,70,106</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="玉兔" class="光">
+			<Features>94,74,62,49,187,74</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="藏鼠" class="光">
+			<Features>89,306,108,272,96,68</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>80</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="雷坊主" class="光">
+			<Features>48,38,122,44,51,122</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>光</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="法糕" class="光">
+			<Features>21,52,39,21,92,65</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="白蛇魅" class="光">
+			<Features>40,79,167,128,56,79</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>光</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="起司君" class="光">
+			<Features>96,153,384,132,436,125</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>光</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="狐魅" class="光">
+			<Features>23,75,151,178,39,75</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>		
+		<Monster name="纱帽" class="光">
+			<Features>65,132,34,52,44,88</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>		
+		<Monster name="鼠魅娘" class="地">
+			<Features>53,124,143,53,60,104</Features>
+		</Monster>		
+		<Monster name="锦衣卫" class="地">
+			<Features>130,41,112,41,42,56</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="沐猴" class="地">
+			<Features>50,146,106,44,122,72</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="吃狂" class="地">
+			<Features>137,60,54,54,60,60</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="魂安鼎" class="地">
+			<Features>117,72,66,117,185,86</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>运</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="戟甲虫" class="地">
+			<Features>116,26,48,112,57,66</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="杜甫" class="地">
+			<Features>37,113,37,92,92,176</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>智</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="纺女" class="地">
+			<Features>40,56,49,141,40,100</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="华佗" class="地">
+			<Features>57,208,73,96,118,208</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="遗双" class="地">
+			<Features>31,48,19,60,130,121</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<Trigger>4</Trigger>
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>30</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="瓜瓜儿" class="地">
+			<Features>89,96,306,108,272,68</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>200</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="夺衣婆" class="暗">
+			<Features>48,48,44,132,44,114</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="暴刺灵" class="暗">
+			<Features>132,39,39,39,50,123</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="凶灵" class="暗">
+			<Features>122,60,106,44,52,44</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>暗</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>					
+			</Skills>
+		</Monster>		
+		<Monster name="勤娘子" class="暗">
+			<Features>30,44,91,120,106,34</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>魅</Feature>
+					<Value>30</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="恶魃" class="暗">
+			<Features>114,42,54,152,42,136</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>30</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="夜游鬼" class="暗">
+			<Features>128,40,110,44,52,52</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="鼎吊鬼" class="暗">
+			<Features>50,56,68,62,166,136</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>暗</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>					
+			</Skills>
+		</Monster>		
+		<Monster name="秘灯" class="暗">
+			<Features>129,64,52,96,42,42</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="月燕" class="暗">
+			<Features>127,41,44,145,51,31</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>力</Feature>
+					<Value>40</Value>
+				</Skill>	
 			</Skills>
 		</Monster>		
 	</Monsters>

@@ -21,7 +21,9 @@ CSkill * CIncreaseFeatureSkillFactory::create(TiXmlElement * pSkillNode)
     auto nFeature = pNode ? Name2Feature(Utf8ToUnicode(pNode->GetText())) : EF_ALL;
     pNode = pSkillNode->FirstChildElement("Value");
     auto nValue = std::stoi(pNode->GetText());
-    return new CIncreaseFeatureSkill(nClass, nFeature, nValue);
+    pNode = pSkillNode->FirstChildElement("Trigger");
+    auto nTrigger = pNode ? std::stoi(pNode->GetText()) : 0;
+    return new CIncreaseFeatureSkill(nClass, nFeature, nValue, nTrigger);
 }
 
 CSkill * CGreenPlumBambooHorseSkillFactroy::create(TiXmlElement * pSkillNode)
@@ -51,3 +53,11 @@ CSkill * CIncreaseSelfFeatureByCountSkillFactroy::create(TiXmlElement * pSkillNo
 	return new CIncreaseSelfFeatureByCountSkill(nClass, nFeature, dValue);
 }
 
+CSkill * CIncreaseSelfFeatureSkillFactroy::create(TiXmlElement * pSkillNode)
+{
+    auto pNode = pSkillNode->FirstChildElement("Feature");
+    auto nFeature = pNode ? Name2Feature(Utf8ToUnicode(pNode->GetText())) : EF_ALL;
+    pNode = pSkillNode->FirstChildElement("Value");
+    auto dValue = std::stod(pNode->GetText());
+    return new CIncreaseSelfFeatureSkill(nFeature, dValue);
+}

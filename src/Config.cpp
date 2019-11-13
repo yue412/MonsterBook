@@ -13,14 +13,15 @@ std::vector<CSkillFactoryPtr> g_oSkillFactory = {
     CSkillFactoryPtr(new CGreenPlumBambooHorseSkillFactroy), 
     CSkillFactoryPtr(new CIncreaseFeatureSkillFactory),
 	CSkillFactoryPtr(new CProductFeatureSkillFactroy),
-	CSkillFactoryPtr(new CIncreaseSelfFeatureByCountSkillFactroy)
+	CSkillFactoryPtr(new CIncreaseSelfFeatureByCountSkillFactroy),
+    CSkillFactoryPtr(new CIncreaseSelfFeatureSkillFactroy)
 };
 
 void CConfig::init(CGame * pGame)
 {
 	auto sConfig = getExePath() + L"\\config.xml";
 	TiXmlDocument oDocument;
-	if (oDocument.LoadFile(toString(sConfig), TIXML_ENCODING_UTF8))
+	if (oDocument.LoadFile(ToString(sConfig), TIXML_ENCODING_UTF8))
 	{
 		auto pRoot = oDocument.RootElement();
 		if (!pRoot)

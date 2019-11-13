@@ -15,7 +15,7 @@ enum EnElementClass
     EC_ALL
 };
 
-const std::wstring g_sClassNames[] = { L"木", L"土", L"水", L"火", L"光", L"暗", L"全" };
+const std::wstring g_sClassNames[] = { L"木", L"地", L"水", L"火", L"光", L"暗", L"全" };
 
 enum EnFeatures
 {
