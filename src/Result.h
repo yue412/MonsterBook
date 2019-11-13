@@ -33,10 +33,10 @@ public:
 public:
     void setTop(int nNum) { m_nNum = nNum; }
     void add(CTeamPtr pTeam, double* dFeatures);
-    void insertOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset);
-    void removeOrder(EnResultOrderType nType);
+	void changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset);
 private:
-    void initItem(CTeamPtr pTeam, double* dFeatures, CResultItem& oItem);
+	void removeOrder(EnResultOrderType nType);
+	void initItem(CTeamPtr pTeam, double* dFeatures, CResultItem& oItem);
     bool compare(int nAscOrDesc, double dVal1, double dVal2, bool& bResult);
     int m_nNum;
     std::list<CResultItem> m_oTeamList;

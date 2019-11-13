@@ -6,6 +6,8 @@
 CResult::CResult(): m_nNum(10)
 {
     m_oOrderList.push_back(std::make_pair(RO_CLOSE, MB_ASC));
+	m_oOrderList.push_back(std::make_pair(RO_FEATURES, MB_ASC));
+	m_oOrderList.push_back(std::make_pair(RO_SIZE, MB_ASC));
 }
 
 CResult::~CResult()
@@ -52,7 +54,7 @@ void CResult::add(CTeamPtr pTeam, double* dFeatures)
     }
 }
 
-void CResult::insertOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset)
+void CResult::changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset)
 {
     removeOrder(nType);
     if (nOffset > (int)m_oOrderList.size())

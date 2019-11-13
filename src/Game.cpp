@@ -18,6 +18,21 @@ CGame::~CGame()
     clear();
 }
 
+void CGame::exclude(std::vector<std::wstring>& oMonsterList)
+{
+	for each (auto sName in oMonsterList)
+	{
+		auto itr = std::find_if(m_oMonsterList.begin(), m_oMonsterList.end(), [sName](CMonster* pMonster) {
+			return pMonster->getName() == sName;
+		});
+		if (itr != m_oMonsterList.end())
+		{
+			delete *itr;
+			m_oMonsterList.erase(itr);
+		}
+	}
+}
+
 void CGame::play(std::vector<CSolutionPtr>& oSolutionList)
 {
     std::sort(m_oChallengeList.begin(), m_oChallengeList.end(), 

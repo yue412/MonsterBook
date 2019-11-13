@@ -20,6 +20,7 @@ public:
     void play(std::vector<CSolutionPtr>& oSolutionList);
     void play(CChallenge* pChallenge, CResult& oResult);
     void simulator(std::vector<std::wstring>& oMonsterList, int* nResult);
+	void exclude(std::vector<std::wstring>& oMonsterList);
     int m_nCount;
 private:
     // ÃÙ’Ω“ªπÿ

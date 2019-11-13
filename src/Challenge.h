@@ -2,12 +2,13 @@
 #define CHALLENGE_H
 
 #include <string>
+#include <map>
 #include "MonsterTypes.h"
 
 class CChallenge
 {
 	friend class CConfig;
-    friend int main(int argc, char* argv[]);
+	friend void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge& oChallenge);
 public:
     CChallenge();
     ~CChallenge();

@@ -29,6 +29,7 @@ enum EnFeatures
 };
 
 const std::wstring g_sFeatureNames[] = { L"力", L"智", L"速", L"魅", L"运", L"技", L"全" };
+const std::wstring g_sFeatureShortNames[] = { L"power", L"int", L"speed", L"charm", L"lucky", L"tech", L"all" };
 
 class CMonster;
 typedef std::vector<CMonster*> CTeam;

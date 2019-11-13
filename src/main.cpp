@@ -42,8 +42,8 @@ void output(const CResult& oResult)
         {
             std::cout << ToString(pMonster->getName()) << ",";
         }
-        std::cout << std::endl;
-        std::cout << "\t\t";
+        //std::cout << std::endl;
+        std::cout << "\t";
         for (int i = 0; i < EF_ALL; i++)
         {
             std::cout << (int)ceil(oItem.dFeatures[i]) << ",";
@@ -54,42 +54,56 @@ void output(const CResult& oResult)
 
 void parseParams(const std::wstring& sParams, std::map<std::wstring, std::wstring>& oParamsMap)
 {
-    std::vector<std::wstring> oParamsList;
-    split(sParams, L';', oParamsList);
-    for each (auto sParam in oParamsList)
-    {
         std::vector<std::wstring> oList;
-        split(sParam, L'=', oList);
-        switch (oList.size())
-        {
-        case 0:
-            break;
-        case 1:
-            oParamsMap.insert(std::make_pair(L"", oList[0]));
-            break;
-        default:
-            oParamsMap.insert(std::make_pair(oList[0], oList[1]));
-        }
-    }
+        split(sParams, L'=', oList);
+        if (oList.size()>1)
+            oParamsMap[oList[0]] = oList[1];
 }
 
-bool parse(const std::wstring& sLine, std::wstring& sCommand, std::wstring& sParams)
+bool getOrderInfo(const std::wstring& sName, const std::map<std::wstring, std::wstring>& oParamsMap,  int& nAscOrDesc, int& nOffset)
 {
-    sCommand = L"";
-    sParams = L"";
-    std::vector<std::wstring> oStringList;
-    split(sLine, L':', oStringList);
-    if (oStringList.size() == 0)
-        return false;
-    sCommand = oStringList[0];
-    if (oStringList.size() == 1)
-        return true;
-    sParams = oStringList[1];
-    return true;
+	auto itr = oParamsMap.find(sName);
+	if (itr != oParamsMap.end())
+	{
+		auto s = itr->second;
+		std::vector<std::wstring> oStringList;
+		split(s, L',', oStringList);
+		if (oStringList.size() == 2)
+		{
+			nAscOrDesc = oStringList[0] == L"asc" ? MB_ASC : MB_DESC;
+			nOffset = std::stoi(oStringList[1]);
+			return true;
+		}
+	}
+	return false;
+}
+
+void initResult(std::map<std::wstring, std::wstring>& oParamsMap, CResult& oResultList)
+{
+	int nAscOrDesc;
+	int nOffset;
+	if (getOrderInfo(L"size", oParamsMap, nAscOrDesc, nOffset))
+		oResultList.changeOrder(RO_SIZE, nAscOrDesc, nOffset);
+	if (getOrderInfo(L"features", oParamsMap, nAscOrDesc, nOffset))
+		oResultList.changeOrder(RO_FEATURES, nAscOrDesc, nOffset);
+	if (getOrderInfo(L"close", oParamsMap, nAscOrDesc, nOffset))
+		oResultList.changeOrder(RO_CLOSE, nAscOrDesc, nOffset);
+	oResultList.setTop(oParamsMap.find(L"top") == oParamsMap.end() ? 10 : std::stoi(oParamsMap[L"top"]));
+}
+
+void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge& oChallenge)
+{
+	oChallenge.m_nMin = oParamsMap.find(L"min") == oParamsMap.end() ? 0 : std::stoi(oParamsMap[L"min"]);
+	oChallenge.m_nMax = oParamsMap.find(L"max") == oParamsMap.end() ? 8 : std::stoi(oParamsMap[L"max"]);
+	for (int i = 0; i < EF_ALL; i++)
+	{
+		oChallenge.m_nRequired[i] = oParamsMap.find(g_sFeatureShortNames[i]) == oParamsMap.end() ? 0 : std::stoi(oParamsMap[g_sFeatureShortNames[i]]);
+	}
 }
 
 int main(int argc, char* argv[])
 {
+	std::map<std::wstring, std::wstring> oParamsMap;
     while (true)
     {
         std::string s;
@@ -98,19 +112,12 @@ int main(int argc, char* argv[])
             continue;
         std::wstring str = ToUnicode(s);
         std::transform(str.begin(), str.end(), str.begin(), ::tolower);
-        std::wstring sCmd, sParams;
-        if (!parse(str, sCmd, sParams))
-        {
-            std::cout << "parse error!" << std::endl;
-            continue;
-        }
-        std::map<std::wstring, std::wstring> oParamsMap;
-        parseParams(sParams, oParamsMap);
+
         CGame oGame;
         CConfig::init(&oGame);
-        if (sCmd == L"team")
+		if (str == L"simulator")
         {
-            auto sNames = oParamsMap[L""];
+            auto sNames = oParamsMap[L"team"];
             std::vector<std::wstring> oMonsterList;
             split(sNames, L',', oMonsterList);
             int oResult[EF_ALL];
@@ -122,33 +129,49 @@ int main(int argc, char* argv[])
             }
             std::cout << std::endl;
         }
-        else if (sCmd == L"challenge")
+		else if (str == L"play")
         {
             CChallenge oChallenge;
-            oChallenge.m_nMin = oParamsMap.find(L"min") == oParamsMap.end() ? 0 : std::stoi(oParamsMap[L"min"]);
-            oChallenge.m_nMax = oParamsMap.find(L"max") == oParamsMap.end() ? 8 : std::stoi(oParamsMap[L"max"]);
-            for (int i = 0; i < EF_ALL; i++)
-            {
-                oChallenge.m_nRequired[i] = oParamsMap.find(g_sFeatureNames[i]) == oParamsMap.end() ? 0 : std::stoi(oParamsMap[g_sFeatureNames[i]]);
-            }
-            auto nTime = GetTickCount();
+			initChallenge(oParamsMap, oChallenge);
+
             CResult oResultList;
-            oGame.play(&oChallenge, oResultList);
+			initResult(oParamsMap, oResultList);
+
+			if (oParamsMap.find(L"exclude") != oParamsMap.end())
+			{
+				std::vector<std::wstring> oStringList;
+				split(oParamsMap[L"exclude"], L',', oStringList);
+				oGame.exclude(oStringList);
+			}
+			auto nTime = GetTickCount();
+			oGame.play(&oChallenge, oResultList);
             std::cout << "count: " << oGame.m_nCount << std::endl;
             std::cout << "play: " << GetTickCount() - nTime << std::endl;
+
             output(oResultList);
         }
-        else
-        {
-            auto nTime = GetTickCount();
-            std::vector<CSolutionPtr> oResultList;
-            oGame.play(oResultList);
-            std::wcout << L"play: " << GetTickCount() - nTime << std::endl;
-            std::sort(oResultList.begin(), oResultList.end(), [](CSolutionPtr pSolution1, CSolutionPtr pSolution2) {
-                return pSolution1->size() > pSolution2->size();
-            });
-            output(oResultList);
-        }
+		else if (str == L"settings")
+		{
+			for each (auto oPair in oParamsMap)
+			{
+				std::cout << ToString(oPair.first) << "\t" << ToString(oPair.second) << std::endl;
+			}
+		}
+		else
+		{
+			parseParams(str, oParamsMap);
+		}
+        //else
+        //{
+        //    auto nTime = GetTickCount();
+        //    std::vector<CSolutionPtr> oResultList;
+        //    oGame.play(oResultList);
+        //    std::wcout << L"play: " << GetTickCount() - nTime << std::endl;
+        //    std::sort(oResultList.begin(), oResultList.end(), [](CSolutionPtr pSolution1, CSolutionPtr pSolution2) {
+        //        return pSolution1->size() > pSolution2->size();
+        //    });
+        //    output(oResultList);
+        //}
 
     }
 
