@@ -38,8 +38,8 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="草头" class="木">
-			<Features>79,34,34,88,34,40</Features>
+		<Monster name="草莽勇" class="木">
+			<Features>101,44,44,118,36,83</Features>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
@@ -478,8 +478,8 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="月光兰" class="水">
-			<Features>63,50,88,50,19,23</Features>
+		<Monster name="月光士" class="水">
+			<Features>130,71,182,71,41,50</Features>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
@@ -824,9 +824,6 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
-		<Challenge name="捕鱼" min="0" max="8">
-			<FeaturesRequired feature="速" limit="620"/>
-		</Challenge>
 		<Challenge name="森林" min="0" max="8">
 			<FeaturesRequired feature="魅" limit="40"/>
 		</Challenge>
@@ -836,15 +833,30 @@
 		<Challenge name="肉铺" min="0" max="8">
 			<FeaturesRequired feature="力" limit="150"/>
 		</Challenge>
+		<Challenge name="药房" min="0" max="8">
+			<FeaturesRequired feature="速" limit="460"/>
+		</Challenge>
 		<Challenge name="碑林" min="0" max="8">
 			<FeaturesRequired feature="速" limit="590"/>
 		</Challenge>
-		<Challenge name="药房" min="0" max="8">
-			<FeaturesRequired feature="速" limit="460"/>
+		<Challenge name="捕鱼" min="0" max="8">
+			<FeaturesRequired feature="速" limit="620"/>
 		</Challenge>
 		<Challenge name="饰品店" min="0" max="8">
 			<FeaturesRequired feature="智" limit="1105"/>
 			<FeaturesRequired feature="魅" limit="1305"/>
+		</Challenge>
+		<Challenge name="炼丹术" min="0" max="6">
+			<FeaturesRequired feature="魅" limit="1565"/>
+			<FeaturesRequired feature="运" limit="1515"/>
+		</Challenge>
+		<Challenge name="试练塔" min="0" max="8">
+			<FeaturesRequired feature="魅" limit="1235"/>
+			<FeaturesRequired feature="力" limit="1385"/>
+		</Challenge>
+		<Challenge name="铁匠装备铺" min="0" max="7">
+			<FeaturesRequired feature="速" limit="1310"/>
+			<FeaturesRequired feature="运" limit="1410"/>
 		</Challenge>
 	</Challenges>
 </MonsterBook>

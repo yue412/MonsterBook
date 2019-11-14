@@ -12,24 +12,24 @@
 
 void output(std::vector<CSolutionPtr>& oResultList)
 {
-  //  for (auto itr = oResultList.begin(); itr != oResultList.end(); itr++)
-  //  {
-  //      auto nIndex = itr - oResultList.begin() + 1;
-		//if (nIndex > 10)
-		//{
-		//	break;
-		//}
-  //      std::wcout << L"Solution " << nIndex << L":" << std::endl;
-  //      for each (auto pair in **itr)
-  //      {
-  //          std::wcout << pair.first->getName() << L"[";
-  //          for each (auto pMonster in *pair.second)
-  //          {
-  //              std::wcout << pMonster->getName() << L",";
-  //          }
-  //          std::wcout << L"]" << std::endl;
-  //      }
-  //  }
+    for (auto itr = oResultList.begin(); itr != oResultList.end(); itr++)
+    {
+        auto nIndex = itr - oResultList.begin() + 1;
+		if (nIndex > 10)
+		{
+			break;
+		}
+        std::cout << "Solution " << nIndex << ":" << std::endl;
+        for each (auto pair in **itr)
+        {
+            std::cout << ToString(pair.first->getName()) << "[";
+            for each (auto pMonster in *pair.second)
+            {
+                std::cout << ToString(pMonster->getName()) << ",";
+            }
+            std::cout << "]" << std::endl;
+        }
+    }
 }
 
 void output(const CResult& oResult)
@@ -157,22 +157,25 @@ int main(int argc, char* argv[])
 				std::cout << ToString(oPair.first) << "\t" << ToString(oPair.second) << std::endl;
 			}
 		}
+        else if (str == L"clear")
+        {
+            oParamsMap.clear();
+        }
+        else if (str == L"playall")
+        {
+            auto nTime = GetTickCount();
+            std::vector<CSolutionPtr> oResultList;
+            oGame.play(oResultList);
+            std::wcout << L"play: " << GetTickCount() - nTime << std::endl;
+            std::sort(oResultList.begin(), oResultList.end(), [](CSolutionPtr pSolution1, CSolutionPtr pSolution2) {
+                return pSolution1->size() > pSolution2->size();
+            });
+            output(oResultList);
+        }
 		else
 		{
 			parseParams(str, oParamsMap);
 		}
-        //else
-        //{
-        //    auto nTime = GetTickCount();
-        //    std::vector<CSolutionPtr> oResultList;
-        //    oGame.play(oResultList);
-        //    std::wcout << L"play: " << GetTickCount() - nTime << std::endl;
-        //    std::sort(oResultList.begin(), oResultList.end(), [](CSolutionPtr pSolution1, CSolutionPtr pSolution2) {
-        //        return pSolution1->size() > pSolution2->size();
-        //    });
-        //    output(oResultList);
-        //}
-
     }
 
     return 0;

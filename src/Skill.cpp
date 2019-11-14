@@ -7,6 +7,11 @@ CSkill::~CSkill()
 {
 }
 
+EnFeatures CSkill::getAffectFeature()
+{
+    return EF_ALL;
+}
+
 void CIncreaseFeatureSkill::affect(const CTeam & oTeam, double* oResult)
 {
     int nCount = m_nClass == EC_ALL ? oTeam.size() : std::count_if(oTeam.begin(), oTeam.end(),

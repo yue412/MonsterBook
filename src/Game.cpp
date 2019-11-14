@@ -52,20 +52,26 @@ void CGame::play(CChallenge * pChallenge, CResult& oResult)
 void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonsterList, CResult& oResult)
 {
     CTeam oTeam;
-    std::vector<CMonster*> oMonsters = oMonsterList;
     // ≈≈–Ú
-    std::set<EnFeatures> oFeatureSet;
+    char nFeatureSet = 0;
     for (int i = 0; i < EF_ALL; i++)
     {
         if (pChallenge->featuresRequired()[i] > g_dEpsilon)
-            oFeatureSet.insert((EnFeatures)i);
+        {
+            nFeatureSet |= 1 << i;
+        }
     }
-    oResult.m_oFeatureSet = oFeatureSet;
-    std::sort(oMonsters.begin(), oMonsters.end(), [oFeatureSet](CMonster* pMonster1, CMonster* pMonster2) {
-        return pMonster1->getFeatureSum(oFeatureSet) > pMonster2->getFeatureSum(oFeatureSet) + g_dEpsilon;
+    oResult.m_nFeatureSet = nFeatureSet;
+
+    std::vector<CMonster*> oMonsters;
+    std::copy_if(oMonsterList.begin(), oMonsterList.end(), std::back_inserter(oMonsters), [nFeatureSet](CMonster* pMonster) {
+        return pMonster->hasSpeciality(nFeatureSet);
     });
-    //std::vector<CMonster*> oList;
-    //std::copy(oMonsters.begin(), oMonsters.begin()+24, std::back_inserter(oList));
+
+    std::sort(oMonsters.begin(), oMonsters.end(), [nFeatureSet](CMonster* pMonster1, CMonster* pMonster2) {
+        return pMonster1->getFeatureSum(nFeatureSet) > pMonster2->getFeatureSum(nFeatureSet) + g_dEpsilon;
+    });
+
     play(pChallenge, oMonsters, 0, pChallenge->getMax(), oTeam, oResult);
 }
 
@@ -149,7 +155,7 @@ void CGame::play(int nChallengeIndex, const std::vector<CMonster*>& oMonsterList
         return;
     }
     CResult oResult;
-    oResult.setTop(5);
+    oResult.setTop(1);
     play(m_oChallengeList[nChallengeIndex], oMonsterList, oResult);
     for each (auto oItem in oResult.m_oTeamList)
     {
@@ -159,7 +165,8 @@ void CGame::play(int nChallengeIndex, const std::vector<CMonster*>& oMonsterList
         play(nChallengeIndex + 1, oList, oSolution, oSolutionList);
         oSolution.pop_back();
     }
-    play(nChallengeIndex + 1, oMonsterList, oSolution, oSolutionList);
+    if (oResult.m_oTeamList.size() == 0)
+        play(nChallengeIndex + 1, oMonsterList, oSolution, oSolutionList);
 }
 
 void CGame::removeMonster(std::vector<CMonster*>& oMonsterList, CTeamPtr pTeam)

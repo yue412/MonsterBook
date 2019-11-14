@@ -50,7 +50,7 @@ void CConfig::init(CGame * pGame)
 						pSkillNode = pSkillNode->NextSiblingElement();
 					}
 				}
-
+                pMonster->init();
 				pMonsterNode = pMonsterNode->NextSiblingElement();
 			}
 		}

@@ -13,6 +13,7 @@ typedef std::shared_ptr<CSolution> CSolutionPtr;
 class CGame
 {
     friend class CConfig;
+    friend int main(int argc, char* argv[]);
 public:
     CGame();
     ~CGame();

@@ -81,9 +81,12 @@ void CResult::initItem(CTeamPtr pTeam, double * dFeatures, CResultItem & oItem)
         oItem.dFeatures[i] = dFeatures[i];
     }
     oItem.dTotalNeedFeature = 0;
-    for each (auto nFeature in m_oFeatureSet)
+    for (int i = 0; i < EF_ALL; i++)
     {
-        oItem.dTotalNeedFeature += dFeatures[nFeature];
+        if (1 << i & m_nFeatureSet)
+        {
+            oItem.dTotalNeedFeature += dFeatures[i];
+        }
     }
     oItem.pTeam = pTeam;
 }

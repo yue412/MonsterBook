@@ -40,7 +40,7 @@ private:
     bool compare(int nAscOrDesc, double dVal1, double dVal2, bool& bResult);
     int m_nNum;
     std::list<CResultItem> m_oTeamList;
-    std::set<EnFeatures> m_oFeatureSet;
+    char m_nFeatureSet;
     std::vector<std::pair<EnResultOrderType, int>> m_oOrderList;
 };
 
