@@ -7,16 +7,9 @@
 
 class CSkill;
 
-struct CSpecialFeature
-{
-    EnFeatures nFeature;
-    double dValue;
-};
-
 class CMonster
 {
 	friend class CConfig;
-    friend int main(int argc, char* argv[]);
 public:
     CMonster();
     ~CMonster();
@@ -35,7 +28,6 @@ private:
 	EnElementClass m_nClass;
 	std::vector<CSkill*> m_oSkills;
 	double m_nFeatures[EF_ALL];
-    std::vector<CSpecialFeature> m_oFeatureOrder;
     char m_nSpeciality;
 };
 

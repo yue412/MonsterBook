@@ -37,7 +37,9 @@ void CGame::play(std::vector<CSolutionPtr>& oSolutionList)
 {
     std::sort(m_oChallengeList.begin(), m_oChallengeList.end(), 
         [](CChallenge* pChallenge1, CChallenge* pChallenge2) {
-			return sum(pChallenge1->featuresRequired()) > sum(pChallenge2->featuresRequired()) + g_dEpsilon;
+			return pChallenge1->getMax() == pChallenge2->getMax() ? 
+                sum(pChallenge1->featuresRequired()) > sum(pChallenge2->featuresRequired()) + g_dEpsilon :
+                pChallenge1->getMax() < pChallenge2->getMax();
         });
     CSolution oSolution;
     play(0, m_oMonsterList, oSolution, oSolutionList);

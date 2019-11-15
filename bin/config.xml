@@ -219,8 +219,8 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="艳灵" class="火">
-			<Features>16,30,19,56,31,23</Features>
+		<Monster name="玫瑰女仆" class="火">
+			<Features>28,51,34,98,56,42</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -228,6 +228,9 @@
 					<Value>15</Value>
 				</Skill>
 			</Skills>
+		</Monster>
+		<Monster name="悦鸣" class="火">
+			<Features>34,52,86,52,34,34</Features>
 		</Monster>
 		<Monster name="翼火蛇" class="火">
 			<Features>98,122,164,82,82,98</Features>
@@ -329,8 +332,8 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="赤红小鬼" class="火">
-			<Features>34,87,34,88,34,28</Features>
+		<Monster name="离空" class="火">
+			<Features>44,106,34,120,34,88</Features>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
@@ -487,7 +490,17 @@
 					<Value>1.3</Value>
 				</Skill>
 			</Skills>
-		</Monster>				
+		</Monster>	
+		<Monster name="条贱" class="水">
+			<Features>25,31,0,25,38,54</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>						
 		<Monster name="般若娘" class="光">
 			<Features>40,83,40,101,118,44</Features>
 			<Skills>
@@ -573,8 +586,8 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="法糕" class="光">
-			<Features>21,52,39,21,92,65</Features>
+		<Monster name="法海" class="光">
+			<Features>60,110,110,60,250,179</Features>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>地</ElementClass>
@@ -631,8 +644,8 @@
 		<Monster name="鼠魅娘" class="地">
 			<Features>53,124,143,53,60,104</Features>
 		</Monster>		
-		<Monster name="锦衣卫" class="地">
-			<Features>130,41,112,41,42,56</Features>
+		<Monster name="虎大官" class="地">
+			<Features>144,108,122,49,49,66</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -691,13 +704,13 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="纺女" class="地">
-			<Features>40,56,49,141,40,100</Features>
+		<Monster name="织女" class="地">
+			<Features>61,86,78,217,61,156</Features>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>技</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		

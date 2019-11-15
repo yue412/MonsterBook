@@ -72,9 +72,16 @@ void CConfig::init(CGame * pGame)
                     auto nFeature = Name2Feature(Utf8ToUnicode(pFeaturesRequiredNode->Attribute("feature")));
                     int nValue = 0;
                     pFeaturesRequiredNode->Attribute("limit", &nValue);
-                    for (int i = 0; i < EF_ALL; i++)
+                    if (nFeature == EF_ALL)
                     {
-                        pChallenge->m_nRequired[i] = nFeature == EF_ALL || i == nFeature ? nValue : 0;
+                        for (int i = 0; i < EF_ALL; i++)
+                        {
+                            pChallenge->m_nRequired[i] = nValue;
+                        }
+                    }
+                    else
+                    {
+                        pChallenge->m_nRequired[nFeature] = nValue;
                     }
                     pFeaturesRequiredNode = pFeaturesRequiredNode->NextSiblingElement("FeaturesRequired");
                 }

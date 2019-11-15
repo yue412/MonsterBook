@@ -19,7 +19,7 @@ void output(std::vector<CSolutionPtr>& oResultList)
 		{
 			break;
 		}
-        std::cout << "Solution " << nIndex << ":" << std::endl;
+        std::cout << "Solution " << nIndex << ":" << (*itr)->size() << std::endl;
         for each (auto pair in **itr)
         {
             std::cout << ToString(pair.first->getName()) << "[";
@@ -107,6 +107,7 @@ int main(int argc, char* argv[])
     while (true)
     {
         std::string s;
+        std::cout << ">";
         std::cin >> s;
         if (s.empty())
             continue;
