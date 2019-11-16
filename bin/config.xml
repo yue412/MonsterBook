@@ -168,8 +168,8 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="小龙人" class="木">
-			<Features>70,45,139,56,45,70</Features>
+		<Monster name="战龙" class="木">
+			<Features>88,58,176,70,58,88</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -178,8 +178,8 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="冲冲侠" class="木">
-			<Features>73,89,139,40,44,40</Features>
+		<Monster name="萌太骑" class="木">
+			<Features>94,114,176,50,56,50</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -207,6 +207,16 @@
 					<ElementClass>火</ElementClass>
 					<Feature>全</Feature>
 					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="油条条" class="火">
+			<Features>67,54,64,58,44,137</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>技</Feature>
+					<Value>15</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -387,6 +397,16 @@
 					<ElementClass>水</ElementClass>
 					<Feature>技</Feature>
 					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="罗刹" class="水">
+			<Features>98,30,77,36,34,34</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -584,6 +604,16 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="胖仔" class="光">
+			<Features>210,60,60,70,70,70</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>光</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="雷坊主" class="光">
 			<Features>48,38,122,44,51,122</Features>
 			<Skills>
@@ -659,6 +689,16 @@
 					<ElementClass>地</ElementClass>
 					<Feature>全</Feature>
 					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="狸弯" class="地">
+			<Features>173,68,85,74,80,68</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -750,6 +790,25 @@
 					<ElementClass>全</ElementClass>
 					<Feature>速</Feature>
 					<Value>200</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="妈蛋" class="暗">
+			<Features>0,-50,0,0,0,199</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>全</Feature>
+					<Value>1</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="贞珠" class="暗">
+			<Features>66,66,86,186,52,86</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
