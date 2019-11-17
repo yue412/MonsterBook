@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <memory>
 #include "SkillFactory.h"
+#include "SoulBead.h"
 
 typedef std::shared_ptr<CSkillFactory> CSkillFactoryPtr;
 std::vector<CSkillFactoryPtr> g_oSkillFactory = { 
@@ -50,7 +51,7 @@ void CConfig::init(CGame * pGame)
 						pSkillNode = pSkillNode->NextSiblingElement();
 					}
 				}
-                pMonster->init();
+                //pMonster->init();
 				pMonsterNode = pMonsterNode->NextSiblingElement();
 			}
 		}
@@ -88,6 +89,34 @@ void CConfig::init(CGame * pGame)
 
 				pChallengeNode = pChallengeNode->NextSiblingElement();
 			}
+		}
+		auto pSoulBeadsNode = pRoot->FirstChildElement("SoulBeads");
+		if (pSoulBeadsNode)
+		{
+			auto pSoulBeadNode = pSoulBeadsNode->FirstChildElement();
+			while (pSoulBeadNode)
+			{
+				auto pSoulBead = new CSoulBead;
+				pGame->m_oSoulBeadList.push_back(pSoulBead);
+				pSoulBead->m_nClass = Name2Class(Utf8ToUnicode(pSoulBeadNode->Attribute("class")));
+
+				// Features
+				initFeatures(pSoulBeadNode, "Features", pSoulBead->m_nFeatures);
+
+				pSoulBeadNode = pSoulBeadNode->NextSiblingElement();
+			}
+		}
+	}
+	for each (auto pMonster in pGame->m_oMonsterList)
+	{
+		auto nClass = pMonster->getClass();
+		auto itr = std::find_if(pGame->m_oSoulBeadList.begin(), pGame->m_oSoulBeadList.end(), [nClass](CSoulBead* pBead) {
+			return pBead->getClass() == nClass;
+			});
+		assert(itr != pGame->m_oSoulBeadList.end());
+		if (itr != pGame->m_oSoulBeadList.end())
+		{
+			pMonster->init(*itr);
 		}
 	}
 }

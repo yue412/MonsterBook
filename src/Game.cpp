@@ -7,6 +7,7 @@
 #include "Common.h"
 #include <assert.h>
 #include <iterator>
+#include "SoulBead.h"
 
 CGame::CGame()
 {
@@ -110,7 +111,8 @@ void CGame::calc(CTeam & oTeam, double * oResult)
     {
         assert(pMonster != nullptr);
         addVec(oResult, pMonster->getFeatures(), oResult);
-        for (int i = 0; i < pMonster->getSkillCount(); i++)
+		addVec(oResult, pMonster->getSoulBead()->getFeatures(), oResult);
+		for (int i = 0; i < pMonster->getSkillCount(); i++)
         {
             double incV[EF_ALL];
             pMonster->getSkill(i)->affect(oTeam, incV);
@@ -193,4 +195,8 @@ void CGame::clear()
         delete p;
     }
     m_oMonsterList.clear();
+	for each (auto p in m_oSoulBeadList)
+	{
+		delete p;
+	}
 }

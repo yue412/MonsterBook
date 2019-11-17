@@ -6,6 +6,7 @@
 
 class CChallenge;
 class CMonster;
+class CSoulBead;
 
 typedef std::vector<std::pair<CChallenge*, CTeamPtr>> CSolution;
 typedef std::shared_ptr<CSolution> CSolutionPtr;
@@ -34,6 +35,7 @@ private:
     void clear();
     std::vector<CChallenge*> m_oChallengeList;
     std::vector<CMonster*> m_oMonsterList;
+	std::vector<CSoulBead*> m_oSoulBeadList;
 };
 
 #endif // !GAME_H

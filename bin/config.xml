@@ -200,6 +200,26 @@
 				</Skill>				
 			</Skills>
 		</Monster>
+		<Monster name="房曰兔己" class="火">
+			<Features>84,94,113,189,189,76</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="绿帽" class="火">
+			<Features>133,44,66,52,44,87</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="藏犬屋" class="火">
 			<Features>166,54,144,59,59,54</Features>
 			<Skills>
@@ -210,8 +230,8 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="油条条" class="火">
-			<Features>67,54,64,58,44,137</Features>
+		<Monster name="油条兄弟" class="火">
+			<Features>106,64,76,70,51,166</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -230,13 +250,33 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="玫瑰女仆" class="火">
-			<Features>28,51,34,98,56,42</Features>
+		<Monster name="玫瑰夫人" class="火">
+			<Features>48,90,60,170,98,72</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>魅</Feature>
 					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="花木兰" class="火">
+			<Features>166,64,105,76,46,76</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="丽娜" class="火">
+			<Features>48,76,62,172,124,180</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -310,13 +350,18 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="丸烧" class="火">
-			<Features>21,27,82,38,44,82</Features>
+		<Monster name="莲童" class="火">
+			<Features>42,54,150,70,80,150</Features>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>火</ElementClass>
 					<Feature>全</Feature>
 					<Value>10</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>速</Feature>
+					<Value>15</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -449,13 +494,13 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="乘风" class="水">
-			<Features>138,59,52,76,84,138</Features>
+		<Monster name="云里金刚宋万" class="水">
+			<Features>191,84,73,106,116,191</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>力</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -669,6 +714,16 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
+		<Monster name="芒星" class="光">
+			<Features>36,44,130,90,71,58</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>		
 		<Monster name="纱帽" class="光">
 			<Features>65,132,34,52,44,88</Features>
 			<Skills>
@@ -681,6 +736,36 @@
 		</Monster>		
 		<Monster name="鼠魅娘" class="地">
 			<Features>53,124,143,53,60,104</Features>
+		</Monster>	
+		<Monster name="石墩" class="地">
+			<Features>102,34,34,46,46,46</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="肥方" class="地">
+			<Features>19,42,19,25,21,42</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>智</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="巨剑" class="地">
+			<Features>88,27,44,34,38,63</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
 		</Monster>		
 		<Monster name="虎大官" class="地">
 			<Features>144,108,122,49,49,66</Features>
@@ -793,6 +878,16 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
+		<Monster name="柴可夫司机" class="地">
+			<Features>110,62,172,62,47,86</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>	
+			</Skills>
+		</Monster>			
 		<Monster name="妈蛋" class="暗">
 			<Features>0,-50,0,0,0,199</Features>
 			<Skills>
@@ -800,6 +895,26 @@
 					<Feature>全</Feature>
 					<Value>1</Value>
 				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="神行太保戴宗" class="暗">
+			<Features>88,106,267,134,88,80</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="面假" class="暗">
+			<Features>126,42,84,42,62,72</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>	
 			</Skills>
 		</Monster>		
 		<Monster name="贞珠" class="暗">
@@ -832,6 +947,16 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
+		<Monster name="棋妖" class="暗">
+			<Features>25,156,46,60,149,107</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>暗</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>					
+			</Skills>
+		</Monster>		
 		<Monster name="凶灵" class="暗">
 			<Features>122,60,106,44,52,44</Features>
 			<Skills>
@@ -862,8 +987,8 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="夜游鬼" class="暗">
-			<Features>128,40,110,44,52,52</Features>
+		<Monster name="夜神月" class="暗">
+			<Features>166,54,153,54,54,54</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -942,5 +1067,30 @@
 			<FeaturesRequired feature="速" limit="1310"/>
 			<FeaturesRequired feature="运" limit="1410"/>
 		</Challenge>
+		<Challenge name="千年古寺" min="0" max="6">
+			<FeaturesRequired feature="速" limit="1430"/>
+			<FeaturesRequired feature="技" limit="1280"/>
+		</Challenge>
 	</Challenges>
+	<SoulBeads>
+		<!--力，智，速，魅，运，技-->
+		<SoulBead class="木">
+			<Features>0,0,0,0,0,0</Features>
+		</SoulBead>
+		<SoulBead class="地">
+			<Features>0,0,0,0,0,0</Features>
+		</SoulBead>
+		<SoulBead class="火">
+			<Features>0,0,0,0,0,0</Features>
+		</SoulBead>
+		<SoulBead class="水">
+			<Features>0,0,0,0,0,0</Features>
+		</SoulBead>
+		<SoulBead class="光">
+			<Features>0,0,0,0,48,0</Features>
+		</SoulBead>
+		<SoulBead class="暗">
+			<Features>0,0,0,0,0,0</Features>
+		</SoulBead>
+	</SoulBeads>
 </MonsterBook>

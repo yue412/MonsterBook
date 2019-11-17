@@ -6,6 +6,7 @@
 #include "MonsterTypes.h"
 
 class CSkill;
+class CSoulBead;
 
 class CMonster
 {
@@ -14,7 +15,8 @@ public:
     CMonster();
     ~CMonster();
 public:
-    void init();
+    void init(CSoulBead* pSoulBead);
+	CSoulBead* getSoulBead() { return m_pSoulBead; }
     std::wstring getName() { return m_sName; }
 	EnElementClass getClass() { return m_nClass; }
     double getFeature(EnFeatures nFeature) { return m_nFeatures[nFeature]; }
@@ -29,6 +31,7 @@ private:
 	std::vector<CSkill*> m_oSkills;
 	double m_nFeatures[EF_ALL];
     char m_nSpeciality;
+	CSoulBead* m_pSoulBead;
 };
 
 #endif // !CMONSTER_H
