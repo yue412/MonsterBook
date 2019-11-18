@@ -12,6 +12,7 @@
 
 void output(std::vector<CSolutionPtr>& oResultList)
 {
+    std::wstring sNames;
     for (auto itr = oResultList.begin(); itr != oResultList.end(); itr++)
     {
         auto nIndex = itr - oResultList.begin() + 1;
@@ -25,11 +26,13 @@ void output(std::vector<CSolutionPtr>& oResultList)
             std::cout << ToString(pair.first->getName()) << "[";
             for each (auto pMonster in *pair.second)
             {
+                sNames += pMonster->getName() + L",";
                 std::cout << ToString(pMonster->getName()) << ",";
             }
             std::cout << "]" << std::endl;
         }
     }
+    std::cout << ToString(sNames) << std::endl;
 }
 
 void output(const CResult& oResult)
@@ -144,6 +147,10 @@ int main(int argc, char* argv[])
 				split(oParamsMap[L"exclude"], L',', oStringList);
 				oGame.exclude(oStringList);
 			}
+            if (oParamsMap.find(L"class") != oParamsMap.end())
+            {
+                oGame.limitMonsterClass(Name2Class(oParamsMap[L"class"]));
+            }
 			auto nTime = GetTickCount();
 			oGame.play(&oChallenge, oResultList);
             std::cout << "count: " << oGame.m_nCount << std::endl;
@@ -161,6 +168,13 @@ int main(int argc, char* argv[])
         else if (str == L"clear")
         {
             oParamsMap.clear();
+        }
+        else if (str == L"list")
+        {
+            for each (auto pMonster in oGame.m_oMonsterList)
+            {
+                std::cout << ToString(pMonster->getName()) << "\t" << (int)pMonster->getSpeciality() << std::endl;
+            }
         }
         else if (str == L"playall")
         {

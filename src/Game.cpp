@@ -9,7 +9,7 @@
 #include <iterator>
 #include "SoulBead.h"
 
-CGame::CGame()
+CGame::CGame(): m_nClass(EC_ALL)
 {
 }
 
@@ -67,8 +67,8 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
     oResult.m_nFeatureSet = nFeatureSet;
 
     std::vector<CMonster*> oMonsters;
-    std::copy_if(oMonsterList.begin(), oMonsterList.end(), std::back_inserter(oMonsters), [nFeatureSet](CMonster* pMonster) {
-        return pMonster->hasSpeciality(nFeatureSet);
+    std::copy_if(oMonsterList.begin(), oMonsterList.end(), std::back_inserter(oMonsters), [this, nFeatureSet](CMonster* pMonster) {
+        return (this->m_nClass == EC_ALL || pMonster->getClass() == this->m_nClass) && pMonster->hasSpeciality(nFeatureSet);
     });
 
     std::sort(oMonsters.begin(), oMonsters.end(), [nFeatureSet](CMonster* pMonster1, CMonster* pMonster2) {
@@ -95,7 +95,7 @@ void CGame::simulator(std::vector<std::wstring>& oMonsterList, int * nResult)
     calc(oTeam, oTotal);
     for (int i = 0; i < EF_ALL; i++)
     {
-        nResult[i] = (int)ceil(oTotal[i]);
+        nResult[i] = (int)ceil(oTotal[i] - g_dEpsilon);
     }
 }
 
@@ -125,7 +125,7 @@ bool CGame::success(double * dChallengeRequired, double* dTeam)
 {
     for (int i = 0; i < EF_ALL; i++)
     {
-        if (!(ceil(dTeam[i]) + g_dEpsilon > dChallengeRequired[i]))
+        if (!(ceil(dTeam[i] - g_dEpsilon) + g_dEpsilon > dChallengeRequired[i]))
             return false;
     }
     return true;

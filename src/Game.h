@@ -23,6 +23,7 @@ public:
     void play(CChallenge* pChallenge, CResult& oResult);
     void simulator(std::vector<std::wstring>& oMonsterList, int* nResult);
 	void exclude(std::vector<std::wstring>& oMonsterList);
+    void limitMonsterClass(EnElementClass nClass) { m_nClass = nClass; }
     int m_nCount;
 private:
     // ÃÙ’Ω“ªπÿ
@@ -36,6 +37,7 @@ private:
     std::vector<CChallenge*> m_oChallengeList;
     std::vector<CMonster*> m_oMonsterList;
 	std::vector<CSoulBead*> m_oSoulBeadList;
+    EnElementClass m_nClass;
 };
 
 #endif // !GAME_H

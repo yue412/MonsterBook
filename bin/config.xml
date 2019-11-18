@@ -68,13 +68,13 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="荞静" class="木">
-			<Features>52,78,58,130,64,163</Features>
+		<Monster name="萌萌小乔" class="木">
+			<Features>72,110,82,181,90,228</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>魅</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -185,6 +185,16 @@
 					<ElementClass>木</ElementClass>
 					<Feature>速</Feature>
 					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="悦鼓" class="木">
+			<Features>30,29,85,30,34,94</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>木</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -405,13 +415,18 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="吃蚊兽" class="火">
-			<Features>215,59,115,92,68,115</Features>
+		<Monster name="螭吻" class="火">
+			<Features>286,81,152,122,92,152</Features>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>力</Feature>
 					<Value>1.6</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -737,6 +752,16 @@
 		<Monster name="鼠魅娘" class="地">
 			<Features>53,124,143,53,60,104</Features>
 		</Monster>	
+		<Monster name="勾鬼" class="地">
+			<Features>52,82,16,36,36,71</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="石墩" class="地">
 			<Features>102,34,34,46,46,46</Features>
 			<Skills>
@@ -747,18 +772,18 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="肥方" class="地">
-			<Features>19,42,19,25,21,42</Features>
+		<Monster name="苏东坡" class="地">
+			<Features>78,155,78,94,86,155</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>智</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="巨剑" class="地">
-			<Features>88,27,44,34,38,63</Features>
+		<Monster name="狗头铡" class="地">
+			<Features>131,43,48,52,56,96</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -835,6 +860,16 @@
 					<Feature>智</Feature>
 					<Value>30</Value>
 				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="张飞" class="地">
+			<Features>198,102,198,62,102,102</Features>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>2</Value>
+				</Skill>	
 			</Skills>
 		</Monster>		
 		<Monster name="织女" class="地">

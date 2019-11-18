@@ -25,6 +25,7 @@ public:
 	CSkill* getSkill(int nIndex) { return m_oSkills[nIndex]; }
 	int getSkillCount() { return (int)m_oSkills.size(); }
     bool hasSpeciality(char nSpecialitySet);
+    char getSpeciality() { return m_nSpeciality; }
 private:
     std::wstring m_sName;
 	EnElementClass m_nClass;

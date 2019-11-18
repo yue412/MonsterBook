@@ -24,7 +24,7 @@ void CMonster::init(CSoulBead* pSoulBead)
     std::vector<CSpecialFeature> oFeatureOrder(EF_ALL);
     for (int i = 0; i < EF_ALL; i++)
     {
-        oFeatureOrder[i].dValue = m_nFeatures[i] + (pSoulBead != nullptr) ? pSoulBead->getFeature((EnFeatures)i) : 0.0;
+        oFeatureOrder[i].dValue = m_nFeatures[i] + ((pSoulBead != nullptr) ? pSoulBead->getFeature((EnFeatures)i) : 0.0);
         oFeatureOrder[i].nFeature = (EnFeatures)i;
     }
     std::sort(oFeatureOrder.begin(), oFeatureOrder.end(), [](CSpecialFeature& oFeature1, CSpecialFeature& oFeature2) {
