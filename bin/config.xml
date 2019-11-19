@@ -98,8 +98,8 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="油侠" class="木">
-			<Features>192,68,101,54,68,62</Features>
+		<Monster name="豹子头林冲" class="木">
+			<Features>269,96,144,75,96,86</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -519,6 +519,16 @@
 				</Skill>
 			</Skills>
 		</Monster>				
+		<Monster name="海飞" class="水">
+			<Features>23,21,54,38,14,19</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>速</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="洞箫" class="水">
 			<Features>42,58,27,155,58,71</Features>
 			<Skills>
@@ -559,8 +569,8 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="瓶守" class="水">
-			<Features>48,38,63,31,23,90</Features>
+		<Monster name="巡卫" class="水">
+			<Features>88,70,117,58,45,165</Features>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
@@ -589,6 +599,16 @@
 				</Skill>
 			</Skills>
 		</Monster>						
+		<Monster name="镰鼬" class="光">
+			<Features>50,134,154,64,76,180</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>技</Feature>
+					<Value>50</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="般若娘" class="光">
 			<Features>40,83,40,101,118,44</Features>
 			<Skills>
@@ -739,13 +759,13 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="纱帽" class="光">
-			<Features>65,132,34,52,44,88</Features>
+		<Monster name="月骑" class="光">
+			<Features>106,211,55,84,70,139</Features>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>智</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>			
 			</Skills>
 		</Monster>		
@@ -802,8 +822,8 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="狸弯" class="地">
-			<Features>173,68,85,74,80,68</Features>
+		<Monster name="酱军" class="地">
+			<Features>200,78,128,84,92,78</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -1105,6 +1125,15 @@
 		<Challenge name="千年古寺" min="0" max="6">
 			<FeaturesRequired feature="速" limit="1430"/>
 			<FeaturesRequired feature="技" limit="1280"/>
+		</Challenge>
+	</Challenges>
+	<Challenges>
+		<Challenge name="主线" min="0" max="8">
+			<FeaturesRequired feature="力" limit="3300"/>
+		</Challenge>
+		<Challenge name="支线" min="0" max="8">
+			<FeaturesRequired feature="智" limit="1445"/>
+			<FeaturesRequired feature="速" limit="1495"/>
 		</Challenge>
 	</Challenges>
 	<SoulBeads>

@@ -6,8 +6,8 @@
 CResult::CResult(): m_nNum(10)
 {
     m_oOrderList.push_back(std::make_pair(RO_CLOSE, MB_ASC));
-	m_oOrderList.push_back(std::make_pair(RO_FEATURES, MB_ASC));
-	m_oOrderList.push_back(std::make_pair(RO_SIZE, MB_ASC));
+    m_oOrderList.push_back(std::make_pair(RO_SIZE, MB_DESC));
+    m_oOrderList.push_back(std::make_pair(RO_FEATURES, MB_ASC));
 }
 
 CResult::~CResult()
