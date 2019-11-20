@@ -112,7 +112,8 @@ void CGame::calc(CTeam & oTeam, double * oResult)
         assert(pMonster != nullptr);
         addVec(oResult, pMonster->getFeatures(), oResult);
 		addVec(oResult, pMonster->getSoulBead()->getFeatures(), oResult);
-		for (int i = 0; i < pMonster->getSkillCount(); i++)
+        int nCount = pMonster->getSkillCount();
+		for (int i = 0; i < nCount; i++)
         {
             double incV[EF_ALL];
             pMonster->getSkill(i)->affect(oTeam, incV);

@@ -1136,11 +1136,11 @@
 			<FeaturesRequired feature="速" limit="1430"/>
 			<FeaturesRequired feature="技" limit="1280"/>
 		</Challenge>
+	</Challenges>
+	<Challenges>
 		<Challenge name="主线" min="0" max="8">
 			<FeaturesRequired feature="速" limit="3300"/>
 		</Challenge>
-	</Challenges>
-	<Challenges>
 		<Challenge name="支线" min="0" max="8">
 			<FeaturesRequired feature="智" limit="1445"/>
 			<FeaturesRequired feature="速" limit="1495"/>

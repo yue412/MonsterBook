@@ -3,6 +3,8 @@
 
 #include "MonsterTypes.h"
 
+class CTeam;
+
 class CSkill
 {
 public:

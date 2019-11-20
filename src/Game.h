@@ -3,6 +3,7 @@
 
 #include "MonsterTypes.h"
 #include "Result.h"
+#include "Team.h"
 
 class CChallenge;
 class CMonster;

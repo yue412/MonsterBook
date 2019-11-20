@@ -4,6 +4,7 @@
 #include "MonsterTypes.h"
 #include <list>
 #include <set>
+#include "Team.h"
 
 enum EnResultOrderType
 {

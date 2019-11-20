@@ -2,6 +2,7 @@
 #include "Monster.h"
 #include <algorithm>
 #include "Common.h"
+#include "Team.h"
 
 CSkill::~CSkill()
 {
@@ -14,8 +15,7 @@ EnFeatures CSkill::getAffectFeature()
 
 void CIncreaseFeatureSkill::affect(const CTeam & oTeam, double* oResult)
 {
-    int nCount = m_nClass == EC_ALL ? oTeam.size() : std::count_if(oTeam.begin(), oTeam.end(),
-        [this](CMonster* pMonster) { return pMonster->getClass() == this->m_nClass; });
+    int nCount = m_nClass == EC_ALL ? oTeam.size() : oTeam.getCount(m_nClass);
     int nVal = m_nValue * nCount;
     if (nCount < m_nTrigger)
     {
