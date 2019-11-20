@@ -210,6 +210,16 @@
 				</Skill>				
 			</Skills>
 		</Monster>
+		<Monster name="破军星" class="火">
+			<Features>200,92,84,141,64,78</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="房曰兔己" class="火">
 			<Features>84,94,113,189,189,76</Features>
 			<Skills>
@@ -310,8 +320,8 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="布布" class="火">
-			<Features>19,39,36,100,31,71</Features>
+		<Monster name="西子" class="火">
+			<Features>35,72,66,183,58,132</Features>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>火</ElementClass>
@@ -519,8 +529,8 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="海飞" class="水">
-			<Features>23,21,54,38,14,19</Features>
+		<Monster name="兔娘" class="水">
+			<Features>60,56,129,93,35,50</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -694,13 +704,13 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="雷坊主" class="光">
-			<Features>48,38,122,44,51,122</Features>
+		<Monster name="金光雷公" class="光">
+			<Features>118,66,208,74,88,208</Features>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>光</ElementClass>
 					<Feature>全</Feature>
-					<Value>5</Value>
+					<Value>10</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -1002,8 +1012,8 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="棋妖" class="暗">
-			<Features>25,156,46,60,149,107</Features>
+		<Monster name="棋魂" class="暗">
+			<Features>44,190,60,75,168,122</Features>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>暗</ElementClass>
@@ -1126,11 +1136,11 @@
 			<FeaturesRequired feature="速" limit="1430"/>
 			<FeaturesRequired feature="技" limit="1280"/>
 		</Challenge>
+		<Challenge name="主线" min="0" max="8">
+			<FeaturesRequired feature="速" limit="3300"/>
+		</Challenge>
 	</Challenges>
 	<Challenges>
-		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="力" limit="3300"/>
-		</Challenge>
 		<Challenge name="支线" min="0" max="8">
 			<FeaturesRequired feature="智" limit="1445"/>
 			<FeaturesRequired feature="速" limit="1495"/>
