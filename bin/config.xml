@@ -330,13 +330,14 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="喵公子" class="火">
-			<Features>70,50,40,60,142,66</Features>
+		<Monster name="武曲星" class="火">
+			<Features>134,74,58,88,208,96</Features>
+			<Character>猫咪|魁梧|小眼睛</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -470,8 +471,31 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="罗刹" class="水">
-			<Features>98,30,77,36,34,34</Features>
+		<Monster name="角鱼" class="水">
+			<Features>40,30,79,94,33,30</Features>
+			<Character>自然|水性</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="摸鱼" class="水">
+			<Features>87,44,66,52,44,133</Features>
+			<Character>自然|人形</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="湿罗刹" class="水">
+			<Features>164,50,142,62,61,61</Features>
+			<Character>武器|人形|战士</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -972,8 +996,9 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="面假" class="暗">
-			<Features>126,42,84,42,62,72</Features>
+		<Monster name="鬼斩骨" class="暗">
+			<Features>160,52,105,52,80,90</Features>
+			<Character>娇小|邪恶|战士</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -1136,14 +1161,18 @@
 			<FeaturesRequired feature="速" limit="1430"/>
 			<FeaturesRequired feature="技" limit="1280"/>
 		</Challenge>
-	</Challenges>
-	<Challenges>
 		<Challenge name="主线" min="0" max="8">
 			<FeaturesRequired feature="速" limit="3300"/>
 		</Challenge>
-		<Challenge name="支线" min="0" max="8">
-			<FeaturesRequired feature="智" limit="1445"/>
-			<FeaturesRequired feature="速" limit="1495"/>
+	</Challenges>
+	<Challenges>
+		<Challenge name="支线1" min="0" max="8">
+			<FeaturesRequired feature="速" limit="1530"/>
+			<FeaturesRequired feature="运" limit="1630"/>
+		</Challenge>
+		<Challenge name="支线2" min="0" max="8">
+			<FeaturesRequired feature="速" limit="1565"/>
+			<FeaturesRequired feature="技" limit="1415"/>
 		</Challenge>
 	</Challenges>
 	<SoulBeads>
@@ -1152,7 +1181,7 @@
 			<Features>0,0,0,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>0,0,0,0,0,0</Features>
+			<Features>0,0,48,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>0,0,0,0,0,0</Features>
