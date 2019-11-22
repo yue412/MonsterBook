@@ -8,6 +8,9 @@
 #include <assert.h>
 #include <iterator>
 #include "SoulBead.h"
+#include <iostream>
+#include <Windows.h>
+#include "Fate.h"
 
 CGame::CGame(): m_nClass(EC_ALL)
 {
@@ -74,8 +77,11 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
     std::sort(oMonsters.begin(), oMonsters.end(), [nFeatureSet](CMonster* pMonster1, CMonster* pMonster2) {
         return pMonster1->getFeatureSum(nFeatureSet) > pMonster2->getFeatureSum(nFeatureSet) + g_dEpsilon;
     });
-
+    auto nTime = GetTickCount();
+    m_nCount = 0;
+    std::cout << ToString(pChallenge->getName()) << ":" << oMonsters.size() << "-" << pChallenge->getMax();
     play(pChallenge, oMonsters, 0, pChallenge->getMax(), oTeam, oResult);
+    std::cout << "\thitcount:" << m_nCount << "\ttime:" << GetTickCount() - nTime << std::endl;
 }
 
 void CGame::simulator(std::vector<std::wstring>& oMonsterList, int * nResult)
@@ -118,6 +124,21 @@ void CGame::calc(CTeam & oTeam, double * oResult)
             double incV[EF_ALL];
             pMonster->getSkill(i)->affect(oTeam, incV);
             addVec(oResult, incV, oResult);
+        }
+    }
+    CBigInt nIdSet = oTeam.getMonsterSet();
+    for each (auto pFate in m_oFateList)
+    {
+        CBigInt nFateSet = pFate->getMonsterSet();
+        if ((nFateSet & nIdSet) == nFateSet)
+        {
+            for (int i = 0; i < pFate->getSkillCount(); i++)
+            {
+                double incV[EF_ALL];
+                pFate->getSkill(i)->affect(oTeam, incV);
+                addVec(oResult, incV, oResult);
+            }
+            break;
         }
     }
 }
@@ -200,4 +221,10 @@ void CGame::clear()
 	{
 		delete p;
 	}
+    m_oSoulBeadList.clear();
+    for each (auto p in m_oFateList)
+    {
+        delete p;
+    }
+    m_oFateList.clear();
 }

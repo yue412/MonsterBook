@@ -60,3 +60,13 @@ CMonster * CTeam::getItems(int nIndex) const
 {
     return m_oMonsterList[nIndex];
 }
+
+CBigInt CTeam::getMonsterSet()
+{
+    CBigInt nResult;
+    for each (auto pMonster in m_oMonsterList)
+    {
+        nResult |= pMonster->getId();
+    }
+    return nResult;
+}

@@ -24,13 +24,6 @@ public:
     virtual CSkill* create(TiXmlElement* pSkillNode);
 };
 
-class CGreenPlumBambooHorseSkillFactroy : public CSkillFactory
-{
-public:
-    virtual std::wstring getName() { return L"GreenPlumBambooHorse"; }
-    virtual CSkill* create(TiXmlElement* pSkillNode);
-};
-
 class CProductFeatureSkillFactroy : public CSkillFactory
 {
 public:

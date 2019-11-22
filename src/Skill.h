@@ -62,11 +62,4 @@ private:
     double m_dValue;
 };
 
-class CGreenPlumBambooHorseSkill : public CSkill
-{
-public:
-	virtual void affect(const CTeam& oTeam, double* oResult);
-    virtual EnFeatures getAffectFeature() { return EF_POWER; }
-};
-
 #endif // !SKILL_H

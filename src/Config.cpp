@@ -8,10 +8,10 @@
 #include <memory>
 #include "SkillFactory.h"
 #include "SoulBead.h"
+#include "Fate.h"
 
 typedef std::shared_ptr<CSkillFactory> CSkillFactoryPtr;
 std::vector<CSkillFactoryPtr> g_oSkillFactory = { 
-    CSkillFactoryPtr(new CGreenPlumBambooHorseSkillFactroy), 
     CSkillFactoryPtr(new CIncreaseFeatureSkillFactory),
 	CSkillFactoryPtr(new CProductFeatureSkillFactroy),
 	CSkillFactoryPtr(new CIncreaseSelfFeatureByCountSkillFactroy),
@@ -20,6 +20,7 @@ std::vector<CSkillFactoryPtr> g_oSkillFactory = {
 
 void CConfig::init(CGame * pGame)
 {
+    int nIndex = 0;
 	auto sConfig = getExePath() + L"\\config.xml";
 	TiXmlDocument oDocument;
 	if (oDocument.LoadFile(ToString(sConfig), TIXML_ENCODING_UTF8))
@@ -35,22 +36,13 @@ void CConfig::init(CGame * pGame)
 			{
 				auto pMonster = new CMonster;
 				pGame->m_oMonsterList.push_back(pMonster);
+                pMonster->m_nId.setBit(nIndex, 1); ++nIndex;
 				pMonster->m_sName = Utf8ToUnicode(pMonsterNode->Attribute("name"));
 				pMonster->m_nClass = Name2Class(Utf8ToUnicode(pMonsterNode->Attribute("class")));
 				// Features
 				initFeatures(pMonsterNode, "Features", pMonster->m_nFeatures);
 				// Skills
-				auto pSkillsNode = pMonsterNode->FirstChildElement("Skills");
-				if (pSkillsNode)
-				{
-					auto pSkillNode = pSkillsNode->FirstChildElement();
-					while (pSkillNode)
-					{
-						std::wstring sSkillName = Utf8ToUnicode(pSkillNode->Attribute("name"));
-						pMonster->m_oSkills.push_back(createSkill(sSkillName, pSkillNode));
-						pSkillNode = pSkillNode->NextSiblingElement();
-					}
-				}
+                initSkills(pMonsterNode, pMonster->m_oSkills);
                 //pMonster->init();
 				pMonsterNode = pMonsterNode->NextSiblingElement();
 			}
@@ -106,7 +98,40 @@ void CConfig::init(CGame * pGame)
 				pSoulBeadNode = pSoulBeadNode->NextSiblingElement();
 			}
 		}
-	}
+        auto pFatesNode = pRoot->FirstChildElement("Fates");
+        if (pFatesNode)
+        {
+            auto pFateNode = pFatesNode->FirstChildElement();
+            while (pFateNode)
+            {
+                auto pFate = new CFate;
+                pGame->m_oFateList.push_back(pFate);
+                pFate->m_sName = Utf8ToUnicode(pFateNode->Attribute("name"));
+                // Skills
+                initSkills(pFateNode, pFate->m_oSkills);
+                // Monsters
+                auto pMonstersNode = pFateNode->FirstChildElement("Monsters");
+                if (pMonstersNode)
+                {
+                    auto sMonsters = Utf8ToUnicode(pMonstersNode->GetText());
+                    std::vector<std::wstring> oStringList;
+                    split(sMonsters, L'|', oStringList);
+                    for each (auto sName in oStringList)
+                    {
+                        auto itr = std::find_if(pGame->m_oMonsterList.begin(), pGame->m_oMonsterList.end(), [sName](CMonster* pMonster) {
+                            return pMonster->getName() == sName;
+                        });
+                        if (itr != pGame->m_oMonsterList.end())
+                        {
+                            pFate->m_oMonsters.push_back(*itr);
+                        }
+                    }
+                }
+
+                pFateNode = pFateNode->NextSiblingElement();
+            }
+        }
+    }
 	for each (auto pMonster in pGame->m_oMonsterList)
 	{
 		auto nClass = pMonster->getClass();
@@ -116,7 +141,7 @@ void CConfig::init(CGame * pGame)
 		assert(itr != pGame->m_oSoulBeadList.end());
 		if (itr != pGame->m_oSoulBeadList.end())
 		{
-			pMonster->init(*itr);
+			pMonster->init(*itr, pGame->m_oFateList);
 		}
 	}
 }
@@ -143,4 +168,20 @@ void CConfig::initFeatures(TiXmlElement* pNode, const std::string& sName, double
 	{
 		dFeatures[i] = i < oStringList.size() ? std::stoi(oStringList[i]) : 0;
 	}
+}
+
+void CConfig::initSkills(TiXmlElement * pNode, std::vector<CSkill*>& oSkills)
+{
+    auto pSkillsNode = pNode->FirstChildElement("Skills");
+    if (pSkillsNode)
+    {
+        auto pSkillNode = pSkillsNode->FirstChildElement();
+        while (pSkillNode)
+        {
+            std::wstring sSkillName = Utf8ToUnicode(pSkillNode->Attribute("name"));
+            oSkills.push_back(createSkill(sSkillName, pSkillNode));
+            pSkillNode = pSkillNode->NextSiblingElement();
+        }
+    }
+
 }

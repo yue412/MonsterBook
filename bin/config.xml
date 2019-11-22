@@ -9,8 +9,6 @@
 					<Feature>全</Feature>
 					<Value>5</Value>
 				</Skill>
-				<Skill name="GreenPlumBambooHorse">
-				</Skill>
 			</Skills>
 		</Monster>
 		<Monster name="树魅" class="木">
@@ -88,8 +86,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="藤坠" class="木">
-			<Features>75,25,71,39,25,52</Features>
+		<Monster name="刺喵" class="木">
+			<Features>140,50,134,76,50,95</Features>
+			<Character>自然|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -206,8 +205,6 @@
 					<Feature>魅</Feature>
 					<Value>2</Value>
 				</Skill>
-				<Skill name="GreenPlumBambooHorse">
-				</Skill>				
 			</Skills>
 		</Monster>
 		<Monster name="破军星" class="火">
@@ -461,6 +458,17 @@
 				</Skill>
 			</Skills>
 		</Monster>				
+		<Monster name="象拔兽" class="水">
+			<Character>自然|呆萌</Character>
+			<Features>90,30,30,48,30,81</Features>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>技</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="渔常在" class="水">
 			<Features>46,114,45,46,46,130</Features>
 			<Skills>
@@ -553,8 +561,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="兔娘" class="水">
-			<Features>60,56,129,93,35,50</Features>
+		<Monster name="海兔娘" class="水">
+			<Features>75,70,166,118,46,64</Features>
+			<Character>妖怪|妹纸|神速</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -600,6 +609,17 @@
 					<ElementClass>水</ElementClass>
 					<Feature>力</Feature>
 					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="周瑜" class="水">
+			<Features>77,104,218,173,104,86</Features>
+			<Character>呆萌|谋略|战士</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.3</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -768,8 +788,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="狐魅" class="光">
-			<Features>23,75,151,178,39,75</Features>
+		<Monster name="狐魉" class="光">
+			<Features>30,91,186,218,47,91</Features>
+			<Character>冰冷|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
@@ -816,8 +837,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="石墩" class="地">
-			<Features>102,34,34,46,46,46</Features>
+		<Monster name="石敢当" class="地">
+			<Features>175,58,58,70,88,88</Features>
+			<Character>武器|神勇|战士</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -1161,6 +1183,13 @@
 			<FeaturesRequired feature="速" limit="1430"/>
 			<FeaturesRequired feature="技" limit="1280"/>
 		</Challenge>
+		<Challenge name="图书馆" min="0" max="5">
+			<FeaturesRequired feature="智" limit="1100"/>
+			<FeaturesRequired feature="魅" limit="1705"/>
+		</Challenge>
+		<Challenge name="九离塔" min="0" max="8">
+			<FeaturesRequired feature="技" limit="3650"/>
+		</Challenge>
 		<Challenge name="主线" min="0" max="8">
 			<FeaturesRequired feature="速" limit="3300"/>
 		</Challenge>
@@ -1175,6 +1204,26 @@
 			<FeaturesRequired feature="技" limit="1415"/>
 		</Challenge>
 	</Challenges>
+	<Fates>
+		<Fate name="青梅竹马">
+			<Monsters>青梅公举|竹马王子</Monsters>
+			<Skills>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>力</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Fate>
+		<Fate name="政治婚姻">
+			<Monsters>周瑜|萌萌小乔</Monsters>
+			<Skills>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>魅</Feature>
+					<Value>250</Value>
+				</Skill>
+			</Skills>
+		</Fate>
+	</Fates>
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
@@ -1187,7 +1236,7 @@
 			<Features>0,0,0,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>0,0,0,0,0,0</Features>
+			<Features>0,48,0,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>0,0,0,0,48,0</Features>

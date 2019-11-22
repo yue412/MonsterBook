@@ -2,6 +2,7 @@
 #include <algorithm>
 #include "Skill.h"
 #include "SoulBead.h"
+#include "Fate.h"
 
 struct CSpecialFeature
 {
@@ -18,7 +19,7 @@ CMonster::~CMonster()
 {
 }
 
-void CMonster::init(CSoulBead* pSoulBead)
+void CMonster::init(CSoulBead* pSoulBead, const std::vector<CFate*>& oFateList)
 {
 	m_pSoulBead = pSoulBead;
     std::vector<CSpecialFeature> oFeatureOrder(EF_ALL);
@@ -43,6 +44,24 @@ void CMonster::init(CSoulBead* pSoulBead)
         if (pSkill->getAffectFeature() != EF_ALL)
         {
             m_nSpeciality |= 1 << pSkill->getAffectFeature();
+        }
+    }
+    for each (auto pFate in oFateList)
+    {
+        for (int i = 0; i < pFate->getMonsterCount(); i++)
+        {
+            if (pFate->getMonster(i) == this)
+            {
+                for (int j = 0; j < pFate->getSkillCount(); j++)
+                {
+                    auto pSkill = pFate->getSkill(j);
+                    if (pSkill->getAffectFeature() != EF_ALL)
+                    {
+                        m_nSpeciality |= 1 << pSkill->getAffectFeature();
+                    }
+                }
+                return;
+            }
         }
     }
 }

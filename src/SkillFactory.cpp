@@ -26,11 +26,6 @@ CSkill * CIncreaseFeatureSkillFactory::create(TiXmlElement * pSkillNode)
     return new CIncreaseFeatureSkill(nClass, nFeature, nValue, nTrigger);
 }
 
-CSkill * CGreenPlumBambooHorseSkillFactroy::create(TiXmlElement * pSkillNode)
-{
-    return new CGreenPlumBambooHorseSkill;
-}
-
 CSkill * CProductFeatureSkillFactroy::create(TiXmlElement * pSkillNode)
 {
 	auto pNode = pSkillNode->FirstChildElement("ElementClass");

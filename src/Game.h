@@ -8,6 +8,7 @@
 class CChallenge;
 class CMonster;
 class CSoulBead;
+class CFate;
 
 typedef std::vector<std::pair<CChallenge*, CTeamPtr>> CSolution;
 typedef std::shared_ptr<CSolution> CSolutionPtr;
@@ -38,6 +39,7 @@ private:
     std::vector<CChallenge*> m_oChallengeList;
     std::vector<CMonster*> m_oMonsterList;
 	std::vector<CSoulBead*> m_oSoulBeadList;
+    std::vector<CFate*> m_oFateList;
     EnElementClass m_nClass;
 };
 

@@ -2,6 +2,7 @@
 #define TEAM_H
 
 #include "MonsterTypes.h"
+#include "BigInt.h"
 
 class CMonster;
 
@@ -19,6 +20,7 @@ public:
     int size() const;
     int getCount(EnElementClass nClass) const;
     CMonster* getItems(int nIndex) const;
+    CBigInt getMonsterSet();
 private:
     std::vector<CMonster*> m_oMonsterList;
     int m_nCount[EC_ALL];

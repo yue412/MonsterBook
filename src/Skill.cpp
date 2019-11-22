@@ -32,20 +32,6 @@ void CIncreaseFeatureSkill::affect(const CTeam & oTeam, double* oResult)
     }
 }
 
-void CGreenPlumBambooHorseSkill::affect(const CTeam & oTeam, double* oResult)
-{
-	fill(oResult, 0.0);
-    auto itr = std::find_if(oTeam.begin(), oTeam.end(), [](CMonster* pMonster) { return pMonster->getName() == L"青梅公举"; });
-    if (itr != oTeam.end())
-    {
-        itr = std::find_if(oTeam.begin(), oTeam.end(), [](CMonster* pMonster) { return pMonster->getName() == L"竹马王子"; });
-        if (itr != oTeam.end())
-        {
-            oResult[EF_POWER] = 200;
-        }
-    }
-}
-
 void CProductFeatureSkill::affect(const CTeam & oTeam, double* oResult)
 {
 	fill(oResult, 0.0);

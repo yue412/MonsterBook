@@ -3,10 +3,12 @@
 
 #include <string>
 #include <set>
+#include "BigInt.h"
 #include "MonsterTypes.h"
 
 class CSkill;
 class CSoulBead;
+class CFate;
 
 class CMonster
 {
@@ -15,7 +17,7 @@ public:
     CMonster();
     ~CMonster();
 public:
-    void init(CSoulBead* pSoulBead);
+    void init(CSoulBead* pSoulBead, const std::vector<CFate*>& oFateList);
 	CSoulBead* getSoulBead() { return m_pSoulBead; }
     std::wstring getName() { return m_sName; }
 	EnElementClass getClass() { return m_nClass; }
@@ -26,6 +28,7 @@ public:
 	int getSkillCount() { return (int)m_oSkills.size(); }
     bool hasSpeciality(char nSpecialitySet);
     char getSpeciality() { return m_nSpeciality; }
+    CBigInt& getId() { return m_nId; }
 private:
     std::wstring m_sName;
 	EnElementClass m_nClass;
@@ -33,6 +36,7 @@ private:
 	double m_nFeatures[EF_ALL];
     char m_nSpeciality;
 	CSoulBead* m_pSoulBead;
+    CBigInt m_nId;
 };
 
 #endif // !CMONSTER_H
