@@ -41,6 +41,7 @@ private:
 	std::vector<CSoulBead*> m_oSoulBeadList;
     std::vector<CFate*> m_oFateList;
     EnElementClass m_nClass;
+    CStageInfo* m_pStackTop;
 };
 
 #endif // !GAME_H
