@@ -71,7 +71,7 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
 
     std::vector<CMonster*> oMonsters;
     std::copy_if(oMonsterList.begin(), oMonsterList.end(), std::back_inserter(oMonsters), [this, nFeatureSet](CMonster* pMonster) {
-        return (this->m_nClass == EC_ALL || pMonster->getClass() == this->m_nClass) && pMonster->hasSpeciality(nFeatureSet);
+        return (this->m_nClass == EC_ALL && pMonster->hasSpeciality(nFeatureSet) || pMonster->getClass() == this->m_nClass);
     });
 
     std::sort(oMonsters.begin(), oMonsters.end(), [nFeatureSet](CMonster* pMonster1, CMonster* pMonster2) {
