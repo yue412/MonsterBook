@@ -12,7 +12,18 @@
 #include <Windows.h>
 #include "Fate.h"
 
-CGame::CGame(): m_nClass(EC_ALL)
+struct CStageInfo
+{
+    CChallenge* pChallenge;
+    std::vector<CMonster*>* pMonsterList;
+    CResult* pResult;
+    std::size_t nStartIndex;
+    std::size_t nCount; 
+    CTeam oTeam; 
+    CStageInfo* pPrev;
+};
+
+CGame::CGame(): m_nClass(EC_ALL), m_pStackTop(nullptr)
 {
 }
 
@@ -126,6 +137,7 @@ void CGame::calc(CTeam & oTeam, double * oResult)
             addVec(oResult, incV, oResult);
         }
     }
+    /*
     CBigInt nIdSet = oTeam.getMonsterSet();
     for each (auto pFate in m_oFateList)
     {
@@ -141,6 +153,7 @@ void CGame::calc(CTeam & oTeam, double * oResult)
             break;
         }
     }
+    */
 }
 
 bool CGame::success(double * dChallengeRequired, double* dTeam)
