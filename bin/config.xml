@@ -26,13 +26,14 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="肉迷" class="木">
-			<Features>205,76,102,86,102,94</Features>
+		<Monster name="饕餮" class="木">
+			<Features>240,90,120,100,120,109</Features>
+			<Character>美食|妖怪|神秘</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>力</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -56,8 +57,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="兔子将" class="木">
-			<Features>192,64,95,76,56,64</Features>
+		<Monster name="大刀关胜" class="木">
+			<Features>267,88,134,106,80,88</Features>
+			<Character>武器|人形|善良</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
@@ -86,14 +88,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="刺喵" class="木">
-			<Features>140,50,134,76,50,95</Features>
-			<Character>自然|人形</Character>
+		<Monster name="刺客荆轲" class="木">
+			<Features>221,80,211,121,80,152</Features>
+			<Character>自然|人形|战士</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>力</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -257,8 +259,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="蜡犬" class="火">
-			<Features>30,33,94,30,34,83</Features>
+		<Monster name="蜡祭狮" class="火">
+			<Features>54,54,166,54,54,154</Features>
+			<Character>呆萌|小眼睛|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -403,13 +406,14 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="松狮球" class="火">
-			<Features>36,86,50,217,160,115</Features>
+		<Monster name="结缘者" class="火">
+			<Features>48,116,65,290,211,154</Features>
+			<Character>吉祥|妖怪|人形</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>魅</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -634,8 +638,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="巡卫" class="水">
-			<Features>88,70,117,58,45,165</Features>
+		<Monster name="小李广花容" class="水">
+			<Features>124,98,165,82,66,232</Features>
+			<Character>善良|人形|神勇</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
@@ -815,6 +820,17 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
+		<Monster name="元始" class="光">
+			<Features>42,84,27,69,42,30</Features>
+			<Character>自然</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>		
 		<Monster name="芒星" class="光">
 			<Features>36,44,130,90,71,58</Features>
 			<Skills>
@@ -979,14 +995,15 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="遗双" class="地">
-			<Features>31,48,19,60,130,121</Features>
+		<Monster name="恐轻" class="地">
+			<Features>52,84,32,98,207,195</Features>
+			<Character>呆萌|妖怪</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<Trigger>4</Trigger>
 					<ElementClass>地</ElementClass>
 					<Feature>全</Feature>
-					<Value>30</Value>
+					<Value>60</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
