@@ -11,19 +11,146 @@
 #include <iostream>
 #include <Windows.h>
 #include "Fate.h"
+#include <thread>
+#include <mutex>
+#include <chrono>
 
 struct CStageInfo
 {
     CChallenge* pChallenge;
     std::vector<CMonster*>* pMonsterList;
     CResult* pResult;
-    std::size_t nStartIndex;
-    std::size_t nCount; 
+    int nStartIndex;
+    int nCount; 
     CTeam oTeam; 
     CStageInfo* pPrev;
 };
 
-CGame::CGame(): m_nClass(EC_ALL), m_pStackTop(nullptr)
+std::mutex g_stage_mutex;
+
+
+CStageInfo* popInfo(CStageInfo** pStackTop)
+{
+	CStageInfo* pInfo = nullptr;
+	g_stage_mutex.lock();
+	bool bExists = *pStackTop != nullptr;
+	if (bExists)
+	{
+		pInfo = *pStackTop;
+		*pStackTop = pInfo->pPrev;
+		//std::cout << pInfo->oTeam.size() <<"," << pInfo->nStartIndex << "," << pInfo->nCount << "," << std::endl;
+	}
+	g_stage_mutex.unlock();
+	return pInfo;
+}
+
+void calc(CTeam& oTeam, double* oResult)
+{
+	//if (oTeam.size() == 8 && oTeam[7]->getName() == L"ÖÇ¶àÐÇÎâÓÃ")
+	//{
+	//    fill(oResult, 0.0);
+	//}
+	//++m_nCount;
+	fill(oResult, 0.0);
+	for each (auto pMonster in oTeam)
+	{
+		assert(pMonster != nullptr);
+		addVec(oResult, pMonster->getFeatures(), oResult);
+		addVec(oResult, pMonster->getSoulBead()->getFeatures(), oResult);
+		int nCount = pMonster->getSkillCount();
+		for (int i = 0; i < nCount; i++)
+		{
+			double incV[EF_ALL];
+			pMonster->getSkill(i)->affect(oTeam, incV);
+			addVec(oResult, incV, oResult);
+		}
+	}
+	/*
+	CBigInt nIdSet = oTeam.getMonsterSet();
+	for each (auto pFate in m_oFateList)
+	{
+		CBigInt nFateSet = pFate->getMonsterSet();
+		if ((nFateSet & nIdSet) == nFateSet)
+		{
+			for (int i = 0; i < pFate->getSkillCount(); i++)
+			{
+				double incV[EF_ALL];
+				pFate->getSkill(i)->affect(oTeam, incV);
+				addVec(oResult, incV, oResult);
+			}
+			break;
+		}
+	}
+	*/
+}
+
+bool success(double* dChallengeRequired, double* dTeam)
+{
+	for (int i = 0; i < EF_ALL; i++)
+	{
+		if (!(ceil(dTeam[i] - g_dEpsilon) + g_dEpsilon > dChallengeRequired[i]))
+			return false;
+	}
+	return true;
+}
+
+void play_thread(CStageInfo** pStackTop)
+{
+	while (true)
+	{
+		auto pInfo = popInfo(pStackTop);
+		if (pInfo == nullptr)
+		{
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));
+			pInfo = popInfo(pStackTop);
+			if (pInfo == nullptr)
+				return; // exit
+		}
+		if (pInfo->nStartIndex >= (int)pInfo->pMonsterList->size() || pInfo->nCount <= 0)
+			continue;
+		if (pInfo->nStartIndex >= 0)
+		{
+			pInfo->oTeam.push_back(pInfo->pMonsterList->at(pInfo->nStartIndex));
+			double oTotal[EF_ALL];
+			calc(pInfo->oTeam, oTotal);
+			if (success(pInfo->pChallenge->featuresRequired(), oTotal))
+			{
+				pInfo->pResult->add(CTeamPtr(new CTeam(pInfo->oTeam)), oTotal);
+				continue;
+			}
+		}
+		CStageInfo* pPrev = nullptr;
+		CStageInfo* pNewInfo;
+		auto nCount = pInfo->nCount - 1;
+		for (int i = pInfo->nStartIndex + 1; i < (int)pInfo->pMonsterList->size(); i++)
+		{
+			pNewInfo = new CStageInfo(*pInfo);
+			pNewInfo->nStartIndex = i;
+			pNewInfo->nCount = nCount;
+			pNewInfo->pPrev = pPrev;
+			pPrev = pNewInfo;
+		}
+		delete pInfo;
+		pInfo = nullptr;
+
+		if (pPrev)
+		{
+			g_stage_mutex.lock();
+			pInfo = *pStackTop;
+			*pStackTop = pPrev;
+			CStageInfo* pLast = nullptr;
+			do
+			{
+				pLast = pPrev;
+				pPrev = pPrev->pPrev;
+			} while (pPrev);
+			pLast->pPrev = pInfo;
+			g_stage_mutex.unlock();
+		}
+	}
+}
+
+CGame::CGame(): m_nClass(EC_ALL)
 {
 }
 
@@ -91,8 +218,28 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
     auto nTime = GetTickCount();
     m_nCount = 0;
     std::cout << ToString(pChallenge->getName()) << ":" << oMonsters.size() << "-" << pChallenge->getMax();
-    play(pChallenge, oMonsters, 0, pChallenge->getMax(), oTeam, oResult);
-    std::cout << "\thitcount:" << m_nCount << "\ttime:" << GetTickCount() - nTime << std::endl;
+
+	CStageInfo* pStackTop = new CStageInfo;
+	pStackTop->pChallenge = pChallenge;
+	pStackTop->pMonsterList = &oMonsters;
+	pStackTop->pResult = &oResult;
+	pStackTop->nCount = pChallenge->getMax();
+	pStackTop->nStartIndex = -1;
+	pStackTop->oTeam = oTeam;
+	pStackTop->pPrev = nullptr;
+
+	std::thread oThreadList[4];
+	for (int i = 0; i < 4; i++)
+	{
+		oThreadList[i] = std::thread(play_thread, &pStackTop);
+	}
+    //play(pChallenge, oMonsters, 0, pChallenge->getMax(), oTeam, oResult);
+	for (int i = 0; i < 4; i++)
+	{
+		oThreadList[i].join();
+	}
+
+	std::cout << "\thitcount:" << m_nCount << "\ttime:" << GetTickCount() - nTime << std::endl;
 }
 
 void CGame::simulator(std::vector<std::wstring>& oMonsterList, int * nResult)

@@ -1,6 +1,9 @@
 #include "Result.h"
 #include <algorithm>
 #include <assert.h>
+#include <mutex>
+
+std::mutex g_result_mutex;
 
 
 CResult::CResult(): m_nNum(10)
@@ -16,6 +19,7 @@ CResult::~CResult()
 
 void CResult::add(CTeamPtr pTeam, double* dFeatures)
 {
+	g_result_mutex.lock();
     CResultItem oNewItem;
     initItem(pTeam, dFeatures, oNewItem);
 
@@ -45,13 +49,14 @@ void CResult::add(CTeamPtr pTeam, double* dFeatures)
             }
         }
         assert(false);
-        return false;
+		return false;
     });
     m_oTeamList.insert(itr, oNewItem);
     if ((int)m_oTeamList.size() > m_nNum)
     {
         m_oTeamList.pop_back();
     }
+	g_result_mutex.unlock();
 }
 
 void CResult::changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset)
