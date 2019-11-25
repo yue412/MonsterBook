@@ -35,6 +35,7 @@ public:
     void setTop(int nNum) { m_nNum = nNum; }
     void add(CTeamPtr pTeam, double* dFeatures);
 	void changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset);
+    void merge(const CResult& oResult);
 private:
 	void removeOrder(EnResultOrderType nType);
 	void initItem(CTeamPtr pTeam, double* dFeatures, CResultItem& oItem);

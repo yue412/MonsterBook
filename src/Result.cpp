@@ -1,9 +1,9 @@
 #include "Result.h"
 #include <algorithm>
 #include <assert.h>
-#include <mutex>
+//#include <mutex>
 
-std::mutex g_result_mutex;
+//std::mutex g_result_mutex;
 
 
 CResult::CResult(): m_nNum(10)
@@ -19,7 +19,7 @@ CResult::~CResult()
 
 void CResult::add(CTeamPtr pTeam, double* dFeatures)
 {
-	g_result_mutex.lock();
+	//g_result_mutex.lock();
     CResultItem oNewItem;
     initItem(pTeam, dFeatures, oNewItem);
 
@@ -56,7 +56,7 @@ void CResult::add(CTeamPtr pTeam, double* dFeatures)
     {
         m_oTeamList.pop_back();
     }
-	g_result_mutex.unlock();
+	//g_result_mutex.unlock();
 }
 
 void CResult::changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset)
@@ -66,6 +66,14 @@ void CResult::changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset)
         m_oOrderList.push_back(std::make_pair(nType, nAscOrDesc));
     else
         m_oOrderList.insert(m_oOrderList.begin() + nOffset, std::make_pair(nType, nAscOrDesc));
+}
+
+void CResult::merge(const CResult & oResult)
+{
+    for each (auto oItem in oResult.m_oTeamList)
+    {
+        this->add(oItem.pTeam, oItem.dFeatures);
+    }
 }
 
 void CResult::removeOrder(EnResultOrderType nType)
