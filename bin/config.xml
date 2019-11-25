@@ -11,8 +11,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="树魅" class="木">
-			<Features>48,134,48,61,48,88</Features>
+		<Monster name="周树人" class="木">
+			<Features>69,192,69,134,69,128</Features>
+			<Character>自然|人形|谋略</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -119,13 +120,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="青荷" class="木">
-			<Features>90,187,73,73,60,60</Features>
+		<Monster name="愚蛇" class="木">
+			<Features>126,263,104,104,84,84</Features>
+			<Character>美食|呆萌</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>智</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -386,8 +388,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="惊毛" class="火">
-			<Features>58,54,63,58,44,138</Features>
+		<Monster name="凛然" class="火">
+			<Features>107,84,100,92,68,215</Features>
+			<Character>善良|龙族</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>火</ElementClass>
@@ -397,12 +400,12 @@
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>力</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -473,9 +476,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="象拔兽" class="水">
-			<Character>自然|呆萌</Character>
-			<Features>90,30,30,48,30,81</Features>
+		<Monster name="虹吸仙象" class="水">
+			<Features>154,50,50,95,50,138</Features>
+			<Character>自然|呆萌|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -649,8 +652,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="月光士" class="水">
-			<Features>130,71,182,71,41,50</Features>
+		<Monster name="名将森兰丸" class="水">
+			<Features>152,76,212,76,49,92</Features>
+			<Character>善良|人形|战士</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
@@ -820,14 +824,14 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="元始" class="光">
-			<Features>42,84,27,69,42,30</Features>
-			<Character>自然</Character>
+		<Monster name="无极仙童" class="光">
+			<Features>78,156,52,130,78,56</Features>
+			<Character>自然|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>智</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>			
 			</Skills>
 		</Monster>		
@@ -854,8 +858,9 @@
 		<Monster name="鼠魅娘" class="地">
 			<Features>53,124,143,53,60,104</Features>
 		</Monster>	
-		<Monster name="勾鬼" class="地">
-			<Features>52,82,16,36,36,71</Features>
+		<Monster name="勾屠" class="地">
+			<Features>103,152,36,48,48,158</Features>
+			<Character>武器|妖怪|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -1147,8 +1152,9 @@
 				</Skill>					
 			</Skills>
 		</Monster>		
-		<Monster name="秘灯" class="暗">
-			<Features>129,64,52,96,42,42</Features>
+		<Monster name="黄泉引路姬" class="暗">
+			<Features>154,76,59,147,49,49</Features>
+			<Character>娇小|妖怪|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -1218,11 +1224,14 @@
 		<Challenge name="九离塔" min="0" max="8">
 			<FeaturesRequired feature="技" limit="3650"/>
 		</Challenge>
-		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="智" limit="3100"/>
+		<Challenge name="五碑林" min="0" max="8">
+			<FeaturesRequired feature="智" limit="4370"/>
 		</Challenge>
 	</Challenges>
 	<Challenges>
+		<Challenge name="主线" min="0" max="8">
+			<FeaturesRequired feature="智" limit="3100"/>
+		</Challenge>
 		<Challenge name="支线1" min="0" max="8">
 			<FeaturesRequired feature="速" limit="1530"/>
 			<FeaturesRequired feature="运" limit="1630"/>
