@@ -30,3 +30,4 @@ add_executable(${PROJECT_NAME} ${SRC_FILES} ${HEAD_FILES})
 #set_target_properties(${PROJECT_NAME} PROPERTIES DEBUG_POSTFIX d)
 
 target_link_libraries(${PROJECT_NAME} debug tinyxmld optimized tinyxml)
+#target_link_libraries(${PROJECT_NAME} debug libtcmalloc_minimal_d optimized libtcmalloc_minimal)
