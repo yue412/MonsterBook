@@ -94,7 +94,7 @@ bool success(double* dChallengeRequired, double* dTeam)
 	return true;
 }
 
-void play_thread(CStageInfo** pStackTop, CResult* pResult, int* nHitCount)
+void play_thread(CStageInfo** pStackTop, CResult* pResult, int* nHitCount, int* nHitCount2)
 {
 	while (true)
 	{
@@ -107,7 +107,7 @@ void play_thread(CStageInfo** pStackTop, CResult* pResult, int* nHitCount)
 				return; // exit
 		}
          
-		if (pInfo->nStartIndex >= (int)pInfo->pMonsterList->size() || pInfo->nCount <= 0)
+		if (pInfo->nStartIndex >= (int)pInfo->pMonsterList->size()/* || pInfo->nCount <= 0*/)
 			continue;
         int nCount = pInfo->nCount;
 		if (pInfo->nStartIndex >= 0)
@@ -123,11 +123,14 @@ void play_thread(CStageInfo** pStackTop, CResult* pResult, int* nHitCount)
 			}
             --nCount;
 		}
+        if (nCount == 0)
+            continue;
 		CStageInfo* pPrev = nullptr;
 		CStageInfo* pNewInfo;
 		//auto nCount = pInfo->nCount - 1;
 		for (int i = pInfo->nStartIndex + 1; i < (int)pInfo->pMonsterList->size(); i++)
 		{
+            ++(*nHitCount2);
 			pNewInfo = new CStageInfo(*pInfo);
 			pNewInfo->nStartIndex = i;
 			pNewInfo->nCount = nCount;
@@ -234,25 +237,28 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
 	std::thread oThreadList[nThreadCount];
     CResult oResultList[nThreadCount];
     int nHitCountList[nThreadCount];
-	for (int i = 0; i < nThreadCount; i++)
+    int nHitCountList2[nThreadCount];
+    for (int i = 0; i < nThreadCount; i++)
 	{
         oResultList[i] = oResult;
         nHitCountList[i] = 0;
-		oThreadList[i] = std::thread(play_thread, &pStackTop, &oResultList[i], &nHitCountList[i]);
+        nHitCountList2[i] = 0;
+		oThreadList[i] = std::thread(play_thread, &pStackTop, &oResultList[i], &nHitCountList[i], &nHitCountList2[i]);
 	}
     //play(pChallenge, oMonsters, 0, pChallenge->getMax(), oTeam, oResult);
 	for (int i = 0; i < nThreadCount; i++)
 	{
 		oThreadList[i].join();
 	}
-
+    int nCount2 = 0;
     for (int i = 0; i < nThreadCount; i++)
     {
         oResult.merge(oResultList[i]);
         m_nCount += nHitCountList[i];
+        nCount2 += nHitCountList2[i];
     }
 
-	std::cout << "\thitcount:" << m_nCount << "\ttime:" << GetTickCount() - nTime << std::endl;
+	std::cout << "\thitcount:" << m_nCount << "\ttime:" << GetTickCount() - nTime <<"\tcreatecount:" << nCount2 << std::endl;
 }
 
 void CGame::simulator(std::vector<std::wstring>& oMonsterList, int * nResult)
