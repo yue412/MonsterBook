@@ -34,6 +34,8 @@ private:
     void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, CResult& oResult);
     void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, std::size_t nStartIndex, std::size_t nCount, CTeam& oTeam, CResult& oResult);
     void play(int nChallengeIndex, const std::vector<CMonster*>& oMonsterList, CSolution& oSolution, std::vector<CSolutionPtr>& oSolutionList);
+    void combination(int m, int n, std::vector<std::vector<int>>& oList);
+    void doCombination(int m, int nStart, int nCount, std::vector<int>& oComb, std::vector<std::vector<int>>& oList);
     void removeMonster(std::vector<CMonster*>& oMonsterList, CTeamPtr pTeam);
     void clear();
     std::vector<CChallenge*> m_oChallengeList;
