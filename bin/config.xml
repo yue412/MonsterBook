@@ -191,8 +191,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="悦鼓" class="木">
-			<Features>30,29,85,30,34,94</Features>
+		<Monster name="鼓妖" class="木">
+			<Features>54,54,154,54,54,166</Features>
+			<Character>乐器|呆萌|人形</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>木</ElementClass>
@@ -503,9 +504,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="角鱼" class="水">
-			<Features>40,30,79,94,33,30</Features>
-			<Character>自然|水性</Character>
+		<Monster name="美人鱼" class="水">
+			<Features>64,54,152,162,54,54</Features>
+			<Character>自然|水性|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -794,8 +795,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="白蛇魅" class="光">
-			<Features>40,79,167,128,56,79</Features>
+		<Monster name="白娘子" class="光">
+			<Features>40,92,213,162,60,92</Features>
+			<Character>善良|妹纸|妖怪</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>光</ElementClass>
@@ -896,8 +898,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="狗头铡" class="地">
-			<Features>131,43,48,52,56,96</Features>
+		<Monster name="王四" class="地">
+			<Features>204,68,68,82,88,149</Features>
+			<Character>武器|狗狗|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -936,8 +939,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="吃狂" class="地">
-			<Features>137,60,54,54,60,60</Features>
+		<Monster name="吃呆" class="地">
+			<Features>180,72,72,72,72,72</Features>
+			<Character>美食|呆萌|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
