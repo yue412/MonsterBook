@@ -1181,6 +1181,32 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
+		<Challenge name="九离塔" min="0" max="8">
+			<FeaturesRequired feature="技" limit="3650"/>
+		</Challenge>
+		<Challenge name="五碑林" min="0" max="8">
+			<FeaturesRequired feature="智" limit="4370"/>
+		</Challenge>
+		<Challenge name="图书馆" min="0" max="5">
+			<FeaturesRequired feature="智" limit="1100"/>
+			<FeaturesRequired feature="魅" limit="1705"/>
+		</Challenge>
+		<Challenge name="饰品店" min="0" max="8">
+			<FeaturesRequired feature="智" limit="1105"/>
+			<FeaturesRequired feature="魅" limit="1305"/>
+		</Challenge>
+		<Challenge name="千年古寺" min="0" max="6">
+			<FeaturesRequired feature="速" limit="1430"/>
+			<FeaturesRequired feature="技" limit="1280"/>
+		</Challenge>
+		<Challenge name="炼丹术" min="0" max="6">
+			<FeaturesRequired feature="魅" limit="1565"/>
+			<FeaturesRequired feature="运" limit="1515"/>
+		</Challenge>
+		<Challenge name="铁匠装备铺" min="0" max="7">
+			<FeaturesRequired feature="速" limit="1310"/>
+			<FeaturesRequired feature="运" limit="1410"/>
+		</Challenge>
 		<Challenge name="森林" min="0" max="8">
 			<FeaturesRequired feature="魅" limit="40"/>
 		</Challenge>
@@ -1190,48 +1216,22 @@
 		<Challenge name="肉铺" min="0" max="8">
 			<FeaturesRequired feature="力" limit="150"/>
 		</Challenge>
-		<Challenge name="药房" min="0" max="8">
-			<FeaturesRequired feature="速" limit="460"/>
-		</Challenge>
-		<Challenge name="碑林" min="0" max="8">
-			<FeaturesRequired feature="速" limit="590"/>
-		</Challenge>
-		<Challenge name="捕鱼" min="0" max="8">
-			<FeaturesRequired feature="速" limit="620"/>
+		<Challenge name="试练塔" min="0" max="8">
+			<FeaturesRequired feature="魅" limit="1235"/>
+			<FeaturesRequired feature="力" limit="1385"/>
 		</Challenge>
 		<Challenge name="纸牌屋" min="0" max="8">
 			<FeaturesRequired feature="速" limit="825"/>
 			<FeaturesRequired feature="力" limit="825"/>
 		</Challenge>		
-		<Challenge name="饰品店" min="0" max="8">
-			<FeaturesRequired feature="智" limit="1105"/>
-			<FeaturesRequired feature="魅" limit="1305"/>
+		<Challenge name="捕鱼" min="0" max="8">
+			<FeaturesRequired feature="速" limit="620"/>
 		</Challenge>
-		<Challenge name="炼丹术" min="0" max="6">
-			<FeaturesRequired feature="魅" limit="1565"/>
-			<FeaturesRequired feature="运" limit="1515"/>
+		<Challenge name="碑林" min="0" max="8">
+			<FeaturesRequired feature="速" limit="590"/>
 		</Challenge>
-		<Challenge name="试练塔" min="0" max="8">
-			<FeaturesRequired feature="魅" limit="1235"/>
-			<FeaturesRequired feature="力" limit="1385"/>
-		</Challenge>
-		<Challenge name="铁匠装备铺" min="0" max="7">
-			<FeaturesRequired feature="速" limit="1310"/>
-			<FeaturesRequired feature="运" limit="1410"/>
-		</Challenge>
-		<Challenge name="千年古寺" min="0" max="6">
-			<FeaturesRequired feature="速" limit="1430"/>
-			<FeaturesRequired feature="技" limit="1280"/>
-		</Challenge>
-		<Challenge name="图书馆" min="0" max="5">
-			<FeaturesRequired feature="智" limit="1100"/>
-			<FeaturesRequired feature="魅" limit="1705"/>
-		</Challenge>
-		<Challenge name="九离塔" min="0" max="8">
-			<FeaturesRequired feature="技" limit="3650"/>
-		</Challenge>
-		<Challenge name="五碑林" min="0" max="8">
-			<FeaturesRequired feature="智" limit="4370"/>
+		<Challenge name="药房" min="0" max="8">
+			<FeaturesRequired feature="速" limit="460"/>
 		</Challenge>
 	</Challenges>
 	<Challenges>
