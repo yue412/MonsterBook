@@ -11,12 +11,10 @@ CFate::~CFate()
     m_oSkills.clear();
 }
 
-CBigInt CFate::getMonsterSet()
+void CFate::init()
 {
-    CBigInt nResult;
     for each (auto pMonster in m_oMonsters)
     {
-        nResult |= pMonster->getId();
+        this->m_nMonsterSet |= pMonster->getId();
     }
-    return nResult;
 }

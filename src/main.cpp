@@ -9,6 +9,7 @@
 #include "Common.h"
 #include "Result.h"
 #include <map>
+#include <iterator>
 
 void output(std::vector<CSolutionPtr>& oResultList)
 {
@@ -104,6 +105,18 @@ void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge&
 	}
 }
 
+void getGroupList(std::map<std::wstring, std::wstring>& oParamsMap, std::vector<int>& oGroupList)
+{
+    if (oParamsMap.find(L"group") == oParamsMap.end())
+        oGroupList.push_back(0);
+    else
+    {
+        std::vector<std::wstring> oStringList;
+        split(oParamsMap[L"group"], L',', oStringList);
+        std::transform(oStringList.begin(), oStringList.end(), std::back_inserter(oGroupList), [](const std::wstring& str) { return std::stoi(str); });
+    }
+}
+
 int main(int argc, char* argv[])
 {
 	std::map<std::wstring, std::wstring> oParamsMap;
@@ -180,7 +193,9 @@ int main(int argc, char* argv[])
         {
             auto nTime = GetTickCount();
             std::vector<CSolutionPtr> oResultList;
-            oGame.play(oResultList);
+            std::vector<int> oGroupList;
+            getGroupList(oParamsMap, oGroupList);
+            oGame.play(oResultList, oGroupList);
             std::wcout << L"play: " << GetTickCount() - nTime << std::endl;
             std::sort(oResultList.begin(), oResultList.end(), [](CSolutionPtr pSolution1, CSolutionPtr pSolution2) {
                 return pSolution1->size() > pSolution2->size();

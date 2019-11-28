@@ -21,7 +21,7 @@ public:
     CGame();
     ~CGame();
 public:
-    void play(std::vector<CSolutionPtr>& oSolutionList);
+    void play(std::vector<CSolutionPtr>& oSolutionList, std::vector<int>& oChallengeGroupIndexList);
     void play(CChallenge* pChallenge, CResult& oResult);
     void simulator(std::vector<std::wstring>& oMonsterList, int* nResult);
 	void exclude(std::vector<std::wstring>& oMonsterList);
@@ -29,16 +29,14 @@ public:
     int m_nCount;
 private:
     // ÃÙ’Ω“ªπÿ
-    void calc(CTeam& oTeam, double* oResult);
-    bool success(double* dChallengeRequired, double* dTeam);
     void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, CResult& oResult);
-    void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, std::size_t nStartIndex, std::size_t nCount, CTeam& oTeam, CResult& oResult);
     void play(int nChallengeIndex, const std::vector<CMonster*>& oMonsterList, CSolution& oSolution, std::vector<CSolutionPtr>& oSolutionList);
     void combination(int m, int n, std::vector<std::vector<int>>& oList);
     void doCombination(int m, int nStart, int nCount, std::vector<int>& oComb, std::vector<std::vector<int>>& oList);
     void removeMonster(std::vector<CMonster*>& oMonsterList, CTeamPtr pTeam);
     void clear();
     std::vector<CChallenge*> m_oChallengeList;
+    std::vector<std::vector<CChallenge*>> m_oChallengeGroupList;
     std::vector<CMonster*> m_oMonsterList;
 	std::vector<CSoulBead*> m_oSoulBeadList;
     std::vector<CFate*> m_oFateList;

@@ -19,33 +19,30 @@ struct CStageInfo
 {
     CChallenge* pChallenge;
     std::vector<CMonster*>* pMonsterList;
-    //CResult* pResult;
-    int nStartIndex;
-    int nCount; 
-    CTeam oTeam; 
-    CStageInfo* pPrev;
+    int nCount;
+    std::vector<int> oHitCounts;
+    std::vector<int> oTimeList;
 };
 
-std::mutex g_stage_mutex;
-int g_nIndex = 0;
-
-
-std::shared_ptr<CStageInfo> popInfo(CStageInfo** pStackTop)
+class CGame_Thread
 {
-	CStageInfo* pInfo = nullptr;
-	g_stage_mutex.lock();
-	bool bExists = *pStackTop != nullptr;
-	if (bExists)
-	{
-		pInfo = *pStackTop;
-		*pStackTop = pInfo->pPrev;
-		//std::cout << pInfo->oTeam.size() <<"," << pInfo->nStartIndex << "," << pInfo->nCount << "," << std::endl;
-	}
-	g_stage_mutex.unlock();
-	return std::shared_ptr<CStageInfo>(pInfo);
-}
+public:
+    static void calc(CTeam& oTeam, double* oResult);
+    static bool success(double* dChallengeRequired, double* dTeam);
+    static void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, int& nHitCount);
+    static bool getStartIndex(std::vector<std::vector<int>>* pStartIndexList, std::vector<int>& nStartIndex);
+    static void play_thread(std::vector<std::vector<int>>* pStartIndexList, CResult* pResult, CStageInfo* pInfo);
+public:
+    static std::vector<CFate*>* m_pFateList;
+    static std::mutex m_oStageMutex;
+    static int m_nIndex;
+};
 
-void calc(CTeam& oTeam, double* oResult)
+std::mutex CGame_Thread::m_oStageMutex;
+std::vector<CFate*>* CGame_Thread::m_pFateList = nullptr;
+int CGame_Thread::m_nIndex = 0;
+
+void CGame_Thread::calc(CTeam& oTeam, double* oResult)
 {
 	//if (oTeam.size() == 8 && oTeam[7]->getName() == L"智多星吴用")
 	//{
@@ -66,9 +63,9 @@ void calc(CTeam& oTeam, double* oResult)
 			addVec(oResult, incV, oResult);
 		}
 	}
-	/*
+	
 	CBigInt nIdSet = oTeam.getMonsterSet();
-	for each (auto pFate in m_oFateList)
+	for each (auto pFate in *m_pFateList)
 	{
 		CBigInt nFateSet = pFate->getMonsterSet();
 		if ((nFateSet & nIdSet) == nFateSet)
@@ -82,10 +79,9 @@ void calc(CTeam& oTeam, double* oResult)
 			break;
 		}
 	}
-	*/
 }
 
-bool success(double* dChallengeRequired, double* dTeam)
+bool CGame_Thread::success(double* dChallengeRequired, double* dTeam)
 {
 	for (int i = 0; i < EF_ALL; i++)
 	{
@@ -95,7 +91,7 @@ bool success(double* dChallengeRequired, double* dTeam)
 	return true;
 }
 
-void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult)
+void CGame_Thread::play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, int& nHitCount)
 {
     if (nStartIndex >= (int)oMonsterList.size() || nCount <= 0)
         return;
@@ -104,40 +100,46 @@ void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, in
         oTeam.push_back(oMonsterList[i]);
         double oTotal[EF_ALL];
         calc(oTeam, oTotal);
+        ++nHitCount;
         if (success(pChallenge->featuresRequired(), oTotal))
             oResult.add(CTeamPtr(new CTeam(oTeam)), oTotal);
         else
-            play(pChallenge, oMonsterList, i + 1, nCount - 1, oTeam, oResult);
+            play(pChallenge, oMonsterList, i + 1, nCount - 1, oTeam, oResult, nHitCount);
         oTeam.pop_back();
     }
 }
 
-bool getStartIndex(std::vector<std::vector<int>>* pStartIndexList, std::vector<int>& nStartIndex)
+bool CGame_Thread::getStartIndex(std::vector<std::vector<int>>* pStartIndexList, std::vector<int>& nStartIndex)
 {
-    g_stage_mutex.lock();
-    bool bResult = g_nIndex < (int)pStartIndexList->size();
+    m_oStageMutex.lock();
+    bool bResult = m_nIndex < (int)pStartIndexList->size();
     if (bResult)
-        nStartIndex = (*pStartIndexList)[g_nIndex++];
-    g_stage_mutex.unlock();
+        nStartIndex = (*pStartIndexList)[m_nIndex++];
+    m_oStageMutex.unlock();
     return bResult;
 }
 
-void play_thread(std::vector<std::vector<int>>* pStartIndexList, CResult* pResult, CChallenge* pChallenge, std::vector<CMonster*>* pMonsterList, int nCount)
+void CGame_Thread::play_thread(std::vector<std::vector<int>>* pStartIndexList, CResult* pResult, CStageInfo* pInfo)
 {
     std::vector<int> nStartIndex;
 	while (getStartIndex(pStartIndexList, nStartIndex))
 	{
+        auto nTime = GetTickCount();
+        int nHitCount = 0;
         CTeam oTeam;
         for each (auto i in nStartIndex)
         {
-            oTeam.push_back((*pMonsterList)[i]);
+            oTeam.push_back((*pInfo->pMonsterList)[i]);
         }
         double oTotal[EF_ALL];
         calc(oTeam, oTotal);
-        if (success(pChallenge->featuresRequired(), oTotal))
+        ++nHitCount;
+        if (success(pInfo->pChallenge->featuresRequired(), oTotal))
             pResult->add(CTeamPtr(new CTeam(oTeam)), oTotal);
-        else if (nStartIndex.size() == nCount)
-           play(pChallenge, (*pMonsterList), nStartIndex.back() + 1, pChallenge->getMax() - nStartIndex.size(), oTeam, *pResult);
+        else if (nStartIndex.size() == pInfo->nCount)
+           play(pInfo->pChallenge, *pInfo->pMonsterList, nStartIndex.back() + 1, pInfo->pChallenge->getMax() - pInfo->nCount, oTeam, *pResult, nHitCount);
+        pInfo->oTimeList.push_back(GetTickCount() - nTime);
+        pInfo->oHitCounts.push_back(nHitCount);
 	}
 }
 
@@ -166,7 +168,7 @@ void CGame::exclude(std::vector<std::wstring>& oMonsterList)
 	}
 }
 
-void CGame::play(std::vector<CSolutionPtr>& oSolutionList)
+void CGame::play(std::vector<CSolutionPtr>& oSolutionList, std::vector<int>& oChallengeGroupIndexList)
 {
    // std::sort(m_oChallengeList.begin(), m_oChallengeList.end(), 
    //     [](CChallenge* pChallenge1, CChallenge* pChallenge2) {
@@ -174,6 +176,15 @@ void CGame::play(std::vector<CSolutionPtr>& oSolutionList)
    //             sum(pChallenge1->featuresRequired()) > sum(pChallenge2->featuresRequired()) + g_dEpsilon :
    //             pChallenge1->getMax() < pChallenge2->getMax();
    //     });
+    m_oChallengeList.clear();
+    for each (auto nIndex in oChallengeGroupIndexList)
+    {
+        if (nIndex < (int)m_oChallengeGroupList.size())
+        {
+            std::vector<CChallenge*>& oChallengeList = m_oChallengeGroupList[nIndex];
+            std::copy(oChallengeList.begin(), oChallengeList.end(), std::back_inserter(m_oChallengeList));
+        }
+    }
     CSolution oSolution;
     play(0, m_oMonsterList, oSolution, oSolutionList);
 }
@@ -210,47 +221,58 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
     m_nCount = 0;
     std::cout << ToString(pChallenge->getName()) << ":" << oMonsters.size() << "-" << pChallenge->getMax();
 
-	CStageInfo* pStackTop = new CStageInfo;
-	pStackTop->pChallenge = pChallenge;
-	pStackTop->pMonsterList = &oMonsters;
-	//pStackTop->pResult = &oResult;
-	pStackTop->nCount = pChallenge->getMax();
-	pStackTop->nStartIndex = -1;
-	pStackTop->oTeam = oTeam;
-	pStackTop->pPrev = nullptr;
+    CGame_Thread::m_nIndex = 0;
+    CGame_Thread::m_pFateList = &m_oFateList;
 
+    int nPreCount = 2;
     const int nThreadCount = 8;
 	std::thread oThreadList[nThreadCount];
     CResult oResultList[nThreadCount];
-    int nPreCount = 2;
+    CStageInfo oInfoList[nThreadCount];
+
     std::vector<std::vector<int>> oList;
     combination(oMonsters.size(), nPreCount, oList);
-    g_nIndex = 0;
-    //int nHitCountList[nThreadCount];
-    //int nHitCountList2[nThreadCount];
-    //std::vector<int> oStartIndexList;
-    //for (int i = oMonsters.size() - 1; i >= 0 ; --i)
-    //{
-    //    oStartIndexList.push_back(i);
-    //}
     for (int i = 0; i < nThreadCount; i++)
 	{
         oResultList[i] = oResult;
+        oInfoList[i].nCount = nPreCount;
+        oInfoList[i].pMonsterList = &oMonsters;
+        oInfoList[i].pChallenge = pChallenge;
         //nHitCountList[i] = 0;
         //nHitCountList2[i] = 0;
-		oThreadList[i] = std::thread(play_thread, &oList, &oResultList[i], pChallenge, &oMonsters, nPreCount);
+		oThreadList[i] = std::thread(CGame_Thread::play_thread, &oList, &oResultList[i], &oInfoList[i]);
 	}
     //play(pChallenge, oMonsters, 0, pChallenge->getMax(), oTeam, oResult);
 	for (int i = 0; i < nThreadCount; i++)
 	{
 		oThreadList[i].join();
 	}
-    int nCount2 = 0;
+
     for (int i = 0; i < nThreadCount; i++)
     {
         oResult.merge(oResultList[i]);
+        /*
+        std::cout << "thread:\t";
+        int nTotalHitCount = 0;
+        //std::cout << "hitCount:\t";
+        for each (auto nHitCount in oInfoList[i].oHitCounts)
+        {
+            //std::cout << nHitCount << ",\t";
+            nTotalHitCount += nHitCount;
+        }
+       // std::cout << std::endl;
+        int nTotalTime = 0;
+        //std::cout << "time:\t";
+        for each (auto nTime in oInfoList[i].oTimeList)
+        {
+            //std::cout << nTime << ",\t";
+            nTotalTime += nTime;
+        }
+        //std::cout << std::endl;
+        std::cout << "total:\t" << nTotalHitCount << "," << nTotalTime << std::endl;
         //m_nCount += nHitCountList[i];
         //nCount2 += nHitCountList2[i];
+        */
     }
 
 	std::cout /*<< "\thitcount:" << m_nCount*/ << "\ttime:" << GetTickCount() - nTime /*<<"\tcreatecount:" << nCount2*/ << std::endl;
@@ -270,77 +292,10 @@ void CGame::simulator(std::vector<std::wstring>& oMonsterList, int * nResult)
         }
     }
     double oTotal[EF_ALL];
-    calc(oTeam, oTotal);
+    CGame_Thread::calc(oTeam, oTotal);
     for (int i = 0; i < EF_ALL; i++)
     {
         nResult[i] = (int)ceil(oTotal[i] - g_dEpsilon);
-    }
-}
-
-void CGame::calc(CTeam & oTeam, double * oResult)
-{
-    //if (oTeam.size() == 8 && oTeam[7]->getName() == L"智多星吴用")
-    //{
-    //    fill(oResult, 0.0);
-    //}
-    ++m_nCount;
-    fill(oResult, 0.0);
-    for each (auto pMonster in oTeam)
-    {
-        assert(pMonster != nullptr);
-        addVec(oResult, pMonster->getFeatures(), oResult);
-		addVec(oResult, pMonster->getSoulBead()->getFeatures(), oResult);
-        int nCount = pMonster->getSkillCount();
-		for (int i = 0; i < nCount; i++)
-        {
-            double incV[EF_ALL];
-            pMonster->getSkill(i)->affect(oTeam, incV);
-            addVec(oResult, incV, oResult);
-        }
-    }
-    /*
-    CBigInt nIdSet = oTeam.getMonsterSet();
-    for each (auto pFate in m_oFateList)
-    {
-        CBigInt nFateSet = pFate->getMonsterSet();
-        if ((nFateSet & nIdSet) == nFateSet)
-        {
-            for (int i = 0; i < pFate->getSkillCount(); i++)
-            {
-                double incV[EF_ALL];
-                pFate->getSkill(i)->affect(oTeam, incV);
-                addVec(oResult, incV, oResult);
-            }
-            break;
-        }
-    }
-    */
-}
-
-bool CGame::success(double * dChallengeRequired, double* dTeam)
-{
-    for (int i = 0; i < EF_ALL; i++)
-    {
-        if (!(ceil(dTeam[i] - g_dEpsilon) + g_dEpsilon > dChallengeRequired[i]))
-            return false;
-    }
-    return true;
-}
-
-void CGame::play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, std::size_t nStartIndex, std::size_t nCount, CTeam& oTeam, CResult& oResult)
-{
-    if (nStartIndex >= oMonsterList.size() || nCount <= 0)
-        return;
-    for (std::size_t i = nStartIndex; i < oMonsterList.size(); i++)
-    {
-        oTeam.push_back(oMonsterList[i]);
-        double oTotal[EF_ALL];
-        calc(oTeam, oTotal);
-        if (success(pChallenge->featuresRequired(), oTotal))
-            oResult.add(CTeamPtr(new CTeam(oTeam)), oTotal);
-        else
-			play(pChallenge, oMonsterList, i + 1, nCount - 1, oTeam, oResult);
-        oTeam.pop_back();
     }
 }
 
@@ -402,11 +357,15 @@ void CGame::removeMonster(std::vector<CMonster*>& oMonsterList, CTeamPtr pTeam)
 
 void CGame::clear()
 {
-    for each (auto p in m_oChallengeList)
-    {
-        delete p;
-    }
     m_oChallengeList.clear();
+    for each (auto oList in m_oChallengeGroupList)
+    {
+        for each (auto p in oList)
+        {
+            delete p;
+        }
+    }
+    m_oChallengeGroupList.clear();
     for each (auto p in m_oMonsterList)
     {
         delete p;

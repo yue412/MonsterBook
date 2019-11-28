@@ -48,13 +48,15 @@ void CConfig::init(CGame * pGame)
 			}
 		}
 		auto pChallengesNode = pRoot->FirstChildElement("Challenges");
-		if (pChallengesNode)
+		while (pChallengesNode)
 		{
-			auto pChallengeNode = pChallengesNode->FirstChildElement();
+            pGame->m_oChallengeGroupList.resize(pGame->m_oChallengeGroupList.size() + 1);
+            std::vector<CChallenge*>& oChallengeList = pGame->m_oChallengeGroupList.back();
+            auto pChallengeNode = pChallengesNode->FirstChildElement();
 			while (pChallengeNode)
 			{
 				auto pChallenge = new CChallenge;
-				pGame->m_oChallengeList.push_back(pChallenge);
+				oChallengeList.push_back(pChallenge);
 				pChallenge->m_sName = Utf8ToUnicode(pChallengeNode->Attribute("name"));
 				pChallengeNode->Attribute("min", &pChallenge->m_nMin);
 				pChallengeNode->Attribute("max", &pChallenge->m_nMax);
@@ -81,6 +83,7 @@ void CConfig::init(CGame * pGame)
 
 				pChallengeNode = pChallengeNode->NextSiblingElement();
 			}
+            pChallengesNode = pChallengesNode->NextSiblingElement("Challenges");
 		}
 		auto pSoulBeadsNode = pRoot->FirstChildElement("SoulBeads");
 		if (pSoulBeadsNode)
@@ -127,6 +130,7 @@ void CConfig::init(CGame * pGame)
                         }
                     }
                 }
+                pFate->init();
 
                 pFateNode = pFateNode->NextSiblingElement();
             }

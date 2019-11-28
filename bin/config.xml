@@ -11,6 +11,17 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="祝英台" class="木">
+			<Features>60,72,137,153,54,60</Features>
+			<Character>自然|邪恶|飞翔</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="周树人" class="木">
 			<Features>69,192,69,134,69,128</Features>
 			<Character>自然|人形|谋略</Character>
@@ -350,8 +361,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="芭蕉叶" class="火">
-			<Features>34,34,48,67,84,147</Features>
+		<Monster name="枫叶渡" class="火">
+			<Features>38,38,185,78,92,234</Features>
+			<Character>小眼睛|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -597,13 +609,14 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="洞箫" class="水">
-			<Features>42,58,27,155,58,71</Features>
+		<Monster name="韩湘子" class="水">
+			<Features>80,198,169,287,108,144</Features>
+			<Character>妹纸|乐器|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>魅</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -853,8 +866,9 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="月骑" class="光">
-			<Features>106,211,55,84,70,139</Features>
+		<Monster name="包公" class="光">
+			<Features>140,280,74,112,91,185</Features>
+			<Character>善良|人形|谋略</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
@@ -1240,15 +1254,16 @@
 	</Challenges>
 	<Challenges>
 		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="智" limit="3100"/>
+			<FeaturesRequired feature="魅" limit="3200"/>
 		</Challenge>
 		<Challenge name="支线1" min="0" max="8">
-			<FeaturesRequired feature="速" limit="1530"/>
-			<FeaturesRequired feature="运" limit="1630"/>
+			<FeaturesRequired feature="速" limit="1985"/>
+			<FeaturesRequired feature="技" limit="1835"/>
 		</Challenge>
-		<Challenge name="支线2" min="0" max="8">
-			<FeaturesRequired feature="速" limit="1565"/>
-			<FeaturesRequired feature="技" limit="1415"/>
+	</Challenges>
+	<Challenges>
+		<Challenge name="主线" min="0" max="8">
+			<FeaturesRequired feature="魅" limit="3100"/>
 		</Challenge>
 	</Challenges>
 	<Fates>
@@ -1277,7 +1292,7 @@
 			<Features>0,0,0,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>0,0,48,0,0,0</Features>
+			<Features>0,48,48,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>0,0,0,0,0,0</Features>
