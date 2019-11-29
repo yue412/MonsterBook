@@ -142,13 +142,13 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="关羽" class="木">
-			<Features>146,46,146,92,46,72</Features>
+		<Monster name="神将关云长" class="木">
+			<Features>202,61,202,126,61,112</Features>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>力</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -407,9 +407,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="凛然" class="火">
-			<Features>107,84,100,92,68,215</Features>
-			<Character>善良|龙族</Character>
+		<Monster name="狴犴" class="火">
+			<Features>176,105,126,116,88,274</Features>
+			<Character>善良|龙族|谋略</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>火</ElementClass>
@@ -419,12 +419,12 @@
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>力</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -1264,6 +1264,14 @@
 			<FeaturesRequired feature="智" limit="2165"/>
 			<FeaturesRequired feature="魅" limit="2320"/>
 		</Challenge>
+		<Challenge name="挑战" min="0" max="8">
+			<FeaturesRequired feature="智" limit="1500"/>
+			<FeaturesRequired feature="魅" limit="1500"/>
+		</Challenge>
+		<Challenge name="龙生九子" min="0" max="6" class="暗">
+			<FeaturesRequired feature="力" limit="1000"/>
+			<FeaturesRequired feature="魅" limit="1000"/>
+		</Challenge>
 	</Challenges>
 	<Challenges>
 		<Challenge name="周挑战" min="0" max="8">
@@ -1301,7 +1309,7 @@
 			<Features>0,0,0,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>0,53,53,0,0,0</Features>
+			<Features>0,52.8,52.8,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>0,0,0,0,0,0</Features>

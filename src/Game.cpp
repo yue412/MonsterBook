@@ -143,7 +143,7 @@ void CGame_Thread::play_thread(std::vector<std::vector<int>>* pStartIndexList, C
 	}
 }
 
-CGame::CGame(): m_nClass(EC_ALL)
+CGame::CGame()
 {
 }
 
@@ -210,8 +210,8 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
     oResult.m_nFeatureSet = nFeatureSet;
 
     std::vector<CMonster*> oMonsters;
-    std::copy_if(oMonsterList.begin(), oMonsterList.end(), std::back_inserter(oMonsters), [this, nFeatureSet](CMonster* pMonster) {
-        return (this->m_nClass == EC_ALL && pMonster->hasSpeciality(nFeatureSet) || pMonster->getClass() == this->m_nClass);
+    std::copy_if(oMonsterList.begin(), oMonsterList.end(), std::back_inserter(oMonsters), [pChallenge, nFeatureSet](CMonster* pMonster) {
+        return (pChallenge->requiredClass() == EC_ALL && pMonster->hasSpeciality(nFeatureSet) || pMonster->getClass() == pChallenge->requiredClass());
     });
 
     std::sort(oMonsters.begin(), oMonsters.end(), [nFeatureSet](CMonster* pMonster1, CMonster* pMonster2) {
@@ -292,6 +292,7 @@ void CGame::simulator(std::vector<std::wstring>& oMonsterList, int * nResult)
         }
     }
     double oTotal[EF_ALL];
+    CGame_Thread::m_pFateList = &m_oFateList;
     CGame_Thread::calc(oTeam, oTotal);
     for (int i = 0; i < EF_ALL; i++)
     {

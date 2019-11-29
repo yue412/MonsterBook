@@ -25,7 +25,6 @@ public:
     void play(CChallenge* pChallenge, CResult& oResult);
     void simulator(std::vector<std::wstring>& oMonsterList, int* nResult);
 	void exclude(std::vector<std::wstring>& oMonsterList);
-    void limitMonsterClass(EnElementClass nClass) { m_nClass = nClass; }
     int m_nCount;
 private:
     // ÃÙ’Ω“ªπÿ
@@ -40,7 +39,7 @@ private:
     std::vector<CMonster*> m_oMonsterList;
 	std::vector<CSoulBead*> m_oSoulBeadList;
     std::vector<CFate*> m_oFateList;
-    EnElementClass m_nClass;
+    //EnElementClass m_nClass;
     //CStageInfo* m_pStackTop;
 };
 

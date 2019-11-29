@@ -99,6 +99,7 @@ void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge&
 {
 	oChallenge.m_nMin = oParamsMap.find(L"min") == oParamsMap.end() ? 0 : std::stoi(oParamsMap[L"min"]);
 	oChallenge.m_nMax = oParamsMap.find(L"max") == oParamsMap.end() ? 8 : std::stoi(oParamsMap[L"max"]);
+    oChallenge.m_nClass = oParamsMap.find(L"class") == oParamsMap.end() ? EC_ALL : Name2Class(oParamsMap[L"class"]);
 	for (int i = 0; i < EF_ALL; i++)
 	{
 		oChallenge.m_nRequired[i] = oParamsMap.find(g_sFeatureShortNames[i]) == oParamsMap.end() ? 0 : std::stoi(oParamsMap[g_sFeatureShortNames[i]]);
@@ -160,10 +161,6 @@ int main(int argc, char* argv[])
 				split(oParamsMap[L"exclude"], L',', oStringList);
 				oGame.exclude(oStringList);
 			}
-            if (oParamsMap.find(L"class") != oParamsMap.end())
-            {
-                oGame.limitMonsterClass(Name2Class(oParamsMap[L"class"]));
-            }
 			auto nTime = GetTickCount();
 			oGame.play(&oChallenge, oResultList);
             std::cout << "count: " << oGame.m_nCount << std::endl;

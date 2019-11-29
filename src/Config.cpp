@@ -60,7 +60,10 @@ void CConfig::init(CGame * pGame)
 				pChallenge->m_sName = Utf8ToUnicode(pChallengeNode->Attribute("name"));
 				pChallengeNode->Attribute("min", &pChallenge->m_nMin);
 				pChallengeNode->Attribute("max", &pChallenge->m_nMax);
-				// Features
+                auto sClass = pChallengeNode->Attribute("class");
+                if (sClass != nullptr)
+                    pChallenge->m_nClass = Name2Class(Utf8ToUnicode(sClass));
+                // Features
                 auto pFeaturesRequiredNode = pChallengeNode->FirstChildElement("FeaturesRequired");
                 while (pFeaturesRequiredNode)
                 {
@@ -170,7 +173,7 @@ void CConfig::initFeatures(TiXmlElement* pNode, const std::string& sName, double
 	split(sText, L',', oStringList);
 	for (std::size_t i = 0; i < EF_ALL; i++)
 	{
-		dFeatures[i] = i < oStringList.size() ? std::stoi(oStringList[i]) : 0;
+		dFeatures[i] = i < oStringList.size() ? std::stod(oStringList[i]) : 0;
 	}
 }
 
