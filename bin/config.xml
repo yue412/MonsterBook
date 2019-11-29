@@ -1234,14 +1234,6 @@
 		<Challenge name="肉铺" min="0" max="8">
 			<FeaturesRequired feature="力" limit="150"/>
 		</Challenge>
-		<Challenge name="试练塔" min="0" max="8">
-			<FeaturesRequired feature="魅" limit="1235"/>
-			<FeaturesRequired feature="力" limit="1385"/>
-		</Challenge>
-		<Challenge name="纸牌屋" min="0" max="8">
-			<FeaturesRequired feature="速" limit="825"/>
-			<FeaturesRequired feature="力" limit="825"/>
-		</Challenge>		
 		<Challenge name="捕鱼" min="0" max="8">
 			<FeaturesRequired feature="速" limit="620"/>
 		</Challenge>
@@ -1251,6 +1243,14 @@
 		<Challenge name="药房" min="0" max="8">
 			<FeaturesRequired feature="速" limit="460"/>
 		</Challenge>
+		<Challenge name="试练塔" min="0" max="8">
+			<FeaturesRequired feature="魅" limit="1235"/>
+			<FeaturesRequired feature="力" limit="1385"/>
+		</Challenge>
+		<Challenge name="纸牌屋" min="0" max="8">
+			<FeaturesRequired feature="速" limit="825"/>
+			<FeaturesRequired feature="力" limit="825"/>
+		</Challenge>		
 	</Challenges>
 	<Challenges>
 		<Challenge name="主线" min="0" max="8">
@@ -1268,6 +1268,12 @@
 			<FeaturesRequired feature="智" limit="1500"/>
 			<FeaturesRequired feature="魅" limit="1500"/>
 		</Challenge>
+		<Challenge name="龙生九子" min="0" max="6" class="暗">
+			<FeaturesRequired feature="力" limit="1000"/>
+			<FeaturesRequired feature="魅" limit="1000"/>
+		</Challenge>
+	</Challenges>
+	<Challenges>
 		<Challenge name="龙生九子" min="0" max="6" class="暗">
 			<FeaturesRequired feature="力" limit="1000"/>
 			<FeaturesRequired feature="魅" limit="1000"/>
