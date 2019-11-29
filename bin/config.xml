@@ -1024,15 +1024,15 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="恐轻" class="地">
-			<Features>52,84,32,98,207,195</Features>
-			<Character>呆萌|妖怪</Character>
+		<Monster name="蒲牢" class="地">
+			<Features>76,131,46,141,306,286</Features>
+			<Character>呆萌|妖怪|龙族</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<Trigger>4</Trigger>
 					<ElementClass>地</ElementClass>
 					<Feature>全</Feature>
-					<Value>60</Value>
+					<Value>100</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
@@ -1254,16 +1254,25 @@
 	</Challenges>
 	<Challenges>
 		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="魅" limit="3200"/>
+			<FeaturesRequired feature="魅" limit="3300"/>
 		</Challenge>
 		<Challenge name="支线1" min="0" max="8">
-			<FeaturesRequired feature="速" limit="1985"/>
-			<FeaturesRequired feature="技" limit="1835"/>
+			<FeaturesRequired feature="速" limit="2015"/>
+			<FeaturesRequired feature="技" limit="1865"/>
+		</Challenge>
+		<Challenge name="乱入-沙虫的入侵" min="0" max="8">
+			<FeaturesRequired feature="智" limit="2165"/>
+			<FeaturesRequired feature="魅" limit="2320"/>
 		</Challenge>
 	</Challenges>
 	<Challenges>
-		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="魅" limit="3100"/>
+		<Challenge name="周挑战" min="0" max="8">
+			<FeaturesRequired feature="力" limit="1800"/>
+			<FeaturesRequired feature="智" limit="1800"/>
+			<FeaturesRequired feature="魅" limit="1800"/>
+			<FeaturesRequired feature="运" limit="1800"/>
+			<FeaturesRequired feature="技" limit="1800"/>
+			<FeaturesRequired feature="速" limit="1800"/>
 		</Challenge>
 	</Challenges>
 	<Fates>
@@ -1292,7 +1301,7 @@
 			<Features>0,0,0,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>0,48,48,0,0,0</Features>
+			<Features>0,53,53,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>0,0,0,0,0,0</Features>
