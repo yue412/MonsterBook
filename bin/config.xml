@@ -1253,24 +1253,16 @@
 		</Challenge>		
 	</Challenges>
 	<Challenges>
-		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="魅" limit="3300"/>
-		</Challenge>
-		<Challenge name="支线1" min="0" max="8">
-			<FeaturesRequired feature="速" limit="2015"/>
-			<FeaturesRequired feature="技" limit="1865"/>
-		</Challenge>
-		<Challenge name="乱入-沙虫的入侵" min="0" max="8">
-			<FeaturesRequired feature="智" limit="2165"/>
-			<FeaturesRequired feature="魅" limit="2320"/>
-		</Challenge>
-		<Challenge name="挑战" min="0" max="8">
-			<FeaturesRequired feature="智" limit="1500"/>
-			<FeaturesRequired feature="魅" limit="1500"/>
-		</Challenge>
 		<Challenge name="龙生九子" min="0" max="6" class="暗">
 			<FeaturesRequired feature="力" limit="1000"/>
 			<FeaturesRequired feature="魅" limit="1000"/>
+		</Challenge>	
+		<Challenge name="主线" min="0" max="8">
+			<FeaturesRequired feature="魅" limit="3400"/>
+		</Challenge>
+		<Challenge name="支线1" min="0" max="8">
+			<FeaturesRequired feature="速" limit="2045"/>
+			<FeaturesRequired feature="技" limit="1895"/>
 		</Challenge>
 	</Challenges>
 	<Challenges>
@@ -1287,6 +1279,14 @@
 			<FeaturesRequired feature="运" limit="1800"/>
 			<FeaturesRequired feature="技" limit="1800"/>
 			<FeaturesRequired feature="速" limit="1800"/>
+		</Challenge>
+		<Challenge name="乱入-沙虫的入侵" min="0" max="8">
+			<FeaturesRequired feature="智" limit="2165"/>
+			<FeaturesRequired feature="魅" limit="2320"/>
+		</Challenge>
+		<Challenge name="挑战" min="0" max="8">
+			<FeaturesRequired feature="智" limit="1500"/>
+			<FeaturesRequired feature="魅" limit="1500"/>
 		</Challenge>
 	</Challenges>
 	<Fates>

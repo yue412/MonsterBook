@@ -188,6 +188,12 @@ int main(int argc, char* argv[])
         }
         else if (str == L"playall")
         {
+            if (oParamsMap.find(L"exclude") != oParamsMap.end())
+            {
+                std::vector<std::wstring> oStringList;
+                split(oParamsMap[L"exclude"], L',', oStringList);
+                oGame.exclude(oStringList);
+            }
             auto nTime = GetTickCount();
             std::vector<CSolutionPtr> oResultList;
             std::vector<int> oGroupList;
