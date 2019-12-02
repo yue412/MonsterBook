@@ -813,6 +813,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="飞头撩" class="光">
+			<Features>104,43,210,88,104,96</Features>
+			<Character>妖怪|人形|飞翔</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>速</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="馒头婆婆" class="光">
 			<Features>94,94,62,68,62,158</Features>
 			<Character>美食|善良|老人家</Character>
@@ -1390,16 +1401,14 @@
 		</Challenge>		
 	</Challenges>
 	<Challenges>
-		<Challenge name="挑战" min="0" max="8">
-			<FeaturesRequired feature="力" limit="1800"/>
-			<FeaturesRequired feature="智" limit="1800"/>
-			<FeaturesRequired feature="技" limit="1800"/>
+		<Challenge name="主线" min="0" max="8">
+			<FeaturesRequired feature="魅" limit="1800"/>
 		</Challenge>
 	</Challenges>
 	<Challenges>
-		<Challenge name="龙生九子" min="0" max="6" class="暗">
-			<FeaturesRequired feature="力" limit="1000"/>
-			<FeaturesRequired feature="魅" limit="1000"/>
+		<Challenge name="龙生九子" min="0" max="8">
+			<FeaturesRequired feature="速" limit="1760"/>
+			<FeaturesRequired feature="力" limit="1730"/>
 		</Challenge>
 	</Challenges>
 	<Challenges>
