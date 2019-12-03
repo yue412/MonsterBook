@@ -1175,9 +1175,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="捉鸡" class="地">
-			<Features>60,30,30,19,19,30</Features>
-			<Character>呆萌</Character>
+		<Monster name="初号机" class="地">
+			<Features>220,140,140,70,60,120</Features>
+			<Character>呆萌|机械|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -1186,9 +1186,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="秋波" class="地">
-			<Features>46,125,49,160,102,62</Features>
-			<Character>呆萌|妹纸</Character>
+		<Monster name="秋香" class="地">
+			<Features>52,146,60,188,120,94</Features>
+			<Character>呆萌|妹纸|吉祥</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
@@ -1510,7 +1510,7 @@
 			<Features>0,0,0,0,50.4,0</Features>
 		</SoulBead>
 		<SoulBead class="暗">
-			<Features>0,0,0,0,0,0</Features>
+			<Features>48,0,0,0,0,48</Features>
 		</SoulBead>
 	</SoulBeads>
 </MonsterBook>
