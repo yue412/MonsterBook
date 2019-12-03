@@ -577,6 +577,17 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="隐花" class="水">
+			<Features>23,23,19,60,19,23</Features>
+			<Character>自然</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="沫沫" class="水">
 			<Features>19,21,18,23,34,56</Features>
 			<Character>水性</Character>
@@ -810,6 +821,17 @@
 					<ElementClass>光</ElementClass>
 					<Feature>技</Feature>
 					<Value>50</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="灰净" class="光">
+			<Features>23,58,19,21,25,23</Features>
+			<Character>吉祥</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>智</Feature>
+					<Value>15</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -1142,6 +1164,39 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="黑长直" class="地">
+			<Features>23,21,19,25,23,58</Features>
+			<Character>吉祥</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>技</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="捉鸡" class="地">
+			<Features>60,30,30,19,19,30</Features>
+			<Character>呆萌</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="枯妖" class="地">
+			<Features>25,48,34,96,61,25</Features>
+			<Character>呆萌</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
 		<Monster name="张飞" class="地">
 			<Features>198,102,198,62,102,102</Features>
 			<Skills>
@@ -1402,39 +1457,19 @@
 	</Challenges>
 	<Challenges>
 		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="魅" limit="1800"/>
+			<FeaturesRequired feature="技" limit="3000"/>
 		</Challenge>
 	</Challenges>
 	<Challenges>
-		<Challenge name="龙生九子" min="0" max="8">
-			<FeaturesRequired feature="速" limit="1760"/>
-			<FeaturesRequired feature="力" limit="1730"/>
+		<Challenge name="阴阳河" min="0" max="8">
+			<FeaturesRequired feature="速" limit="2165"/>
+			<FeaturesRequired feature="技" limit="2015"/>
 		</Challenge>
 	</Challenges>
 	<Challenges>
 		<Challenge name="悟真塔" min="0" max="8" class="水">
 			<FeaturesRequired feature="智" limit="1800"/>
 			<FeaturesRequired feature="技" limit="1800"/>
-		</Challenge>
-		<Challenge name="龙生九子" min="0" max="6" class="火">
-			<FeaturesRequired feature="速" limit="1800"/>
-			<FeaturesRequired feature="技" limit="1800"/>
-		</Challenge>	
-		<Challenge name="周挑战" min="0" max="8">
-			<FeaturesRequired feature="力" limit="1800"/>
-			<FeaturesRequired feature="智" limit="1800"/>
-			<FeaturesRequired feature="魅" limit="1800"/>
-			<FeaturesRequired feature="运" limit="1800"/>
-			<FeaturesRequired feature="技" limit="1800"/>
-			<FeaturesRequired feature="速" limit="1800"/>
-		</Challenge>
-		<Challenge name="乱入-沙虫的入侵" min="0" max="8">
-			<FeaturesRequired feature="智" limit="2165"/>
-			<FeaturesRequired feature="魅" limit="2320"/>
-		</Challenge>
-		<Challenge name="挑战" min="0" max="8">
-			<FeaturesRequired feature="智" limit="1500"/>
-			<FeaturesRequired feature="魅" limit="1500"/>
 		</Challenge>
 	</Challenges>
 	<Fates>
