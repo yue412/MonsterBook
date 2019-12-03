@@ -36,9 +36,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="书呆" class="木">
-			<Features>38,134,42,55,62,96</Features>
-			<Character>谋略|人形</Character>
+		<Monster name="文曲星" class="木">
+			<Features>68,239,76,101,109,169</Features>
+			<Character>谋略|人形|老人家</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -1186,14 +1186,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="枯妖" class="地">
-			<Features>25,48,34,96,61,25</Features>
-			<Character>呆萌</Character>
+		<Monster name="秋波" class="地">
+			<Features>46,125,49,160,102,62</Features>
+			<Character>呆萌|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>魅</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
