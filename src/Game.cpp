@@ -210,8 +210,9 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
     oResult.m_nFeatureSet = nFeatureSet;
 
     std::vector<CMonster*> oMonsters;
-    std::copy_if(oMonsterList.begin(), oMonsterList.end(), std::back_inserter(oMonsters), [pChallenge, nFeatureSet](CMonster* pMonster) {
-        return (pChallenge->requiredClass() == EC_ALL && pMonster->hasSpeciality(nFeatureSet) || pMonster->getClass() == pChallenge->requiredClass());
+    int nCount = 0;
+    std::copy_if(oMonsterList.begin(), oMonsterList.end(), std::back_inserter(oMonsters), [&nCount, pChallenge, nFeatureSet](CMonster* pMonster) {
+        return (pChallenge->requiredClass() == EC_ALL && pMonster->hasSpeciality(nFeatureSet) || pMonster->getClass() == pChallenge->requiredClass()) && ++nCount <= 50;
     });
 
     std::sort(oMonsters.begin(), oMonsters.end(), [nFeatureSet](CMonster* pMonster1, CMonster* pMonster2) {

@@ -24,13 +24,13 @@ void output(std::vector<CSolutionPtr>& oResultList)
         std::cout << "Solution " << nIndex << ":" << (*itr)->size() << std::endl;
         for each (auto pair in **itr)
         {
-            std::cout << ToString(pair.first->getName()) << "[";
+            std::cout << ToString(pair.first->getName()) << ":";
             for each (auto pMonster in *pair.second)
             {
                 sNames += pMonster->getName() + L",";
-                std::cout << ToString(pMonster->getName()) << ",";
+                std::cout << ToString(pMonster->getName()) << "[" << ToString(g_sClassNames[pMonster->getClass()]) << "],";
             }
-            std::cout << "]" << std::endl;
+            std::cout << std::endl;
         }
     }
     std::cout << ToString(sNames) << std::endl;
