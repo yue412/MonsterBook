@@ -259,9 +259,20 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="福塔" class="火">
-			<Features>95,78,52,181,78,64</Features>
-			<Character>自然|人形</Character>
+		<Monster name="尾火虎" class="火">
+			<Features>198,76,56,106,70,139</Features>
+			<Character>美食|魁梧|猫咪</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="托塔天王" class="火">
+			<Features>154,121,82,287,121,102</Features>
+			<Character>自然|人形|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -588,14 +599,14 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="沫沫" class="水">
-			<Features>19,21,18,23,34,56</Features>
-			<Character>水性</Character>
+		<Monster name="清道夫" class="水">
+			<Features>50,54,44,60,81,137</Features>
+			<Character>水性|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>技</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -824,9 +835,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="灰净" class="光">
-			<Features>23,58,19,21,25,23</Features>
-			<Character>吉祥</Character>
+		<Monster name="光留鼎" class="光">
+			<Features>99,154,54,59,72,99</Features>
+			<Character>吉祥|娇小|呆萌</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
@@ -1034,13 +1045,13 @@
 		<Monster name="鼠魅娘" class="地">
 			<Features>53,124,143,53,60,104</Features>
 		</Monster>	
-		<Monster name="壶精" class="地">
-			<Features>21,42,14,23,14,60</Features>
-			<Character>善良</Character>
+		<Monster name="名医许仙" class="地">
+			<Features>62,152,44,68,44,170</Features>
+			<Character>善良|人形|神秘</Character>
 		</Monster>	
-		<Monster name="黑白馒" class="地">
-			<Features>95,32,31,38,80,31</Features>
-			<Character>美食|呆萌</Character>
+		<Monster name="乾坤子" class="地">
+			<Features>134,44,44,48,112,44</Features>
+			<Character>美食|呆萌|猫咪</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -1164,9 +1175,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="黑长直" class="地">
-			<Features>23,21,19,25,23,58</Features>
-			<Character>吉祥</Character>
+		<Monster name="蚊避鼎" class="地">
+			<Features>78,48,44,56,78,122</Features>
+			<Character>吉祥|娇小|呆萌</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -1402,6 +1413,17 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
+		<!--Challenge name="二十四节气" min="0" max="8">
+			<FeaturesRequired feature="力" limit="3000"/>
+			<FeaturesRequired feature="智" limit="3000"/>
+			<FeaturesRequired feature="速" limit="3000"/>
+			<FeaturesRequired feature="魅" limit="3000"/>
+			<FeaturesRequired feature="运" limit="3000"/>
+			<FeaturesRequired feature="技" limit="3000"/>
+		</Challenge-->
+		<Challenge name="阴阳河" min="0" max="8">
+			<FeaturesRequired feature="速" limit="4300"/>
+		</Challenge>
 		<Challenge name="九离塔" min="0" max="8">
 			<FeaturesRequired feature="技" limit="3650"/>
 		</Challenge>
@@ -1457,13 +1479,23 @@
 	</Challenges>
 	<Challenges>
 		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="技" limit="3000"/>
+			<FeaturesRequired feature="技" limit="3100"/>
 		</Challenge>
-	</Challenges>
-	<Challenges>
-		<Challenge name="阴阳河" min="0" max="8">
-			<FeaturesRequired feature="速" limit="2165"/>
-			<FeaturesRequired feature="技" limit="2015"/>
+		<Challenge name="龙生九子" min="0" max="6" class="火">
+			<FeaturesRequired feature="速" limit="1800"/>
+			<FeaturesRequired feature="技" limit="1800"/>
+		</Challenge>
+		<Challenge name="悟真塔" min="0" max="8" class="水">
+			<FeaturesRequired feature="智" limit="1800"/>
+			<FeaturesRequired feature="技" limit="1800"/>
+		</Challenge>
+		<Challenge name="每周挑战" min="0" max="8">
+			<FeaturesRequired feature="力" limit="1800"/>
+			<FeaturesRequired feature="智" limit="1800"/>
+			<FeaturesRequired feature="速" limit="1800"/>
+			<FeaturesRequired feature="魅" limit="1800"/>
+			<FeaturesRequired feature="运" limit="1800"/>
+			<FeaturesRequired feature="技" limit="1800"/>
 		</Challenge>
 	</Challenges>
 	<Challenges>
