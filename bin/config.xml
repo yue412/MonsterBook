@@ -95,13 +95,14 @@
 				</Skill>
 			</Skills>
 		</Monster>			
-		<Monster name="那家" class="木">
-			<Features>82,50,124,258,309,61</Features>
+		<Monster name="小娜迦" class="木">
+			<Features>92,56,138,288,346,68</Features>
+			<Character>娇小|妖怪|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -588,9 +589,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="隐花" class="水">
-			<Features>23,23,19,60,19,23</Features>
-			<Character>自然</Character>
+		<Monster name="藻娘" class="水">
+			<Features>60,60,50,143,50,60</Features>
+			<Character>自然|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -599,9 +600,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="清道夫" class="水">
-			<Features>50,54,44,60,81,137</Features>
-			<Character>水性|善良</Character>
+		<Monster name="混江龙李俊" class="水">
+			<Features>74,82,65,90,124,208</Features>
+			<Character>水性|善良|自然</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -1479,7 +1480,26 @@
 	</Challenges>
 	<Challenges>
 		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="技" limit="3100"/>
+			<FeaturesRequired feature="技" limit="3250"/>
+		</Challenge>
+		<Challenge name="月下森林" min="0" max="8">
+			<FeaturesRequired feature="智" limit="2110"/>
+			<FeaturesRequired feature="力" limit="1785"/>
+		</Challenge>
+
+	</Challenges>
+	<Challenges>
+		<Challenge name="每周挑战" min="0" max="8">
+			<FeaturesRequired feature="力" limit="1600"/>
+			<FeaturesRequired feature="智" limit="1600"/>
+			<FeaturesRequired feature="速" limit="1600"/>
+			<FeaturesRequired feature="魅" limit="1600"/>
+			<FeaturesRequired feature="运" limit="1600"/>
+			<FeaturesRequired feature="技" limit="1600"/>
+		</Challenge>
+		<Challenge name="悟真塔" min="0" max="8" class="水">
+			<FeaturesRequired feature="智" limit="1800"/>
+			<FeaturesRequired feature="技" limit="1800"/>
 		</Challenge>
 		<Challenge name="龙生九子" min="0" max="6" class="火">
 			<FeaturesRequired feature="速" limit="1800"/>
@@ -1488,21 +1508,7 @@
 		<Challenge name="悟真塔" min="0" max="8" class="水">
 			<FeaturesRequired feature="智" limit="1800"/>
 			<FeaturesRequired feature="技" limit="1800"/>
-		</Challenge>
-		<Challenge name="每周挑战" min="0" max="8">
-			<FeaturesRequired feature="力" limit="1800"/>
-			<FeaturesRequired feature="智" limit="1800"/>
-			<FeaturesRequired feature="速" limit="1800"/>
-			<FeaturesRequired feature="魅" limit="1800"/>
-			<FeaturesRequired feature="运" limit="1800"/>
-			<FeaturesRequired feature="技" limit="1800"/>
-		</Challenge>
-	</Challenges>
-	<Challenges>
-		<Challenge name="悟真塔" min="0" max="8" class="水">
-			<FeaturesRequired feature="智" limit="1800"/>
-			<FeaturesRequired feature="技" limit="1800"/>
-		</Challenge>
+		</Challenge>		
 	</Challenges>
 	<Fates>
 		<Fate name="青梅竹马">
