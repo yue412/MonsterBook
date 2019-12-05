@@ -14,6 +14,7 @@
 #include <thread>
 #include <mutex>
 #include <chrono>
+#include <numeric>
 
 struct CStageInfo
 {
@@ -230,6 +231,7 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
 	std::thread oThreadList[nThreadCount];
     CResult oResultList[nThreadCount];
     CStageInfo oInfoList[nThreadCount];
+    //int nHitCountList[nThreadCount];
 
     std::vector<std::vector<int>> oList;
     combination(oMonsters.size(), nPreCount, oList);
@@ -248,10 +250,11 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
 	{
 		oThreadList[i].join();
 	}
-
+    int nTotalHitCount = 0;
     for (int i = 0; i < nThreadCount; i++)
     {
         oResult.merge(oResultList[i]);
+        nTotalHitCount += std::accumulate(oInfoList[i].oHitCounts.begin(), oInfoList[i].oHitCounts.end(), 0);
         /*
         std::cout << "thread:\t";
         int nTotalHitCount = 0;
@@ -276,7 +279,7 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
         */
     }
 
-	std::cout /*<< "\thitcount:" << m_nCount*/ << "\ttime:" << GetTickCount() - nTime /*<<"\tcreatecount:" << nCount2*/ << std::endl;
+	std::cout << "\thitcount:" << nTotalHitCount << "\ttime:" << GetTickCount() - nTime /*<<"\tcreatecount:" << nCount2*/ << std::endl;
 }
 
 void CGame::simulator(std::vector<std::wstring>& oMonsterList, int * nResult)

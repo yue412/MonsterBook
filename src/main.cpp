@@ -25,6 +25,8 @@ void output(std::vector<CSolutionPtr>& oResultList)
         for each (auto pair in **itr)
         {
             std::cout << ToString(pair.first->getName()) << ":";
+            std::stable_sort(pair.second->begin(), pair.second->end(), [](CMonster* pMonster1, CMonster* pMonster2) {
+                return pMonster1->getClass() < pMonster2->getClass(); });
             for each (auto pMonster in *pair.second)
             {
                 sNames += pMonster->getName() + L",";
