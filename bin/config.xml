@@ -37,6 +37,17 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="木圆" class="木">
+			<Features>92,44,36,54,36,31</Features>
+			<Character>自然</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="泥垢" class="木">
 			<Features>18,19,36,23,19,56</Features>
 			<Character>呆萌</Character>
