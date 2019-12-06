@@ -37,6 +37,17 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="泥垢" class="木">
+			<Features>18,19,36,23,19,56</Features>
+			<Character>呆萌</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>技</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="绿茶姬" class="木">
 			<Features>95,57,70,150,95,70</Features>
 			<Character>自然|妹纸|善良</Character>
