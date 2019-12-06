@@ -1260,6 +1260,17 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
+		<Monster name="储羊" class="光">
+			<Features>92,39,42,25,42,52</Features>
+			<Character>呆萌</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>		
 		<Monster name="鼠魅娘" class="地">
 			<Features>53,124,143,53,60,104</Features>
 		</Monster>	
