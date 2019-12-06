@@ -1305,6 +1305,17 @@
 				</Skill>				
 			</Skills>
 		</Monster>				
+		<Monster name="毕宿五" class="地">
+			<Features>89,96,306,108,272,68</Features>
+			<Character>神秘</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="袋仔" class="地">
 			<Features>117,39,65,46,25,117</Features>
 			<Character>善良</Character>
