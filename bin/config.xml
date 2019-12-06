@@ -282,6 +282,28 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="核桃" class="火">
+			<Features>14,14,48,21,27,48</Features>
+			<Character>自然</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>技</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="肉痴" class="火">
+			<Features>25,16,36,19,50,25</Features>
+			<Character>美食</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="上联" class="火">
 			<Features>100,115,92,115,155,77</Features>
 			<Character>吉祥</Character>
@@ -882,6 +904,17 @@
 				</Skill>
 			</Skills>
 		</Monster>				
+		<Monster name="银冠" class="水">
+			<Features>61,111,31,31,130,44</Features>
+			<Character>财迷</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
 		<Monster name="名将森兰丸" class="水">
 			<Features>152,76,212,76,49,92</Features>
 			<Character>善良|人形|战士</Character>
@@ -1113,6 +1146,17 @@
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>		
+		<Monster name="轻音" class="光">
+			<Features>38,23,145,121,27,58</Features>
+			<Character>呆萌</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>速</Feature>
 					<Value>1.3</Value>
 				</Skill>			
 			</Skills>
