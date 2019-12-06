@@ -16,12 +16,14 @@ public:
     std::wstring getName() { return m_sName; }
 	int getMin() { return m_nMin; }
 	int getMax() { return m_nMax; }
+    int getTotal() { return m_nTotal; }
 	double* featuresRequired() { return m_nRequired; }
     EnElementClass requiredClass() { return m_nClass; }
 private:
     std::wstring m_sName;
 	int m_nMin;
 	int m_nMax;
+    int m_nTotal;
     double m_nRequired[EF_ALL];
     EnElementClass m_nClass;
 };

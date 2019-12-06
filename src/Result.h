@@ -36,6 +36,7 @@ public:
     void add(CTeamPtr pTeam, double* dFeatures);
 	void changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset);
     void merge(const CResult& oResult);
+    int size() { return (int)m_oTeamList.size(); }
 private:
 	void removeOrder(EnResultOrderType nType);
 	void initItem(CTeamPtr pTeam, double* dFeatures, CResultItem& oItem);

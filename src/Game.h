@@ -4,6 +4,7 @@
 #include "MonsterTypes.h"
 #include "Result.h"
 #include "Team.h"
+#include <map>
 
 class CChallenge;
 class CMonster;
@@ -21,15 +22,15 @@ public:
     CGame();
     ~CGame();
 public:
-    void play(std::vector<CSolutionPtr>& oSolutionList, std::vector<int>& oChallengeGroupIndexList);
-    void play(CChallenge* pChallenge, CResult& oResult);
+    void play(std::vector<CSolutionPtr>& oSolutionList, std::vector<int>& oChallengeGroupIndexList, std::map<std::wstring, CResult>& oFailedMap);
+    void play(CChallenge* pChallenge, CResult& oResult, CResult& oFailedResult);
     void simulator(std::vector<std::wstring>& oMonsterList, int* nResult);
 	void exclude(std::vector<std::wstring>& oMonsterList);
     int m_nCount;
 private:
     // ÃÙ’Ω“ªπÿ
-    void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, CResult& oResult);
-    void play(int nChallengeIndex, const std::vector<CMonster*>& oMonsterList, CSolution& oSolution, std::vector<CSolutionPtr>& oSolutionList);
+    void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, CResult& oResult, CResult& oFailedResult);
+    void play(int nChallengeIndex, const std::vector<CMonster*>& oMonsterList, CSolution& oSolution, std::vector<CSolutionPtr>& oSolutionList, std::map<std::wstring, CResult>& oFailedMap);
     void combination(int m, int n, std::vector<std::vector<int>>& oList);
     void doCombination(int m, int nStart, int nCount, std::vector<int>& oComb, std::vector<std::vector<int>>& oList);
     void removeMonster(std::vector<CMonster*>& oMonsterList, CTeamPtr pTeam);

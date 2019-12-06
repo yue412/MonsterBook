@@ -1878,7 +1878,7 @@
 		</Challenge>		
 	</Challenges>
 	<Challenges>
-		<Challenge name="二十四节气" min="0" max="8" total="60">
+		<Challenge name="二十四节气" min="0" max="8" total="40">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
 			<FeaturesRequired feature="速" limit="3000"/>
@@ -1886,12 +1886,12 @@
 			<FeaturesRequired feature="运" limit="3000"/>
 			<FeaturesRequired feature="技" limit="3000"/>
 		</Challenge>	
-		<Challenge name="九离塔" min="0" max="8">
+		<!--Challenge name="九离塔" min="0" max="8">
 			<FeaturesRequired feature="技" limit="3650"/>
 		</Challenge>
 		<Challenge name="主线" min="0" max="8">
 			<FeaturesRequired feature="技" limit="3300"/>
-		</Challenge>
+		</Challenge-->
 		<!--Challenge name="月下森林" min="0" max="8">
 			<FeaturesRequired feature="智" limit="2110"/>
 			<FeaturesRequired feature="力" limit="1785"/>

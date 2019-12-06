@@ -60,6 +60,7 @@ void CConfig::init(CGame * pGame)
 				pChallenge->m_sName = Utf8ToUnicode(pChallengeNode->Attribute("name"));
 				pChallengeNode->Attribute("min", &pChallenge->m_nMin);
 				pChallengeNode->Attribute("max", &pChallenge->m_nMax);
+                pChallengeNode->Attribute("total", &pChallenge->m_nTotal);
                 auto sClass = pChallengeNode->Attribute("class");
                 if (sClass != nullptr)
                     pChallenge->m_nClass = Name2Class(Utf8ToUnicode(sClass));

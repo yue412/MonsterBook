@@ -156,7 +156,9 @@ int main(int argc, char* argv[])
 
             CResult oResultList;
 			initResult(oParamsMap, oResultList);
-
+            CResult oFailedResultList;
+            oFailedResultList.changeOrder(RO_CLOSE, MB_DESC, 0);
+            oFailedResultList.setTop(oParamsMap.find(L"top") == oParamsMap.end() ? 10 : std::stoi(oParamsMap[L"top"]));
 			if (oParamsMap.find(L"exclude") != oParamsMap.end())
 			{
 				std::vector<std::wstring> oStringList;
@@ -164,11 +166,19 @@ int main(int argc, char* argv[])
 				oGame.exclude(oStringList);
 			}
 			auto nTime = GetTickCount();
-			oGame.play(&oChallenge, oResultList);
+			oGame.play(&oChallenge, oResultList, oFailedResultList);
             std::cout << "count: " << oGame.m_nCount << std::endl;
             std::cout << "play: " << GetTickCount() - nTime << std::endl;
 
-            output(oResultList);
+            if (oResultList.size() > 0)
+            {
+                output(oResultList);
+            }
+            else
+            {
+                std::cout << "<--------- no match result !!! --------->" << std::endl;
+                output(oFailedResultList);
+            }
         }
 		else if (str == L"settings")
 		{
@@ -200,12 +210,22 @@ int main(int argc, char* argv[])
             std::vector<CSolutionPtr> oResultList;
             std::vector<int> oGroupList;
             getGroupList(oParamsMap, oGroupList);
-            oGame.play(oResultList, oGroupList);
+            std::map<std::wstring, CResult> oFailedResultList;
+            oGame.play(oResultList, oGroupList, oFailedResultList);
             std::wcout << L"play: " << GetTickCount() - nTime << std::endl;
             std::sort(oResultList.begin(), oResultList.end(), [](CSolutionPtr pSolution1, CSolutionPtr pSolution2) {
                 return pSolution1->size() > pSolution2->size();
             });
             output(oResultList);
+            if (oFailedResultList.size() > 0)
+            {
+                std::cout << "<--------- failed match --------->" << std::endl;
+                for each (auto oPair in oFailedResultList)
+                {
+                    std::cout << ToString(oPair.first) << ":" << std::endl;
+                    output(oPair.second);
+                }
+            }
         }
 		else
 		{
