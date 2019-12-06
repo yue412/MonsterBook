@@ -1531,6 +1531,17 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
+		<Monster name="缚圆" class="暗">
+			<Features>44,19,31,96,48,60</Features>
+			<Character>妖怪</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
 		<Monster name="暴刺灵" class="暗">
 			<Features>132,39,39,39,50,123</Features>
 			<Skills>
@@ -1539,6 +1550,17 @@
 					<Feature>力</Feature>
 					<Value>30</Value>
 				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="糖宝" class="暗">
+			<Features>272,89,68,108,96,306</Features>
+			<Character>善良|呆萌</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>暗</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>					
 			</Skills>
 		</Monster>		
 		<Monster name="棋魂" class="暗">
