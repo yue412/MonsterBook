@@ -1272,6 +1272,17 @@
 				</Skill>				
 			</Skills>
 		</Monster>				
+		<Monster name="袋仔" class="地">
+			<Features>117,39,65,46,25,117</Features>
+			<Character>善良</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="索灵" class="地">
 			<Features>25,16,36,16,16,63</Features>
 			<Character>呆萌</Character>
