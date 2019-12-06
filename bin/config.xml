@@ -1227,6 +1227,17 @@
 				</Skill>				
 			</Skills>
 		</Monster>				
+		<Monster name="索灵" class="地">
+			<Features>25,16,36,16,16,63</Features>
+			<Character>呆萌</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>技</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="乾坤子" class="地">
 			<Features>134,44,44,48,112,44</Features>
 			<Character>美食|呆萌|猫咪</Character>
@@ -1478,6 +1489,17 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
+		<Monster name="渊鲶" class="暗">
+			<Features>23,23,50,19,23,34</Features>
+			<Character>呆萌</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
 		<Monster name="鬼斩骨" class="暗">
 			<Features>160,52,105,52,80,90</Features>
 			<Character>娇小|邪恶|战士</Character>
@@ -1667,6 +1689,14 @@
 		</Challenge>		
 	</Challenges>
 	<Challenges>
+		<Challenge name="二十四节气" min="0" max="8" total="60">
+			<FeaturesRequired feature="力" limit="3000"/>
+			<FeaturesRequired feature="智" limit="3000"/>
+			<FeaturesRequired feature="速" limit="3000"/>
+			<FeaturesRequired feature="魅" limit="3000"/>
+			<FeaturesRequired feature="运" limit="3000"/>
+			<FeaturesRequired feature="技" limit="3000"/>
+		</Challenge>	
 		<Challenge name="九离塔" min="0" max="8">
 			<FeaturesRequired feature="技" limit="3650"/>
 		</Challenge>
