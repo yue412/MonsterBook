@@ -947,6 +947,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="椰壳" class="光">
+			<Features>56,252,63,252,71,86</Features>
+			<Character>自然</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="碎金" class="光">
 			<Features>50,117,42,54,31,117</Features>
 			<Character>财迷</Character>
@@ -1668,7 +1679,7 @@
 		</Challenge-->
 	</Challenges>
 	<Challenges>
-		<Challenge name="每周挑战" min="0" max="8">
+		<Challenge name="每周挑战" min="0" max="8" total="60">
 			<FeaturesRequired feature="力" limit="1600"/>
 			<FeaturesRequired feature="智" limit="1600"/>
 			<FeaturesRequired feature="速" limit="1600"/>
