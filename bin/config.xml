@@ -733,6 +733,18 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="风仔" class="水">
+			<Features>58,58,128,46,71,50</Features>
+			<Character>奇特</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<Trigger>4</Trigger>
+					<ElementClass>水</ElementClass>
+					<Feature>全</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="针塑" class="水">
 			<Features>61,21,19,19,34,18</Features>
 			<Character>自然</Character>
@@ -1335,6 +1347,17 @@
 					<ElementClass>全</ElementClass>
 					<Feature>速</Feature>
 					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="锤子" class="地">
+			<Features>140,69,84,56,42,27</Features>
+			<Character>奇特</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
