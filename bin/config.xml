@@ -74,6 +74,17 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="青团" class="木">
+			<Features>232,62,58,72,72,208</Features>
+			<Character>小眼睛</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
 		<Monster name="饕餮" class="木">
 			<Features>240,90,120,100,120,109</Features>
 			<Character>美食|妖怪|神秘</Character>
@@ -736,6 +747,17 @@
 				</Skill>
 			</Skills>
 		</Monster>				
+		<Monster name="咚仔" class="水">
+			<Features>19,100,36,71,31,39</Features>
+			<Character>神秘</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>智</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="八仙韩湘子" class="水">
 			<Features>88,218,188,318,118,158</Features>
 			<Character>妹纸|乐器|神仙|冰冷</Character>
@@ -834,6 +856,17 @@
 					<ElementClass>光</ElementClass>
 					<Feature>技</Feature>
 					<Value>50</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="兔兔" class="光">
+			<Features>25,63,38,98,31,36</Features>
+			<Character>自然</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
