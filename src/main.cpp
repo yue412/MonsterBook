@@ -52,7 +52,7 @@ void output(const CResult& oResult)
         std::cout << "\t";
         for (int i = 0; i < EF_ALL; i++)
         {
-            std::cout << (int)ceil(oItem.dFeatures[i]) << ",";
+            std::cout << roundEx(oItem.dFeatures[i]) << ",";
         }
         std::cout << std::endl;
     }
@@ -211,6 +211,7 @@ int main(int argc, char* argv[])
             std::vector<int> oGroupList;
             getGroupList(oParamsMap, oGroupList);
             std::map<std::wstring, CResult> oFailedResultList;
+			oGame.m_bExportFailedInfo = oParamsMap.find(L"export") != oParamsMap.end() && (oParamsMap[L"export"] == L"on");
             oGame.play(oResultList, oGroupList, oFailedResultList);
             std::wcout << L"play: " << GetTickCount() - nTime << std::endl;
             std::sort(oResultList.begin(), oResultList.end(), [](CSolutionPtr pSolution1, CSolutionPtr pSolution2) {

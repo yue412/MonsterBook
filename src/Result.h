@@ -10,7 +10,9 @@ enum EnResultOrderType
 {
     RO_CLOSE,
     RO_SIZE,
-    RO_FEATURES
+    RO_FEATURES,
+	RO_FIT_FEATURE_COUNT,
+	RO_CLOSE_FEATURE
 };
 
 #define MB_DESC 1 // ½µÐò
@@ -21,6 +23,8 @@ struct CResultItem
     double dFeatures[EF_ALL];
     double dTotalFeature;
     double dTotalNeedFeature;
+	int nFitCount;
+	double dClosedFeature;
     CTeamPtr pTeam;
 };
 
@@ -33,13 +37,13 @@ public:
     ~CResult();
 public:
     void setTop(int nNum) { m_nNum = nNum; }
-    void add(CTeamPtr pTeam, double* dFeatures);
+    void add(CTeamPtr pTeam, double* dFeatures, double* dRequiredFeatures);
 	void changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset);
-    void merge(const CResult& oResult);
+    void merge(const CResult& oResult, double* dRequiredFeatures);
     int size() { return (int)m_oTeamList.size(); }
 private:
 	void removeOrder(EnResultOrderType nType);
-	void initItem(CTeamPtr pTeam, double* dFeatures, CResultItem& oItem);
+	void initItem(CTeamPtr pTeam, double* dFeatures, double* dRequiredFeatures, CResultItem& oItem);
     bool compare(int nAscOrDesc, double dVal1, double dVal2, bool& bResult);
     int m_nNum;
     std::list<CResultItem> m_oTeamList;

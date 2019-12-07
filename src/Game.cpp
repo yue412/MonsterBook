@@ -23,6 +23,7 @@ struct CStageInfo
     int nCount;
     std::vector<int> oHitCounts;
     std::vector<int> oTimeList;
+	bool bExportFailedInfo;
 };
 
 class CGame_Thread
@@ -30,7 +31,7 @@ class CGame_Thread
 public:
     static void calc(CTeam& oTeam, double* oResult);
     static bool success(double* dChallengeRequired, double* dTeam);
-    static void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, CResult& oFailedResult, int& nHitCount);
+    static void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, CResult& oFailedResult, int& nHitCount, bool bExportFailedInfo);
     static bool getStartIndex(std::vector<std::vector<int>>* pStartIndexList, std::vector<int>& nStartIndex);
     static void play_thread(std::vector<std::vector<int>>* pStartIndexList, CResult* pResult, CResult* pFailedResult, CStageInfo* pInfo);
 public:
@@ -86,13 +87,13 @@ bool CGame_Thread::success(double* dChallengeRequired, double* dTeam)
 {
 	for (int i = 0; i < EF_ALL; i++)
 	{
-		if (!(ceil(dTeam[i] - g_dEpsilon) + g_dEpsilon > dChallengeRequired[i]))
+		if (!(roundEx(dTeam[i]) + g_dEpsilon > dChallengeRequired[i]))
 			return false;
 	}
 	return true;
 }
 
-void CGame_Thread::play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, CResult& oFailedResult, int& nHitCount)
+void CGame_Thread::play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, CResult& oFailedResult, int& nHitCount, bool bExportFailedInfo)
 {
     if (nStartIndex >= (int)oMonsterList.size() || nCount <= 0)
         return;
@@ -103,12 +104,12 @@ void CGame_Thread::play(CChallenge* pChallenge, const std::vector<CMonster*>& oM
         calc(oTeam, oTotal);
         ++nHitCount;
         if (success(pChallenge->featuresRequired(), oTotal))
-            oResult.add(CTeamPtr(new CTeam(oTeam)), oTotal);
+            oResult.add(CTeamPtr(new CTeam(oTeam)), oTotal, nullptr);
         else 
         {
-            if (oResult.size() == 0)
-                oFailedResult.add(CTeamPtr(new CTeam(oTeam)), oTotal);
-            play(pChallenge, oMonsterList, i + 1, nCount - 1, oTeam, oResult, oFailedResult, nHitCount);
+            if (oResult.size() == 0 && bExportFailedInfo)
+                oFailedResult.add(CTeamPtr(new CTeam(oTeam)), oTotal, pChallenge->featuresRequired());
+            play(pChallenge, oMonsterList, i + 1, nCount - 1, oTeam, oResult, oFailedResult, nHitCount, bExportFailedInfo);
         }
         oTeam.pop_back();
     }
@@ -140,20 +141,20 @@ void CGame_Thread::play_thread(std::vector<std::vector<int>>* pStartIndexList, C
         calc(oTeam, oTotal);
         ++nHitCount;
         if (success(pInfo->pChallenge->featuresRequired(), oTotal))
-            pResult->add(CTeamPtr(new CTeam(oTeam)), oTotal);
+            pResult->add(CTeamPtr(new CTeam(oTeam)), oTotal, nullptr);
         else
         {
-            if (pResult->size() == 0)
-                pFailedResult->add(CTeamPtr(new CTeam(oTeam)), oTotal);
+            if (pResult->size() == 0 && pInfo->bExportFailedInfo)
+                pFailedResult->add(CTeamPtr(new CTeam(oTeam)), oTotal, pInfo->pChallenge->featuresRequired());
             if (nStartIndex.size() == pInfo->nCount)
-                play(pInfo->pChallenge, *pInfo->pMonsterList, nStartIndex.back() + 1, pInfo->pChallenge->getMax() - pInfo->nCount, oTeam, *pResult, *pFailedResult, nHitCount);
+                play(pInfo->pChallenge, *pInfo->pMonsterList, nStartIndex.back() + 1, pInfo->pChallenge->getMax() - pInfo->nCount, oTeam, *pResult, *pFailedResult, nHitCount, pInfo->bExportFailedInfo);
         }
         pInfo->oTimeList.push_back(GetTickCount() - nTime);
         pInfo->oHitCounts.push_back(nHitCount);
 	}
 }
 
-CGame::CGame()
+CGame::CGame(): m_bExportFailedInfo(false)
 {
 }
 
@@ -260,6 +261,7 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
         oInfoList[i].nCount = nPreCount;
         oInfoList[i].pMonsterList = &oMonsters;
         oInfoList[i].pChallenge = pChallenge;
+		oInfoList[i].bExportFailedInfo = m_bExportFailedInfo;
         //nHitCountList[i] = 0;
         //nHitCountList2[i] = 0;
 		oThreadList[i] = std::thread(CGame_Thread::play_thread, &oList, &oResultList[i], &oFailedResultList[i], &oInfoList[i]);
@@ -272,8 +274,8 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
     int nTotalHitCount = 0;
     for (int i = 0; i < nThreadCount; i++)
     {
-        oResult.merge(oResultList[i]);
-        oFailedResult.merge(oFailedResultList[i]);
+        oResult.merge(oResultList[i], pChallenge->featuresRequired());
+        oFailedResult.merge(oFailedResultList[i], pChallenge->featuresRequired());
         nTotalHitCount += std::accumulate(oInfoList[i].oHitCounts.begin(), oInfoList[i].oHitCounts.end(), 0);
         /*
         std::cout << "thread:\t";
@@ -320,7 +322,7 @@ void CGame::simulator(std::vector<std::wstring>& oMonsterList, int * nResult)
     CGame_Thread::calc(oTeam, oTotal);
     for (int i = 0; i < EF_ALL; i++)
     {
-        nResult[i] = (int)ceil(oTotal[i] - g_dEpsilon);
+        nResult[i] = roundEx(oTotal[i]);
     }
 }
 
@@ -337,9 +339,10 @@ void CGame::play(int nChallengeIndex, const std::vector<CMonster*>& oMonsterList
     CResult oResult;
     oResult.setTop(1);
     CResult oFailedResult;
-    oFailedResult.setTop(2);
-    oFailedResult.changeOrder(RO_CLOSE, MB_DESC, 0);
-    play(m_oChallengeList[nChallengeIndex], oMonsterList, oResult, oFailedResult);
+    oFailedResult.setTop(1);
+    oFailedResult.changeOrder(RO_FIT_FEATURE_COUNT, MB_DESC, 0);
+	oFailedResult.changeOrder(RO_CLOSE_FEATURE, MB_ASC, 1);
+	play(m_oChallengeList[nChallengeIndex], oMonsterList, oResult, oFailedResult);
     for each (auto oItem in oResult.m_oTeamList)
     {
         oSolution.push_back(std::make_pair(m_oChallengeList[nChallengeIndex], oItem.pTeam));

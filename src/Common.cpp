@@ -265,3 +265,8 @@ double sum(double arr[])
 	}
 	return dResult;
 }
+
+int roundEx(double dVal)
+{
+	return (int)ceil(dVal - g_dEpsilon);
+}

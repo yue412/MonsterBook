@@ -30,5 +30,6 @@ EnFeatures Name2Feature(std::wstring& sName);
 void fill(double arr[], double dVal);
 void addVec(double vec1[], double vec2[], double result[]);
 double sum(double arr[]);
+int roundEx(double dVal);
 
 #endif // !COMMON_H

@@ -27,6 +27,7 @@ public:
     void simulator(std::vector<std::wstring>& oMonsterList, int* nResult);
 	void exclude(std::vector<std::wstring>& oMonsterList);
     int m_nCount;
+	bool m_bExportFailedInfo;
 private:
     // ÃÙ’Ω“ªπÿ
     void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, CResult& oResult, CResult& oFailedResult);
@@ -40,7 +41,7 @@ private:
     std::vector<CMonster*> m_oMonsterList;
 	std::vector<CSoulBead*> m_oSoulBeadList;
     std::vector<CFate*> m_oFateList;
-    //EnElementClass m_nClass;
+	//EnElementClass m_nClass;
     //CStageInfo* m_pStackTop;
 };
 
