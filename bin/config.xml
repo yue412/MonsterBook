@@ -1023,6 +1023,17 @@
 				</Skill>
 			</Skills>
 		</Monster>				
+		<Monster name="冰兰" class="水">
+			<Features>50,128,46,60,50,75</Features>
+			<Character>美食</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="玄冰" class="水">
 			<Features>30,54,39,86,46,39</Features>
 			<Character>呆萌</Character>
@@ -2043,6 +2054,9 @@
 			<FeaturesRequired feature="运" limit="3000"/>
 			<FeaturesRequired feature="技" limit="3000"/>
 		</Challenge>	
+		<Challenge name="五碑林" min="0" max="8">
+			<FeaturesRequired feature="智" limit="4370"/>
+		</Challenge>
 		<!--Challenge name="九离塔" min="0" max="8">
 			<FeaturesRequired feature="技" limit="3650"/>
 		</Challenge>
