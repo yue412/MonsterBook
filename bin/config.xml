@@ -1635,6 +1635,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="角母" class="暗">
+			<Features>27,54,18,19,18,38</Features>
+			<Character>水性</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
 		<Monster name="忘情水" class="暗">
 			<Features>44,44,38,48,27,90</Features>
 			<Character>美食</Character>
