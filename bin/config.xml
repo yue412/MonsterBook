@@ -1048,15 +1048,21 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="椰壳" class="光">
-			<Features>56,252,63,252,71,86</Features>
-			<Character>自然</Character>
+		<Monster name="圣人椰酥" class="光">
+			<Features>72,318,82,318,90,108</Features>
+			<Character>自然|神仙|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>魅</Feature>
-					<Value>15</Value>
+					<Value>50</Value>
 				</Skill>
+				<Skill name="IncreaseFeature">
+					<Trigger>8</Trigger>
+					<ElementClass>光</ElementClass>
+					<Feature>全</Feature>
+					<Value>200</Value>
+				</Skill>	
 			</Skills>
 		</Monster>		
 		<Monster name="碎金" class="光">
@@ -1230,9 +1236,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="可口小王子" class="光">
-			<Features>122,193,490,170,551,157</Features>
-			<Character>善良|呆萌|吉祥</Character>
+		<Monster name="囝囝可欸克" class="光">
+			<Features>132,215,537,186,605,174</Features>
+			<Character>善良|呆萌|吉祥|人形</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>光</ElementClass>
@@ -1243,7 +1249,12 @@
 					<ElementClass>全</ElementClass>
 					<Feature>运</Feature>
 					<Value>200</Value>
-				</Skill>	
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>2</Value>
+				</Skill>						
 			</Skills>
 		</Monster>		
 		<Monster name="狐魉" class="光">
@@ -1719,15 +1730,25 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="糖宝" class="暗">
-			<Features>272,89,68,108,96,306</Features>
-			<Character>善良|呆萌</Character>
+		<Monster name="囡囡可欸可" class="暗">
+			<Features>537,174,132,215,186,605</Features>
+			<Character>善良|呆萌|妹纸|人形</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>暗</ElementClass>
 					<Feature>全</Feature>
 					<Value>10</Value>
 				</Skill>					
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>技</Feature>
+					<Value>200</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>2</Value>
+				</Skill>	
 			</Skills>
 		</Monster>		
 		<Monster name="棋魂" class="暗">
@@ -1813,14 +1834,14 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
-		<!--Challenge name="二十四节气" min="0" max="8">
+		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
 			<FeaturesRequired feature="速" limit="3000"/>
 			<FeaturesRequired feature="魅" limit="3000"/>
 			<FeaturesRequired feature="运" limit="3000"/>
 			<FeaturesRequired feature="技" limit="3000"/>
-		</Challenge-->
+		</Challenge>	
 		<Challenge name="阴阳河" min="0" max="8">
 			<FeaturesRequired feature="速" limit="4300"/>
 		</Challenge>
@@ -1878,7 +1899,7 @@
 		</Challenge>		
 	</Challenges>
 	<Challenges>
-		<Challenge name="二十四节气" min="0" max="8" total="40">
+		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
 			<FeaturesRequired feature="速" limit="3000"/>
@@ -1898,7 +1919,14 @@
 		</Challenge-->
 	</Challenges>
 	<Challenges>
-		<Challenge name="每周挑战" min="0" max="8" total="60">
+		<Challenge name="龙生九子" min="0" max="6" class="暗">
+			<FeaturesRequired feature="智" limit="1200"/>
+			<FeaturesRequired feature="运" limit="1200"/>
+		</Challenge>
+		<Challenge name="主线" min="0" max="8">
+			<FeaturesRequired feature="技" limit="3350"/>
+		</Challenge>
+		<!--Challenge name="每周挑战" min="0" max="8" total="60">
 			<FeaturesRequired feature="力" limit="1600"/>
 			<FeaturesRequired feature="智" limit="1600"/>
 			<FeaturesRequired feature="速" limit="1600"/>
@@ -1912,11 +1940,7 @@
 		<Challenge name="悟真塔" min="0" max="8" class="水">
 			<FeaturesRequired feature="智" limit="1800"/>
 			<FeaturesRequired feature="技" limit="1800"/>
-		</Challenge>
-		<Challenge name="龙生九子" min="0" max="6" class="光">
-			<FeaturesRequired feature="魅" limit="1000"/>
-			<FeaturesRequired feature="力" limit="1000"/>
-		</Challenge>
+		</Challenge-->
 	</Challenges>
 	<Fates>
 		<Fate name="青梅竹马">
