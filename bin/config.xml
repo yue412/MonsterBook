@@ -382,6 +382,17 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="金儿" class="火">
+			<Features>48,56,38,71,119,82</Features>
+			<Character>吉祥</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="核桃" class="火">
 			<Features>14,14,48,21,27,48</Features>
 			<Character>自然</Character>
