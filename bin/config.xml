@@ -651,6 +651,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="红豆丸" class="火">
+			<Features>164,58,88,46,75,115</Features>
+			<Character>美食</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>技</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="活阎罗阮小七" class="火">
 			<Features>124,116,81,165,108,165</Features>
 			<Character>自然|小眼睛|人形</Character>
@@ -696,6 +707,22 @@
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
 					<Value>50</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="花卷" class="火">
+			<Features>56,36,111,130,30,52</Features>
+			<Character>神秘</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.3</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
