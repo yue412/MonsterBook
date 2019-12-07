@@ -1671,6 +1671,16 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
+		<Monster name="土包" class="地">
+			<Features>100,42,54,36,27,36</Features>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>	
+			</Skills>
+		</Monster>			
 		<Monster name="柴可夫司机" class="地">
 			<Features>110,62,172,62,47,86</Features>
 			<Skills>
