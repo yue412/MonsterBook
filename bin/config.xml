@@ -37,6 +37,17 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="白羊座" class="木">
+			<Features>306,108,272,68,89,96</Features>
+			<Character>神秘</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>力</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="雪丸" class="木">
 			<Features>306,108,272,68,89,96</Features>
 			<Character>善良</Character>
@@ -314,6 +325,17 @@
 					<ElementClass>木</ElementClass>
 					<Feature>速</Feature>
 					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="竹豆" class="木">
+			<Features>17,61,21,18,54,13</Features>
+			<Character>自然</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>木</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -741,6 +763,17 @@
 					<Trigger>4</Trigger>
 					<ElementClass>水</ElementClass>
 					<Feature>全</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+		<Monster name="莲灵" class="水">
+			<Features>48,61,82,145,48,27</Features>
+			<Character>水性</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>魅</Feature>
 					<Value>30</Value>
 				</Skill>
 			</Skills>
