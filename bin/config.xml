@@ -1814,6 +1814,17 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
+		<Monster name="汗马" class="暗">
+			<Features>36,18,25,21,18,54</Features>
+			<Character>奇特</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
 		<Monster name="渊鲶" class="暗">
 			<Features>23,23,50,19,23,34</Features>
 			<Character>呆萌</Character>
