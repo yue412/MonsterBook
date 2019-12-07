@@ -1465,6 +1465,17 @@
 				</Skill>				
 			</Skills>
 		</Monster>				
+		<Monster name="遗酒" class="地">
+			<Features>54,21,14,27,38,18</Features>
+			<Character>美食</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="毕宿五" class="地">
 			<Features>89,96,306,108,272,68</Features>
 			<Character>神秘</Character>
