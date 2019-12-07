@@ -767,6 +767,17 @@
 				</Skill>
 			</Skills>
 		</Monster>				
+		<Monster name="莲精" class="水">
+			<Features>36,75,56,36,56,153</Features>
+			<Character>妹纸</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>技</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="莲灵" class="水">
 			<Features>48,61,82,145,48,27</Features>
 			<Character>水性</Character>
@@ -1313,6 +1324,17 @@
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>		
+		<Monster name="绒茸" class="光">
+			<Features>34,61,42,103,121,52</Features>
+			<Character>呆萌</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
 					<Value>1.3</Value>
 				</Skill>			
 			</Skills>
