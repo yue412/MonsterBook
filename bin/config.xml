@@ -141,6 +141,17 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="金镶玉" class="木">
+			<Features>48,201,48,201,92,73</Features>
+			<Character>善良</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="裸架" class="木">
 			<Features>16,21,52,25,36,21</Features>
 			<Character>奇特</Character>
@@ -401,6 +412,29 @@
 					<ElementClass>木</ElementClass>
 					<Feature>魅</Feature>
 					<Value>2</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="牛头琴" class="火">
+			<Features>113,19,42,61,46,130</Features>
+			<Character>乐器</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<Trigger>4</Trigger>
+					<ElementClass>火</ElementClass>
+					<Feature>全</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="神棍" class="火">
+			<Features>145,39,25,54,82,67</Features>
+			<Character>神仙</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -904,6 +938,17 @@
 				</Skill>
 			</Skills>
 		</Monster>				
+		<Monster name="双鱼座" class="水">
+			<Features>89,306,96,272,108,68</Features>
+			<Character>神秘</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>智</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="莲精" class="水">
 			<Features>36,75,56,36,56,153</Features>
 			<Character>妹纸</Character>
@@ -1230,6 +1275,17 @@
 				</Skill>
 			</Skills>
 		</Monster>						
+		<Monster name="兔类" class="光">
+			<Features>30,84,36,36,30,84</Features>
+			<Character>小眼睛</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>智</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="碟雕" class="光">
 			<Features>58,18,50,18,18,18</Features>
 			<Character>妖怪</Character>
@@ -1513,6 +1569,17 @@
 					<Feature>运</Feature>
 					<Value>2</Value>
 				</Skill>						
+			</Skills>
+		</Monster>		
+		<Monster name="金杵" class="光">
+			<Features>145,50,19,61,65,69</Features>
+			<Character>神仙</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.5</Value>
+				</Skill>			
 			</Skills>
 		</Monster>		
 		<Monster name="狐魉" class="光">
@@ -1980,6 +2047,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="书包仔" class="暗">
+			<Features>60,119,31,48,44,111</Features>
+			<Character>娇小</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.6</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
 		<Monster name="吕布" class="暗">
 			<Features>153,30,75,56,30,67</Features>
 			<Character>善良</Character>
@@ -2053,6 +2131,17 @@
 					<ElementClass>全</ElementClass>
 					<Feature>技</Feature>
 					<Value>200</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="令牌君" class="暗">
+			<Features>61,14,30,46,46,94</Features>
+			<Character>奇特</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
