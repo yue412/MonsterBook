@@ -371,6 +371,17 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="处女座" class="火">
+			<Features>89,68,96,306,108,272</Features>
+			<Character>神秘</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>技</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="火苗儿" class="火">
 			<Features>89,272,96,306,108,68</Features>
 			<Character>自然</Character>
