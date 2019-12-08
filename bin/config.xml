@@ -804,6 +804,17 @@
 				</Skill>
 			</Skills>
 		</Monster>				
+		<Monster name="墨悬" class="水">
+			<Features>14,46,30,77,30,94</Features>
+			<Character>妹纸</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>木</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
 		<Monster name="木偶仆" class="水">
 			<Features>90,90,90,90,90,90</Features>
 			<Character>自然|机械|人形</Character>
