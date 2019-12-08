@@ -361,6 +361,17 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="画精" class="木">
+			<Features>69,25,10,90,25,69</Features>
+			<Character>娇小</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>木</ElementClass>
+					<Feature>全</Feature>
+					<Value>5</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
 		<Monster name="竹豆" class="木">
 			<Features>17,61,21,18,54,13</Features>
 			<Character>自然</Character>
@@ -606,6 +617,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="玄鸟" class="火">
+			<Features>75,67,82,75,178,67</Features>
+			<Character>自然</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="梅妃" class="火">
 			<Features>18,25,42,71,42,96</Features>
 			<Character>善良</Character>
