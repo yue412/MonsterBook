@@ -8,9 +8,9 @@ CSkill::~CSkill()
 {
 }
 
-EnFeatures CSkill::getAffectFeature()
+int CSkill::getAffectFeature()
 {
-    return EF_ALL;
+    return 0;
 }
 
 void CIncreaseFeatureSkill::affect(const CTeam & oTeam, double* oResult)
@@ -72,5 +72,17 @@ void CIncreaseSelfFeatureSkill::affect(const CTeam & oTeam, double * oResult)
     {
         fill(oResult, 0);
         oResult[m_nFeature] = m_dValue;
+    }
+}
+
+void CIncreaseSelfFeatureByCharacterSkill::affect(const CTeam & oTeam, double * oResult)
+{
+    fill(oResult, 0.0);
+    auto nCount = std::count_if(oTeam.begin(), oTeam.end(), [this](CMonster* pMonster) {
+        return pMonster->getCharacterSet().count(this->m_sCharacter) > 0;
+    });
+    for (int i = 0; i < EF_ALL; i++)
+    {
+        oResult[i] += m_nFeatureFlag[i] * nCount * m_dValue;
     }
 }

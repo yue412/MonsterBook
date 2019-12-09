@@ -41,31 +41,8 @@ void CMonster::init(CSoulBead* pSoulBead, const std::vector<CFate*>& oFateList)
     }
     for each (auto pSkill in m_oSkills)
     {
-        if (pSkill->getAffectFeature() != EF_ALL)
-        {
-            m_nSpeciality |= 1 << pSkill->getAffectFeature();
-        }
+        m_nSpeciality |= pSkill->getAffectFeature();
     }
-    /*
-    for each (auto pFate in oFateList)
-    {
-        for (int i = 0; i < pFate->getMonsterCount(); i++)
-        {
-            if (pFate->getMonster(i) == this)
-            {
-                for (int j = 0; j < pFate->getSkillCount(); j++)
-                {
-                    auto pSkill = pFate->getSkill(j);
-                    if (pSkill->getAffectFeature() != EF_ALL)
-                    {
-                        m_nSpeciality |= 1 << pSkill->getAffectFeature();
-                    }
-                }
-                return;
-            }
-        }
-    }
-    */
 }
 
 double CMonster::getFeatureSum(char nFeatureSet)

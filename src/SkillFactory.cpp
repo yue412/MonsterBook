@@ -56,3 +56,25 @@ CSkill * CIncreaseSelfFeatureSkillFactroy::create(TiXmlElement * pSkillNode)
     auto dValue = std::stod(pNode->GetText());
     return new CIncreaseSelfFeatureSkill(nFeature, dValue);
 }
+
+CSkill * CIncreaseSelfFeatureByCharacterSkillFactroy::create(TiXmlElement * pSkillNode)
+{
+    auto pNode = pSkillNode->FirstChildElement("Character");
+    auto sCharacter = pNode ? Utf8ToUnicode(pNode->GetText()) : L"";
+
+    pNode = pSkillNode->FirstChildElement("Features");
+    auto sFeatures = Utf8ToUnicode(pNode->GetText());
+    std::vector<std::wstring> oStrings;
+    split(sFeatures, L'|', oStrings);
+    int nFeatureFlag[EF_ALL];
+    memset(nFeatureFlag, 0, sizeof(int)*EF_ALL);
+    for each (auto str in oStrings)
+    {
+        auto i = Name2Feature(str);
+        nFeatureFlag[i] = 1;
+    }
+
+    pNode = pSkillNode->FirstChildElement("Value");
+    auto dValue = std::stod(pNode->GetText());
+    return new CIncreaseSelfFeatureByCharacterSkill(sCharacter, nFeatureFlag, dValue);
+}

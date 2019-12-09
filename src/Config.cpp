@@ -15,7 +15,8 @@ std::vector<CSkillFactoryPtr> g_oSkillFactory = {
     CSkillFactoryPtr(new CIncreaseFeatureSkillFactory),
 	CSkillFactoryPtr(new CProductFeatureSkillFactroy),
 	CSkillFactoryPtr(new CIncreaseSelfFeatureByCountSkillFactroy),
-    CSkillFactoryPtr(new CIncreaseSelfFeatureSkillFactroy)
+    CSkillFactoryPtr(new CIncreaseSelfFeatureSkillFactroy),
+    CSkillFactoryPtr(new CIncreaseSelfFeatureByCharacterSkillFactroy)
 };
 
 void CConfig::init(CGame * pGame)
@@ -39,6 +40,17 @@ void CConfig::init(CGame * pGame)
                 pMonster->m_nId.setBit(nIndex, 1); ++nIndex;
 				pMonster->m_sName = Utf8ToUnicode(pMonsterNode->Attribute("name"));
 				pMonster->m_nClass = Name2Class(Utf8ToUnicode(pMonsterNode->Attribute("class")));
+                auto pCharacterNode = pMonsterNode->FirstChildElement("Character");
+                if (pCharacterNode)
+                {
+                    auto sText = Utf8ToUnicode(pCharacterNode->GetText());
+                    std::vector<std::wstring> oStrings;
+                    split(sText, L'|', oStrings);
+                    for each (auto str in oStrings)
+                    {
+                        pMonster->m_oCharacterSet.insert(str);
+                    }
+                }
 				// Features
 				initFeatures(pMonsterNode, "Features", pMonster->m_nFeatures);
 				// Skills
