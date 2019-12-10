@@ -1801,9 +1801,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="索灵" class="地">
-			<Features>25,16,36,16,16,63</Features>
-			<Character>呆萌</Character>
+		<Monster name="寻金锁" class="地">
+			<Features>52,52,148,52,52,180</Features>
+			<Character>呆萌|娇小|神秘</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
