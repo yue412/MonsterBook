@@ -494,9 +494,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="肉痴" class="火">
-			<Features>25,16,36,19,50,25</Features>
-			<Character>美食</Character>
+		<Monster name="豚燕" class="火">
+			<Features>76,48,136,58,146,76</Features>
+			<Character>美食|善良|神速</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -802,14 +802,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="狴犴" class="火">
-			<Features>176,105,126,116,88,274</Features>
-			<Character>善良|龙族|谋略</Character>
+		<Monster name="龙子狴犴" class="火">
+			<Features>216,132,156,144,108,336</Features>
+			<Character>善良|龙族|谋略|神秘</Character>
 			<Skills>
-				<Skill name="IncreaseSelfFeatureByCount">
-					<ElementClass>火</ElementClass>
-					<Feature>全</Feature>
-					<Value>10</Value>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>龙族</Character>
+					<Features>力|速|运</Features>
+					<Value>88</Value>
 				</Skill>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -1301,9 +1301,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="碟雕" class="光">
-			<Features>58,18,50,18,18,18</Features>
-			<Character>妖怪</Character>
+		<Monster name="口角兽" class="光">
+			<Features>162,56,156,56,56,56</Features>
+			<Character>妖怪|邪恶|魁梧</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
@@ -2013,9 +2013,9 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="蒲牢" class="地">
-			<Features>76,131,46,141,306,286</Features>
-			<Character>呆萌|妖怪|龙族</Character>
+		<Monster name="龙子蒲牢" class="地">
+			<Features>84,146,52,156,336,314</Features>
+			<Character>呆萌|妖怪|龙族|谋略</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<Trigger>4</Trigger>
@@ -2023,6 +2023,11 @@
 					<Feature>全</Feature>
 					<Value>100</Value>
 				</Skill>	
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>龙族</Character>
+					<Features>力|速|运</Features>
+					<Value>88</Value>
+				</Skill>
 			</Skills>
 		</Monster>		
 		<Monster name="瓜瓜儿" class="地">
@@ -2362,14 +2367,6 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
-		<Challenge name="悟真塔" min="0" max="8" class="火">
-			<FeaturesRequired feature="智" limit="1500"/>
-			<FeaturesRequired feature="魅" limit="1500"/>
-			<FeaturesRequired feature="运" limit="1500"/>
-		</Challenge>
-		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="运" limit="3500"/>
-		</Challenge>
 		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
@@ -2435,17 +2432,26 @@
 		</Challenge>		
 	</Challenges>
 	<Challenges>
+		<Challenge name="主线" min="0" max="8">
+			<FeaturesRequired feature="运" limit="3750"/>
+		</Challenge>
+		<Challenge name="支线" min="0" max="8">
+			<FeaturesRequired feature="速" limit="2495"/>
+			<FeaturesRequired feature="技" limit="2345"/>
+		</Challenge>
+		<Challenge name="扑克牌" min="0" max="8">
+			<FeaturesRequired feature="力" limit="4500"/>
+			<FeaturesRequired feature="技" limit="4500"/>
+		</Challenge>
 		<Challenge name="龙生九子" min="0" max="6" class="暗">
 			<FeaturesRequired feature="智" limit="1200"/>
 			<FeaturesRequired feature="运" limit="1200"/>
 		</Challenge>
-		<Challenge name="悟真塔" min="0" max="8" class="火">
-			<FeaturesRequired feature="智" limit="1500"/>
-			<FeaturesRequired feature="魅" limit="1500"/>
-			<FeaturesRequired feature="运" limit="1500"/>
-		</Challenge>
-		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="运" limit="3500"/>
+		<Challenge name="悟真塔" min="0" max="8">
+			<FeaturesRequired feature="智" limit="1900"/>
+			<FeaturesRequired feature="力" limit="1900"/>
+			<FeaturesRequired feature="技" limit="1900"/>
+			<FeaturesRequired feature="运" limit="1900"/>
 		</Challenge>
 		<!--Challenge name="九离塔" min="0" max="8">
 			<FeaturesRequired feature="技" limit="3650"/>
