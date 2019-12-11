@@ -1305,6 +1305,17 @@
 				</Skill>
 			</Skills>
 		</Monster>						
+		<Monster name="黑桃3" class="光">
+			<Features>94,31,106,33,38,23</Features>
+			<Character>扑克</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="兔类" class="光">
 			<Features>30,84,36,36,30,84</Features>
 			<Character>小眼睛</Character>
