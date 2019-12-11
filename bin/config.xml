@@ -2411,13 +2411,19 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
-		<Challenge name="挑战" min="0" max="8" total="50">
-			<FeaturesRequired feature="力" limit="3333"/>
-			<FeaturesRequired feature="智" limit="3333"/>
-			<FeaturesRequired feature="速" limit="3333"/>
-			<FeaturesRequired feature="魅" limit="3333"/>
-			<FeaturesRequired feature="运" limit="3333"/>
-			<FeaturesRequired feature="技" limit="3333"/>
+		<Challenge name="悟真塔" min="0" max="8" class="地">
+			<FeaturesRequired feature="速" limit="1800"/>
+			<FeaturesRequired feature="力" limit="1800"/>
+			<FeaturesRequired feature="技" limit="1800"/>
+			<FeaturesRequired feature="运" limit="1800"/>
+		</Challenge>
+		<!--Challenge name="扑克牌" min="0" max="8">
+			<FeaturesRequired feature="力" limit="4500"/>
+			<FeaturesRequired feature="技" limit="4500"/>
+		</Challenge-->
+		<Challenge name="每周挑战" min="0" max="8">
+			<FeaturesRequired feature="智" limit="3600"/>
+			<FeaturesRequired feature="速" limit="3600"/>
 		</Challenge>	
 		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
@@ -2484,26 +2490,19 @@
 		</Challenge>		
 	</Challenges>
 	<Challenges>
-		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="运" limit="3750"/>
-		</Challenge>
-		<Challenge name="支线" min="0" max="8">
-			<FeaturesRequired feature="速" limit="2495"/>
-			<FeaturesRequired feature="技" limit="2345"/>
+		<Challenge name="悟真塔" min="0" max="8" class="地">
+			<FeaturesRequired feature="速" limit="1800"/>
+			<FeaturesRequired feature="力" limit="1800"/>
+			<FeaturesRequired feature="技" limit="1800"/>
+			<FeaturesRequired feature="运" limit="1800"/>
 		</Challenge>
 		<Challenge name="扑克牌" min="0" max="8">
 			<FeaturesRequired feature="力" limit="4500"/>
 			<FeaturesRequired feature="技" limit="4500"/>
 		</Challenge>
-		<Challenge name="龙生九子" min="0" max="6" class="暗">
-			<FeaturesRequired feature="智" limit="1200"/>
-			<FeaturesRequired feature="运" limit="1200"/>
-		</Challenge>
-		<Challenge name="悟真塔" min="0" max="8">
-			<FeaturesRequired feature="智" limit="1900"/>
-			<FeaturesRequired feature="力" limit="1900"/>
-			<FeaturesRequired feature="技" limit="1900"/>
-			<FeaturesRequired feature="运" limit="1900"/>
+		<Challenge name="每周挑战" min="0" max="8">
+			<FeaturesRequired feature="智" limit="3600"/>
+			<FeaturesRequired feature="速" limit="3600"/>
 		</Challenge>
 		<!--Challenge name="九离塔" min="0" max="8">
 			<FeaturesRequired feature="技" limit="3650"/>
@@ -2517,6 +2516,17 @@
 		</Challenge-->
 	</Challenges>
 	<Challenges>
+		<Challenge name="龙生九子" min="0" max="6" class="暗">
+			<FeaturesRequired feature="智" limit="1200"/>
+			<FeaturesRequired feature="运" limit="1200"/>
+		</Challenge>
+		<Challenge name="主线" min="0" max="8">
+			<FeaturesRequired feature="运" limit="3750"/>
+		</Challenge>
+		<Challenge name="支线" min="0" max="8">
+			<FeaturesRequired feature="速" limit="2495"/>
+			<FeaturesRequired feature="技" limit="2345"/>
+		</Challenge>
 		<Challenge name="挑战" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3333"/>
 			<FeaturesRequired feature="智" limit="3333"/>
