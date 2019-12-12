@@ -2427,20 +2427,18 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
-		<Challenge name="悟真塔" min="0" max="8" class="地">
-			<FeaturesRequired feature="速" limit="1800"/>
-			<FeaturesRequired feature="力" limit="1800"/>
-			<FeaturesRequired feature="技" limit="1800"/>
-			<FeaturesRequired feature="运" limit="1800"/>
+		<Challenge name="悟真塔" min="0" max="8">
+			<FeaturesRequired feature="力" limit="3900"/>
+			<FeaturesRequired feature="运" limit="3900"/>
 		</Challenge>
 		<!--Challenge name="扑克牌" min="0" max="8">
 			<FeaturesRequired feature="力" limit="4500"/>
 			<FeaturesRequired feature="技" limit="4500"/>
-		</Challenge-->
+		</Challenge>
 		<Challenge name="每周挑战" min="0" max="8">
 			<FeaturesRequired feature="智" limit="3600"/>
 			<FeaturesRequired feature="速" limit="3600"/>
-		</Challenge>	
+		</Challenge-->	
 		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
@@ -2510,27 +2508,31 @@
 			<FeaturesRequired feature="力" limit="3900"/>
 			<FeaturesRequired feature="运" limit="3900"/>
 		</Challenge-->
+		<Challenge name="活动关" min="0" max="8" class="地">
+			<FeaturesRequired feature="力" limit="808"/>
+			<FeaturesRequired feature="智" limit="808"/>
+			<FeaturesRequired feature="速" limit="808"/>
+			<FeaturesRequired feature="魅" limit="808"/>
+			<FeaturesRequired feature="运" limit="808"/>
+			<FeaturesRequired feature="技" limit="808"/>
+		</Challenge>
+		<Challenge name="扑克牌" min="0" max="8">
+			<FeaturesRequired feature="力" limit="4800"/>
+			<FeaturesRequired feature="智" limit="4800"/>
+			<FeaturesRequired feature="速" limit="4800"/>
+			<FeaturesRequired feature="魅" limit="4800"/>
+			<FeaturesRequired feature="运" limit="4800"/>
+			<FeaturesRequired feature="技" limit="4800"/>
+		</Challenge>
 		<Challenge name="主线" min="0" max="8" class="木">
 			<FeaturesRequired feature="速" limit="3300"/>
 		</Challenge>
 		<Challenge name="支线-破旧的雕像" min="0" max="8">
-			<FeaturesRequired feature="运" limit="4325"/>
-		</Challenge>
-		<Challenge name="活动关" min="0" max="8" class="地">
-			<FeaturesRequired feature="力" limit="606"/>
-			<FeaturesRequired feature="智" limit="606"/>
-			<FeaturesRequired feature="速" limit="606"/>
-			<FeaturesRequired feature="魅" limit="606"/>
-			<FeaturesRequired feature="运" limit="606"/>
-			<FeaturesRequired feature="技" limit="606"/>
-		</Challenge>
-		<Challenge name="扑克牌" min="0" max="8">
-			<FeaturesRequired feature="力" limit="4500"/>
-			<FeaturesRequired feature="技" limit="4500"/>
+			<FeaturesRequired feature="力" limit="4775"/>
 		</Challenge>
 		<Challenge name="支线-人妖情未了" min="0" max="8">
-			<FeaturesRequired feature="速" limit="2825"/>
-			<FeaturesRequired feature="技" limit="2675"/>
+			<FeaturesRequired feature="速" limit="2855"/>
+			<FeaturesRequired feature="技" limit="2705"/>
 		</Challenge>
 		<!--Challenge name="每周挑战" min="0" max="8">
 			<FeaturesRequired feature="智" limit="3600"/>
@@ -2542,11 +2544,19 @@
 		</Challenge-->
 	</Challenges>
 	<Challenges>
-		<Challenge name="龙生九子" min="0" max="6" class="暗">
+		<Challenge name="扑克牌" min="0" max="8">
+			<FeaturesRequired feature="力" limit="4800"/>
+			<FeaturesRequired feature="智" limit="4800"/>
+			<FeaturesRequired feature="速" limit="4800"/>
+			<FeaturesRequired feature="魅" limit="4800"/>
+			<FeaturesRequired feature="运" limit="4800"/>
+			<FeaturesRequired feature="技" limit="4800"/>
+		</Challenge>
+		<!--Challenge name="龙生九子" min="0" max="6" class="暗">
 			<FeaturesRequired feature="智" limit="1200"/>
 			<FeaturesRequired feature="运" limit="1200"/>
 		</Challenge>
-		<!--Challenge name="每周挑战" min="0" max="8" total="60">
+		<Challenge name="每周挑战" min="0" max="8" total="60">
 			<FeaturesRequired feature="力" limit="1600"/>
 			<FeaturesRequired feature="智" limit="1600"/>
 			<FeaturesRequired feature="速" limit="1600"/>
