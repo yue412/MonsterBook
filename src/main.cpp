@@ -52,7 +52,7 @@ void output(const CResult& oResult)
         std::cout << "\t";
         for (int i = 0; i < EF_ALL; i++)
         {
-            std::cout << roundEx(oItem.dFeatures[i]) << ",";
+            std::cout << roundEx(oItem.dFeatures[i]) << "("<< ToString(g_sFeatureNames[i]) <<"),";
         }
         std::cout << std::endl;
     }
@@ -223,7 +223,23 @@ int main(int argc, char* argv[])
                 std::cout << "<--------- failed match --------->" << std::endl;
                 for each (auto oPair in oFailedResultList)
                 {
-                    std::cout << ToString(oPair.first) << ":" << std::endl;
+                    std::wstring sName = oPair.first;
+                    auto itr = std::find_if(oGame.m_oChallengeList.begin(), oGame.m_oChallengeList.end(), [sName](CChallenge* pChallenge) {
+                        return pChallenge->getName() == sName;
+                    });
+                    std::cout << ToString(sName) << ":";
+                    if (itr != oGame.m_oChallengeList.end())
+                    {
+                        auto dRequired = (*itr)->featuresRequired();
+                        for (int i = 0; i < EF_ALL; i++)
+                        {
+                            if (dRequired[i] > g_dEpsilon)
+                            {
+                                std::cout << dRequired[i] << "(" << ToString(g_sFeatureNames[i]) << "),";
+                            }
+                        }
+                    }
+                    std::cout << std::endl;
                     output(oPair.second);
                 }
             }
