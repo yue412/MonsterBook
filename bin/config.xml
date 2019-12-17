@@ -1386,9 +1386,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="弦仔" class="光">
-			<Features>25,34,50,39,60,84</Features>
-			<Character>乐器</Character>
+		<Monster name="持国天王" class="光">
+			<Features>70,86,130,104,155,218</Features>
+			<Character>乐器|神秘|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
@@ -2151,14 +2151,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="书包仔" class="暗">
-			<Features>60,119,31,48,44,111</Features>
-			<Character>娇小</Character>
+		<Monster name="宁采臣" class="暗">
+			<Features>0,300,80,120,110,280</Features>
+			<Character>娇小|人形|冰冷</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>智</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
@@ -2200,9 +2200,9 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="忘情水" class="暗">
-			<Features>44,44,38,48,27,90</Features>
-			<Character>美食</Character>
+		<Monster name="孟婆汤" class="暗">
+			<Features>131,131,114,141,84,266</Features>
+			<Character>美食|妹纸|老人家</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
@@ -2232,14 +2232,14 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="紫晶" class="暗">
-			<Features>181,59,45,73,63,203</Features>
-			<Character>冰冷</Character>
+		<Monster name="紫冰" class="暗">
+			<Features>256,83,63,102,88,291</Features>
+			<Character>冰冷|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>技</Feature>
-					<Value>80</Value>
+					<Value>160</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
@@ -2287,9 +2287,9 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="渊鲶" class="暗">
-			<Features>23,23,50,19,23,34</Features>
-			<Character>呆萌</Character>
+		<Monster name="魁剑客" class="暗">
+			<Features>90,55,150,44,128,72</Features>
+			<Character>呆萌|人形|魁梧</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -2329,14 +2329,14 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="缚圆" class="暗">
-			<Features>44,19,31,96,48,60</Features>
-			<Character>妖怪</Character>
+		<Monster name="九霄" class="暗">
+			<Features>112,50,82,246,122,153</Features>
+			<Character>妖怪|人形|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>魅</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
