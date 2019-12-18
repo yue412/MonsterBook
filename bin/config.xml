@@ -456,9 +456,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="处女座" class="火">
-			<Features>89,68,96,306,108,272</Features>
-			<Character>神秘</Character>
+		<Monster name="粉红马卡龙" class="火">
+			<Features>125,96,132,436,153,384</Features>
+			<Character>神秘|美食</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
@@ -467,9 +467,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="火苗儿" class="火">
-			<Features>89,272,96,306,108,68</Features>
-			<Character>自然</Character>
+		<Monster name="夏火小鬼" class="火">
+			<Features>125,384,132,436,153,96</Features>
+			<Character>自然|神秘</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
@@ -478,14 +478,14 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="金儿" class="火">
-			<Features>48,56,38,71,119,82</Features>
-			<Character>吉祥</Character>
+		<Monster name="金童" class="火">
+			<Features>102,122,81,152,256,173</Features>
+			<Character>吉祥|人形|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
-					<Value>15</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -1217,14 +1217,14 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="万两" class="水">
-			<Features>67,82,60,206,170,82</Features>
-			<Character>邪恶</Character>
+		<Monster name="金来" class="水">
+			<Features>89,108,80,272,226,108</Features>
+			<Character>邪恶|财迷</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -1277,14 +1277,14 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="银冠" class="水">
-			<Features>61,111,31,31,130,44</Features>
-			<Character>财迷</Character>
+		<Monster name="痴花" class="水">
+			<Features>102,180,53,53,209,72</Features>
+			<Character>财迷|人形</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -1787,9 +1787,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="咕冬" class="地">
-			<Features>89,96,306,108,272,68</Features>
-			<Character>自然</Character>
+		<Monster name="噗冬" class="地">
+			<Features>125,132,436,153,384,96</Features>
+			<Character>自然|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
@@ -1820,9 +1820,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="毕宿五" class="地">
-			<Features>89,96,306,108,272,68</Features>
-			<Character>神秘</Character>
+		<Monster name="扭蛋" class="地">
+			<Features>125,132,436,153,384,96</Features>
+			<Character>神秘|呆萌</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
@@ -2042,9 +2042,9 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="愚耳" class="地">
-			<Features>0,201,0,0,0,0</Features>
-			<Character>奇特</Character>
+		<Monster name="笨DJ" class="地">
+			<Features>0,312,0,0,0,0</Features>
+			<Character>奇特,乐器</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
