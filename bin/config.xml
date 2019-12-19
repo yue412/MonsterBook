@@ -5,8 +5,8 @@
 			<Features>48,48,90,138,168,48</Features>
 			<Character>善良|妹纸|妖怪</Character>
 		</Monster>				
-		<Monster name="花符" class="木">
-			<Features>23,23,23,50,23,23</Features>
+		<Monster name="浪爷" class="木">
+			<Features>44,44,44,88,44,44</Features>
 			<Character>彩蛋</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeature">
@@ -422,15 +422,26 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="牛头琴" class="火">
-			<Features>113,19,42,61,46,130</Features>
-			<Character>乐器</Character>
+		<Monster name="下联" class="火">
+			<Features>115,92,100,115,155,77</Features>
+			<Character>乐器|人形</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="琴音使" class="火">
+			<Features>184,32,66,100,74,209</Features>
+			<Character>乐器|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<Trigger>4</Trigger>
 					<ElementClass>火</ElementClass>
 					<Feature>全</Feature>
-					<Value>30</Value>
+					<Value>60</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -660,9 +671,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="玄鸟" class="火">
-			<Features>75,67,82,75,178,67</Features>
-			<Character>自然</Character>
+		<Monster name="七宿仙人" class="火">
+			<Features>104,82,97,90,210,82</Features>
+			<Character>自然|人形</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
@@ -948,15 +959,15 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="风仔" class="水">
-			<Features>58,58,128,46,71,50</Features>
-			<Character>奇特</Character>
+		<Monster name="风仆" class="水">
+			<Features>94,94,205,76,117,82</Features>
+			<Character>奇特|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<Trigger>4</Trigger>
 					<ElementClass>水</ElementClass>
 					<Feature>全</Feature>
-					<Value>30</Value>
+					<Value>60</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -971,9 +982,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="莲精" class="水">
-			<Features>36,75,56,36,56,153</Features>
-			<Character>妹纸</Character>
+		<Monster name="采花小君" class="水">
+			<Features>43,96,70,197,70,192</Features>
+			<Character>妹纸|吉祥</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -982,9 +993,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="莲灵" class="水">
-			<Features>48,61,82,145,48,27</Features>
-			<Character>水性</Character>
+		<Monster name="藕仙子" class="水">
+			<Features>80,160,96,240,55,40</Features>
+			<Character>水性|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -1318,6 +1329,17 @@
 					<ElementClass>光</ElementClass>
 					<Feature>力</Feature>
 					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="福神" class="光">
+			<Features>50,62,62,150,150,74</Features>
+			<Character>吉祥|人形</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -1798,9 +1820,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="土球" class="地">
-			<Features>54,36,14,25,19,25</Features>
-			<Character>自然</Character>
+		<Monster name="胃土雉" class="地">
+			<Features>194,129,52,96,78,96</Features>
+			<Character>自然|美食|神速</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -1809,13 +1831,18 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="遗酒" class="地">
-			<Features>54,21,14,27,38,18</Features>
-			<Character>美食</Character>
+		<Monster name="鲁智深" class="地">
+			<Features>130,54,36,68,92,46</Features>
+			<Character>美食|人形|神勇</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>技</Feature>
 					<Value>15</Value>
 				</Skill>
 			</Skills>
@@ -1831,9 +1858,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="锤子" class="地">
-			<Features>140,69,84,56,42,27</Features>
-			<Character>奇特</Character>
+		<Monster name="锤丸君" class="地">
+			<Features>213,84,206,63,49,49</Features>
+			<Character>奇特|呆萌</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -2031,9 +2058,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="精卫" class="地">
-			<Features>39,25,60,84,50,34</Features>
-			<Character>美食</Character>
+		<Monster name="女娃" class="地">
+			<Features>74,50,111,156,93,61</Features>
+			<Character>美食|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
@@ -2112,8 +2139,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="瓜瓜儿" class="地">
-			<Features>89,96,306,108,272,68</Features>
+		<Monster name="夏娃瓜" class="地">
+			<Features>125,132,436,153,384,96</Features>
+			<Character>自然|呆萌</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
@@ -2122,8 +2150,9 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="土包" class="地">
-			<Features>100,42,54,36,27,36</Features>
+		<Monster name="土仔" class="地">
+			<Features>186,80,99,66,52,66</Features>
+			<Character>自然|人形</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>地</ElementClass>
@@ -2566,8 +2595,8 @@
 	</Challenges>
 	<Challenges>
 		<Challenge name="每周挑战" min="0" max="8">
-			<FeaturesRequired feature="智" limit="8000"/>
-			<FeaturesRequired feature="速" limit="8000"/>
+			<FeaturesRequired feature="智" limit="5500"/>
+			<FeaturesRequired feature="技" limit="5500"/>
 		</Challenge>
 	</Challenges>
 	<Challenges>
