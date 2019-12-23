@@ -5,7 +5,7 @@
 			<Features>48,48,90,138,168,48</Features>
 			<Character>善良|妹纸|妖怪</Character>
 		</Monster>				
-		<Monster name="碧池长老" class="木">
+		<Monster name="碧池长老" class="木" ignore="true">
 			<Features>59,59,59,122,59,59</Features>
 			<Character>彩蛋</Character>
 			<Skills>
@@ -81,7 +81,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="泥垢" class="木">
+		<Monster name="泥垢" class="木" ignore="true">
 			<Features>18,19,36,23,19,56</Features>
 			<Character>呆萌</Character>
 			<Skills>
@@ -265,7 +265,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="松果" class="木">
+		<Monster name="松果" class="木" ignore="true">
 			<Features>14,19,21,58,18,38</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
@@ -650,7 +650,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="玫瑰夫人" class="火">
+		<Monster name="玫瑰夫人" class="火" ignore="true">
 			<Features>48,90,60,170,98,72</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
@@ -703,7 +703,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="金钗子" class="火">
+		<Monster name="金钗子" class="火" ignore="true">
 			<Features>36,46,46,92,134,60</Features>
 			<Character>善良</Character>
 			<Skills>
@@ -1005,7 +1005,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="孔融" class="水">
+		<Monster name="孔融" class="水" ignore="true">
 			<Features>192,68,62,62,102,54</Features>
 			<Character>自然|人形|善良</Character>
 			<Skills>
@@ -1092,7 +1092,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="呵" class="水">
+		<Monster name="呵" class="水" ignore="true">
 			<Features>50,23,23,23,23,23</Features>
 			<Skills>
 				<Skill name="IncreaseSelfFeature">
@@ -1615,7 +1615,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="白娘子" class="光">
+		<Monster name="白娘子" class="光" ignore="true">
 			<Features>40,92,213,162,60,92</Features>
 			<Character>善良|妹纸|妖怪</Character>
 			<Skills>
@@ -1870,14 +1870,19 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="鲜仔" class="地">
-			<Features>74,62,173,74,97,68</Features>
-			<Character>呆萌|美食</Character>
+		<Monster name="佛跳墙" class="地">
+			<Features>104,86,242,104,138,94</Features>
+			<Character>呆萌|美食|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>速</Feature>
 					<Value>30</Value>
+				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>美食</Character>
+					<Features>速</Features>
+					<Value>70</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -2219,7 +2224,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="墨角兽" class="暗">
+		<Monster name="墨角兽" class="暗" ignore="true">
 			<Features>64,162,58,53,53,150</Features>
 			<Character>水性|娇小|神秘</Character>
 			<Skills>
@@ -2251,7 +2256,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="梁山伯" class="暗">
+		<Monster name="梁山伯" class="暗" ignore="true">
 			<Features>60,153,137,72,54,60</Features>
 			<Character>财迷|人形|飞翔</Character>
 			<Skills>
@@ -2295,7 +2300,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="方元姬" class="暗">
+		<Monster name="方元姬" class="暗" ignore="true">
 			<Features>48,62,172,48,62,148</Features>
 			<Character>呆萌|神秘|妹纸</Character>
 			<Skills>
@@ -2317,7 +2322,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="魁剑客" class="暗">
+		<Monster name="魁剑客" class="暗" ignore="true">
 			<Features>90,55,150,44,128,72</Features>
 			<Character>呆萌|人形|魁梧</Character>
 			<Skills>

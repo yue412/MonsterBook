@@ -30,6 +30,7 @@ public:
     char getSpeciality() { return m_nSpeciality; }
     CBigInt& getId() { return m_nId; }
     std::set<std::wstring>& getCharacterSet() { return m_oCharacterSet; }
+    bool ignore() { return m_bIgnore; }
 private:
     std::wstring m_sName;
 	EnElementClass m_nClass;
@@ -39,6 +40,7 @@ private:
 	CSoulBead* m_pSoulBead;
     CBigInt m_nId;
     std::set<std::wstring> m_oCharacterSet;
+    bool m_bIgnore;
 };
 
 #endif // !CMONSTER_H

@@ -10,7 +10,7 @@ struct CSpecialFeature
     double dValue;
 };
 
-CMonster::CMonster() : m_nClass(EC_WOOD), m_nSpeciality(0), m_pSoulBead(nullptr)
+CMonster::CMonster() : m_nClass(EC_WOOD), m_nSpeciality(0), m_pSoulBead(nullptr), m_bIgnore(false)
 {
 }
 
