@@ -445,7 +445,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="曹国舅" class="火">
+		<Monster name="曹国舅" class="火" ignore="true">
 			<Features>293,72,54,146,248,174</Features>
 			<Character>神仙|善良|老人家</Character>
 			<Skills>
@@ -489,7 +489,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="金童" class="火">
+		<Monster name="金童" class="火" ignore="true">
 			<Features>102,122,81,152,256,173</Features>
 			<Character>吉祥|人形|善良</Character>
 			<Skills>
@@ -500,7 +500,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="觜火猴" class="火">
+		<Monster name="觜火猴" class="火" ignore="true">
 			<Features>56,56,174,84,104,174</Features>
 			<Character>自然|奇特|神秘</Character>
 			<Skills>
@@ -511,7 +511,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="豚燕" class="火">
+		<Monster name="豚燕" class="火" ignore="true">
 			<Features>76,48,136,58,146,76</Features>
 			<Character>美食|善良|神速</Character>
 			<Skills>
@@ -522,7 +522,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="联发" class="火">
+		<Monster name="联发" class="火" ignore="true">
 			<Features>118,136,107,136,180,90</Features>
 			<Character>吉祥|人形</Character>
 			<Skills>
@@ -533,7 +533,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="尾火虎" class="火">
+		<Monster name="尾火虎" class="火" ignore="true">
 			<Features>198,76,56,106,70,139</Features>
 			<Character>美食|魁梧|猫咪</Character>
 			<Skills>
@@ -566,7 +566,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="喜儿" class="火">
+		<Monster name="喜儿" class="火" ignore="true">
 			<Features>71,90,60,107,60,150</Features>
 			<Character>自然|妹纸|吉祥</Character>
 			<Skills>
@@ -608,7 +608,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="斩昭" class="火">
+		<Monster name="斩昭" class="火" ignore="true">
 			<Features>168,56,84,66,56,112</Features>
 			<Character>神秘|猫咪|人形</Character>
 			<Skills>
@@ -619,7 +619,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="藏犬屋" class="火">
+		<Monster name="藏犬屋" class="火" ignore="true">
 			<Features>166,54,144,59,59,54</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
@@ -639,7 +639,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="蜡祭狮" class="火">
+		<Monster name="蜡祭狮" class="火" ignore="true">
 			<Features>54,54,166,54,54,154</Features>
 			<Character>呆萌|小眼睛|善良</Character>
 			<Skills>
@@ -761,7 +761,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="汉钟离" class="火">
+		<Monster name="汉钟离" class="火" ignore="true">
 			<Features>45,132,228,93,199,285</Features>
 			<Character>小眼睛|神仙|老人家</Character>
 			<Skills>
@@ -983,7 +983,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="蓝采和" class="水">
+		<Monster name="蓝采和" class="水" ignore="true">
 			<Features>62,164,100,228,164,271</Features>
 			<Character>妹纸|吉祥|神仙</Character>
 			<Skills>
@@ -1333,7 +1333,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="紫薇大帝" class="光">
+		<Monster name="紫薇大帝" class="光" ignore="true">
 			<Features>80,100,100,240,240,110</Features>
 			<Character>吉祥|人形|神仙</Character>
 			<Skills>
@@ -1459,7 +1459,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="光留鼎" class="光">
+		<Monster name="光留鼎" class="光" ignore="true">
 			<Features>99,154,54,59,72,99</Features>
 			<Character>吉祥|娇小|呆萌</Character>
 			<Skills>
@@ -2010,7 +2010,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="魂安鼎" class="地">
+		<Monster name="魂安鼎" class="地" ignore="true">
 			<Features>117,72,66,117,185,86</Features>
 			<Skills>
 				<Skill name="IncreaseFeature">
@@ -2042,7 +2042,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="蚊避鼎" class="地">
+		<Monster name="蚊避鼎" class="地" ignore="true">
 			<Features>78,48,44,56,78,122</Features>
 			<Character>吉祥|娇小|呆萌</Character>
 			<Skills>
