@@ -165,6 +165,7 @@ int main(int argc, char* argv[])
 				split(oParamsMap[L"exclude"], L',', oStringList);
 				oGame.exclude(oStringList);
 			}
+            oGame.exclude(oGame.m_oExcludeMonsters);
 			auto nTime = GetTickCount();
 			oGame.play(&oChallenge, oResultList, oFailedResultList);
             std::cout << "count: " << oGame.m_nCount << std::endl;
@@ -206,6 +207,7 @@ int main(int argc, char* argv[])
                 split(oParamsMap[L"exclude"], L',', oStringList);
                 oGame.exclude(oStringList);
             }
+            oGame.exclude(oGame.m_oExcludeMonsters);
             auto nTime = GetTickCount();
             std::vector<CSolutionPtr> oResultList;
             std::vector<int> oGroupList;

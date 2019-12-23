@@ -41,6 +41,7 @@ private:
     std::vector<CMonster*> m_oMonsterList;
 	std::vector<CSoulBead*> m_oSoulBeadList;
     std::vector<CFate*> m_oFateList;
+    std::vector<std::wstring> m_oExcludeMonsters;
 	//EnElementClass m_nClass;
     //CStageInfo* m_pStackTop;
 };

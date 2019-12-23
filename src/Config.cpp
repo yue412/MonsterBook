@@ -151,6 +151,15 @@ void CConfig::init(CGame * pGame)
 
                 pFateNode = pFateNode->NextSiblingElement();
             }
+            auto pExcludeNode = pRoot->FirstChildElement("Exclude");
+            if (pExcludeNode)
+            {
+                std::wstring sText = Utf8ToUnicode(pExcludeNode->GetText());
+                sText.erase(std::remove(sText.begin(), sText.end(), L' '), sText.end());
+                //std::replace(sText.begin(), sText.end(), L'\x20', L'\x0');
+                //std::replace(sText.begin(), sText.end(), L'\xa', L'\x0');
+                split(sText, L',', pGame->m_oExcludeMonsters);
+            }
         }
     }
 	for each (auto pMonster in pGame->m_oMonsterList)
