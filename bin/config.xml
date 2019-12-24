@@ -2598,22 +2598,28 @@
 			<FeaturesRequired feature="力" limit="1785"/>
 		</Challenge-->
 	</Challenges>
-	<Challenges>
+	<Challenges type="2">
 		<Challenge name="龙生九子" min="0" max="6" class="暗">
 			<FeaturesRequired feature="速" limit="2200"/>
 			<FeaturesRequired feature="力" limit="2200"/>
 			<FeaturesRequired feature="运" limit="2200"/>
 		</Challenge>
 	</Challenges>
-	<Challenges>
+	<Challenges type="3">
 		<Challenge name="每周挑战" min="0" max="8">
 			<FeaturesRequired feature="智" limit="5500"/>
 			<FeaturesRequired feature="技" limit="5500"/>
 		</Challenge>
 	</Challenges>
-	<Challenges>
+	<Challenges type="4">
 		<Challenge name="主线" min="0" max="8" class="木">
 			<FeaturesRequired feature="技" limit="3350"/>
+		</Challenge>
+	</Challenges>
+	<Challenges type="5">
+		<Challenge name="扑克牌" min="0" max="8">
+			<FeaturesRequired feature="力" limit="4500"/>
+			<FeaturesRequired feature="技" limit="4500"/>
 		</Challenge>
 	</Challenges>
 	<Fates>
