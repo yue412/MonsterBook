@@ -423,14 +423,14 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="书立" class="火">
-			<Features>136,107,118,136,180,90</Features>
-			<Character>吉祥|人形</Character>
+		<Monster name="下联仔" class="火">
+			<Features>154,122,132,154,204,102</Features>
+			<Character>吉祥|人形|飞翔</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -1371,15 +1371,20 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="雪无印" class="光">
-			<Features>145,251,104,112,107,311</Features>
-			<Character>呆萌|妹纸</Character>
+		<Monster name="一雪一杀士" class="光">
+			<Features>176,343,133,145,142,398</Features>
+			<Character>呆萌|妹纸|冰冷</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>技</Feature>
-					<Value>100</Value>
+					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.6</Value>
+				</Skill>			
 			</Skills>
 		</Monster>		
 		<Monster name="摩羯星" class="光">
@@ -2617,9 +2622,17 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="5">
-		<Challenge name="扑克牌" min="0" max="8">
+		<!--Challenge name="扑克牌" min="0" max="8">
 			<FeaturesRequired feature="力" limit="4500"/>
 			<FeaturesRequired feature="技" limit="4500"/>
+		</Challenge-->
+		<Challenge name="扑克牌" min="0" max="8" total="70">
+			<FeaturesRequired feature="力" limit="4800"/>
+			<FeaturesRequired feature="智" limit="4800"/>
+			<FeaturesRequired feature="速" limit="4800"/>
+			<FeaturesRequired feature="魅" limit="4800"/>
+			<FeaturesRequired feature="运" limit="4800"/>
+			<FeaturesRequired feature="技" limit="4800"/>
 		</Challenge>
 	</Challenges>
 	<Fates>
