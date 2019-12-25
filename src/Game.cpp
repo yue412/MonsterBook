@@ -100,15 +100,22 @@ void CGame_Thread::play(CChallenge* pChallenge, const std::vector<CMonster*>& oM
     for (int i = nStartIndex; i < (int)oMonsterList.size(); i++)
     {
         oTeam.push_back(oMonsterList[i]);
-        double oTotal[EF_ALL];
-        calc(oTeam, oTotal);
-        ++nHitCount;
-        if (success(pChallenge->featuresRequired(), oTotal))
-            oResult.add(CTeamPtr(new CTeam(oTeam)), oTotal, nullptr);
-        else 
+        if (oTeam.size() >= pChallenge->getMin())
         {
-            if (oResult.size() == 0 && bExportFailedInfo)
-                oFailedResult.add(CTeamPtr(new CTeam(oTeam)), oTotal, pChallenge->featuresRequired());
+            double oTotal[EF_ALL];
+            calc(oTeam, oTotal);
+            ++nHitCount;
+            if (success(pChallenge->featuresRequired(), oTotal))
+                oResult.add(CTeamPtr(new CTeam(oTeam)), oTotal, nullptr);
+            else
+            {
+                if (oResult.size() == 0 && bExportFailedInfo)
+                    oFailedResult.add(CTeamPtr(new CTeam(oTeam)), oTotal, pChallenge->featuresRequired());
+                play(pChallenge, oMonsterList, i + 1, nCount - 1, oTeam, oResult, oFailedResult, nHitCount, bExportFailedInfo);
+            }
+        }
+        else
+        {
             play(pChallenge, oMonsterList, i + 1, nCount - 1, oTeam, oResult, oFailedResult, nHitCount, bExportFailedInfo);
         }
         oTeam.pop_back();
@@ -137,15 +144,23 @@ void CGame_Thread::play_thread(std::vector<std::vector<int>>* pStartIndexList, C
         {
             oTeam.push_back((*pInfo->pMonsterList)[i]);
         }
-        double oTotal[EF_ALL];
-        calc(oTeam, oTotal);
-        ++nHitCount;
-        if (success(pInfo->pChallenge->featuresRequired(), oTotal))
-            pResult->add(CTeamPtr(new CTeam(oTeam)), oTotal, nullptr);
+        if (oTeam.size() >= pInfo->pChallenge->getMin())
+        {
+            double oTotal[EF_ALL];
+            calc(oTeam, oTotal);
+            ++nHitCount;
+            if (success(pInfo->pChallenge->featuresRequired(), oTotal))
+                pResult->add(CTeamPtr(new CTeam(oTeam)), oTotal, nullptr);
+            else
+            {
+                if (pResult->size() == 0 && pInfo->bExportFailedInfo)
+                    pFailedResult->add(CTeamPtr(new CTeam(oTeam)), oTotal, pInfo->pChallenge->featuresRequired());
+                if (nStartIndex.size() == pInfo->nCount)
+                    play(pInfo->pChallenge, *pInfo->pMonsterList, nStartIndex.back() + 1, pInfo->pChallenge->getMax() - pInfo->nCount, oTeam, *pResult, *pFailedResult, nHitCount, pInfo->bExportFailedInfo);
+            }
+        }
         else
         {
-            if (pResult->size() == 0 && pInfo->bExportFailedInfo)
-                pFailedResult->add(CTeamPtr(new CTeam(oTeam)), oTotal, pInfo->pChallenge->featuresRequired());
             if (nStartIndex.size() == pInfo->nCount)
                 play(pInfo->pChallenge, *pInfo->pMonsterList, nStartIndex.back() + 1, pInfo->pChallenge->getMax() - pInfo->nCount, oTeam, *pResult, *pFailedResult, nHitCount, pInfo->bExportFailedInfo);
         }

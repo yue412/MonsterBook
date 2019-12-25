@@ -2562,12 +2562,24 @@
 		<Challenge name="纸牌屋" min="0" max="8">
 			<FeaturesRequired feature="速" limit="825"/>
 			<FeaturesRequired feature="力" limit="825"/>
-		</Challenge>		
+		</Challenge>
+		<Challenge name="圣诞节3" min="8" max="8">
+			<FeaturesRequired feature="运" limit="2400"/>
+		</Challenge>				
+		<Challenge name="圣诞节2" min="8" max="8">
+			<FeaturesRequired feature="运" limit="1400"/>
+		</Challenge>				
+		<Challenge name="圣诞节1" min="8" max="8">
+			<FeaturesRequired feature="运" limit="300"/>
+		</Challenge>				
 	</Challenges>
 	<Challenges>
-		<Challenge name="悟真塔" min="0" max="8" class="光">
+		<Challenge name="圣诞节1" min="8" max="8">
+			<FeaturesRequired feature="运" limit="300"/>
+		</Challenge>				
+		<!--Challenge name="悟真塔" min="0" max="8" class="光">
 			<FeaturesRequired feature="速" limit="8900"/>
-		</Challenge>
+		</Challenge-->
 		<!--Challenge name="活动关" min="0" max="8" class="地">
 			<FeaturesRequired feature="力" limit="808"/>
 			<FeaturesRequired feature="智" limit="808"/>
@@ -2626,14 +2638,19 @@
 			<FeaturesRequired feature="力" limit="4500"/>
 			<FeaturesRequired feature="技" limit="4500"/>
 		</Challenge-->
-		<Challenge name="扑克牌" min="0" max="8" total="70">
+		<!--Challenge name="扑克牌" min="0" max="8">
 			<FeaturesRequired feature="力" limit="4800"/>
 			<FeaturesRequired feature="智" limit="4800"/>
 			<FeaturesRequired feature="速" limit="4800"/>
 			<FeaturesRequired feature="魅" limit="4800"/>
 			<FeaturesRequired feature="运" limit="4800"/>
 			<FeaturesRequired feature="技" limit="4800"/>
+		</Challenge-->
+		<Challenge name="扑克牌" min="0" max="5">
+			<FeaturesRequired feature="力" limit="7200"/>
+			<FeaturesRequired feature="技" limit="7200"/>
 		</Challenge>
+		<!--囝囝可欸克,一雪一杀士,芝鼠,金吒,妲己,圣人椰酥,帝释天,包公,-->
 	</Challenges>
 	<Fates>
 		<Fate name="青梅竹马">
