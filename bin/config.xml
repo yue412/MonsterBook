@@ -1098,8 +1098,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="呵" class="水">
-			<Features>50,23,23,23,23,23</Features>
+		<Monster name="呵呵" class="水">
+			<Features>88,44,44,44,44,44</Features>
+			<Character>彩蛋</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeature">
 					<Feature>全</Feature>
@@ -2718,7 +2719,7 @@
 		</SoulBead>
 	</SoulBeads>
 	<Exclude>
-		碧池长老,圣诞树,孔融,呵,墨角兽,梁山伯,魁剑客,泥垢,
+		碧池长老,圣诞树,孔融,呵呵,墨角兽,梁山伯,魁剑客,泥垢,
 		曹国舅,汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
 		金童,蓝采和,联发,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 		玫瑰夫人,金钗子,白娘子,方元姬
