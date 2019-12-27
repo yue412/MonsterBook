@@ -2210,14 +2210,14 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="吕奉先" class="暗">
-			<Features>222,44,177,82,44,100</Features>
-			<Character>善良|战士</Character>
+		<Monster name="名将吕布威登" class="暗">
+			<Features>329,65,248,124,65,156</Features>
+			<Character>善良|战士|神勇</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>力</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
