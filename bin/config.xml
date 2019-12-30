@@ -70,14 +70,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="木佣" class="木">
-			<Features>169,80,68,101,68,59</Features>
-			<Character>自然|善良</Character>
+		<Monster name="木儡" class="木">
+			<Features>238,114,94,142,94,84</Features>
+			<Character>自然|善良|战士</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>力</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -2671,7 +2671,7 @@
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
-			<Features>48,48,0,0,48,0</Features>
+			<Features>48,48,48,48,48,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
 			<Features>0,52.8,52.8,0,0,0</Features>
