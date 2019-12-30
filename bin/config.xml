@@ -185,8 +185,8 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="避水金睛兽" class="木">
-			<Features>497,132,122,157,157,439</Features>
+		<Monster name="碧水独角兽" class="木">
+			<Features>555,150,136,174,174,490</Features>
 			<Character>小眼睛|吉祥|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
@@ -197,7 +197,7 @@
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>运</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -675,14 +675,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="七宿仙人" class="火">
-			<Features>104,82,97,90,210,82</Features>
-			<Character>自然|人形</Character>
+		<Monster name="南七宿朱雀" class="火">
+			<Features>192,116,138,128,298,116</Features>
+			<Character>自然|人形|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -847,9 +847,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="花卷" class="火">
-			<Features>56,36,111,130,30,52</Features>
-			<Character>神秘</Character>
+		<Monster name="宫主" class="火">
+			<Features>90,60,180,209,48,84</Features>
+			<Character>神秘|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
@@ -944,9 +944,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="笔支" class="水">
-			<Features>26,147,45,106,60,160</Features>
-			<Character>妹纸|呆萌</Character>
+		<Monster name="笔仙" class="水">
+			<Features>36,166,52,112,111,180</Features>
+			<Character>妹纸|呆萌|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>水</ElementClass>
@@ -1236,14 +1236,14 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="金来" class="水">
-			<Features>89,108,80,272,226,108</Features>
-			<Character>邪恶|财迷</Character>
+		<Monster name="魍魉" class="水">
+			<Features>100,120,90,304,252,120</Features>
+			<Character>邪恶|财迷|妖怪</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -2576,52 +2576,23 @@
 		</Challenge>				
 	</Challenges>
 	<Challenges>
-		<Challenge name="圣诞节1" min="8" max="8">
-			<FeaturesRequired feature="运" limit="300"/>
+		<Challenge name="悟真塔" min="0" max="8" class="木">
+			<FeaturesRequired feature="力" limit="5000"/>
+			<FeaturesRequired feature="运" limit="5000"/>
+		</Challenge>
+		<!--碧水独角兽,小白棉花,小娜迦,大刀关胜,赑屃,青梅公举,小青,竹时雨-->
+		<Challenge name="主线" min="0" max="8" class="木">
+			<FeaturesRequired feature="魅" limit="4300"/>
+		</Challenge>
+		<Challenge name="龙生九子" min="0" max="6" class="火">
+			<FeaturesRequired feature="魅" limit="1000"/>
+			<FeaturesRequired feature="力" limit="1000"/>
 		</Challenge>				
-		<!--Challenge name="悟真塔" min="0" max="8" class="光">
-			<FeaturesRequired feature="速" limit="8900"/>
-		</Challenge-->
-		<!--Challenge name="活动关" min="0" max="8" class="地">
-			<FeaturesRequired feature="力" limit="808"/>
-			<FeaturesRequired feature="智" limit="808"/>
-			<FeaturesRequired feature="速" limit="808"/>
-			<FeaturesRequired feature="魅" limit="808"/>
-			<FeaturesRequired feature="运" limit="808"/>
-			<FeaturesRequired feature="技" limit="808"/>
-		</Challenge-->
-		<!--Challenge name="扑克牌" min="0" max="8">
-			<FeaturesRequired feature="力" limit="4800"/>
-			<FeaturesRequired feature="智" limit="4800"/>
-			<FeaturesRequired feature="速" limit="4800"/>
-			<FeaturesRequired feature="魅" limit="4800"/>
-			<FeaturesRequired feature="运" limit="4800"/>
-			<FeaturesRequired feature="技" limit="4800"/>
-		</Challenge-->
-		<!--Challenge name="主线" min="0" max="8" class="木">
-			<FeaturesRequired feature="速" limit="3300"/>
-		</Challenge-->
-		<!--Challenge name="支线-破旧的雕像" min="0" max="8">
-			<FeaturesRequired feature="智" limit="4395"/>
-		</Challenge-->
-		<!--Challenge name="支线-人妖情未了" min="0" max="8">
-			<FeaturesRequired feature="速" limit="2945"/>
-			<FeaturesRequired feature="技" limit="2795"/>
-		</Challenge-->
-		<!--Challenge name="每周挑战" min="0" max="8">
-			<FeaturesRequired feature="智" limit="8000"/>
-			<FeaturesRequired feature="速" limit="8000"/>
-		</Challenge-->
-		<!--Challenge name="月下森林" min="0" max="8">
-			<FeaturesRequired feature="智" limit="2110"/>
-			<FeaturesRequired feature="力" limit="1785"/>
-		</Challenge-->
 	</Challenges>
 	<Challenges type="2">
-		<Challenge name="龙生九子" min="0" max="6" class="暗">
-			<FeaturesRequired feature="速" limit="2200"/>
-			<FeaturesRequired feature="力" limit="2200"/>
-			<FeaturesRequired feature="运" limit="2200"/>
+		<Challenge name="龙生九子" min="0" max="6" class="火">
+			<FeaturesRequired feature="魅" limit="1000"/>
+			<FeaturesRequired feature="力" limit="1000"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="3">
