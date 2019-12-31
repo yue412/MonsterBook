@@ -480,14 +480,19 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="夏火小鬼" class="火">
-			<Features>125,384,132,436,153,96</Features>
-			<Character>自然|神秘</Character>
+		<Monster name="火火崩地儿" class="火">
+			<Features>157,490,170,551,193,122</Features>
+			<Character>自然|神秘|神勇</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>魅</Feature>
 					<Value>200</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -524,14 +529,14 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="联发" class="火">
-			<Features>118,136,107,136,180,90</Features>
-			<Character>吉祥|人形</Character>
+		<Monster name="上联仔" class="火">
+			<Features>132,154,122,154,204,102</Features>
+			<Character>吉祥|人形|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -1098,8 +1103,8 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="呵呵" class="水">
-			<Features>88,44,44,44,44,44</Features>
+		<Monster name="哦" class="水">
+			<Features>122,59,59,59,59,59</Features>
 			<Character>彩蛋</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeature">
@@ -1389,14 +1394,14 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="摩羯星" class="光">
-			<Features>305,96,271,68,108,89</Features>
-			<Character>神秘</Character>
+		<Monster name="奇摩摩" class="光">
+			<Features>436,133,384,96,152,125</Features>
+			<Character>神秘|美食</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
-					<Value>40</Value>
+					<Value>80</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -2502,6 +2507,14 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
+		<Challenge name="主线" min="0" max="8" class="木">
+			<FeaturesRequired feature="魅" limit="4300"/>
+		</Challenge>	
+		<Challenge name="龙生九子" min="0" max="6" class="光">
+			<FeaturesRequired feature="力" limit="2200"/>
+			<FeaturesRequired feature="速" limit="2200"/>
+			<FeaturesRequired feature="运" limit="2200"/>
+		</Challenge>	
 		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
@@ -2565,34 +2578,17 @@
 			<FeaturesRequired feature="速" limit="825"/>
 			<FeaturesRequired feature="力" limit="825"/>
 		</Challenge>
-		<Challenge name="圣诞节3" min="8" max="8">
-			<FeaturesRequired feature="运" limit="2400"/>
-		</Challenge>				
-		<Challenge name="圣诞节2" min="8" max="8">
-			<FeaturesRequired feature="运" limit="1400"/>
-		</Challenge>				
-		<Challenge name="圣诞节1" min="8" max="8">
-			<FeaturesRequired feature="运" limit="300"/>
-		</Challenge>				
 	</Challenges>
-	<Challenges>
-		<Challenge name="悟真塔" min="0" max="8" class="木">
-			<FeaturesRequired feature="力" limit="5000"/>
-			<FeaturesRequired feature="运" limit="5000"/>
+	<Challenges type="1">
+		<Challenge name="悟真塔" min="0" max="8" class="水">
+			<FeaturesRequired feature="智" limit="115000"/>
 		</Challenge>
-		<!--碧水独角兽,小白棉花,小娜迦,大刀关胜,赑屃,青梅公举,小青,竹时雨-->
-		<Challenge name="主线" min="0" max="8" class="木">
-			<FeaturesRequired feature="魅" limit="4300"/>
-		</Challenge>
-		<Challenge name="龙生九子" min="0" max="6" class="火">
-			<FeaturesRequired feature="魅" limit="1000"/>
-			<FeaturesRequired feature="力" limit="1000"/>
-		</Challenge>				
 	</Challenges>
 	<Challenges type="2">
-		<Challenge name="龙生九子" min="0" max="6" class="火">
-			<FeaturesRequired feature="魅" limit="1000"/>
-			<FeaturesRequired feature="力" limit="1000"/>
+		<Challenge name="龙生九子" min="0" max="6" class="光">
+			<FeaturesRequired feature="力" limit="2200"/>
+			<FeaturesRequired feature="速" limit="2200"/>
+			<FeaturesRequired feature="运" limit="2200"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="3">
@@ -2625,6 +2621,15 @@
 			<FeaturesRequired feature="技" limit="7200"/>
 		</Challenge>
 		<!--囝囝可欸克,一雪一杀士,芝鼠,金吒,妲己,圣人椰酥,帝释天,包公,-->
+		<!--Challenge name="圣诞节3" min="8" max="8">
+			<FeaturesRequired feature="运" limit="2400"/>
+		</Challenge>				
+		<Challenge name="圣诞节2" min="8" max="8">
+			<FeaturesRequired feature="运" limit="1400"/>
+		</Challenge>				
+		<Challenge name="圣诞节1" min="8" max="8">
+			<FeaturesRequired feature="运" limit="300"/>
+		</Challenge-->
 	</Challenges>
 	<Fates>
 		<Fate name="青梅竹马">
@@ -2667,6 +2672,16 @@
 				</Skill>
 			</Skills>
 		</Fate>
+		<Fate name="新春对联">
+			<Monsters>上联仔|下联仔|横批仔</Monsters>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>168</Value>
+				</Skill>	
+			</Skills>
+		</Fate>
 	</Fates>
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
@@ -2690,9 +2705,9 @@
 		</SoulBead>
 	</SoulBeads>
 	<Exclude>
-		碧池长老,圣诞树,孔融,呵呵,墨角兽,梁山伯,魁剑客,泥垢,
+		碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
 		曹国舅,汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
-		金童,蓝采和,联发,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
+		金童,蓝采和,上联仔,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 		玫瑰夫人,金钗子,白娘子,方元姬
 	</Exclude>
 </MonsterBook>
