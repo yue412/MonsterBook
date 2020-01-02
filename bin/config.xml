@@ -308,14 +308,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="愚蛇" class="木">
-			<Features>126,263,104,104,84,84</Features>
-			<Character>美食|呆萌</Character>
+		<Monster name="摩呼罗迦" class="木">
+			<Features>142,298,118,118,94,94</Features>
+			<Character>美食|呆萌|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>智</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -1334,6 +1334,17 @@
 				</Skill>
 			</Skills>
 		</Monster>						
+		<Monster name="跨年娃" class="光">
+			<Features>76,60,190,114,114,92</Features>
+			<Character>奇特|神速|妹纸</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>速</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="黑桃3" class="光">
 			<Features>94,31,106,33,38,23</Features>
 			<Character>扑克</Character>
@@ -2507,14 +2518,6 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
-		<Challenge name="主线" min="0" max="8" class="木">
-			<FeaturesRequired feature="魅" limit="4300"/>
-		</Challenge>	
-		<Challenge name="龙生九子" min="0" max="6" class="光">
-			<FeaturesRequired feature="力" limit="2200"/>
-			<FeaturesRequired feature="速" limit="2200"/>
-			<FeaturesRequired feature="运" limit="2200"/>
-		</Challenge>	
 		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
@@ -2585,21 +2588,21 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="2">
-		<Challenge name="龙生九子" min="0" max="6" class="光">
-			<FeaturesRequired feature="力" limit="2200"/>
-			<FeaturesRequired feature="速" limit="2200"/>
-			<FeaturesRequired feature="运" limit="2200"/>
+		<Challenge name="龙生九子" min="0" max="6" class="木">
+			<FeaturesRequired feature="智" limit="2500"/>
+			<FeaturesRequired feature="魅" limit="2500"/>
+			<FeaturesRequired feature="技" limit="2500"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="3">
-		<Challenge name="每周挑战" min="0" max="8">
-			<FeaturesRequired feature="智" limit="5500"/>
-			<FeaturesRequired feature="技" limit="5500"/>
+		<Challenge name="每周挑战" min="8" max="8">
+			<FeaturesRequired feature="智" limit="11000"/>
+			<FeaturesRequired feature="运" limit="11000"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="4">
 		<Challenge name="主线" min="0" max="8" class="木">
-			<FeaturesRequired feature="魅" limit="4300"/>
+			<FeaturesRequired feature="速" limit="3800"/>
 		</Challenge>
 		<!--青梅公举,金镶玉,神笔马良,春丽,小青,草莽勇,赑屃,蛇猿,-->>
 	</Challenges>
