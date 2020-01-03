@@ -2588,7 +2588,7 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="2">
-		<Challenge name="龙生九子" min="0" max="6" class="木">
+		<Challenge name="龙生九子" min="0" max="6" class="火">
 			<FeaturesRequired feature="智" limit="2500"/>
 			<FeaturesRequired feature="魅" limit="2500"/>
 			<FeaturesRequired feature="技" limit="2500"/>
@@ -2602,7 +2602,7 @@
 	</Challenges>
 	<Challenges type="4">
 		<Challenge name="主线" min="0" max="8" class="木">
-			<FeaturesRequired feature="速" limit="3800"/>
+			<FeaturesRequired feature="技" limit="3850"/>
 		</Challenge>
 		<!--青梅公举,金镶玉,神笔马良,春丽,小青,草莽勇,赑屃,蛇猿,-->>
 	</Challenges>
