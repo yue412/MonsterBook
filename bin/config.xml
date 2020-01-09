@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MonsterBook>
 	<Monsters>
+		<Monster name="粽仔" class="木">
+			<Features>61,18,25,25,18,25</Features>
+			<Character>美食</Character>
+		</Monster>				
 		<Monster name="小青" class="木">
 			<Features>48,48,90,138,168,48</Features>
 			<Character>善良|妹纸|妖怪</Character>
@@ -59,15 +63,20 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="小雪童" class="木">
-			<Features>436,153,384,96,125,132</Features>
-			<Character>善良|呆萌</Character>
+		<Monster name="雪舞姬" class="木">
+			<Features>551,193,490,122,157,170</Features>
+			<Character>善良|呆萌|吉祥</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
 					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>				
 			</Skills>
 		</Monster>		
 		<Monster name="木儡" class="木">
@@ -424,6 +433,10 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="辣子姬" class="火">
+			<Features>68,61,100,187,62,62</Features>
+			<Character>自然|人形|妹纸</Character>
+		</Monster>
 		<Monster name="下联仔" class="火">
 			<Features>154,122,132,154,204,102</Features>
 			<Character>吉祥|人形|飞翔</Character>
@@ -435,15 +448,15 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="琴音使" class="火">
-			<Features>184,32,66,100,74,209</Features>
-			<Character>乐器|人形</Character>
+		<Monster name="囚牛" class="火">
+			<Features>272,47,98,147,110,310</Features>
+			<Character>乐器|人形|龙族</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<Trigger>4</Trigger>
 					<ElementClass>火</ElementClass>
 					<Feature>全</Feature>
-					<Value>60</Value>
+					<Value>100</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -911,15 +924,20 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="和风芽" class="火">
-			<Features>125,384,132,436,153,96</Features>
-			<Character>小眼睛|呆萌</Character>
+		<Monster name="春分十里小燕几" class="火">
+			<Features>157,490,170,551,193,122</Features>
+			<Character>小眼睛|呆萌|飞翔</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>魅</Feature>
 					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.6</Value>
+				</Skill>				
 			</Skills>
 		</Monster>				
 		<Monster name="驭汤仙人" class="火">
@@ -938,9 +956,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="秘汤" class="水">
-			<Features>52,42,34,100,27,38</Features>
-			<Character>自然</Character>
+		<Monster name="忍海" class="水">
+			<Features>156,123,104,289,82,114</Features>
+			<Character>自然|人形|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>水</ElementClass>
@@ -1816,14 +1834,14 @@
 				</Skill>				
 			</Skills>
 		</Monster>				
-		<Monster name="铁砧" class="地">
-			<Features>38,31,106,33,94,23</Features>
-			<Character>神秘</Character>
+		<Monster name="小铁匠" class="地">
+			<Features>52,43,152,46,133,33</Features>
+			<Character>神秘|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>智</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -2185,9 +2203,42 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="土仔" class="地">
-			<Features>186,80,99,66,52,66</Features>
-			<Character>自然|人形</Character>
+		<Monster name="木牛" class="地">
+			<Features>189,70,50,60,70,100</Features>
+			<Character>自然|善良|机械</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>	
+			</Skills>
+		</Monster>		
+		<Monster name="木吒" class="地">
+			<Features>108,108,108,108,108,108</Features>
+			<Character>自然|呆萌|人形</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>	
+			</Skills>
+		</Monster>			
+		<Monster name="鹊桥" class="地">
+			<Features>48,90,60,72,98,170</Features>
+			<Character>娇小|呆萌|善良</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>	
+			</Skills>
+		</Monster>			
+		<Monster name="仁山" class="地">
+			<Features>293,125,158,104,84,104</Features>
+			<Character>自然|人形|善良</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>地</ElementClass>
@@ -2213,6 +2264,17 @@
 					<Feature>全</Feature>
 					<Value>1</Value>
 				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="梦魇" class="暗">
+			<Features>105,51,172,105,51,172</Features>
+			<Character>邪恶|妖怪|神秘</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>	
 			</Skills>
 		</Monster>		
 		<Monster name="宁采臣" class="暗">
@@ -2601,10 +2663,30 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="4">
-		<Challenge name="主线" min="0" max="8" class="木">
-			<FeaturesRequired feature="技" limit="3850"/>
+		<Challenge name="主线" min="0" max="8" class="光">
+			<FeaturesRequired feature="魅" limit="6000"/>
 		</Challenge>
-		<!--青梅公举,金镶玉,神笔马良,春丽,小青,草莽勇,赑屃,蛇猿,-->>
+		<!-- 芝鼠,妲己,圣人椰酥,迦罗逻,九色鹿,讹兽,囝囝可欸克,金吒-->
+		<!--Challenge name="白银之翼" min="0" max="8" class="光">
+			<FeaturesRequired feature="魅" limit="9000"/>
+			<FeaturesRequired feature="力" limit="9000"/>
+		</Challenge>	
+		<Challenge name="每周挑战" min="0" max="8">
+			<FeaturesRequired feature="力" limit="3800"/>
+			<FeaturesRequired feature="智" limit="3800"/>
+			<FeaturesRequired feature="速" limit="3800"/>
+			<FeaturesRequired feature="魅" limit="3800"/>
+			<FeaturesRequired feature="运" limit="3800"/>
+			<FeaturesRequired feature="技" limit="3800"/>
+		</Challenge>	
+		<Challenge name="龙生九子" min="0" max="6" class="木">
+			<FeaturesRequired feature="力" limit="4600"/>
+			<FeaturesRequired feature="运" limit="4600"/>
+		</Challenge>
+		<Challenge name="扑克牌" min="0" max="5">
+			<FeaturesRequired feature="力" limit="7200"/>
+			<FeaturesRequired feature="技" limit="7200"/>
+		</Challenge-->						
 	</Challenges>
 	<Challenges type="5">
 		<!--Challenge name="扑克牌" min="0" max="8">
@@ -2685,6 +2767,16 @@
 				</Skill>	
 			</Skills>
 		</Fate>
+		<Fate name="人山人海">
+			<Monsters>仁山|忍海</Monsters>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>全</Feature>
+					<Value>58</Value>
+				</Skill>	
+			</Skills>
+		</Fate>		
 	</Fates>
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
