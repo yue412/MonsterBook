@@ -693,6 +693,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="亢金龙" class="火">
+			<Features>228,72,90,181,90,100</Features>
+			<Character>呆萌|龙族|战士</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="南七宿朱雀" class="火">
 			<Features>192,116,138,128,298,116</Features>
 			<Character>自然|人形|神仙</Character>
@@ -2671,14 +2682,6 @@
 			<FeaturesRequired feature="魅" limit="9000"/>
 			<FeaturesRequired feature="力" limit="9000"/>
 		</Challenge>	
-		<Challenge name="每周挑战" min="0" max="8">
-			<FeaturesRequired feature="力" limit="3800"/>
-			<FeaturesRequired feature="智" limit="3800"/>
-			<FeaturesRequired feature="速" limit="3800"/>
-			<FeaturesRequired feature="魅" limit="3800"/>
-			<FeaturesRequired feature="运" limit="3800"/>
-			<FeaturesRequired feature="技" limit="3800"/>
-		</Challenge>	
 		<Challenge name="龙生九子" min="0" max="6" class="木">
 			<FeaturesRequired feature="力" limit="4600"/>
 			<FeaturesRequired feature="运" limit="4600"/>
@@ -2701,6 +2704,15 @@
 			<FeaturesRequired feature="运" limit="4800"/>
 			<FeaturesRequired feature="技" limit="4800"/>
 		</Challenge-->
+		<Challenge name="白银之翼" min="0" max="8" class="光">
+			<FeaturesRequired feature="魅" limit="9000"/>
+			<FeaturesRequired feature="力" limit="9000"/>
+		</Challenge>	
+		<Challenge name="龙生九子" min="0" max="6" class="木">
+			<FeaturesRequired feature="力" limit="4600"/>
+			<FeaturesRequired feature="运" limit="4600"/>
+		</Challenge>	
+		<!--碧水独角兽,雪舞姬,小娜迦,竹马王子,赑屃,青梅公举-->	
 		<Challenge name="扑克牌" min="0" max="5">
 			<FeaturesRequired feature="力" limit="7200"/>
 			<FeaturesRequired feature="技" limit="7200"/>
