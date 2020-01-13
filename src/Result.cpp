@@ -9,6 +9,7 @@
 
 CResult::CResult(): m_nNum(10)
 {
+    m_oOrderList.push_back(std::make_pair(RO_FACTOR, MB_ASC));
     m_oOrderList.push_back(std::make_pair(RO_CLOSE, MB_ASC));
     m_oOrderList.push_back(std::make_pair(RO_SIZE, MB_DESC));
     m_oOrderList.push_back(std::make_pair(RO_FEATURES, MB_ASC));
@@ -52,6 +53,11 @@ void CResult::add(CTeamPtr pTeam, double* dFeatures, double* dRequiredFeatures)
 					break;
             case RO_SIZE:
                 if (compare(oOrder.second, pItem1.pTeam->size(), pItem2.pTeam->size(), bResult))
+                    return bResult;
+                else
+                    break;
+            case RO_FACTOR:
+                if (compare(oOrder.second, pItem1.dFactor, pItem2.dFactor, bResult))
                     return bResult;
                 else
                     break;
@@ -121,6 +127,7 @@ void CResult::initItem(CTeamPtr pTeam, double * dFeatures, double* dRequiredFeat
 			}
         }
     }
+    oItem.dFactor = pTeam->getFactor();
     oItem.pTeam = pTeam;
 }
 

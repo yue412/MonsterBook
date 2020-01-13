@@ -12,7 +12,8 @@ enum EnResultOrderType
     RO_SIZE,
     RO_FEATURES,
 	RO_FIT_FEATURE_COUNT,
-	RO_CLOSE_FEATURE
+	RO_CLOSE_FEATURE,
+    RO_FACTOR
 };
 
 #define MB_DESC 1 // ½µÐò
@@ -25,6 +26,7 @@ struct CResultItem
     double dTotalNeedFeature;
 	int nFitCount;
 	double dClosedFeature;
+    double dFactor;
     CTeamPtr pTeam;
 };
 

@@ -31,6 +31,7 @@ public:
     CBigInt& getId() { return m_nId; }
     std::set<std::wstring>& getCharacterSet() { return m_oCharacterSet; }
     bool ignore() { return m_bIgnore; }
+    double getFactor() { return m_dFactor; }
 private:
     std::wstring m_sName;
 	EnElementClass m_nClass;
@@ -41,6 +42,7 @@ private:
     CBigInt m_nId;
     std::set<std::wstring> m_oCharacterSet;
     bool m_bIgnore;
+    double m_dFactor;
 };
 
 #endif // !CMONSTER_H

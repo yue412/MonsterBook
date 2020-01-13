@@ -21,6 +21,7 @@ public:
     CIncreaseFeatureSkill(EnElementClass nClass, EnFeatures nFeature, int nValue, int nTrigger = 0): m_nClass(nClass), m_nFeature(nFeature), m_nValue(nValue), m_nTrigger(nTrigger){}
 	virtual void affect(const CTeam& oTeam, double* oResult);
     virtual int getAffectFeature() { return m_nFeature == EF_ALL ? 0 : 1 << m_nFeature; }
+    int getValue() { return m_nValue; }
 private:
     EnElementClass m_nClass;
     EnFeatures m_nFeature;

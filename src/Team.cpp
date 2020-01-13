@@ -70,3 +70,13 @@ CBigInt CTeam::getMonsterSet()
     }
     return nResult;
 }
+
+double CTeam::getFactor()
+{
+    double dResult = 0.0;
+    for each (auto pMonster in m_oMonsterList)
+    {
+        dResult += pMonster->getFactor();
+    }
+    return dResult;
+}

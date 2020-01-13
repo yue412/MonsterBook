@@ -21,6 +21,7 @@ public:
     int getCount(EnElementClass nClass) const;
     CMonster* getItems(int nIndex) const;
     CBigInt getMonsterSet();
+    double getFactor();
 private:
     std::vector<CMonster*> m_oMonsterList;
     int m_nCount[EC_ALL];
