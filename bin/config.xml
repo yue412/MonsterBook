@@ -817,14 +817,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="红豆丸" class="火">
-			<Features>164,58,88,46,75,115</Features>
-			<Character>美食</Character>
+		<Monster name="赤笛仔" class="火">
+			<Features>234,82,124,66,108,165</Features>
+			<Character>美食|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>技</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -1352,14 +1352,14 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="隧弯" class="水">
-			<Features>64,77,0,64,89,129</Features>
-			<Character>奇特|奇特</Character>
+		<Monster name="轸水蚓" class="水">
+			<Features>128,153,0,128,180,258</Features>
+			<Character>奇特|奇特|奇特</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>速</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>						
@@ -2661,7 +2661,7 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="2">
-		<Challenge name="龙生九子" min="0" max="6" class="火">
+		<Challenge name="龙生九子" min="0" max="6" class="水">
 			<FeaturesRequired feature="智" limit="2500"/>
 			<FeaturesRequired feature="魅" limit="2500"/>
 			<FeaturesRequired feature="技" limit="2500"/>
