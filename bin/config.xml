@@ -1034,14 +1034,14 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="藕仙子" class="水">
-			<Features>80,160,96,240,55,40</Features>
-			<Character>水性|妹纸</Character>
+		<Monster name="何仙姑" class="水">
+			<Features>95,194,96,291,156,156</Features>
+			<Character>水性|妹纸|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>魅</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -1445,15 +1445,20 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="哈姆太鼠" class="光">
-			<Features>96,153,384,132,436,125</Features>
-			<Character>神速|娇小</Character>
+		<Monster name="冰箱哈姆鼠妹" class="光">
+			<Features>122,193,490,170,551,157</Features>
+			<Character>神速|娇小|奇特</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>运</Feature>
 					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
+				</Skill>						
 			</Skills>
 		</Monster>		
 		<Monster name="镰鼬" class="光">
