@@ -2851,6 +2851,19 @@
 				</Skill>
 			</Skills>
 		</Fate>
+		<Fate name="木牛流马">
+			<Monsters>木牛|流马</Monsters>
+			<Skills>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>力</Feature>
+					<Value>200</Value>
+				</Skill>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>速</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Fate>		
 		<Fate name="新春对联">
 			<Monsters>上联仔|下联仔|横批仔</Monsters>
 			<Skills>
