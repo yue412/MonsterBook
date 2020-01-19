@@ -448,6 +448,17 @@
 			<Features>68,61,100,187,62,62</Features>
 			<Character>自然|人形|妹纸</Character>
 		</Monster>
+		<Monster name="火烧" class="火">
+			<Features>34,84,25,60,39,50</Features>
+			<Character>奇特</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>智</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="下联仔" class="火">
 			<Features>154,122,132,154,204,102</Features>
 			<Character>吉祥|人形|飞翔</Character>
@@ -1056,6 +1067,17 @@
 				</Skill>
 			</Skills>
 		</Monster>				
+		<Monster name="黑塔匣" class="水">
+			<Features>19,23,27,25,16,61</Features>
+			<Character>美食</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>速</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="悬叶" class="水">
 			<Features>39,19,56,18,16,25</Features>
 			<Character>呆萌</Character>
@@ -1971,6 +1993,17 @@
 				</Skill>				
 			</Skills>
 		</Monster>				
+		<Monster name="菇仔" class="地">
+			<Features>16,19,23,38,52,23</Features>
+			<Character>美食</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>运</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>			
 		<Monster name="戟月" class="地">
 			<Features>58,75,75,58,225,215</Features>
 			<Character>武器</Character>
