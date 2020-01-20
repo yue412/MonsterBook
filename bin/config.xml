@@ -1346,14 +1346,20 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="介公子" class="水">
-			<Features>122,306,112,141,122,184</Features>
-			<Character>美食|自然|人形</Character>
+		<Monster name="晋文公" class="水">
+			<Features>134,338,124,156,134,202</Features>
+			<Character>美食|自然|人形|谋略</Character>
 			<Skills>
+				<Skill name="IncreaseFeature">
+					<Trigger>4</Trigger>
+					<ElementClass>水</ElementClass>
+					<Feature>全</Feature>
+					<Value>30</Value>
+				</Skill>					
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>智</Feature>
-					<Value>2</Value>
+					<Value>2.5</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
