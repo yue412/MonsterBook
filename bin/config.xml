@@ -3034,6 +3034,15 @@
 				</Skill>
 			</Skills>
 		</Fate>
+		<Fate name="六扇窗">
+			<Monsters>蛮力客|鼓妖|虎大官|草莽勇|魁剑客</Monsters>
+			<Skills>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>速</Feature>
+					<Value>500</Value>
+				</Skill>
+			</Skills>
+		</Fate>		
 		<Fate name="豆腐拳">
 			<Monsters>拳王|很忙的杜甫</Monsters>
 			<Skills>
