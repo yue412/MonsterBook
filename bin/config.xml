@@ -3039,14 +3039,14 @@
 				</Skill>	
 			</Skills>
 		</Monster>			
-		<Monster name="猫眼石" class="暗">
-			<Features>69,94,117,117,176,206</Features>
-			<Character>自然</Character>
+		<Monster name="夕" class="暗">
+			<Features>79,105,134,134,199,233</Features>
+			<Character>自然|猫咪</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
@@ -3475,7 +3475,9 @@
 	</Challenges>
 	<Challenges type="1">
 		<Challenge name="悟真塔" min="0" max="8" class="水">
-			<FeaturesRequired feature="智" limit="115000"/>
+			<FeaturesRequired feature="魅" limit="2000"/>
+			<FeaturesRequired feature="智" limit="2000"/>
+			<FeaturesRequired feature="技" limit="2000"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="2">
@@ -3484,10 +3486,15 @@
 			<FeaturesRequired feature="魅" limit="2500"/>
 			<FeaturesRequired feature="技" limit="2500"/>
 		</Challenge-->
-		<Challenge name="龙生九子-睚眦2" min="0" max="6" class="暗">
+		<!--Challenge name="龙生九子-睚眦2" min="0" max="6" class="暗">
 			<FeaturesRequired feature="运" limit="1200"/>
 			<FeaturesRequired feature="智" limit="1200"/>
-		</Challenge>		
+		</Challenge-->	
+		<Challenge name="龙生九子-嘲风5" min="0" max="6" class="光">
+			<FeaturesRequired feature="魅" limit="2500"/>
+			<FeaturesRequired feature="技" limit="2500"/>
+			<FeaturesRequired feature="智" limit="2500"/>
+		</Challenge>	
 	</Challenges>
 	<Challenges type="3">
 		<Challenge name="每周挑战" min="8" max="8">
@@ -3496,8 +3503,8 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="4">
-		<Challenge name="主线" min="0" max="8" class="光">
-			<FeaturesRequired feature="魅" limit="6000"/>
+		<Challenge name="主线" min="0" max="8" class="暗">
+			<FeaturesRequired feature="运" limit="2100"/>
 		</Challenge>
 		<!-- 芝鼠,妲己,圣人椰酥,迦罗逻,九色鹿,讹兽,囝囝可欸克,金吒-->
 		<!--Challenge name="白银之翼" min="0" max="8" class="光">
