@@ -3490,10 +3490,9 @@
 			<FeaturesRequired feature="运" limit="1200"/>
 			<FeaturesRequired feature="智" limit="1200"/>
 		</Challenge-->	
-		<Challenge name="龙生九子-嘲风5" min="0" max="6" class="光">
-			<FeaturesRequired feature="魅" limit="2500"/>
-			<FeaturesRequired feature="技" limit="2500"/>
-			<FeaturesRequired feature="智" limit="2500"/>
+		<Challenge name="龙生九子-嘲风6" min="0" max="6" class="暗">
+			<FeaturesRequired feature="运" limit="4600"/>
+			<FeaturesRequired feature="力" limit="4600"/>
 		</Challenge>	
 	</Challenges>
 	<Challenges type="3">
