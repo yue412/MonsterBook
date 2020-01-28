@@ -263,14 +263,19 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="唤水仔" class="木">
-			<Features>65,46,56,69,155,155</Features>
-			<Character>奇特</Character>
+		<Monster name="龙王敖闰" class="木">
+			<Features>130,92,112,140,308,308</Features>
+			<Character>奇特|龙族|神仙|自然</Character>
 			<Skills>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>龙族</Character>
+					<Features>力|速|运</Features>
+					<Value>128</Value>
+				</Skill>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>技</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -1431,9 +1436,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="蓝采和" class="水">
-			<Features>62,164,100,228,164,271</Features>
-			<Character>妹纸|吉祥|神仙</Character>
+		<Monster name="八仙蓝采和" class="水">
+			<Features>70,180,110,250,180,300</Features>
+			<Character>妹纸|吉祥|神仙|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -2701,7 +2706,18 @@
 					<Value>30</Value>
 				</Skill>
 			</Skills>
-		</Monster>		
+		</Monster>	
+		<Monster name="姜流儿" class="地">
+			<Features>14,38,14,14,38,54</Features>
+			<Character>美食</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>技</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
 		<Monster name="菱绢" class="地">
 			<Features>16,39,19,61,21,16</Features>
 			<Character>呆萌</Character>
@@ -3247,14 +3263,14 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="魂飞" class="暗">
-			<Features>10,16,18,50,42,8</Features>
-			<Character>神秘</Character>
+		<Monster name="聂小倩" class="暗">
+			<Features>67,102,109,300,255,50</Features>
+			<Character>神秘|妹纸|善良</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>魅</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>	
 			</Skills>
 		</Monster>	
@@ -3954,6 +3970,31 @@
 				</Skill>	
 			</Skills>
 		</Fate>		
+		<Fate name="倩女幽魂">
+			<Monsters>聂小倩|宁采臣</Monsters>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>2</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>速</Feature>
+					<Value>2</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>运</Feature>
+					<Value>2</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>2</Value>
+				</Skill>
+			</Skills>
+		</Fate>	
 	</Fates>
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
@@ -3964,7 +4005,7 @@
 			<Features>0,52.8,52.8,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>0,0,0,0,0,0</Features>
+			<Features>0,0,0,48,0,0</Features>
 		</SoulBead>
 		<SoulBead class="水">
 			<Features>0,50.4,0,0,0,0</Features>
@@ -3979,7 +4020,7 @@
 	<Exclude>
 		碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
 		曹国舅,汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
-		金童,蓝采和,上联仔,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
+		金童,八仙蓝采和,上联仔,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 		玫瑰夫人,金钗子,白娘子,方元姬
 	</Exclude>
 </MonsterBook>
