@@ -3116,14 +3116,19 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="明珠" class="地">
-			<Features>233,38,193,92,46,61</Features>
-			<Character>自然</Character>
+		<Monster name="阿修罗" class="地">
+			<Features>346,56,288,138,68,92</Features>
+			<Character>自然|人形|神勇</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>力</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.6</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
@@ -3421,7 +3426,23 @@
 					<Value>1.3</Value>
 				</Skill>	
 			</Skills>
-		</Monster>		
+		</Monster>
+		<Monster name="古灵精怪神速夕" class="暗">
+			<Features>155,131,428,200,143,102</Features>
+			<Character>呆萌|人形|邪恶</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>200</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>力</Feature>
+					<Value>80</Value>
+				</Skill>		
+			</Skills>
+		</Monster>	
 		<Monster name="锦衣卫将军" class="暗">
 			<Features>283,112,170,55,112,135</Features>
 			<Character>美食|武器|善良</Character>
@@ -4005,10 +4026,10 @@
 			<Features>0,52.8,52.8,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>0,0,0,48,0,0</Features>
+			<Features>0,0,0,48,0,48</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>0,50.4,0,0,0,0</Features>
+			<Features>0,50.4,0,50.4,0,0</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>0,0,0,0,50.4,0</Features>
