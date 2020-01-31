@@ -19,6 +19,17 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="梅花4" class="木">
+			<Features>38,31,106,33,94,23</Features>
+			<Character>扑克</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>			
 		<Monster name="荆棘弓" class="木">
 			<Features>125,153,436,96,132,384</Features>
 			<Character>神秘|善良</Character>
@@ -622,14 +633,19 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="付炬" class="火">
-			<Features>164,54,44,67,54,164</Features>
-			<Character>美食</Character>
+		<Monster name="敖钦" class="火">
+			<Features>294,98,80,124,98,294</Features>
+			<Character>美食|龙族|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>技</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
+				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>龙族</Character>
+					<Features>力|速|运</Features>
+					<Value>88</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -2428,6 +2444,17 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="迷团" class="光">
+			<Features>34,42,38,100,34,46</Features>
+			<Character>神秘</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>	
 		<Monster name="字母罗" class="光">
 			<Features>68,108,272,96,306,89</Features>
 			<Character>战士</Character>
@@ -2439,14 +2466,14 @@
 				</Skill>			
 			</Skills>
 		</Monster>	
-		<Monster name="汪仔" class="光">
-			<Features>119,90,71,107,210,180</Features>
-			<Character>自然</Character>
+		<Monster name="萌极" class="光">
+			<Features>136,102,82,121,239,203</Features>
+			<Character>自然|猫咪</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>			
 			</Skills>
 		</Monster>	
@@ -3836,10 +3863,8 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="1">
-		<Challenge name="悟真塔" min="0" max="8" class="水">
-			<FeaturesRequired feature="魅" limit="2000"/>
-			<FeaturesRequired feature="智" limit="2000"/>
-			<FeaturesRequired feature="技" limit="2000"/>
+		<Challenge name="悟真塔" min="0" max="8" class="火">
+			<FeaturesRequired feature="技" limit="7700"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="2">
@@ -3852,10 +3877,15 @@
 			<FeaturesRequired feature="运" limit="1200"/>
 			<FeaturesRequired feature="智" limit="1200"/>
 		</Challenge-->	
-		<Challenge name="龙生九子-嘲风6" min="0" max="6" class="暗">
+		<!--Challenge name="龙生九子-嘲风6" min="0" max="6" class="暗">
 			<FeaturesRequired feature="运" limit="4600"/>
 			<FeaturesRequired feature="力" limit="4600"/>
-		</Challenge>	
+		</Challenge-->	
+		<Challenge name="龙生九子-蒲牢4" min="0" max="6" class="水">
+			<FeaturesRequired feature="速" limit="2200"/>
+			<FeaturesRequired feature="运" limit="2200"/>
+			<FeaturesRequired feature="力" limit="2200"/>
+		</Challenge>
 	</Challenges>
 	<Challenges type="3">
 		<Challenge name="每周挑战" min="8" max="8">
@@ -4030,13 +4060,13 @@
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
-			<Features>48,48,48,48,48,0</Features>
+			<Features>50.4,50.4,50.4,50.4,50.4,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
 			<Features>0,52.8,52.8,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>0,0,0,48,0,48</Features>
+			<Features>0,0,0,50.4,0,50.4</Features>
 		</SoulBead>
 		<SoulBead class="水">
 			<Features>0,50.4,0,50.4,0,0</Features>
@@ -4045,7 +4075,7 @@
 			<Features>0,0,0,0,50.4,50.4</Features>
 		</SoulBead>
 		<SoulBead class="暗">
-			<Features>48,0,48,0,0,48</Features>
+			<Features>50.4,0,50.4,0,0,50.4</Features>
 		</SoulBead>
 	</SoulBeads>
 	<Exclude>
