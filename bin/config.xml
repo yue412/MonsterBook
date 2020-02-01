@@ -2466,14 +2466,14 @@
 				</Skill>			
 			</Skills>
 		</Monster>	
-		<Monster name="萌极" class="光">
-			<Features>136,102,82,121,239,203</Features>
-			<Character>自然|猫咪</Character>
+		<Monster name="糖无极" class="光">
+			<Features>152,114,90,136,266,228</Features>
+			<Character>自然|猫咪|美食</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>			
 			</Skills>
 		</Monster>	
@@ -4066,7 +4066,7 @@
 			<Features>0,52.8,52.8,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>0,0,0,50.4,0,50.4</Features>
+			<Features>0,0,0,50.4,50.4,50.4</Features>
 		</SoulBead>
 		<SoulBead class="水">
 			<Features>0,50.4,0,50.4,0,0</Features>
