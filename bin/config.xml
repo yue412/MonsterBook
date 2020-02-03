@@ -1397,6 +1397,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="珊心" class="水">
+			<Features>27,31,21,48,18,25</Features>
+			<Character>自然</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="雪球" class="水">
 			<Features>44,23,30,23,30,23</Features>
 			<Character>冰冷</Character>
@@ -1920,6 +1931,17 @@
 				</Skill>
 			</Skills>
 		</Monster>						
+		<Monster name="黄豆豆" class="光">
+			<Features>23,36,16,56,16,30</Features>
+			<Character>自然</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
 		<Monster name="灶神" class="光">
 			<Features>133,72,90,80,180,90</Features>
 			<Character>美食|善良|神仙</Character>
@@ -2466,14 +2488,14 @@
 				</Skill>			
 			</Skills>
 		</Monster>	
-		<Monster name="萌极" class="光">
-			<Features>136,102,82,121,239,203</Features>
-			<Character>自然|猫咪</Character>
+		<Monster name="糖无极" class="光">
+			<Features>152,114,90,136,266,228</Features>
+			<Character>自然|猫咪|美食</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>			
 			</Skills>
 		</Monster>	
@@ -2735,6 +2757,17 @@
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>运</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="太锣" class="地">
+			<Features>34,42,38,34,46,100</Features>
+			<Character>乐器</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>技</Feature>
 					<Value>30</Value>
 				</Skill>
 			</Skills>
@@ -3798,6 +3831,14 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
+		<Challenge name="龙生九子-蒲牢7" min="0" max="8" total="50">
+			<FeaturesRequired feature="力" limit="4200"/>
+			<FeaturesRequired feature="智" limit="4200"/>
+			<FeaturesRequired feature="速" limit="4200"/>
+			<FeaturesRequired feature="魅" limit="4200"/>
+			<FeaturesRequired feature="运" limit="4200"/>
+			<FeaturesRequired feature="技" limit="4200"/>
+		</Challenge>		
 		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
@@ -4066,10 +4107,10 @@
 			<Features>0,52.8,52.8,0,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>0,0,0,50.4,0,50.4</Features>
+			<Features>0,0,0,50.4,50.4,50.4</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>0,50.4,0,50.4,0,0</Features>
+			<Features>0,50.4,0,50.4,50.4,0</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>0,0,0,0,50.4,50.4</Features>
