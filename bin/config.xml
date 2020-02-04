@@ -1656,14 +1656,19 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="小猪妖" class="水">
-			<Features>92,83,78,220,197,55</Features>
-			<Character>呆萌</Character>
+		<Monster name="猪刚鬣" class="水">
+			<Features>165,146,143,417,388,98</Features>
+			<Character>呆萌|妖怪|邪恶</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>魅</Feature>
-					<Value>80</Value>
+					<Value>200</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>			
@@ -3951,8 +3956,8 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="4">
-		<Challenge name="主线" min="0" max="8" class="暗">
-			<FeaturesRequired feature="运" limit="2100"/>
+		<Challenge name="主线" min="0" max="8" class="水">
+			<FeaturesRequired feature="魅" limit="6800"/>
 		</Challenge>
 		<!-- 芝鼠,妲己,圣人椰酥,迦罗逻,九色鹿,讹兽,囝囝可欸克,金吒-->
 		<!--Challenge name="白银之翼" min="0" max="8" class="光">
