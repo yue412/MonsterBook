@@ -2466,6 +2466,17 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="光车" class="光">
+			<Features>111,-38,93,37,-20,-38</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>	
 		<Monster name="迷团" class="光">
 			<Features>34,42,38,100,34,46</Features>
 			<Character>神秘</Character>
@@ -2488,15 +2499,20 @@
 				</Skill>			
 			</Skills>
 		</Monster>	
-		<Monster name="糖无极" class="光">
-			<Features>152,114,90,136,266,228</Features>
-			<Character>自然|猫咪|美食</Character>
+		<Monster name="汪年" class="光">
+			<Features>168,126,100,150,294,252</Features>
+			<Character>自然|猫咪|美食|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>运</Feature>
-					<Value>2</Value>
+					<Value>2.5</Value>
 				</Skill>			
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>猫咪</Character>
+					<Features>力|智|运|技|魅|速</Features>
+					<Value>100</Value>
+				</Skill>
 			</Skills>
 		</Monster>	
 		<Monster name="帘卷精" class="光">
@@ -4104,7 +4120,7 @@
 			<Features>50.4,50.4,50.4,50.4,50.4,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>0,52.8,52.8,0,0,0</Features>
+			<Features>0,52.8,52.8,52.8,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>0,0,0,50.4,50.4,50.4</Features>
