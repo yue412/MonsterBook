@@ -5,14 +5,18 @@
 #include <set>
 
 class CTeam;
+class CMonster;
 
 class CSkill
 {
 public:
+    CSkill(): m_pOwner(nullptr) {}
     virtual ~CSkill();
     virtual void affect(const CTeam& oTeam, double* oResult) = 0;
     virtual int getAffectFeature();
+    virtual void setOwner(CMonster* pOwner) { m_pOwner = pOwner; }
 protected:
+    CMonster* m_pOwner;
 };
 
 class CIncreaseFeatureSkill: public CSkill
@@ -68,6 +72,28 @@ class CIncreaseSelfFeatureByCharacterSkill : public CSkill
 {
 public:
     CIncreaseSelfFeatureByCharacterSkill(const std::wstring& sCharacter, int* nFeatures, double dValue) : m_sCharacter(sCharacter), m_dValue(dValue), m_nAffectFeatures(0) {
+        for (int i = 0; i < EF_ALL; i++)
+        {
+            m_nFeatureFlag[i] = nFeatures[i];
+            if (nFeatures[i] > 0)
+            {
+                m_nAffectFeatures |= 1 << i;
+            }
+        }
+    }
+    virtual void affect(const CTeam& oTeam, double* oResult);
+    virtual int getAffectFeature() { return m_nAffectFeatures; }
+private:
+    std::wstring m_sCharacter;
+    int m_nFeatureFlag[EF_ALL];
+    int m_nAffectFeatures;
+    double m_dValue;
+};
+
+class CProductSelfFeatureByCharacterSkill : public CSkill
+{
+public:
+    CProductSelfFeatureByCharacterSkill(const std::wstring& sCharacter, int* nFeatures, double dValue) : m_sCharacter(sCharacter), m_dValue(dValue), m_nAffectFeatures(0) {
         for (int i = 0; i < EF_ALL; i++)
         {
             m_nFeatureFlag[i] = nFeatures[i];

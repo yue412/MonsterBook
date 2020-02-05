@@ -52,4 +52,11 @@ public:
     virtual CSkill* create(TiXmlElement* pSkillNode);
 };
 
+class CProductSelfFeatureByCharacterSkillFactroy : public CSkillFactory
+{
+public:
+    virtual std::wstring getName() { return L"ProductSelfFeatureByCharacter"; }
+    virtual CSkill* create(TiXmlElement* pSkillNode);
+};
+
 #endif // !SKILLFACTORY_H

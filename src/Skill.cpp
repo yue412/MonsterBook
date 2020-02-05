@@ -86,3 +86,15 @@ void CIncreaseSelfFeatureByCharacterSkill::affect(const CTeam & oTeam, double * 
         oResult[i] += m_nFeatureFlag[i] * nCount * m_dValue;
     }
 }
+
+void CProductSelfFeatureByCharacterSkill::affect(const CTeam & oTeam, double * oResult)
+{
+    fill(oResult, 0.0);
+    auto nCount = std::count_if(oTeam.begin(), oTeam.end(), [this](CMonster* pMonster) {
+        return pMonster->getCharacterSet().count(this->m_sCharacter) > 0;
+    });
+    for (int i = 0; i < EF_ALL; i++)
+    {
+        oResult[i] += m_nFeatureFlag[i] * nCount * m_pOwner->getFeature((EnFeatures)i) * (m_dValue);
+    }
+}

@@ -131,7 +131,7 @@ int main(int argc, char* argv[])
         if (s.empty())
             continue;
         std::wstring str = ToUnicode(s);
-        std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+        //std::transform(str.begin(), str.end(), str.begin(), ::tolower);
 
         CGame oGame;
         CConfig::init(&oGame);

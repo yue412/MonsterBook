@@ -9,6 +9,7 @@
 #include "SkillFactory.h"
 #include "SoulBead.h"
 #include "Fate.h"
+#include "Skill.h"
 
 typedef std::shared_ptr<CSkillFactory> CSkillFactoryPtr;
 std::vector<CSkillFactoryPtr> g_oSkillFactory = { 
@@ -16,7 +17,8 @@ std::vector<CSkillFactoryPtr> g_oSkillFactory = {
 	CSkillFactoryPtr(new CProductFeatureSkillFactroy),
 	CSkillFactoryPtr(new CIncreaseSelfFeatureByCountSkillFactroy),
     CSkillFactoryPtr(new CIncreaseSelfFeatureSkillFactroy),
-    CSkillFactoryPtr(new CIncreaseSelfFeatureByCharacterSkillFactroy)
+    CSkillFactoryPtr(new CIncreaseSelfFeatureByCharacterSkillFactroy),
+    CSkillFactoryPtr(new CProductSelfFeatureByCharacterSkillFactroy)
 };
 
 void CConfig::init(CGame * pGame)
@@ -55,7 +57,7 @@ void CConfig::init(CGame * pGame)
 				// Features
 				initFeatures(pMonsterNode, "Features", pMonster->m_nFeatures);
 				// Skills
-                initSkills(pMonsterNode, pMonster->m_oSkills);
+                initSkills(pMonsterNode, pMonster->m_oSkills, pMonster);
                 //pMonster->init();
 				pMonsterNode = pMonsterNode->NextSiblingElement();
 			}
@@ -200,7 +202,7 @@ void CConfig::initFeatures(TiXmlElement* pNode, const std::string& sName, double
 	}
 }
 
-void CConfig::initSkills(TiXmlElement * pNode, std::vector<CSkill*>& oSkills)
+void CConfig::initSkills(TiXmlElement * pNode, std::vector<CSkill*>& oSkills, CMonster* pOwner)
 {
     auto pSkillsNode = pNode->FirstChildElement("Skills");
     if (pSkillsNode)
@@ -209,7 +211,9 @@ void CConfig::initSkills(TiXmlElement * pNode, std::vector<CSkill*>& oSkills)
         while (pSkillNode)
         {
             std::wstring sSkillName = Utf8ToUnicode(pSkillNode->Attribute("name"));
-            oSkills.push_back(createSkill(sSkillName, pSkillNode));
+            auto pSkill = createSkill(sSkillName, pSkillNode);
+            pSkill->setOwner(pOwner);
+            oSkills.push_back(pSkill);
             pSkillNode = pSkillNode->NextSiblingElement();
         }
     }
