@@ -3994,7 +3994,7 @@
 	</Challenges>
 	<Challenges type="4">
 		<Challenge name="主线" min="0" max="8" class="水">
-			<FeaturesRequired feature="速" limit="5305"/>
+			<FeaturesRequired feature="魅" limit="7840"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="5">
