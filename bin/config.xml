@@ -3926,6 +3926,7 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
+	<!--
 		<Challenge name="龙生九子-蒲牢7" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="4200"/>
 			<FeaturesRequired feature="智" limit="4200"/>
@@ -3934,6 +3935,7 @@
 			<FeaturesRequired feature="运" limit="4200"/>
 			<FeaturesRequired feature="技" limit="4200"/>
 		</Challenge>		
+		-->
 		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
@@ -4017,11 +4019,17 @@
 			<FeaturesRequired feature="运" limit="4600"/>
 			<FeaturesRequired feature="力" limit="4600"/>
 		</Challenge-->	
+		<Challenge name="龙生九子-赑屃6" min="0" max="6" class="火">
+			<FeaturesRequired feature="运" limit="4600"/>
+			<FeaturesRequired feature="力" limit="4600"/>
+		</Challenge>	
+		<!--
 		<Challenge name="龙生九子-蒲牢4" min="0" max="6" class="水">
 			<FeaturesRequired feature="速" limit="2200"/>
 			<FeaturesRequired feature="运" limit="2200"/>
 			<FeaturesRequired feature="力" limit="2200"/>
 		</Challenge>
+		-->
 	</Challenges>
 	<Challenges type="3">
 		<Challenge name="每周挑战" min="8" max="8">
@@ -4030,8 +4038,8 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="4">
-		<Challenge name="主线" min="0" max="8" class="水">
-			<FeaturesRequired feature="魅" limit="7840"/>
+		<Challenge name="主线" min="0" max="8" class="地">
+			<FeaturesRequired feature="魅" limit="4200"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="5">
@@ -4187,13 +4195,13 @@
 			<Features>0,52.8,52.8,52.8,0,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>0,0,0,50.4,50.4,50.4</Features>
+			<Features>0,0,0,55.2,55.2,55.2</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>0,50.4,0,50.4,50.4,0</Features>
+			<Features>0,52.8,0,52.8,52.8,0</Features>
 		</SoulBead>
 		<SoulBead class="光">
-			<Features>0,0,0,0,50.4,50.4</Features>
+			<Features>50.4,0,0,0,50.4,50.4</Features>
 		</SoulBead>
 		<SoulBead class="暗">
 			<Features>50.4,0,50.4,0,0,50.4</Features>
@@ -4203,6 +4211,7 @@
 		碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
 		曹国舅,汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
 		金童,八仙蓝采和,上联仔,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
+		阳炎公主,南七宿朱雀,囚牛,武曲星,横批仔,龙子狴犴,
 		玫瑰夫人,金钗子,白娘子,方元姬
 	</Exclude>
 </MonsterBook>
