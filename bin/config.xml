@@ -2868,14 +2868,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="戟月" class="地">
-			<Features>58,75,75,58,225,215</Features>
-			<Character>武器</Character>
+		<Monster name="洪玉儿" class="地">
+			<Features>125,160,160,125,479,459</Features>
+			<Character>武器|妹纸|战士</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>魅</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>			
@@ -3926,7 +3926,7 @@
 		</Monster>		
 	</Monsters>
 	<Challenges>
-	<!--
+	
 		<Challenge name="龙生九子-蒲牢7" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="4200"/>
 			<FeaturesRequired feature="智" limit="4200"/>
@@ -3935,7 +3935,7 @@
 			<FeaturesRequired feature="运" limit="4200"/>
 			<FeaturesRequired feature="技" limit="4200"/>
 		</Challenge>		
-		-->
+		
 		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
@@ -4192,13 +4192,13 @@
 			<Features>50.4,50.4,50.4,50.4,50.4,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>0,52.8,52.8,52.8,0,0</Features>
+			<Features>0,52.8,52.8,52.8,52.8,0</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>0,0,0,55.2,55.2,55.2</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>0,52.8,0,52.8,52.8,0</Features>
+			<Features>0,55.2,0,55.2,55.2,0</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>50.4,0,0,0,50.4,50.4</Features>
@@ -4211,7 +4211,6 @@
 		碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
 		曹国舅,汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
 		金童,八仙蓝采和,上联仔,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
-		阳炎公主,南七宿朱雀,囚牛,武曲星,横批仔,龙子狴犴,
 		玫瑰夫人,金钗子,白娘子,方元姬
 	</Exclude>
 </MonsterBook>
