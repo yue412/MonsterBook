@@ -4015,7 +4015,6 @@
 			<FeaturesRequired feature="运" limit="4200"/>
 			<FeaturesRequired feature="技" limit="4200"/>
 		</Challenge>		
-		
 		<Challenge name="二十四节气" min="0" max="8" total="50">
 			<FeaturesRequired feature="力" limit="3000"/>
 			<FeaturesRequired feature="智" limit="3000"/>
@@ -4024,6 +4023,9 @@
 			<FeaturesRequired feature="运" limit="3000"/>
 			<FeaturesRequired feature="技" limit="3000"/>
 		</Challenge>	
+		<Challenge name="赌场" min="0" max="8">
+			<FeaturesRequired feature="魅" limit="4740"/>
+		</Challenge>
 		<Challenge name="阴阳河" min="0" max="8">
 			<FeaturesRequired feature="速" limit="4300"/>
 		</Challenge>
@@ -4298,7 +4300,7 @@
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
-			<Features>50.4,50.4,50.4,50.4,50.4,0</Features>
+			<Features>55.2,55.2,55.2,55.2,55.2,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
 			<Features>0,55.2,55.2,55.2,55.2,0</Features>
