@@ -3811,9 +3811,9 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="鱼生" class="暗">
-			<Features>179,84,59,59,78,90</Features>
-			<Character>自然|武器</Character>
+		<Monster name="短命二郎阮小五" class="暗">
+			<Features>250,116,81,81,108,124</Features>
+			<Character>自然|武器|战士</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -4524,7 +4524,7 @@
 			<Features>55.2,55.2,55.2,55.2,55.2,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>0,55.2,55.2,55.2,55.2,0</Features>
+			<Features>0,55.2,55.2,55.2,55.2,55.2</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>55.2,0,55.2,55.2,55.2,55.2</Features>
@@ -4536,7 +4536,7 @@
 			<Features>55.2,0,0,0,55.2,55.2</Features>
 		</SoulBead>
 		<SoulBead class="暗">
-			<Features>50.4,0,50.4,0,0,50.4</Features>
+			<Features>55.2,0,55.2,0,0,55.2</Features>
 		</SoulBead>
 	</SoulBeads>
 	<Exclude>
