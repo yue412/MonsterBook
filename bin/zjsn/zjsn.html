@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>战舰少女</title>
+	</head>
+		<script type="text/javascript" src="output.js">
+		</script>
+		<script type="text/javascript">
+            document.write("<table border=\"1\" id=\"tb2\"> ");
+            document.write("<tr>");
+            var obj = g_data[0];
+            var max_obj = null;
+            for(var name in obj){ 
+                if(name != "MAX_DATA")
+                    document.write("<td>"+name+"</td>");      
+            }
+            document.write("</tr>");
+            g_data.forEach(element => {
+                document.write("<tr>");
+                for(var name in obj){ 
+                    if(name != "MAX_DATA")
+                        document.write("<td>"+element[name]+"</td>");      
+                }                
+                document.write("</tr>");
+            });
+            document.write("</table>");
+		</script>
+		<noscript>
+		    ��֧��JavaScript��
+		</noscript>
+	</body>
+</html>
