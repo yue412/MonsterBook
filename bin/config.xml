@@ -1481,9 +1481,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="水团" class="水">
-			<Features>16,16,56,30,19,39</Features>
-			<Character>自然</Character>
+		<Monster name="水母" class="水">
+			<Features>37,37,135,72,47,95</Features>
+			<Character>自然|娇小</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
