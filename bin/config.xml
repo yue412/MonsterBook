@@ -485,9 +485,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="神将关云长" class="木">
-			<Features>202,61,202,126,61,112</Features>
-			<Character>善良|神勇|龙族</Character>
+		<Monster name="武圣关云长" class="木">
+			<Features>255,77,255,158,77,140</Features>
+			<Character>善良|神勇|龙族|战士</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
@@ -1503,9 +1503,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="青过娘" class="水">
-			<Features>49,53,37,84,33,46</Features>
-			<Character>自然|妖怪</Character>
+		<Monster name="海葵妃" class="水">
+			<Features>88,96,66,148,58,82</Features>
+			<Character>自然|妖怪|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -4527,16 +4527,16 @@
 			<Features>0,55.2,55.2,55.2,55.2,55.2</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>55.2,0,55.2,55.2,55.2,55.2</Features>
+			<Features>57.6,0,57.6,57.6,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>0,55.2,0,55.2,55.2,55.2</Features>
+			<Features>55.2,55.2,0,55.2,55.2,55.2</Features>
 		</SoulBead>
 		<SoulBead class="光">
-			<Features>55.2,0,0,0,55.2,55.2</Features>
+			<Features>55.2,55.2,55.2,0,55.2,55.2</Features>
 		</SoulBead>
 		<SoulBead class="暗">
-			<Features>55.2,0,55.2,0,0,55.2</Features>
+			<Features>55.2,0,55.2,55.2,0,55.2</Features>
 		</SoulBead>
 	</SoulBeads>
 	<Exclude>
