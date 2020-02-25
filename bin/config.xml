@@ -4532,7 +4532,7 @@
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
-			<Features>55.2,55.2,55.2,55.2,55.2,0</Features>
+			<Features>57.6,57.6,57.6,57.6,57.6,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
 			<Features>0,57.6,57.6,57.6,57.6,57.6</Features>
