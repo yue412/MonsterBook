@@ -3800,6 +3800,17 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
+		<Monster name="贪狼星" class="暗">
+			<Features>84,78,64,200,92,141</Features>
+			<Character>小眼睛|小眼睛|小眼睛</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>智</Feature>
+					<Value>15</Value>
+				</Skill>	
+			</Skills>
+		</Monster>	
 		<Monster name="师爷公孙册" class="暗">
 			<Features>51,273,157,104,51,126</Features>
 			<Character>小眼睛|神秘|谋略</Character>
@@ -4524,13 +4535,13 @@
 			<Features>55.2,55.2,55.2,55.2,55.2,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>0,55.2,55.2,55.2,55.2,55.2</Features>
+			<Features>0,57.6,57.6,57.6,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>57.6,0,57.6,57.6,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>55.2,55.2,0,55.2,55.2,55.2</Features>
+			<Features>57.6,57.6,0,57.6,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>55.2,55.2,55.2,0,55.2,55.2</Features>
