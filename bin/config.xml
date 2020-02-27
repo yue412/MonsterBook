@@ -675,6 +675,17 @@
 				</Skill>
 			</Skills>
 		</Monster>
+		<Monster name="红桃5" class="火">
+			<Features>38,94,106,33,31,23</Features>
+			<Character>扑克</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>速</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="秦王" class="火">
 			<Features>286,92,82,286,122,122</Features>
 			<Character>自然|神秘|谋略</Character>
@@ -2116,14 +2127,19 @@
 				<!--法器互斥-->
 			</Skills>
 		</Monster>	
-		<Monster name="墓烛幽儿" class="光">
-			<Features>96,153,384,132,436,125</Features>
-			<Character>妖怪|老人家</Character>
+		<Monster name="三三幽鬼灯" class="光">
+			<Features>122,193,490,170,551,157</Features>
+			<Character>妖怪|老人家|谋略</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>运</Feature>
 					<Value>200</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -2555,15 +2571,20 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="瘾者" class="光">
-			<Features>80,190,68,85,52,190</Features>
-			<Character>邪恶|龙族</Character>
+		<Monster name="敖顺" class="光">
+			<Features>120,282,102,128,76,282</Features>
+			<Character>邪恶|龙族|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>水</ElementClass>
 					<Feature>全</Feature>
 					<Value>60</Value>
 				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>龙族</Character>
+					<Features>力|速|运</Features>
+					<Value>88</Value>
+				</Skill>				
 			</Skills>
 		</Monster>	
 		<Monster name="胖仔" class="光">
@@ -2913,9 +2934,9 @@
 			<Features>62,152,44,68,44,170</Features>
 			<Character>善良|人形|神秘</Character>
 		</Monster>	
-		<Monster name="刘备" class="地">
-			<Features>86,211,66,250,76,76</Features>
-			<Character>小眼睛|人形|战士</Character>
+		<Monster name="昭烈刘玄德" class="地">
+			<Features>107,265,84,316,96,96</Features>
+			<Character>小眼睛|人形|战士|神秘</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -4453,6 +4474,21 @@
 				</Skill>	
 			</Skills>
 		</Fate>
+		<Fate name="真三臭皮匠">
+			<Monsters>咆哮张翼德|武圣关云长|昭烈刘玄德</Monsters>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>力</Feature>
+					<Value>150</Value>
+				</Skill>	
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>150</Value>
+				</Skill>	
+			</Skills>
+		</Fate>
 		<Fate name="八种兵器">
 			<Monsters>洪玉儿|李白|勾屠|稳重斯基|王四|夜神月|湿罗刹|石敢当</Monsters>
 			<Skills>
@@ -4532,10 +4568,10 @@
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
-			<Features>57.6,57.6,57.6,57.6,57.6,0</Features>
+			<Features>60,60,60,60,60,0</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>0,57.6,57.6,57.6,57.6,57.6</Features>
+			<Features>0,60,60,60,60,60</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>57.6,0,57.6,57.6,57.6,57.6</Features>
@@ -4544,10 +4580,10 @@
 			<Features>57.6,57.6,0,57.6,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="光">
-			<Features>55.2,55.2,55.2,0,55.2,55.2</Features>
+			<Features>57.6,57.6,57.6,0,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="暗">
-			<Features>55.2,0,55.2,55.2,0,55.2</Features>
+			<Features>57.6,0,57.6,57.6,0,57.6</Features>
 		</SoulBead>
 	</SoulBeads>
 	<Exclude>
