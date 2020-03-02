@@ -46,6 +46,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="零号机" class="木">
+			<Features>130,100,150,60,60,230</Features>
+			<Character>呆萌|机械|魁梧</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>技</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="玄武仙人" class="木">
 			<Features>137,115,46,92,68,200</Features>
 			<Character>呆萌|人形|老人家</Character>
@@ -675,14 +686,19 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="红桃5" class="火">
-			<Features>38,94,106,33,31,23</Features>
-			<Character>扑克</Character>
+		<Monster name="呜呜少女" class="火">
+			<Features>53,132,152,46,43,33</Features>
+			<Character>扑克|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>速</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>智</Feature>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -2945,6 +2961,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="青面兽杨志" class="地">
+			<Features>157,78,94,198,62,54</Features>
+			<Character>呆萌|人形|小眼睛</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>魅</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="睡面虎" class="地">
 			<Features>436,125,384,133,152,96</Features>
 			<Character>妖怪|猫咪</Character>
@@ -3507,6 +3534,17 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
+		<Monster name="氐土貉" class="地">
+			<Features>94,78,61,116,78,219</Features>
+			<Character>美食|娇小|邪恶</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCount">
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>10</Value>
+				</Skill>	
+			</Skills>
+		</Monster>	
 		<Monster name="魔音" class="地">
 			<Features>66,82,48,124,132,208</Features>
 			<Character>乐器|妹纸|神仙</Character>
@@ -3618,6 +3656,17 @@
 					<ElementClass>暗</ElementClass>
 					<Feature>魅</Feature>
 					<Value>2</Value>
+				</Skill>	
+			</Skills>
+		</Monster>	
+		<Monster name="紫霞" class="暗">
+			<Features>61,78,70,219,155,61</Features>
+			<Character>自然|人形|妹纸</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
 				</Skill>	
 			</Skills>
 		</Monster>	
@@ -4253,11 +4302,12 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="2">
-		<!--Challenge name="龙生九子" min="0" max="6" class="水">
+		<Challenge name="龙生九子-负屃" min="0" max="6" class="木">
 			<FeaturesRequired feature="智" limit="2500"/>
 			<FeaturesRequired feature="魅" limit="2500"/>
 			<FeaturesRequired feature="技" limit="2500"/>
-		</Challenge-->
+		</Challenge>
+		<!--荆棘弓[木],赑屃[木],摩呼罗迦[木],三文鱼[木],离卷[木],九纹龙史进[木]-->
 		<!--Challenge name="龙生九子-睚眦2" min="0" max="6" class="暗">
 			<FeaturesRequired feature="运" limit="1200"/>
 			<FeaturesRequired feature="智" limit="1200"/>
@@ -4272,12 +4322,14 @@
 			<FeaturesRequired feature="力" limit="4600"/>
 		</Challenge>
 		-->
+		<!--
 		<Challenge name="龙生九子-狻猊4" min="0" max="6" class="暗">
 			<FeaturesRequired feature="速" limit="2200"/>
 			<FeaturesRequired feature="运" limit="2200"/>
 			<FeaturesRequired feature="力" limit="2200"/>
-			<!--古灵精怪神速夕[暗],喵夕[暗],地狱盐王[暗],鬼斩骨[暗],九霄[暗],暗卒[暗],-->
 		</Challenge>			
+		-->
+		<!--古灵精怪神速夕[暗],喵夕[暗],地狱盐王[暗],鬼斩骨[暗],九霄[暗],暗卒[暗],-->
 		<!--
 		<Challenge name="龙生九子-蒲牢4" min="0" max="6" class="水">
 			<FeaturesRequired feature="速" limit="2200"/>
@@ -4330,6 +4382,12 @@
 			<FeaturesRequired feature="力" limit="9000"/>
 		</Challenge>	
 	</Challenges>
+	<Challenges type="7">
+		<Challenge name="龙之秘宝" min="0" max="8" class="地">
+			<FeaturesRequired feature="力" limit="9800"/>
+		</Challenge>	
+		<!--睡面虎[地],阿修罗[地],仁山[地],张果老[地],拳王[地],咆哮张翼德[地],石敢当[地],蛋黄喵[地],-->
+	</Challenges>	
 	<Fates>
 		<Fate name="青梅竹马">
 			<Monsters>青梅公举|竹马王子</Monsters>
