@@ -761,8 +761,8 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="囚牛" class="火">
-			<Features>272,47,98,147,110,310</Features>
+		<Monster name="龙子囚牛" class="火">
+			<Features>300,54,108,164,122,340</Features>
 			<Character>乐器|人形|龙族</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
@@ -771,6 +771,11 @@
 					<Feature>全</Feature>
 					<Value>100</Value>
 				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>龙族</Character>
+					<Features>力|速|运</Features>
+					<Value>88</Value>
+				</Skill>				
 			</Skills>
 		</Monster>
 		<Monster name="曹国舅" class="火">
@@ -2495,9 +2500,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="诸葛孔明" class="光">
-			<Features>122,157,439,157,497,132</Features>
-			<Character>呆萌|人形|谋略</Character>
+		<Monster name="神算诸葛亮" class="光">
+			<Features>136,174,490,174,555,150</Features>
+			<Character>呆萌|人形|谋略|飞翔</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
@@ -2507,7 +2512,7 @@
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>光</ElementClass>
 					<Feature>全</Feature>
-					<Value>10</Value>
+					<Value>60</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -4302,12 +4307,20 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="2">
+	<!--
 		<Challenge name="龙生九子-负屃" min="0" max="6" class="木">
 			<FeaturesRequired feature="智" limit="2500"/>
 			<FeaturesRequired feature="魅" limit="2500"/>
 			<FeaturesRequired feature="技" limit="2500"/>
 		</Challenge>
+		-->
 		<!--荆棘弓[木],赑屃[木],摩呼罗迦[木],三文鱼[木],离卷[木],九纹龙史进[木]-->
+
+		<Challenge name="龙生九子-负屃6" min="0" max="6" class="地">
+			<FeaturesRequired feature="运" limit="4600"/>
+			<FeaturesRequired feature="力" limit="4600"/>
+		</Challenge>
+
 		<!--Challenge name="龙生九子-睚眦2" min="0" max="6" class="暗">
 			<FeaturesRequired feature="运" limit="1200"/>
 			<FeaturesRequired feature="智" limit="1200"/>
@@ -4383,8 +4396,8 @@
 		</Challenge>	
 	</Challenges>
 	<Challenges type="7">
-		<Challenge name="龙之秘宝" min="0" max="8" class="地">
-			<FeaturesRequired feature="力" limit="9800"/>
+		<Challenge name="龙之秘宝" min="0" max="8" class="火">
+			<FeaturesRequired feature="智" limit="9800"/>
 		</Challenge>	
 		<!--睡面虎[地],阿修罗[地],仁山[地],张果老[地],拳王[地],咆哮张翼德[地],石敢当[地],蛋黄喵[地],-->
 	</Challenges>	
