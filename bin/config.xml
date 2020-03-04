@@ -1458,9 +1458,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="嘲风" class="水">
-			<Features>137,137,304,112,174,122</Features>
-			<Character>奇特|人形|龙族</Character>
+		<Monster name="龙子嘲风" class="水">
+			<Features>152,152,334,124,190,134</Features>
+			<Character>奇特|人形|龙族|飞翔</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<Trigger>4</Trigger>
@@ -1468,6 +1468,11 @@
 					<Feature>全</Feature>
 					<Value>100</Value>
 				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>龙族</Character>
+					<Features>力|速|运</Features>
+					<Value>88</Value>
+				</Skill>				
 			</Skills>
 		</Monster>			
 		<Monster name="蛟女" class="水">
@@ -4396,8 +4401,8 @@
 		</Challenge>	
 	</Challenges>
 	<Challenges type="7">
-		<Challenge name="龙之秘宝" min="0" max="8" class="火">
-			<FeaturesRequired feature="智" limit="9800"/>
+		<Challenge name="龙之秘宝" min="0" max="8" class="光">
+			<FeaturesRequired feature="技" limit="9800"/>
 		</Challenge>	
 		<!--睡面虎[地],阿修罗[地],仁山[地],张果老[地],拳王[地],咆哮张翼德[地],石敢当[地],蛋黄喵[地],-->
 	</Challenges>	
