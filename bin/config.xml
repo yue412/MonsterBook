@@ -19,19 +19,19 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="新兵盖尔" class="木">
-			<Features>53,43,152,46,132,33</Features>
-			<Character>扑克|战士</Character>
+		<Monster name="翠谷骑士" class="木">
+			<Features>67,54,191,59,170,42</Features>
+			<Character>扑克|战士|旅人</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>速</Feature>
-					<Value>30</Value>
+					<Value>60</Value>
 				</Skill>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>运</Feature>
-					<Value>30</Value>
+					<Value>60</Value>
 				</Skill>
 			</Skills>
 		</Monster>			
