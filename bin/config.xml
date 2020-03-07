@@ -3778,14 +3778,14 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="名将吕布威登" class="暗">
-			<Features>329,65,248,124,65,156</Features>
-			<Character>善良|战士|神勇</Character>
+		<Monster name="赤兔吕布" class="暗">
+			<Features>366,72,274,136,72,164</Features>
+			<Character>善良|战士|神勇|财迷</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>力</Feature>
-					<Value>2</Value>
+					<Value>2.5</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
