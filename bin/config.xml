@@ -1518,9 +1518,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="水母" class="水">
-			<Features>37,37,135,72,47,95</Features>
-			<Character>自然|娇小</Character>
+		<Monster name="僧帽水母" class="水">
+			<Features>48,48,170,90,60,122</Features>
+			<Character>自然|娇小|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -4003,15 +4003,20 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="紫冰" class="暗">
-			<Features>256,83,63,102,88,291</Features>
-			<Character>冰冷|妹纸</Character>
+		<Monster name="紫霜" class="暗">
+			<Features>326,104,82,129,113,367</Features>
+			<Character>冰冷|妹纸|吉祥</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>技</Feature>
 					<Value>160</Value>
-				</Skill>	
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.3</Value>
+				</Skill>					
 			</Skills>
 		</Monster>		
 		<Monster name="亭亭玉莉" class="暗">
@@ -4363,8 +4368,9 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="4">
-		<Challenge name="主线" min="0" max="8" class="地">
-			<FeaturesRequired feature="魅" limit="4200"/>
+		<Challenge name="主线" min="0" max="8">
+			<FeaturesRequired feature="力" limit="9935"/>
+			<FeaturesRequired feature="魅" limit="9960"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="5">
@@ -4666,6 +4672,25 @@
 		碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
 		曹国舅,汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
 		金童,八仙蓝采和,上联仔,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
-		玫瑰夫人,金钗子,白娘子,方元姬
+		弃斧,离卷,金镶玉,扫尘娘,粽仔,小青,萌太骑,竹时雨,
+		玫瑰夫人,金钗子,白娘子,方元姬,
+		荆棘弓,拳王,秤仔,八仙韩湘子,晋文公,敖广,灵山宫主,墓烛幽儿,
+		刘备,增长天王,火火崩地儿,文昌帝君,讹兽,九霄,谜画偶灵,贞珠,
+		铁拐李,竹马王子,扭蛋,佛跳墙,陶安公,苍老师,扑天雕李应,跨年娃,
+		混江龙李俊,金吒,电母,南极老人星,金角大王,白无常,持国天王,银角大王,
+		摩呼罗迦,文曲星,智多星吴用,初号机,小双鱼,入云龙公孙胜,大三元,九万,
+		何仙姑,谋士荀彧,忍海,美女西施,地狱盐王,
+		萌萌小乔,托塔天王,秦王,横批仔,混沌,诸葛孔明,
+		刺客荆轲,张果老,某海龙王,哪吒,紧那罗,金光雷公,
+		粉红马卡龙,房曰兔己,下联仔,法海,聂小倩,
+		急先锋索超,鹦螺号,乹毷,飞头撩,
+		爪虎,
+		黄豆娘,
+		木牛,
+		战龙,海兔娘,新兵尼禄,
+		祝英台,寻金锁,娄金狗,
+		翼火蛇,夜神月,
+		多闻天王,仁山,稳重斯基,吕洞宾,破军星,壁咚老爷,短命二郎阮小五,
+		酱军,拿破仑,雪怪,赤笛仔,口角兽
 	</Exclude>
 </MonsterBook>
