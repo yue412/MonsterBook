@@ -949,6 +949,7 @@
 		</Monster>
 		<Monster name="破军星" class="火">
 			<Features>200,92,84,141,64,78</Features>
+			<Character>邪恶|人形|冰冷</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -3124,15 +3125,20 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="噗冬" class="地">
-			<Features>125,132,436,153,384,96</Features>
-			<Character>自然|妹纸</Character>
+		<Monster name="东门吹雪" class="地">
+			<Features>157,170,551,193,490,122</Features>
+			<Character>自然|妹纸|冰冷</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>速</Feature>
 					<Value>200</Value>
 				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>冰冷</Character>
+					<Features>智</Features>
+					<Value>200</Value>
+				</Skill>				
 			</Skills>
 		</Monster>				
 		<Monster name="胃土雉" class="地">
@@ -4369,8 +4375,8 @@
 	</Challenges>
 	<Challenges type="4">
 		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="力" limit="9935"/>
-			<FeaturesRequired feature="魅" limit="9960"/>
+			<FeaturesRequired feature="力" limit="20000"/>
+			<!--<FeaturesRequired feature="技" limit="9425"/>-->
 		</Challenge>
 	</Challenges>
 	<Challenges type="5">
@@ -4673,6 +4679,7 @@
 		曹国舅,汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
 		金童,八仙蓝采和,上联仔,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 		弃斧,离卷,金镶玉,扫尘娘,粽仔,小青,萌太骑,竹时雨,
+		灶神,玉兔,广目天王,笔仙,镰鼬,魔音,敖顺,南七宿朱雀,
 		玫瑰夫人,金钗子,白娘子,方元姬,
 		荆棘弓,拳王,秤仔,八仙韩湘子,晋文公,敖广,灵山宫主,墓烛幽儿,
 		刘备,增长天王,火火崩地儿,文昌帝君,讹兽,九霄,谜画偶灵,贞珠,
@@ -4693,4 +4700,6 @@
 		多闻天王,仁山,稳重斯基,吕洞宾,破军星,壁咚老爷,短命二郎阮小五,
 		酱军,拿破仑,雪怪,赤笛仔,口角兽
 	</Exclude>
+<!--
+	-->
 </MonsterBook>
