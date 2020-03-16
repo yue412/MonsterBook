@@ -5,6 +5,10 @@
 			<Features>61,18,25,25,18,25</Features>
 			<Character>美食</Character>
 		</Monster>				
+		<Monster name="粽妮" class="木">
+			<Features>25,18,25,61,18,25</Features>
+			<Character>美食</Character>
+		</Monster>				
 		<Monster name="小青" class="木">
 			<Features>48,48,90,138,168,48</Features>
 			<Character>善良|妹纸|妖怪</Character>
@@ -35,6 +39,17 @@
 				</Skill>
 			</Skills>
 		</Monster>			
+		<Monster name="玉儿" class="木">
+			<Features>75,50,39,50,151,46</Features>
+			<Character>吉祥</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>运</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="荆棘弓" class="木">
 			<Features>125,153,436,96,132,384</Features>
 			<Character>神秘|善良</Character>
@@ -79,15 +94,20 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="小穗儿" class="木">
-			<Features>436,153,384,96,125,132</Features>
-			<Character>自然|奇特</Character>
+		<Monster name="穗儿姑娘" class="木">
+			<Features>551,193,490,122,157,170</Features>
+			<Character>自然|奇特|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
 					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>					
 			</Skills>
 		</Monster>		
 		<Monster name="竹马王子" class="木">
@@ -226,6 +246,17 @@
 					<ElementClass>木</ElementClass>
 					<Feature>魅</Feature>
 					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="竹笛" class="木">
+			<Features>16,25,18,61,25,25</Features>
+			<Character>善良</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.3</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -402,6 +433,7 @@
 		</Monster>			
 		<Monster name="草莽勇" class="木">
 			<Features>101,44,44,118,36,83</Features>
+			<Character>自然|人形|妖怪</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
@@ -434,6 +466,7 @@
 		</Monster>	
 		<Monster name="萌萌小乔" class="木">
 			<Features>72,110,82,181,90,228</Features>
+			<Character>自然|人形|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -477,6 +510,7 @@
 		</Monster>		
 		<Monster name="智多星吴用" class="木">
 			<Features>68,238,68,84,84,118</Features>
+			<Character>神秘|人形|谋略</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -509,6 +543,7 @@
 		</Monster>	
 		<Monster name="樵有山" class="木">
 			<Features>129,47,42,47,42,117</Features>
+			<Character>呆萌|老人家</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
@@ -519,6 +554,7 @@
 		</Monster>	
 		<Monster name="蛇猿" class="木">
 			<Features>46,164,146,45,46,92</Features>
+			<Character>自然|妖怪|奇特</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
@@ -529,6 +565,7 @@
 		</Monster>	
 		<Monster name="春丽" class="木">
 			<Features>82,110,82,178,138,66</Features>
+			<Character>呆萌|妹纸|战士</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
@@ -550,6 +587,7 @@
 		</Monster>
 		<Monster name="萌太骑" class="木">
 			<Features>94,114,176,50,56,50</Features>
+			<Character>自然|人形|神速</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -626,6 +664,7 @@
 		</Monster>
 		<Monster name="青梅公举" class="木">
 			<Features>68,82,68,203,178,150</Features>
+			<Character>娇小|呆萌|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
@@ -686,19 +725,19 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="呜呜少女" class="火">
-			<Features>53,132,152,46,43,33</Features>
-			<Character>扑克|善良</Character>
+		<Monster name="嘤嘤牧师" class="火">
+			<Features>67,170,191,59,54,42</Features>
+			<Character>扑克|善良|旅人</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>速</Feature>
-					<Value>30</Value>
+					<Value>60</Value>
 				</Skill>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>智</Feature>
-					<Value>30</Value>
+					<Value>60</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -1160,6 +1199,7 @@
 		</Monster>
 		<Monster name="丽娜" class="火">
 			<Features>48,76,62,172,124,180</Features>
+			<Character>呆萌|妹纸|神秘</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
@@ -1192,6 +1232,7 @@
 		</Monster>
 		<Monster name="翼火蛇" class="火">
 			<Features>98,122,164,82,82,98</Features>
+			<Character>自然|邪恶|飞翔</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -1249,15 +1290,20 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="赤笛仔" class="火">
-			<Features>234,82,124,66,108,165</Features>
-			<Character>美食|人形</Character>
+		<Monster name="牛郎" class="火">
+			<Features>296,103,158,84,136,209</Features>
+			<Character>美食|人形|邪恶</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>技</Feature>
 					<Value>30</Value>
 				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>妹纸</Character>
+					<Features>力|速|技</Features>
+					<Value>77</Value>
+				</Skill>				
 			</Skills>
 		</Monster>		
 		<Monster name="活阎罗阮小七" class="火">
@@ -1675,6 +1721,7 @@
 		</Monster>				
 		<Monster name="渔常在" class="水">
 			<Features>46,114,45,46,46,130</Features>
+			<Character>呆萌|老人家</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -1728,6 +1775,7 @@
 		</Monster>				
 		<Monster name="雪毛" class="水">
 			<Features>81,44,50,44,54,154</Features>
+			<Character>自然|呆萌|妖怪</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -1738,6 +1786,7 @@
 		</Monster>				
 		<Monster name="扑天雕李应" class="水">
 			<Features>157,94,198,54,62,78</Features>
+			<Character>飞翔|人形|神速</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -1759,6 +1808,7 @@
 		</Monster>				
 		<Monster name="云里金刚宋万" class="水">
 			<Features>191,84,73,106,116,191</Features>
+			<Character>自然|人形|魁梧</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -2225,19 +2275,19 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="新兵尼禄" class="光">
-			<Features>133,43,152,46,53,33</Features>
-			<Character>扑克|神速</Character>
+		<Monster name="蒸汽驱动型自走主坦" class="光">
+			<Features>170,54,191,59,67,43</Features>
+			<Character>扑克|神速|旅人</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>力</Feature>
-					<Value>30</Value>
+					<Value>60</Value>
 				</Skill>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>速</Feature>
-					<Value>30</Value>
+					<Value>60</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -2418,6 +2468,7 @@
 		</Monster>		
 		<Monster name="般若娘" class="光">
 			<Features>40,83,40,101,118,44</Features>
+			<Character>娇小|神秘|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
@@ -2466,6 +2517,7 @@
 		</Monster>		
 		<Monster name="白求恩" class="光">
 			<Features>152,42,136,42,54,114</Features>
+			<Character>呆萌|人形|小眼睛</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
@@ -2476,6 +2528,7 @@
 		</Monster>		
 		<Monster name="娄金狗" class="光">
 			<Features>176,84,139,70,70,106</Features>
+			<Character>呆萌|娇小|狗狗</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
@@ -2627,6 +2680,7 @@
 		</Monster>		
 		<Monster name="金光雷公" class="光">
 			<Features>118,66,208,74,88,208</Features>
+			<Character>呆萌|人形|神仙</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>光</ElementClass>
@@ -2924,6 +2978,7 @@
 		</Monster>		
 		<Monster name="芒星" class="光">
 			<Features>36,44,130,90,71,58</Features>
+			<Character>自然</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
@@ -3334,6 +3389,7 @@
 		</Monster>		
 		<Monster name="魂安鼎" class="地">
 			<Features>117,72,66,117,185,86</Features>
+			<Character>吉祥|娇小|呆萌</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>地</ElementClass>
@@ -3465,6 +3521,7 @@
 		</Monster>		
 		<Monster name="织女" class="地">
 			<Features>61,86,78,217,61,156</Features>
+			<Character>自然|妹纸|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
@@ -4098,6 +4155,7 @@
 		</Monster>		
 		<Monster name="贞珠" class="暗">
 			<Features>66,66,86,186,52,86</Features>
+			<Character>小眼睛|神秘|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -4108,6 +4166,7 @@
 		</Monster>		
 		<Monster name="夺衣婆" class="暗">
 			<Features>48,48,44,132,44,114</Features>
+			<Character>人形|呆萌|邪恶</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -4129,6 +4188,7 @@
 		</Monster>		
 		<Monster name="暴刺灵" class="暗">
 			<Features>132,39,39,39,50,123</Features>
+			<Character>邪恶|妖怪|神秘</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -4160,6 +4220,7 @@
 		</Monster>		
 		<Monster name="棋魂" class="暗">
 			<Features>44,190,60,75,168,122</Features>
+			<Character>神秘|谋略|奇特</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>暗</ElementClass>
@@ -4170,6 +4231,7 @@
 		</Monster>		
 		<Monster name="凶灵" class="暗">
 			<Features>122,60,106,44,52,44</Features>
+			<Character>呆萌|妖怪|战士</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>暗</ElementClass>
@@ -4180,6 +4242,7 @@
 		</Monster>		
 		<Monster name="勤娘子" class="暗">
 			<Features>30,44,91,120,106,34</Features>
+			<Character>自然|人形|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -4190,6 +4253,7 @@
 		</Monster>		
 		<Monster name="恶魃" class="暗">
 			<Features>114,42,54,152,42,136</Features>
+			<Character>小眼睛|人形|邪恶</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -4200,6 +4264,7 @@
 		</Monster>		
 		<Monster name="夜神月" class="暗">
 			<Features>166,54,153,54,54,54</Features>
+			<Character>娇小|武器|呆萌</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -4210,6 +4275,7 @@
 		</Monster>		
 		<Monster name="鼎吊鬼" class="暗">
 			<Features>50,56,68,62,166,136</Features>
+			<Character>娇小|神秘|奇特</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>暗</ElementClass>
@@ -4231,6 +4297,7 @@
 		</Monster>		
 		<Monster name="月燕" class="暗">
 			<Features>127,41,44,145,51,31</Features>
+			<Character>神秘|飞翔</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
@@ -4331,12 +4398,16 @@
 		</Challenge>
 		-->
 		<!--荆棘弓[木],赑屃[木],摩呼罗迦[木],三文鱼[木],离卷[木],九纹龙史进[木]-->
-
+		<Challenge name="龙生九子-囚牛6" min="0" max="6" class="地">
+			<FeaturesRequired feature="运" limit="4600"/>
+			<FeaturesRequired feature="力" limit="4600"/>
+		</Challenge>
+<!--
 		<Challenge name="龙生九子-负屃6" min="0" max="6" class="地">
 			<FeaturesRequired feature="运" limit="4600"/>
 			<FeaturesRequired feature="力" limit="4600"/>
 		</Challenge>
-
+-->
 		<!--Challenge name="龙生九子-睚眦2" min="0" max="6" class="暗">
 			<FeaturesRequired feature="运" limit="1200"/>
 			<FeaturesRequired feature="智" limit="1200"/>
@@ -4375,7 +4446,7 @@
 	</Challenges>
 	<Challenges type="4">
 		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="力" limit="20000"/>
+			<FeaturesRequired feature="速" limit="20000"/>
 			<!--<FeaturesRequired feature="技" limit="9425"/>-->
 		</Challenge>
 	</Challenges>
@@ -4694,11 +4765,11 @@
 		爪虎,
 		黄豆娘,
 		木牛,
-		战龙,海兔娘,新兵尼禄,
+		战龙,海兔娘,蒸汽驱动型自走主坦,
 		祝英台,寻金锁,娄金狗,
 		翼火蛇,夜神月,
 		多闻天王,仁山,稳重斯基,吕洞宾,破军星,壁咚老爷,短命二郎阮小五,
-		酱军,拿破仑,雪怪,赤笛仔,口角兽
+		酱军,拿破仑,雪怪,牛郎,口角兽
 	</Exclude>
 <!--
 	-->
