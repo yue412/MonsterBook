@@ -39,14 +39,14 @@
 				</Skill>
 			</Skills>
 		</Monster>			
-		<Monster name="玉儿" class="木">
-			<Features>75,50,39,50,151,46</Features>
-			<Character>吉祥</Character>
+		<Monster name="玉女" class="木">
+			<Features>162,108,85,108,325,96</Features>
+			<Character>吉祥|人形|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>运</Feature>
-					<Value>15</Value>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -249,9 +249,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="竹笛" class="木">
-			<Features>16,25,18,61,25,25</Features>
-			<Character>善良</Character>
+		<Monster name="林呆呆" class="木">
+			<Features>46,57,52,176,77,130</Features>
+			<Character>善良|人形|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
@@ -3038,6 +3038,22 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="轮滑小子" class="地">
+			<Features>53,33,46,152,43,132</Features>
+			<Character>扑克|神速</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>魅</Feature>
+					<Value>30</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="睡面虎" class="地">
 			<Features>436,125,384,133,152,96</Features>
 			<Character>妖怪|猫咪</Character>
@@ -4469,7 +4485,7 @@
 			<FeaturesRequired feature="力" limit="14400"/>
 			<FeaturesRequired feature="技" limit="14400"/>
 		</Challenge>
-		
+		<!--穗儿姑娘[木],拂晓王子[地],圣炎女皇朱迪斯[火],帝释天[光],囡囡可欸可[暗],亭亭玉莉[暗],紫霜[暗],赤兔吕布[暗],-->
 		<!--
 		<Challenge name="扑克牌" min="0" max="5">
 			<FeaturesRequired feature="力" limit="7200"/>
@@ -4484,8 +4500,8 @@
 		</Challenge>	
 	</Challenges>
 	<Challenges type="7">
-		<Challenge name="龙之秘宝" min="0" max="8" class="光">
-			<FeaturesRequired feature="技" limit="9800"/>
+		<Challenge name="龙之秘宝" min="0" max="8" class="木">
+			<FeaturesRequired feature="魅" limit="9800"/>
 		</Challenge>	
 		<!--睡面虎[地],阿修罗[地],仁山[地],张果老[地],拳王[地],咆哮张翼德[地],石敢当[地],蛋黄喵[地],-->
 	</Challenges>	
@@ -4623,6 +4639,15 @@
 				</Skill>
 			</Skills>
 		</Fate>		
+		<Fate name="梅兰竹菊">
+			<Monsters>林呆呆|名将森兰丸|梅鹤鸣|菊爷</Monsters>
+			<Skills>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>全</Feature>
+					<Value>120</Value>
+				</Skill>
+			</Skills>
+		</Fate>		
 		<Fate name="新春对联">
 			<Monsters>上联仔|下联仔|横批仔</Monsters>
 			<Skills>
@@ -4710,6 +4735,16 @@
 					<ElementClass>全</ElementClass>
 					<Feature>运</Feature>
 					<Value>2</Value>
+				</Skill>	
+			</Skills>
+		</Fate>	
+		<Fate name="金童玉女">
+			<Monsters>金童|玉女</Monsters>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
 				</Skill>	
 			</Skills>
 		</Fate>	
