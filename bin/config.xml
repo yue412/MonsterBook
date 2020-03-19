@@ -1268,9 +1268,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="汉钟离" class="火">
-			<Features>45,132,228,93,199,285</Features>
-			<Character>小眼睛|神仙|老人家</Character>
+		<Monster name="八仙汉钟离" class="火">
+			<Features>52,146,252,104,220,314</Features>
+			<Character>小眼睛|神仙|老人家|飞翔</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -4497,12 +4497,14 @@
 		<Challenge name="白银之翼" min="0" max="8" class="光">
 			<FeaturesRequired feature="魅" limit="9000"/>
 			<FeaturesRequired feature="力" limit="9000"/>
-		</Challenge>	
+		</Challenge>
+		<!--樱灵,帝释天,太白金星,圣人椰酥,妲己,廉贞星,神算诸葛亮,牛金宝-->	
 	</Challenges>
 	<Challenges type="7">
 		<Challenge name="龙之秘宝" min="0" max="8" class="木">
 			<FeaturesRequired feature="魅" limit="9800"/>
 		</Challenge>	
+		<!--金镶玉-->
 		<!--睡面虎[地],阿修罗[地],仁山[地],张果老[地],拳王[地],咆哮张翼德[地],石敢当[地],蛋黄喵[地],-->
 	</Challenges>	
 	<Fates>
@@ -4782,7 +4784,7 @@
 	</SoulBeads>
 	<Exclude>
 		碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
-		曹国舅,汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
+		曹国舅,八仙汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
 		金童,八仙蓝采和,上联仔,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 		弃斧,离卷,金镶玉,扫尘娘,粽仔,小青,萌太骑,竹时雨,
 		灶神,玉兔,广目天王,笔仙,镰鼬,魔音,敖顺,南七宿朱雀,
