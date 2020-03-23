@@ -3502,13 +3502,18 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="笨DJ" class="地">
-			<Features>0,312,0,0,0,0</Features>
-			<Character>奇特,乐器</Character>
+		<Monster name="蠢朋克" class="地">
+			<Features>0,412,0,0,0,0</Features>
+			<Character>奇特|乐器|彩蛋</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>智</Feature>
+					<Value>1.2</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>魅</Feature>
 					<Value>1.2</Value>
 				</Skill>	
 			</Skills>
