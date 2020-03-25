@@ -3829,6 +3829,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="特急海盗" class="暗">
+			<Features>53,152,46,33,132,43</Features>
+			<Character>扑克|魁梧</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>旅人</Character>
+					<Features>力|速|运|技|魅|智</Features>
+					<Value>400</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="黑客公鸡" class="暗">
 			<Features>0,0,0,-301,-301,400</Features>
 			<Character>彩蛋</Character>
