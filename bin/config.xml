@@ -143,9 +143,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="赑屃" class="木">
-			<Features>160,150,50,110,130,290</Features>
-			<Character>自然|机械|龙族</Character>
+		<Monster name="龙子赑屃" class="木">
+			<Features>200,180,50,130,160,360</Features>
+			<Character>自然|机械|龙族|魁梧</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<Trigger>4</Trigger>
@@ -153,6 +153,11 @@
 					<Feature>全</Feature>
 					<Value>100</Value>
 				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>龙族</Character>
+					<Features>力|速|运</Features>
+					<Value>88</Value>
+				</Skill>				
 			</Skills>
 		</Monster>
 		<Monster name="九纹龙史进" class="木">
@@ -3595,15 +3600,20 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="夏娃瓜" class="地">
-			<Features>125,132,436,153,384,96</Features>
-			<Character>自然|呆萌</Character>
+		<Monster name="西瓜小太郎" class="地">
+			<Features>157,170,551,193,490,122</Features>
+			<Character>自然|呆萌|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>速</Feature>
 					<Value>200</Value>
 				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.6</Value>
+				</Skill>				
 			</Skills>
 		</Monster>		
 		<Monster name="木牛" class="地">
