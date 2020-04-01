@@ -703,6 +703,17 @@
 				</Skill>				
 			</Skills>
 		</Monster>
+		<Monster name="魑魅" class="火">
+			<Features>90,252,100,304,120,120</Features>
+			<Character>邪恶|妹纸|美食</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>魅</Feature>
+					<Value>2</Value>
+				</Skill>				
+			</Skills>
+		</Monster>		
 		<Monster name="龙王敖钦" class="火">
 			<Features>324,108,88,136,108,324</Features>
 			<Character>美食|龙族|神仙|奇特</Character>
@@ -4540,6 +4551,13 @@
 		<!--金镶玉-->
 		<!--睡面虎[地],阿修罗[地],仁山[地],张果老[地],拳王[地],咆哮张翼德[地],石敢当[地],蛋黄喵[地],-->
 	</Challenges>	
+	<Challenges type="8">
+		<Challenge name="其他" min="0" max="8" class="地">
+			<FeaturesRequired feature="智" limit="6000"/>
+		</Challenge>	
+		<!--金镶玉-->
+		<!--睡面虎[地],阿修罗[地],仁山[地],张果老[地],拳王[地],咆哮张翼德[地],石敢当[地],蛋黄喵[地],-->
+	</Challenges>	
 	<Fates>
 		<Fate name="青梅竹马">
 			<Monsters>青梅公举|竹马王子</Monsters>
@@ -4780,6 +4798,21 @@
 					<ElementClass>全</ElementClass>
 					<Feature>运</Feature>
 					<Value>1.6</Value>
+				</Skill>	
+			</Skills>
+		</Fate>	
+		<Fate name="魑魅魍魉">
+			<Monsters>魑魅|魍魉</Monsters>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
 				</Skill>	
 			</Skills>
 		</Fate>	
