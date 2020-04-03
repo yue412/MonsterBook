@@ -1570,14 +1570,24 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="小双鱼" class="水">
-			<Features>125,436,132,384,153,96</Features>
-			<Character>神秘|水性</Character>
+		<Monster name="美双鱼美人" class="水">
+			<Features>174,605,186,537,215,132</Features>
+			<Character>神秘|水性|妹纸|邪恶</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
 					<Value>200</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>智</Feature>
+					<Value>2</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -3852,6 +3862,22 @@
 					<Character>猫咪</Character>
 					<Features>力|速|运|技|魅|智</Features>
 					<Value>100</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="空间魔法师" class="暗">
+			<Features>96,125,384,153,436,132</Features>
+			<Character>扑克|神秘</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>200</Value>
+				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>律法</Character>
+					<Features>速|运|魅|智</Features>
+					<Value>300</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
