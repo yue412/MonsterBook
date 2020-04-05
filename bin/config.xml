@@ -3085,19 +3085,24 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="睡面虎" class="地">
-			<Features>436,125,384,133,152,96</Features>
-			<Character>妖怪|猫咪</Character>
+		<Monster name="烈昂白虎" class="地">
+			<Features>551,156,490,169,194,123</Features>
+			<Character>妖怪|猫咪|战士</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>速</Feature>
-					<Value>160</Value>
+					<Value>200</Value>
 				</Skill>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>力</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
+				</Skill>				
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
 				</Skill>				
 			</Skills>
 		</Monster>	
