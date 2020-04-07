@@ -2932,9 +2932,9 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="妲己" class="光">
-			<Features>45,137,276,321,72,137</Features>
-			<Character>冰冷|妹纸|妖怪</Character>
+		<Monster name="妖狐妲己" class="光">
+			<Features>50,150,302,354,80,150</Features>
+			<Character>冰冷|妹纸|妖怪|财迷</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
@@ -2949,12 +2949,12 @@
 				<Skill name="IncreaseSelfFeatureByCharacter">
 					<Character>神勇</Character>
 					<Features>魅|速</Features>
-					<Value>80</Value>
+					<Value>100</Value>
 				</Skill>
 				<Skill name="IncreaseSelfFeatureByCharacter">
 					<Character>神勇</Character>
 					<Features>智</Features>
-					<Value>-80</Value>
+					<Value>-100</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
