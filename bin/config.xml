@@ -3870,10 +3870,15 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="空间魔法师" class="暗">
-			<Features>96,125,384,153,436,132</Features>
-			<Character>扑克|神秘</Character>
+		<Monster name="暗域领主" class="暗">
+			<Features>122,157,490,193,551,170</Features>
+			<Character>扑克|神秘|律法</Character>
 			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>运</Feature>
+					<Value>2</Value>
+				</Skill>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>速</Feature>
@@ -4474,8 +4479,9 @@
 		</Challenge>
 	</Challenges>
 	<Challenges type="1">
-		<Challenge name="悟真塔" min="0" max="8" class="火">
-			<FeaturesRequired feature="技" limit="7700"/>
+		<Challenge name="悟真塔" min="0" max="8" class="暗">
+			<FeaturesRequired feature="技" limit="6500"/>
+			<FeaturesRequired feature="智" limit="6500"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="2">
