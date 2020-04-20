@@ -265,14 +265,26 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="眼符" class="木">
-			<Features>31,31,31,127,31,31</Features>
-			<Character>法器|呆萌</Character>
+		<Monster name="一命踪" class="木">
+			<Features>53,53,53,222,53,53</Features>
+			<Character>法器|呆萌|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>魅</Feature>
 					<Value>1.3</Value>
+				</Skill>
+				<!--法器互斥-->
+			</Skills>
+		</Monster>
+		<Monster name="四万" class="木">
+			<Features>21,21,21,21,21,88</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>技</Feature>
+					<Value>30</Value>
 				</Skill>
 				<!--法器互斥-->
 			</Skills>
@@ -354,10 +366,15 @@
 			</Skills>
 			<!--法器互斥-->
 		</Monster>
-		<Monster name="皇天" class="木">
-			<Features>63,270,63,270,122,98</Features>
-			<Character>善良|吉祥</Character>
+		<Monster name="昊天金阙无上至尊自然妙有弥罗至真玉皇大帝" class="木">
+			<Features>72,300,72,300,136,108</Features>
+			<Character>善良|吉祥|神仙</Character>
 			<Skills>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>神仙</Character>
+					<Features>魅|智|运</Features>
+					<Value>68</Value>
+				</Skill>
 				<Skill name="ProductFeature">
 					<ElementClass>木</ElementClass>
 					<Feature>魅</Feature>
@@ -1118,6 +1135,41 @@
 			<Character>法器</Character>
 			<Skills>
 				<!--法器互斥-->
+			</Skills>
+		</Monster>
+		<Monster name="五饼" class="火">
+			<Features>19,19,19,19,100,19</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>
+				<!--法器互斥-->
+			</Skills>
+		</Monster>
+		<Monster name="四饼" class="火">
+			<Features>100,19,19,19,19,19</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>
+				<!--法器互斥-->
+			</Skills>
+		</Monster>
+		<Monster name="西洋棋.白马" class="火">
+			<Features>21,7,66,-23,-23,56</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.3</Value>
+				</Skill>
 			</Skills>
 		</Monster>
 		<Monster name="爱心觉罗" class="火">
@@ -2211,6 +2263,28 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="光兵" class="光">
+			<Features>56,-12,-23,21,66,-23</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="光炮" class="光">
+			<Features>56,-23,21,-12,-23,66</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>技</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>
 		<Monster name="三万" class="光">
 			<Features>12,12,12,52,12,12</Features>
 			<Character>法器</Character>
@@ -2230,6 +2304,17 @@
 				<!--法器互斥-->
 			</Skills>
 		</Monster>	
+		<Monster name="光相" class="光">
+			<Features>-54,156,-54,-28,131,52</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="三三幽鬼灯" class="光">
 			<Features>122,193,490,170,551,157</Features>
 			<Character>妖怪|老人家|谋略</Character>
@@ -3048,6 +3133,13 @@
 		<Monster name="鼠魅娘" class="地">
 			<Features>53,124,143,53,60,104</Features>
 		</Monster>	
+		<Monster name="七条" class="地">
+			<Features>27,140,27,27,27,27</Features>
+			<Character>法器</Character>
+			<Skills>
+				<!--法器互斥-->
+			</Skills>
+		</Monster>		
 		<Monster name="名医许仙" class="地">
 			<Features>62,152,44,68,44,170</Features>
 			<Character>善良|人形|神秘</Character>
@@ -3831,6 +3923,28 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
+		<Monster name="暗车" class="暗">
+			<Features>111,-38,93,37,-20,-38</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+			</Skills>
+		</Monster>	
+		<Monster name="暗炮" class="暗">
+			<Features>56,-23,21,-12,-23,66</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
 		<Monster name="西洋棋.黑象" class="暗">
 			<Features>66,-23,-13,-23,21,56</Features>
 			<Character>法器</Character>
@@ -4085,20 +4199,39 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="九万" class="暗">
-			<Features>27,140,27,27,27,27</Features>
-			<Character>法器</Character>
+		<Monster name="六万" class="暗">
+			<Features>21,21,88,21,21,21</Features>
+			<Character>法器|谋略</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
+					<Feature>速</Feature>
+					<Value>30</Value>
+				</Skill>
+				<!--法器互斥-->	
+			</Skills>
+		</Monster>	
+		<Monster name="炼生" class="暗">
+			<Features>43,223,43,43,43,43</Features>
+			<Character>法器|谋略</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
-					<Value>50</Value>
+					<Value>160</Value>
 				</Skill>
 				<!--法器互斥-->	
 			</Skills>
 		</Monster>	
 		<Monster name="三条" class="暗">
 			<Features>12,12,12,52,12,12</Features>
+			<Character>法器</Character>
+			<Skills>
+				<!--法器互斥-->	
+			</Skills>
+		</Monster>
+		<Monster name="二条" class="暗">
+			<Features>12,12,52,12,12,12</Features>
 			<Character>法器</Character>
 			<Skills>
 				<!--法器互斥-->	
@@ -4524,7 +4657,7 @@
 			<FeaturesRequired feature="运" limit="1200"/>
 			<FeaturesRequired feature="智" limit="1200"/>
 		</Challenge-->	
-		<Challenge name="龙生九子-嘲风6" min="0" max="6" class="暗">
+		<Challenge name="龙生九子-嘲风6" min="0" max="6" class="水">
 			<FeaturesRequired feature="运" limit="4600"/>
 			<FeaturesRequired feature="力" limit="4600"/>
 		</Challenge>	
@@ -4558,7 +4691,8 @@
 	</Challenges>
 	<Challenges type="4">
 		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="速" limit="20000"/>
+			<FeaturesRequired feature="运" limit="9800"/>
+			<FeaturesRequired feature="技" limit="9800"/>
 			<!--<FeaturesRequired feature="技" limit="9425"/>-->
 		</Challenge>
 	</Challenges>
@@ -4597,14 +4731,17 @@
 		<!--樱灵,帝释天,太白金星,圣人椰酥,妲己,廉贞星,神算诸葛亮,牛金宝-->	
 	</Challenges>
 	<Challenges type="7">
-	<!--
 		<Challenge name="龙之秘宝2" min="0" max="8" class="木">
 			<FeaturesRequired feature="魅" limit="9800"/>
 		</Challenge>	
+	<!--
+	
 	-->
+	<!--
 		<Challenge name="龙之秘宝1" min="0" max="8" class="地">
 			<FeaturesRequired feature="力" limit="9800"/>
 		</Challenge>	
+		-->
 		<!--金镶玉-->
 		<!--睡面虎[地],阿修罗[地],仁山[地],张果老[地],拳王[地],咆哮张翼德[地],石敢当[地],蛋黄喵[地],-->
 	</Challenges>	
@@ -4902,22 +5039,25 @@
 			<Features>57.6,57.6,57.6,0,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="暗">
-			<Features>57.6,0,57.6,57.6,0,57.6</Features>
+			<Features>57.6,57.6,57.6,57.6,57.6,144</Features>
 		</SoulBead>
 	</SoulBeads>
 	<Exclude>
 		碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
 		曹国舅,八仙汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
 		金童,八仙蓝采和,上联仔,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
-		弃斧,离卷,皇天,扫尘娘,粽仔,小青,萌太骑,竹时雨,
 		灶神,玉兔,广目天王,笔仙,镰鼬,魔音,敖顺,南七宿朱雀,
+
+
+
 	</Exclude>
 <!--
+
 		荆棘弓,拳王,秤仔,八仙韩湘子,晋文公,敖广,灵山宫主,墓烛幽儿,
 		刘备,增长天王,火火崩地儿,文昌帝君,讹兽,九霄,谜画偶灵,贞珠,
 		铁拐李,竹马王子,扭蛋,佛跳墙,陶安公,苍老师,扑天雕李应,跨年娃,
 		混江龙李俊,金吒,电母,南极老人星,金角大王,白无常,持国天王,银角大王,
-		摩呼罗迦,文曲星,智多星吴用,初号机,小双鱼,入云龙公孙胜,大三元,九万,
+		摩呼罗迦,文曲星,智多星吴用,初号机,美双鱼美人,入云龙公孙胜,大三元,炼生,
 		何仙姑,谋士荀彧,忍海,美女西施,地狱盐王,
 		萌萌小乔,托塔天王,秦王,横批仔,混沌,诸葛孔明,
 		刺客荆轲,张果老,某海龙王,哪吒,紧那罗,金光雷公,
