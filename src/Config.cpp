@@ -18,6 +18,7 @@ std::vector<CSkillFactoryPtr> g_oSkillFactory = {
 	CSkillFactoryPtr(new CIncreaseSelfFeatureByCountSkillFactroy),
     CSkillFactoryPtr(new CIncreaseSelfFeatureSkillFactroy),
     CSkillFactoryPtr(new CIncreaseSelfFeatureByCharacterSkillFactroy),
+    CSkillFactoryPtr(new CArtifactSkillFactroy),
     CSkillFactoryPtr(new CProductSelfFeatureByCharacterSkillFactroy)
 };
 

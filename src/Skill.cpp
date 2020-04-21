@@ -98,3 +98,21 @@ void CProductSelfFeatureByCharacterSkill::affect(const CTeam & oTeam, double * o
         oResult[i] += m_nFeatureFlag[i] * nCount * m_pOwner->getFeature((EnFeatures)i) * (m_dValue);
     }
 }
+
+void CArtifactSkill::affect(const CTeam & oTeam, double * oResult)
+{
+    fill(oResult, 0.0);
+    auto nCount = std::count_if(oTeam.begin(), oTeam.end(), [this](CMonster* pMonster) {
+        return pMonster->getCharacterSet().count(L"·¨Æ÷") > 0;
+    });
+    if (nCount > 1)
+    {
+        for (int i = 0; i < EF_ALL; i++)
+        {
+            for each (auto pMonster in oTeam)
+            {
+                oResult[i] -= pMonster->getFeature((EnFeatures)i) * 0.5;
+            }
+        }
+    }
+}

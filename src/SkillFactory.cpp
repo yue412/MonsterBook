@@ -100,3 +100,8 @@ CSkill * CProductSelfFeatureByCharacterSkillFactroy::create(TiXmlElement * pSkil
     auto dValue = std::stod(pNode->GetText());
     return new CProductSelfFeatureByCharacterSkill(sCharacter, nFeatureFlag, dValue);
 }
+
+CSkill * CArtifactSkillFactroy::create(TiXmlElement * pSkillNode)
+{
+    return new CArtifactSkill();
+}

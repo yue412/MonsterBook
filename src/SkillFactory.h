@@ -59,4 +59,11 @@ public:
     virtual CSkill* create(TiXmlElement* pSkillNode);
 };
 
+class CArtifactSkillFactroy : public CSkillFactory
+{
+public:
+    virtual std::wstring getName() { return L"Artifact"; }
+    virtual CSkill* create(TiXmlElement* pSkillNode);
+};
+
 #endif // !SKILLFACTORY_H

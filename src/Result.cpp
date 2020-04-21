@@ -65,7 +65,8 @@ void CResult::add(CTeamPtr pTeam, double* dFeatures, double* dRequiredFeatures)
                 assert(false);
             }
         }
-        assert(false);
+        // 可能有重复
+        //assert(false);
 		return false;
     });
     m_oTeamList.insert(itr, oNewItem);

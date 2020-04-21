@@ -4644,7 +4644,7 @@
 	</Challenges>
 	<Challenges type="1">
 		<Challenge name="悟真塔" min="0" max="8" class="光">
-			<FeaturesRequired feature="力" limit="9400"/>
+			<FeaturesRequired feature="力" limit="9700"/>
 		</Challenge>
 	</Challenges>
 	<Challenges type="2">
@@ -4714,12 +4714,8 @@
 	</Challenges>
 	<Challenges type="4">
 		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="力" limit="4400"/>
-			<FeaturesRequired feature="智" limit="4400"/>
-			<FeaturesRequired feature="速" limit="4400"/>
-			<FeaturesRequired feature="魅" limit="4400"/>
-			<FeaturesRequired feature="运" limit="4400"/>
-			<FeaturesRequired feature="技" limit="4400"/>
+			<FeaturesRequired feature="力" limit="10000"/>
+			<FeaturesRequired feature="智" limit="10000"/>
 			<!--<FeaturesRequired feature="技" limit="9425"/>-->
 		</Challenge>
 	</Challenges>
@@ -5077,6 +5073,8 @@
 		七条,张果老,轮滑小子,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
 		太白金星,芒星,
 
+	</Exclude>
+<!--
 		荆棘弓,拳王,秤仔,八仙韩湘子,晋文公,龙王敖广,灵山宫主,三三幽鬼灯,
 		刘备,增长天王,火火崩地儿,文昌帝君,讹兽,九霄,谜画偶灵,贞珠,
 		铁拐李,竹马王子,扭蛋,佛跳墙,陶安公,苍老师,扑天雕李应,跨年娃,
@@ -5095,11 +5093,6 @@
 		翼火蛇,夜神月,
 		多闻天王,仁山,稳重斯基,吕洞宾,破军星,壁咚老爷,短命二郎阮小五,
 		酱军,拿破仑,雪怪,牛郎,口角兽
-
-
-
-	</Exclude>
-<!--
 
 	-->
 </MonsterBook>

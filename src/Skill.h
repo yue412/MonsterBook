@@ -112,5 +112,14 @@ private:
     double m_dValue;
 };
 
+// ·¨Æ÷»¥³â
+class CArtifactSkill : public CSkill
+{
+public:
+    CArtifactSkill() {}
+    virtual void affect(const CTeam& oTeam, double* oResult);
+    virtual int getAffectFeature() { return 0; }
+};
+
 
 #endif // !SKILL_H
