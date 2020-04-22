@@ -154,14 +154,25 @@ void CConfig::init(CGame * pGame)
 
                 pFateNode = pFateNode->NextSiblingElement();
             }
-            auto pExcludeNode = pRoot->FirstChildElement("Exclude");
-            if (pExcludeNode)
+            auto pExcludeGroupNode = pRoot->FirstChildElement("ExcludeGroup");
+            if (pExcludeGroupNode)
             {
-                std::wstring sText = Utf8ToUnicode(pExcludeNode->GetText());
-                sText.erase(std::remove(sText.begin(), sText.end(), L' '), sText.end());
-                //std::replace(sText.begin(), sText.end(), L'\x20', L'\x0');
-                //std::replace(sText.begin(), sText.end(), L'\xa', L'\x0');
-                split(sText, L',', pGame->m_oExcludeMonsters);
+                auto pExcludeNode = pExcludeGroupNode->FirstChildElement("Exclude");
+                int n = 0;
+                while (pExcludeNode)
+                {
+                    auto itr = std::find(pGame->m_oDisableExcludeGroupList.begin(), pGame->m_oDisableExcludeGroupList.end(), n);
+                    if (itr == pGame->m_oDisableExcludeGroupList.end())
+                    {
+                        std::wstring sText = Utf8ToUnicode(pExcludeNode->GetText());
+                        sText.erase(std::remove(sText.begin(), sText.end(), L' '), sText.end());
+                        //std::replace(sText.begin(), sText.end(), L'\x20', L'\x0');
+                        //std::replace(sText.begin(), sText.end(), L'\xa', L'\x0');
+                        split(sText, L',', pGame->m_oExcludeMonsters);
+                    }
+                    ++n;
+                    pExcludeNode = pExcludeNode->NextSiblingElement();
+                }
             }
         }
     }

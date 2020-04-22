@@ -194,6 +194,14 @@ void CGame::exclude(std::vector<std::wstring>& oMonsterList)
 	}
 }
 
+void CGame::disable_exclude_group(std::vector<std::wstring>& oList)
+{
+    for each (auto str in oList)
+    {
+        this->m_oDisableExcludeGroupList.push_back(std::stoi(str));
+    }
+}
+
 void CGame::play(std::vector<CSolutionPtr>& oSolutionList, std::vector<int>& oChallengeGroupIndexList, std::map<std::wstring, CResult>& oFailedMap)
 {
    // std::sort(m_oChallengeList.begin(), m_oChallengeList.end(), 

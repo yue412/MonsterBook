@@ -185,15 +185,14 @@ void logHistory(std::map<std::wstring, std::wstring>& oParamsMap)
         getHistroyList(oStringList);
         auto sParams = getParamStr(oParamsMap);
         auto itr = std::find(oStringList.begin(), oStringList.end(), sParams);
-        if (itr == oStringList.end())
+        if (itr != oStringList.end())
+            oStringList.erase(itr);
+        oStringList.insert(oStringList.begin(), sParams);
+        if (oStringList.size() > 20)
         {
-            oStringList.insert(oStringList.begin(), sParams);
-            if (oStringList.size() > 20)
-            {
-                oStringList.resize(20);
-            }
-            saveHistoryList(oStringList);
+            oStringList.resize(20);
         }
+        saveHistoryList(oStringList);
     }
 }
 
@@ -211,7 +210,15 @@ int main(int argc, char* argv[])
         //std::transform(str.begin(), str.end(), str.begin(), ::tolower);
 
         CGame oGame;
+        if (oParamsMap.find(L"disable") != oParamsMap.end())
+        {
+            std::vector<std::wstring> oStringList;
+            split(oParamsMap[L"disable"], L',', oStringList);
+            oGame.disable_exclude_group(oStringList);
+        }
+
         CConfig::init(&oGame);
+
 		if (str == L"simulator")
         {
             auto sNames = oParamsMap[L"team"];
