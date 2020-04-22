@@ -145,7 +145,10 @@ void getHistroyList(std::vector<std::wstring>& oStringList)
         {
             std::string str;
             std::getline(in, str);
-            oStringList.push_back(Utf8ToUnicode(str));
+            if (!str.empty())
+            {
+                oStringList.push_back(Utf8ToUnicode(str));
+            }
         }
     }
 }
@@ -280,6 +283,22 @@ int main(int argc, char* argv[])
         else if (str == L"clear")
         {
             oParamsMap.clear();
+        }
+        else if (str == L"help")
+        {
+            std::cout << "Command:" << std::endl;
+            std::cout << "\tsimulator" << std::endl;
+            std::cout << "\tplay" << std::endl;
+            std::cout << "\tsettings" << std::endl;
+            std::cout << "\tclear" << std::endl;
+            std::cout << "\thelp" << std::endl;
+            std::cout << "\thistory" << std::endl;
+            std::cout << "\tlist" << std::endl;
+            std::cout << "\tplayall" << std::endl;
+            std::cout << "ClassNames:" << std::endl;
+            std::cout << "\tÄ¾,µØ,Ë®,»ð,¹â,°µ" << std::endl;
+            std::cout << "FeatureShortNames:" << std::endl;
+            std::cout << "\tpower,int,speed,charm,lucky,tech" << std::endl;
         }
         else if (str == L"history")
         {
