@@ -4714,7 +4714,7 @@
 	</Challenges>
 	<Challenges type="4">
 		<Challenge name="主线" min="0" max="8">
-			<FeaturesRequired feature="力" limit="10000"/>
+			<FeaturesRequired feature="速" limit="10000"/>
 			<FeaturesRequired feature="智" limit="10000"/>
 			<!--<FeaturesRequired feature="技" limit="9425"/>-->
 		</Challenge>
@@ -5059,7 +5059,7 @@
 			<Features>57.6,57.6,0,57.6,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="光">
-			<Features>57.6,57.6,57.6,0,57.6,57.6</Features>
+			<Features>57.6,57.6,57.6,57.6,144,57.6</Features>
 		</SoulBead>
 		<SoulBead class="暗">
 			<Features>57.6,57.6,57.6,57.6,57.6,144</Features>

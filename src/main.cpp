@@ -10,6 +10,7 @@
 #include "Result.h"
 #include <map>
 #include <iterator>
+#include <fstream>
 
 void output(std::vector<CSolutionPtr>& oResultList)
 {
@@ -46,7 +47,7 @@ void output(const CResult& oResult)
         std::cout << oItem.dTotalNeedFeature << "\t";
         for each (auto pMonster in *oItem.pTeam)
         {
-            std::cout << ToString(pMonster->getName()) << ",";
+            std::cout << ToString(pMonster->getName()) << "[" << ToString(g_sClassNames[pMonster->getClass()]) << "],";
         }
         //std::cout << std::endl;
         std::cout << "\t";
@@ -120,6 +121,79 @@ void getGroupList(std::map<std::wstring, std::wstring>& oParamsMap, std::vector<
     }
 }
 
+bool isSetChallenge(std::map<std::wstring, std::wstring>& oParamsMap)
+{
+    bool bResult = false;
+    for (int i = 0; i < EF_ALL; i++)
+    {
+        if (oParamsMap.find(g_sFeatureShortNames[i]) != oParamsMap.end())
+        {
+            bResult = true;
+            break;
+        }
+    }
+    return bResult;
+}
+
+void getHistroyList(std::vector<std::wstring>& oStringList)
+{
+    std::ifstream in;
+    in.open(UnicodeToUtf8(getFullPath(L"MonsterBook.log")), std::ios::in);
+    if (in.is_open())
+    {
+        while (!in.eof())
+        {
+            std::string str;
+            std::getline(in, str);
+            oStringList.push_back(Utf8ToUnicode(str));
+        }
+    }
+}
+
+std::wstring getParamStr(std::map<std::wstring, std::wstring>& oParamsMap)
+{
+    std::wstring sResult;
+    for each (auto oPair in oParamsMap)
+    {
+        sResult += oPair.first + L"=" + oPair.second + L" ";
+    }
+    return sResult;
+}
+
+void saveHistoryList(std::vector<std::wstring>& oList)
+{
+    std::ofstream out;
+    out.open(UnicodeToUtf8(getFullPath(L"MonsterBook.log")), std::ios::out);
+    if (out.is_open())
+    {
+        for each (auto str in oList)
+        {
+            out << UnicodeToUtf8(str) << std::endl;
+        }
+        out.close();
+    }
+}
+
+void logHistory(std::map<std::wstring, std::wstring>& oParamsMap)
+{
+    if (isSetChallenge(oParamsMap))
+    {
+        std::vector<std::wstring> oStringList;
+        getHistroyList(oStringList);
+        auto sParams = getParamStr(oParamsMap);
+        auto itr = std::find(oStringList.begin(), oStringList.end(), sParams);
+        if (itr == oStringList.end())
+        {
+            oStringList.insert(oStringList.begin(), sParams);
+            if (oStringList.size() > 20)
+            {
+                oStringList.resize(20);
+            }
+            saveHistoryList(oStringList);
+        }
+    }
+}
+
 int main(int argc, char* argv[])
 {
 	std::map<std::wstring, std::wstring> oParamsMap;
@@ -151,14 +225,19 @@ int main(int argc, char* argv[])
         }
 		else if (str == L"play")
         {
+            logHistory(oParamsMap);
             CChallenge oChallenge;
 			initChallenge(oParamsMap, oChallenge);
 
             CResult oResultList;
 			initResult(oParamsMap, oResultList);
             CResult oFailedResultList;
-            oFailedResultList.changeOrder(RO_CLOSE, MB_DESC, 0);
-            oFailedResultList.setTop(oParamsMap.find(L"top") == oParamsMap.end() ? 10 : std::stoi(oParamsMap[L"top"]));
+            //oFailedResultList.changeOrder(RO_CLOSE, MB_DESC, 0);
+            //oFailedResultList.setTop(oParamsMap.find(L"top") == oParamsMap.end() ? 10 : std::stoi(oParamsMap[L"top"]));
+            oResultList.setTop(1);
+            oFailedResultList.setTop(1);
+            oFailedResultList.changeOrder(RO_FIT_FEATURE_COUNT, MB_DESC, 0);
+            oFailedResultList.changeOrder(RO_CLOSE_FEATURE, MB_ASC, 1);
 			if (oParamsMap.find(L"exclude") != oParamsMap.end())
 			{
 				std::vector<std::wstring> oStringList;
@@ -166,6 +245,7 @@ int main(int argc, char* argv[])
 				oGame.exclude(oStringList);
 			}
             oGame.exclude(oGame.m_oExcludeMonsters);
+            oGame.m_bExportFailedInfo = oParamsMap.find(L"export") != oParamsMap.end() && (oParamsMap[L"export"] == L"on");
 			auto nTime = GetTickCount();
 			oGame.play(&oChallenge, oResultList, oFailedResultList);
             std::cout << "count: " << oGame.m_nCount << std::endl;
@@ -178,6 +258,15 @@ int main(int argc, char* argv[])
             else
             {
                 std::cout << "<--------- no match result !!! --------->" << std::endl;
+                auto dRequired = oChallenge.featuresRequired();
+                for (int i = 0; i < EF_ALL; i++)
+                {
+                    if (dRequired[i] > g_dEpsilon)
+                    {
+                        std::cout << dRequired[i] << "(" << ToString(g_sFeatureNames[i]) << "),";
+                    }
+                }
+                std::cout << std::endl;
                 output(oFailedResultList);
             }
         }
@@ -191,6 +280,15 @@ int main(int argc, char* argv[])
         else if (str == L"clear")
         {
             oParamsMap.clear();
+        }
+        else if (str == L"history")
+        {
+            std::vector<std::wstring> oList;
+            getHistroyList(oList);
+            for each (auto str in oList)
+            {
+                std::cout << ToString(str) << std::endl;
+            }
         }
         else if (str == L"list")
         {
