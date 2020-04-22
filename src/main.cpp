@@ -100,6 +100,7 @@ void initResult(std::map<std::wstring, std::wstring>& oParamsMap, CResult& oResu
 
 void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge& oChallenge)
 {
+    oChallenge.m_sName = oParamsMap.find(L"name") == oParamsMap.end() ? L"" : oParamsMap[L"name"];
 	oChallenge.m_nMin = oParamsMap.find(L"min") == oParamsMap.end() ? 0 : std::stoi(oParamsMap[L"min"]);
 	oChallenge.m_nMax = oParamsMap.find(L"max") == oParamsMap.end() ? 8 : std::stoi(oParamsMap[L"max"]);
     oChallenge.m_nClass = oParamsMap.find(L"class") == oParamsMap.end() ? EC_ALL : Name2Class(oParamsMap[L"class"]);
@@ -121,19 +122,19 @@ void getGroupList(std::map<std::wstring, std::wstring>& oParamsMap, std::vector<
     }
 }
 
-bool isSetChallenge(std::map<std::wstring, std::wstring>& oParamsMap)
-{
-    bool bResult = false;
-    for (int i = 0; i < EF_ALL; i++)
-    {
-        if (oParamsMap.find(g_sFeatureShortNames[i]) != oParamsMap.end())
-        {
-            bResult = true;
-            break;
-        }
-    }
-    return bResult;
-}
+//bool isSetChallenge(std::map<std::wstring, std::wstring>& oParamsMap)
+//{
+//    bool bResult = false;
+//    for (int i = 0; i < EF_ALL; i++)
+//    {
+//        if (oParamsMap.find(g_sFeatureShortNames[i]) != oParamsMap.end())
+//        {
+//            bResult = true;
+//            break;
+//        }
+//    }
+//    return bResult;
+//}
 
 void getHistroyList(std::vector<std::wstring>& oStringList)
 {
@@ -153,12 +154,24 @@ void getHistroyList(std::vector<std::wstring>& oStringList)
     }
 }
 
-std::wstring getParamStr(std::map<std::wstring, std::wstring>& oParamsMap)
+std::wstring getParamStr(CChallenge* pChallenge)
 {
     std::wstring sResult;
-    for each (auto oPair in oParamsMap)
+    if (!pChallenge->getName().empty())
+        sResult += L"name=" + pChallenge->getName() + L" ";
+    if (pChallenge->getMin() != 0)
+        sResult += L"min=" + ToUnicode(std::to_string(pChallenge->getMin())) + L" ";
+    if (pChallenge->getMax() != 8)
+        sResult += L"max=" + ToUnicode(std::to_string(pChallenge->getMax())) + L" ";
+    if (pChallenge->requiredClass() != EC_ALL)
+        sResult += L"class=" + g_sClassNames[pChallenge->requiredClass()] + L" ";
+    for (int i = 0; i < EF_ALL; i++)
     {
-        sResult += oPair.first + L"=" + oPair.second + L" ";
+        double dVal = pChallenge->featuresRequired()[i];
+        if (abs(dVal) > g_dEpsilon) // ²»ÎªÁã
+        {
+            sResult += g_sFeatureShortNames[i] + L"=" + ToUnicode(std::to_string((int)dVal)) + L" ";
+        }
     }
     return sResult;
 }
@@ -177,13 +190,14 @@ void saveHistoryList(std::vector<std::wstring>& oList)
     }
 }
 
-void logHistory(std::map<std::wstring, std::wstring>& oParamsMap)
+void logHistory(CChallenge* pChallenge)
 {
-    if (isSetChallenge(oParamsMap))
+    //if (isSetChallenge(oParamsMap))
+    if (pChallenge)
     {
         std::vector<std::wstring> oStringList;
         getHistroyList(oStringList);
-        auto sParams = getParamStr(oParamsMap);
+        auto sParams = getParamStr(pChallenge);
         auto itr = std::find(oStringList.begin(), oStringList.end(), sParams);
         if (itr != oStringList.end())
             oStringList.erase(itr);
@@ -235,9 +249,9 @@ int main(int argc, char* argv[])
         }
 		else if (str == L"play")
         {
-            logHistory(oParamsMap);
             CChallenge oChallenge;
 			initChallenge(oParamsMap, oChallenge);
+            logHistory(&oChallenge);
 
             CResult oResultList;
 			initResult(oParamsMap, oResultList);
