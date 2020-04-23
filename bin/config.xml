@@ -2466,19 +2466,24 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="樱灵" class="光">
-			<Features>551,169,490,123,194,156</Features>
-			<Character>神秘|美食|人形</Character>
+		<Monster name="人形兵器风间樱" class="光">
+			<Features>605,187,538,133,215,173</Features>
+			<Character>神秘|美食|人形|冰冷</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
-					<Value>160</Value>
+					<Value>200</Value>
 				</Skill>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>技</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>速</Feature>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -5059,7 +5064,7 @@
 			<Features>57.6,57.6,0,57.6,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="光">
-			<Features>57.6,57.6,57.6,57.6,144,57.6</Features>
+			<Features>144,57.6,57.6,57.6,144,57.6</Features>
 		</SoulBead>
 		<SoulBead class="暗">
 			<Features>57.6,57.6,57.6,57.6,57.6,144</Features>
@@ -5071,7 +5076,7 @@
 			八仙曹国舅,八仙汉钟离,觜火猴,豚燕,尾火虎,斩昭,藏犬屋,蜡祭狮,
 			金童,八仙蓝采和,上联仔,喜儿,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 			灶神,玉兔,广目天王,笔仙,镰鼬,魔音,敖顺,南七宿朱雀,
-			七条,张果老,轮滑小子,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
+			七条,洪玉儿,轮滑小子,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
 			太白金星,芒星
 		</Exclude>
 		<Exclude>

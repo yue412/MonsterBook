@@ -11,6 +11,7 @@
 #include <map>
 #include <iterator>
 #include <fstream>
+#include "tinyxml.h"
 
 void output(std::vector<CSolutionPtr>& oResultList)
 {
@@ -39,22 +40,35 @@ void output(std::vector<CSolutionPtr>& oResultList)
     std::cout << ToString(sNames) << std::endl;
 }
 
+std::wstring getTeamStr(CTeamPtr& pTeam)
+{
+    std::wstring sResult;
+    for each (auto pMonster in *pTeam)
+    {
+        sResult += pMonster->getName() + L"["  + g_sClassNames[pMonster->getClass()] + L"],";
+    }
+    return sResult;
+}
+
+std::wstring getTeamFeatureStr(double* dFeatures)
+{
+    std::wstring sResult;
+    for (int i = 0; i < EF_ALL; i++)
+    {
+        sResult += std::to_wstring(roundEx(dFeatures[i])) + L"("  + g_sFeatureNames[i] + L"),";
+    }
+    return sResult;
+}
+
 void output(const CResult& oResult)
 {
     for each (auto oItem in oResult.m_oTeamList)
     {
+        std::cout << ToString(getTeamStr(oItem.pTeam));
+        std::cout << std::endl;
         std::cout << oItem.dTotalFeature << "\t";
         std::cout << oItem.dTotalNeedFeature << "\t";
-        for each (auto pMonster in *oItem.pTeam)
-        {
-            std::cout << ToString(pMonster->getName()) << "[" << ToString(g_sClassNames[pMonster->getClass()]) << "],";
-        }
-        //std::cout << std::endl;
-        std::cout << "\t";
-        for (int i = 0; i < EF_ALL; i++)
-        {
-            std::cout << roundEx(oItem.dFeatures[i]) << "("<< ToString(g_sFeatureNames[i]) <<"),";
-        }
+        std::cout << ToString(getTeamFeatureStr(oItem.dFeatures));
         std::cout << std::endl;
     }
 }
@@ -136,25 +150,40 @@ void getGroupList(std::map<std::wstring, std::wstring>& oParamsMap, std::vector<
 //    return bResult;
 //}
 
-void getHistroyList(std::vector<std::wstring>& oStringList)
+struct CHistoryItem
 {
-    std::ifstream in;
-    in.open(UnicodeToUtf8(getFullPath(L"MonsterBook.log")), std::ios::in);
-    if (in.is_open())
+    CHistoryItem() : bSuccess(true) {}
+
+    std::wstring sChallenge;
+    bool bSuccess;
+    std::wstring sMonsters;
+    std::wstring sFeatures;
+};
+
+void getHistroyList(std::vector<CHistoryItem>& oHistoryList)
+{
+    auto sConfig = getFullPath(L"MonsterBookHistory.log");
+    TiXmlDocument oDocument;
+    if (oDocument.LoadFile(ToString(sConfig), TIXML_ENCODING_UTF8))
     {
-        while (!in.eof())
+        auto pRoot = oDocument.RootElement();
+        if (!pRoot)
+            return;
+        auto pItemNode = pRoot->FirstChildElement("Item");
+        while (pItemNode)
         {
-            std::string str;
-            std::getline(in, str);
-            if (!str.empty())
-            {
-                oStringList.push_back(Utf8ToUnicode(str));
-            }
+            CHistoryItem oNewItem;
+            oNewItem.sChallenge = Utf8ToUnicode(pItemNode->FirstChildElement("Challenge")->GetText());
+            oNewItem.bSuccess = std::stoi(pItemNode->FirstChildElement("Success")->GetText()) != 0;
+            oNewItem.sMonsters = Utf8ToUnicode(pItemNode->FirstChildElement("Monsters")->GetText());
+            oNewItem.sFeatures = Utf8ToUnicode(pItemNode->FirstChildElement("Features")->GetText());
+            oHistoryList.push_back(oNewItem);
+            pItemNode = pItemNode->NextSiblingElement();
         }
     }
 }
 
-std::wstring getParamStr(CChallenge* pChallenge)
+std::wstring getChallengeStr(CChallenge* pChallenge)
 {
     std::wstring sResult;
     if (!pChallenge->getName().empty())
@@ -173,40 +202,65 @@ std::wstring getParamStr(CChallenge* pChallenge)
             sResult += g_sFeatureShortNames[i] + L"=" + ToUnicode(std::to_string((int)dVal)) + L" ";
         }
     }
-    return sResult;
+    return sResult.substr(0, sResult.length() - 1);
 }
 
-void saveHistoryList(std::vector<std::wstring>& oList)
+CHistoryItem makeHistoryItem(CChallenge* pChallenge, bool bSuccess, CResult& oResult)
 {
-    std::ofstream out;
-    out.open(UnicodeToUtf8(getFullPath(L"MonsterBook.log")), std::ios::out);
-    if (out.is_open())
-    {
-        for each (auto str in oList)
-        {
-            out << UnicodeToUtf8(str) << std::endl;
-        }
-        out.close();
-    }
+    CHistoryItem oItem;
+    oItem.sChallenge = getChallengeStr(pChallenge);
+    oItem.bSuccess = bSuccess;
+    
+    oItem.sMonsters = getTeamStr(oResult.getTeamList().front().pTeam);
+    oItem.sFeatures = getTeamFeatureStr(oResult.getTeamList().front().dFeatures);
+
+    return oItem;
 }
 
-void logHistory(CChallenge* pChallenge)
+TiXmlNode* createTextNode(std::string sName, std::string sValue)
+{
+    TiXmlElement* pNode = new TiXmlElement(sName);
+    pNode->LinkEndChild(new TiXmlText(sValue));
+    return pNode;
+}
+
+void saveHistoryList(std::vector<CHistoryItem>& oList)
+{
+    TiXmlDocument oDocument;
+    TiXmlElement *pRoot = new TiXmlElement("MonsterBook");
+    oDocument.LinkEndChild(pRoot);
+    for each (auto oItem in oList)
+    {
+        TiXmlElement* pItemNode = new TiXmlElement("Item");
+        pRoot->LinkEndChild(pItemNode);
+
+        pItemNode->LinkEndChild(createTextNode("Challenge", UnicodeToUtf8(oItem.sChallenge)));
+        pItemNode->LinkEndChild(createTextNode("Success", std::to_string(oItem.bSuccess)));
+        pItemNode->LinkEndChild(createTextNode("Monsters", UnicodeToUtf8(oItem.sMonsters)));
+        pItemNode->LinkEndChild(createTextNode("Features", UnicodeToUtf8(oItem.sFeatures)));
+    }
+    auto sConfig = getFullPath(L"MonsterBookHistory.log");
+    oDocument.SaveFile(UnicodeToUtf8(sConfig));
+}
+
+void logHistory(CChallenge* pChallenge, bool bSuccess, CResult& oResult)
 {
     //if (isSetChallenge(oParamsMap))
     if (pChallenge)
     {
-        std::vector<std::wstring> oStringList;
-        getHistroyList(oStringList);
-        auto sParams = getParamStr(pChallenge);
-        auto itr = std::find(oStringList.begin(), oStringList.end(), sParams);
-        if (itr != oStringList.end())
-            oStringList.erase(itr);
-        oStringList.insert(oStringList.begin(), sParams);
-        if (oStringList.size() > 20)
+        std::vector<CHistoryItem> oHistoryList;
+        getHistroyList(oHistoryList);
+        auto oNew = makeHistoryItem(pChallenge, bSuccess, oResult);
+        auto itr = std::find_if(oHistoryList.begin(), oHistoryList.end(), [oNew](CHistoryItem& oItem) {
+            return oItem.sChallenge == oNew.sChallenge; });
+        if (itr != oHistoryList.end())
+            oHistoryList.erase(itr);
+        oHistoryList.insert(oHistoryList.begin(), oNew);
+        if (oHistoryList.size() > 20)
         {
-            oStringList.resize(20);
+            oHistoryList.resize(20);
         }
-        saveHistoryList(oStringList);
+        saveHistoryList(oHistoryList);
     }
 }
 
@@ -251,7 +305,6 @@ int main(int argc, char* argv[])
         {
             CChallenge oChallenge;
 			initChallenge(oParamsMap, oChallenge);
-            logHistory(&oChallenge);
 
             CResult oResultList;
 			initResult(oParamsMap, oResultList);
@@ -293,6 +346,7 @@ int main(int argc, char* argv[])
                 std::cout << std::endl;
                 output(oFailedResultList);
             }
+            logHistory(&oChallenge, oResultList.size() > 0, (oResultList.size() > 0) ? oResultList : oFailedResultList);
         }
 		else if (str == L"settings")
 		{
@@ -323,11 +377,22 @@ int main(int argc, char* argv[])
         }
         else if (str == L"history")
         {
-            std::vector<std::wstring> oList;
+            std::vector<CHistoryItem> oList;
             getHistroyList(oList);
-            for each (auto str in oList)
+            for each (auto oItem in oList)
             {
-                std::cout << ToString(str) << std::endl;
+                std::cout << ToString(oItem.sChallenge) << std::endl;
+            }
+        }
+        else if (str == L"history_result")
+        {
+            std::vector<CHistoryItem> oList;
+            getHistroyList(oList);
+            for each (auto oItem in oList)
+            {
+                std::cout << ToString(oItem.sChallenge) << std::endl;
+                std::cout << "\t" << ToString(oItem.sMonsters) << std::endl;
+                std::cout << "\t" << (oItem.bSuccess ? "Succ:" : "Failed:") << ToString(oItem.sFeatures) << std::endl;
             }
         }
         else if (str == L"list")

@@ -43,6 +43,7 @@ public:
 	void changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset);
     void merge(const CResult& oResult, double* dRequiredFeatures);
     int size() { return (int)m_oTeamList.size(); }
+    std::list<CResultItem>& getTeamList() { return m_oTeamList; }
 private:
 	void removeOrder(EnResultOrderType nType);
 	void initItem(CTeamPtr pTeam, double* dFeatures, double* dRequiredFeatures, CResultItem& oItem);
