@@ -3909,19 +3909,19 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="鬼金羊" class="暗">
-			<Features>94,118,78,126,236,236</Features>
-			<Character>美食|神秘|人形</Character>
+		<Monster name="星宿鬼金羊" class="暗">
+			<Features>115,144,96,154,289,289</Features>
+			<Character>美食|神秘|人形|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>	
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>技</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>	
 			</Skills>
 		</Monster>	
