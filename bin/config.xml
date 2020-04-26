@@ -3084,15 +3084,20 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="九色鹿" class="光">
-			<Features>82,147,98,247,290,124</Features>
-			<Character>自然|呆萌|奇特</Character>
+		<Monster name="鹿王本生" class="光">
+			<Features>90,164,108,272,318,136</Features>
+			<Character>自然|呆萌|奇特|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>运</Feature>
 					<Value>2</Value>
-				</Skill>			
+				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>善良</Character>
+					<Features>运</Features>
+					<Value>168</Value>
+				</Skill>
 			</Skills>
 		</Monster>		
 		<Monster name="迦罗逻" class="光">
@@ -3239,15 +3244,25 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="蛋黄喵" class="地">
-			<Features>125,436,132,153,384,96</Features>
-			<Character>神秘|猫咪</Character>
+		<Monster name="无双小狮妹" class="地">
+			<Features>174,605,186,215,537,132</Features>
+			<Character>神秘|猫咪|妹纸|吉祥</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
 					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>魅</Feature>
+					<Value>2</Value>
+				</Skill>				
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.3</Value>
+				</Skill>				
 			</Skills>
 		</Monster>			
 		<Monster name="圆福" class="地">
@@ -5082,7 +5097,7 @@
 		<Exclude>
 			荆棘弓,拳王,秤仔,八仙韩湘子,晋文公,龙王敖广,灵山宫主,三三幽鬼灯,
 			昭烈刘玄德,增长天王,火火崩地儿,文昌帝君,讹兽,九霄,谜画偶灵,贞珠,
-			铁拐李,竹马王子,扭蛋,佛跳墙,陶安公,苍老师,扑天雕李应,跨年娃,
+			铁拐李,竹马王子,厚皮老牛,佛跳墙,陶安公,苍老师,扑天雕李应,跨年娃,
 			混江龙李俊,金吒,电母,南极老人星,金角大王,白无常,持国天王,银角大王,
 			摩呼罗迦,文曲星,智多星吴用,初号机,美双鱼美人,入云龙公孙胜,大三元,
 			何仙姑,谋士荀彧,忍海,美女西施,地狱盐王,

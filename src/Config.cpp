@@ -77,6 +77,10 @@ void CConfig::init(CGame * pGame)
 				pChallengeNode->Attribute("min", &pChallenge->m_nMin);
 				pChallengeNode->Attribute("max", &pChallenge->m_nMax);
                 pChallengeNode->Attribute("total", &pChallenge->m_nTotal);
+                pChallengeNode->QueryBoolAttribute("enable_skill", &pChallenge->m_bEnableSkill);
+                auto sCharacter = pChallengeNode->Attribute("character");
+                if (sCharacter != nullptr)
+                    pChallenge->m_sCharacter = Utf8ToUnicode(sCharacter);
                 auto sClass = pChallengeNode->Attribute("class");
                 if (sClass != nullptr)
                     pChallenge->m_nClass = Name2Class(Utf8ToUnicode(sClass));

@@ -118,6 +118,8 @@ void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge&
 	oChallenge.m_nMin = oParamsMap.find(L"min") == oParamsMap.end() ? 0 : std::stoi(oParamsMap[L"min"]);
 	oChallenge.m_nMax = oParamsMap.find(L"max") == oParamsMap.end() ? 8 : std::stoi(oParamsMap[L"max"]);
     oChallenge.m_nClass = oParamsMap.find(L"class") == oParamsMap.end() ? EC_ALL : Name2Class(oParamsMap[L"class"]);
+    oChallenge.m_bEnableSkill = oParamsMap.find(L"enable_skill") == oParamsMap.end() ? true : oParamsMap[L"enable_skill"] == L"true";
+    oChallenge.m_sCharacter = oParamsMap.find(L"character") == oParamsMap.end() ? L"" : oParamsMap[L"character"];
 	for (int i = 0; i < EF_ALL; i++)
 	{
 		oChallenge.m_nRequired[i] = oParamsMap.find(g_sFeatureShortNames[i]) == oParamsMap.end() ? 0 : std::stoi(oParamsMap[g_sFeatureShortNames[i]]);
@@ -160,6 +162,17 @@ struct CHistoryItem
     std::wstring sFeatures;
 };
 
+std::string getNodeText(TiXmlElement* pNode)
+{
+    if (pNode)
+    {
+        const char* str = pNode->GetText();
+        if (str)
+            return str;
+    }
+    return "";
+}
+
 void getHistroyList(std::vector<CHistoryItem>& oHistoryList)
 {
     auto sConfig = getFullPath(L"MonsterBookHistory.log");
@@ -173,10 +186,10 @@ void getHistroyList(std::vector<CHistoryItem>& oHistoryList)
         while (pItemNode)
         {
             CHistoryItem oNewItem;
-            oNewItem.sChallenge = Utf8ToUnicode(pItemNode->FirstChildElement("Challenge")->GetText());
-            oNewItem.bSuccess = std::stoi(pItemNode->FirstChildElement("Success")->GetText()) != 0;
-            oNewItem.sMonsters = Utf8ToUnicode(pItemNode->FirstChildElement("Monsters")->GetText());
-            oNewItem.sFeatures = Utf8ToUnicode(pItemNode->FirstChildElement("Features")->GetText());
+            oNewItem.sChallenge = Utf8ToUnicode(getNodeText(pItemNode->FirstChildElement("Challenge")));
+            oNewItem.bSuccess = std::stoi(getNodeText(pItemNode->FirstChildElement("Success"))) != 0;
+            oNewItem.sMonsters = Utf8ToUnicode(getNodeText(pItemNode->FirstChildElement("Monsters")));
+            oNewItem.sFeatures = Utf8ToUnicode(getNodeText(pItemNode->FirstChildElement("Features")));
             oHistoryList.push_back(oNewItem);
             pItemNode = pItemNode->NextSiblingElement();
         }
@@ -194,6 +207,10 @@ std::wstring getChallengeStr(CChallenge* pChallenge)
         sResult += L"max=" + ToUnicode(std::to_string(pChallenge->getMax())) + L" ";
     if (pChallenge->requiredClass() != EC_ALL)
         sResult += L"class=" + g_sClassNames[pChallenge->requiredClass()] + L" ";
+    if (!pChallenge->enableSkill())
+        sResult += L"enable_skill=false ";
+    if (!pChallenge->requiredCharacter().empty())
+        sResult += L"character=" + pChallenge->requiredCharacter() + L" ";
     for (int i = 0; i < EF_ALL; i++)
     {
         double dVal = pChallenge->featuresRequired()[i];
@@ -211,8 +228,11 @@ CHistoryItem makeHistoryItem(CChallenge* pChallenge, bool bSuccess, CResult& oRe
     oItem.sChallenge = getChallengeStr(pChallenge);
     oItem.bSuccess = bSuccess;
     
-    oItem.sMonsters = getTeamStr(oResult.getTeamList().front().pTeam);
-    oItem.sFeatures = getTeamFeatureStr(oResult.getTeamList().front().dFeatures);
+    if (!oResult.getTeamList().empty())
+    {
+        oItem.sMonsters = getTeamStr(oResult.getTeamList().front().pTeam);
+        oItem.sFeatures = getTeamFeatureStr(oResult.getTeamList().front().dFeatures);
+    }
 
     return oItem;
 }
