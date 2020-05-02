@@ -299,6 +299,13 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
+		<Monster name="一条" class="木">
+			<Features>12,12,12,12,52,12</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="Artifact" />
+			</Skills>
+		</Monster>
 		<Monster name="西洋棋.白车" class="木">
 			<Features>93,-39,-20,-39,111,37</Features>
 			<Character>法器</Character>
@@ -1140,10 +1147,34 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
+		<Monster name="五万" class="火">
+			<Features>88,21,21,21,21,21</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>30</Value>
+				</Skill>
+				<Skill name="Artifact" />
+			</Skills>
+		</Monster>
 		<Monster name="五条" class="火">
 			<Features>19,100,19,19,19,19</Features>
 			<Character>法器</Character>
 			<Skills>
+				<Skill name="Artifact" />
+			</Skills>
+		</Monster>
+		<Monster name="三饼" class="火">
+			<Features>12,12,12,12,12,52</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>技</Feature>
+					<Value>30</Value>
+				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
@@ -2312,11 +2343,44 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
+		<Monster name="西洋棋.白王" class="光">
+			<Features>-46,39,-21,-49,55,52</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>法器</Character>
+					<Features>力|魅|技</Features>
+					<Value>100</Value>
+				</Skill>				
+			</Skills>
+		</Monster>
 		<Monster name="四条" class="光">
 			<Features>100,19,19,19,19,19</Features>
 			<Character>法器</Character>
 			<Skills>
 				<Skill name="Artifact" />
+			</Skills>
+		</Monster>	
+		<Monster name="光马" class="光">
+			<Features>93,-38,111,37,-20,-38</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="发财" class="光">
+			<Features>36,71,44,54,164,44</Features>
+			<Character>神器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>
 			</Skills>
 		</Monster>	
 		<Monster name="光相" class="光">
@@ -2326,6 +2390,17 @@
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>智</Feature>
+					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="光仕" class="光">
+			<Features>-54,-54,-28,156,131,52</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>魅</Feature>
 					<Value>1.6</Value>
 				</Skill>
 			</Skills>
@@ -4246,6 +4321,41 @@
 				<Skill name="Artifact" />	
 			</Skills>
 		</Monster>	
+		<Monster name="白板" class="暗">
+			<Features>46,94,56,69,94,56</Features>
+			<Character>神器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="七饼" class="暗">
+			<Features>23,23,23,23,23,151</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.6</Value>
+				</Skill>
+				<Skill name="Artifact" />
+			</Skills>
+		</Monster>			
+		<Monster name="一万" class="暗">
+			<Features>12,12,12,12,12,52</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>15</Value>
+				</Skill>
+				<Skill name="Artifact" />
+			</Skills>
+		</Monster>			
 		<Monster name="炼生" class="暗">
 			<Features>43,223,43,43,43,43</Features>
 			<Character>法器|谋略</Character>
