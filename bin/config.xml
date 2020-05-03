@@ -275,14 +275,14 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="一命踪" class="木">
-			<Features>53,53,53,222,53,53</Features>
-			<Character>法器|呆萌|妹纸</Character>
+		<Monster name="法器-一命踪" class="木">
+			<Features>120,120,120,250,120,120</Features>
+			<Character>法器|呆萌|妹纸|小眼睛</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>魅</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
@@ -2115,6 +2115,17 @@
 			<Character>法器</Character>
 			<Skills>
 				<Skill name="Artifact" />
+			</Skills>
+		</Monster>
+		<Monster name="北风" class="水">
+			<Features>48,79,60,39,140,52</Features>
+			<Character>神器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>
 			</Skills>
 		</Monster>
 		<Monster name="急先锋索超" class="水">
@@ -4311,11 +4322,23 @@
 		</Monster>	
 		<Monster name="六万" class="暗">
 			<Features>21,21,88,21,21,21</Features>
-			<Character>法器|谋略</Character>
+			<Character>法器</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>速</Feature>
+					<Value>30</Value>
+				</Skill>
+				<Skill name="Artifact" />	
+			</Skills>
+		</Monster>	
+		<Monster name="七万" class="暗">
+			<Features>27,140,27,27,27,27</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>智</Feature>
 					<Value>30</Value>
 				</Skill>
 				<Skill name="Artifact" />	
@@ -5177,7 +5200,7 @@
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
-			<Features>60,60,60,60,60,0</Features>
+			<Features>60,60,60,60,60,60</Features>
 		</SoulBead>
 		<SoulBead class="地">
 			<Features>0,60,60,60,60,60</Features>
