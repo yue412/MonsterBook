@@ -2365,10 +2365,15 @@
 				</Skill>				
 			</Skills>
 		</Monster>
-		<Monster name="四条" class="光">
-			<Features>100,19,19,19,19,19</Features>
-			<Character>法器</Character>
+		<Monster name="武仔" class="光">
+			<Features>183,35,35,35,35,35</Features>
+			<Character>法器|人形</Character>
 			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>			
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>	
