@@ -2405,13 +2405,18 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="光仕" class="光">
-			<Features>-54,-54,-28,156,131,52</Features>
-			<Character>法器</Character>
+		<Monster name="三步一杀仕" class="光">
+			<Features>-137,-137,-69,410,341,136</Features>
+			<Character>法器|娇小|战士|武器</Character>
 			<Skills>
 				<Skill name="ProductFeature">
-					<ElementClass>光</ElementClass>
+					<ElementClass>全</ElementClass>
 					<Feature>魅</Feature>
+					<Value>2.5</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
 					<Value>1.6</Value>
 				</Skill>
 			</Skills>
@@ -2986,15 +2991,20 @@
 				</Skill>			
 			</Skills>
 		</Monster>	
-		<Monster name="光车" class="光">
-			<Features>111,-38,93,37,-20,-38</Features>
-			<Character>法器</Character>
+		<Monster name="冲霸" class="光">
+			<Features>328,-111,273,109,-55,-111</Features>
+			<Character>法器|神速|机械</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
-					<Feature>力</Feature>
+					<Feature>智</Feature>
 					<Value>1.3</Value>
-				</Skill>			
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>							
 			</Skills>
 		</Monster>	
 		<Monster name="廉贞星" class="光">
