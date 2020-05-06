@@ -1662,20 +1662,25 @@
 				</Skill>				
 			</Skills>
 		</Monster>	
-		<Monster name="豪猿" class="水">
-			<Features>384,132,153,125,436,96</Features>
-			<Character>自然|战士</Character>
+		<Monster name="参水猿" class="水">
+			<Features>490,170,193,157,551,122</Features>
+			<Character>自然|战士|邪恶</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
-					<Value>160</Value>
+					<Value>200</Value>
 				</Skill>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>运</Feature>
-					<Value>160</Value>
+					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>				
 			</Skills>
 		</Monster>		
 		<Monster name="美双鱼美人" class="水">
@@ -1710,15 +1715,25 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="秤仔" class="水">
-			<Features>384,96,132,436,153,125</Features>
-			<Character>神秘|娇小</Character>
+		<Monster name="白翼佣兵沃尔坎" class="水">
+			<Features>537,132,186,605,215,174</Features>
+			<Character>神秘|娇小|温柔|神勇</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
-					<Value>160</Value>
+					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>2</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>				
 			</Skills>
 		</Monster>		
 		<Monster name="海葵妃" class="水">
@@ -5262,7 +5277,7 @@
 			<Features>57.6,57.6,0,57.6,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="光">
-			<Features>144,57.6,57.6,57.6,144,57.6</Features>
+			<Features>144,57.6,57.6,57.6,144,144</Features>
 		</SoulBead>
 		<SoulBead class="暗">
 			<Features>57.6,57.6,57.6,57.6,57.6,144</Features>
@@ -5278,7 +5293,7 @@
 			太白金星,银河
 		</Exclude>
 		<Exclude>
-			荆棘弓,拳王,秤仔,八仙韩湘子,晋文公,龙王敖广,灵山宫主,三三幽鬼灯,
+			荆棘弓,拳王,白翼佣兵沃尔坎,八仙韩湘子,晋文公,龙王敖广,灵山宫主,三三幽鬼灯,
 			昭烈刘玄德,增长天王,火火崩地儿,文昌帝君,讹兽,九霄,谜画偶灵,贞珠,
 			铁拐李,竹马王子,厚皮老牛,佛跳墙,陶安公,苍老师,扑天雕李应,跨年娃,
 			混江龙李俊,金吒,电母,南极老人星,金角大王,白无常,持国天王,银角大王,
