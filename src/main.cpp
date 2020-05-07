@@ -116,7 +116,8 @@ void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge&
 {
     oChallenge.m_sName = oParamsMap.find(L"name") == oParamsMap.end() ? L"" : oParamsMap[L"name"];
 	oChallenge.m_nMin = oParamsMap.find(L"min") == oParamsMap.end() ? 0 : std::stoi(oParamsMap[L"min"]);
-	oChallenge.m_nMax = oParamsMap.find(L"max") == oParamsMap.end() ? 8 : std::stoi(oParamsMap[L"max"]);
+    oChallenge.m_nMax = oParamsMap.find(L"max") == oParamsMap.end() ? 8 : std::stoi(oParamsMap[L"max"]);
+    oChallenge.m_nTotal = oParamsMap.find(L"total") == oParamsMap.end() ? 50 : std::stoi(oParamsMap[L"total"]);
     oChallenge.m_nClass = oParamsMap.find(L"class") == oParamsMap.end() ? EC_ALL : Name2Class(oParamsMap[L"class"]);
     oChallenge.m_bEnableSkill = oParamsMap.find(L"enable_skill") == oParamsMap.end() ? true : oParamsMap[L"enable_skill"] == L"true";
     oChallenge.m_sCharacter = oParamsMap.find(L"character") == oParamsMap.end() ? L"" : oParamsMap[L"character"];
