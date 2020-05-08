@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <assert.h>
 #include "Common.h"
+#include <math.h>
 //#include <mutex>
 
 //std::mutex g_result_mutex;
@@ -46,7 +47,12 @@ void CResult::add(CTeamPtr pTeam, double* dFeatures, double* dRequiredFeatures)
 					return bResult;
 				else
 					break;
-			case RO_FIT_FEATURE_COUNT:
+            case RO_MAX_CLOSE_FEATURE:
+                if (compare(oOrder.second, pItem1.dMaxClosedFeature, pItem2.dMaxClosedFeature, bResult))
+                    return bResult;
+                else
+                    break;
+            case RO_FIT_FEATURE_COUNT:
 				if (compare(oOrder.second, pItem1.nFitCount, pItem2.nFitCount, bResult))
 					return bResult;
 				else
@@ -114,6 +120,7 @@ void CResult::initItem(CTeamPtr pTeam, double * dFeatures, double* dRequiredFeat
 	oItem.nFitCount = 0;
     oItem.dTotalNeedFeature = 0;
 	oItem.dClosedFeature = 0;
+    oItem.dMaxClosedFeature = 0;
     for (int i = 0; i < EF_ALL; i++)
     {
         if (1 << i & m_nFeatureSet)
@@ -121,8 +128,11 @@ void CResult::initItem(CTeamPtr pTeam, double * dFeatures, double* dRequiredFeat
             oItem.dTotalNeedFeature += dFeatures[i];
 			if (dRequiredFeatures)
 			{
-				if (!(roundEx(dFeatures[i]) + g_dEpsilon > dRequiredFeatures[i]))
-					oItem.dClosedFeature += dRequiredFeatures[i] - dFeatures[i];
+                if (!(roundEx(dFeatures[i]) + g_dEpsilon > dRequiredFeatures[i]))
+                {
+                    oItem.dClosedFeature += dRequiredFeatures[i] - dFeatures[i];
+                    oItem.dMaxClosedFeature = std::max(oItem.dMaxClosedFeature, dRequiredFeatures[i] - dFeatures[i]);
+                }
 				else
 					++oItem.nFitCount;
 			}

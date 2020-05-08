@@ -13,6 +13,7 @@ enum EnResultOrderType
     RO_FEATURES,
 	RO_FIT_FEATURE_COUNT,
 	RO_CLOSE_FEATURE,
+    RO_MAX_CLOSE_FEATURE,
     RO_FACTOR
 };
 
@@ -26,6 +27,7 @@ struct CResultItem
     double dTotalNeedFeature;
 	int nFitCount;
 	double dClosedFeature;
+    double dMaxClosedFeature;
     double dFactor;
     CTeamPtr pTeam;
 };

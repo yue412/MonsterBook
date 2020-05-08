@@ -334,9 +334,14 @@ int main(int argc, char* argv[])
             //oFailedResultList.setTop(oParamsMap.find(L"top") == oParamsMap.end() ? 10 : std::stoi(oParamsMap[L"top"]));
             oResultList.setTop(1);
             oFailedResultList.setTop(1);
-            oFailedResultList.changeOrder(RO_FIT_FEATURE_COUNT, MB_DESC, 0);
-            oFailedResultList.changeOrder(RO_CLOSE_FEATURE, MB_ASC, 1);
-			if (oParamsMap.find(L"exclude") != oParamsMap.end())
+            if (oParamsMap.find(L"min_max_close") == oParamsMap.end())
+            {
+                oFailedResultList.changeOrder(RO_FIT_FEATURE_COUNT, MB_DESC, 0);
+                oFailedResultList.changeOrder(RO_CLOSE_FEATURE, MB_ASC, 1);
+            }
+            else
+                oFailedResultList.changeOrder(RO_MAX_CLOSE_FEATURE, MB_ASC, 0);
+            if (oParamsMap.find(L"exclude") != oParamsMap.end())
 			{
 				std::vector<std::wstring> oStringList;
 				split(oParamsMap[L"exclude"], L',', oStringList);
