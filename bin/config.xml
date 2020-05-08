@@ -3359,10 +3359,15 @@
 				</Skill>				
 			</Skills>
 		</Monster>	
-		<Monster name="拂晓王子" class="地">
-			<Features>125,96,132,153,384,436</Features>
+		<Monster name="风沙君王尤利乌斯" class="地">
+			<Features>157,122,170,193,490,551</Features>
 			<Character>扑克|正义|神勇</Character>
 			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>技</Feature>
+					<Value>2</Value>
+				</Skill>			
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>技</Feature>
