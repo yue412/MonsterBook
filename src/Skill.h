@@ -26,6 +26,7 @@ public:
 	virtual void affect(const CTeam& oTeam, double* oResult);
     virtual int getAffectFeature() { return m_nFeature == EF_ALL ? 0 : 1 << m_nFeature; }
     int getValue() { return m_nValue; }
+    EnElementClass getClass() { return m_nClass; }
 private:
     EnElementClass m_nClass;
     EnFeatures m_nFeature;
@@ -39,6 +40,7 @@ public:
     CProductFeatureSkill(EnElementClass nClass, EnFeatures nFeature, double dValue) : m_nClass(nClass), m_nFeature(nFeature), m_dValue(dValue) {}
 	virtual void affect(const CTeam& oTeam, double* oResult);
     virtual int getAffectFeature() { return m_nFeature == EF_ALL ? 0 : 1 << m_nFeature; }
+    EnElementClass getClass() { return m_nClass; }
 private:
     EnElementClass m_nClass;
     EnFeatures m_nFeature;

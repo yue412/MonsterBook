@@ -10,7 +10,7 @@ struct CSpecialFeature
     double dValue;
 };
 
-CMonster::CMonster() : m_nClass(EC_WOOD), m_nSpeciality(0), m_pSoulBead(nullptr), m_bIgnore(false), m_dFactor(0)
+CMonster::CMonster() : m_nClass(EC_WOOD), m_nSpeciality(0), m_pSoulBead(nullptr), m_bIgnore(false), m_dFactor(0), m_bIsAffectAll(false)
 {
 }
 
@@ -45,12 +45,23 @@ void CMonster::init(CSoulBead* pSoulBead, const std::vector<CFate*>& oFateList)
         auto pTemp = dynamic_cast<CProductFeatureSkill*>(pSkill);
         if (pTemp)
         {
+            if (pTemp->getClass() == EC_ALL)
+            {
+                m_bIsAffectAll = true;
+            }
             m_dFactor += 1.0;
         }
         auto pTemp2 = dynamic_cast<CIncreaseFeatureSkill*>(pSkill);
-        if (pTemp2 && pTemp2->getValue() >= 100)
+        if (pTemp2 )
         {
-            m_dFactor += 1.0;
+            if (pTemp2->getClass() == EC_ALL)
+            {
+                m_bIsAffectAll = true;
+            }
+            if (pTemp2->getValue() >= 100)
+            {
+                m_dFactor += 1.0;
+            }
         }
     }
 }

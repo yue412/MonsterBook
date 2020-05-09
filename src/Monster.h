@@ -31,6 +31,7 @@ public:
     CBigInt& getId() { return m_nId; }
     std::set<std::wstring>& getCharacterSet() { return m_oCharacterSet; }
     bool ignore() { return m_bIgnore; }
+    bool isAffectAll() { return m_bIsAffectAll; }
     double getFactor() { return m_dFactor; }
 private:
     std::wstring m_sName;
@@ -42,6 +43,7 @@ private:
     CBigInt m_nId;
     std::set<std::wstring> m_oCharacterSet;
     bool m_bIgnore;
+    bool m_bIsAffectAll;
     double m_dFactor;
 };
 

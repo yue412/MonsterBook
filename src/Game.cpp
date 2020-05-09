@@ -292,6 +292,7 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
     std::vector<CMonster*> oTempMonsters;
     std::copy_if(oMonsterList.begin(), oMonsterList.end(), std::back_inserter(oTempMonsters), [pChallenge, nFeatureSet](CMonster* pMonster) {
         return !pMonster->ignore() && 
+            (!pChallenge->OnlyAll() || pMonster->isAffectAll()) &&
             (pChallenge->requiredClass() == EC_ALL && pMonster->hasSpeciality(nFeatureSet) || pMonster->getClass() == pChallenge->requiredClass()) &&
             (pChallenge->requiredCharacter().empty() || pMonster->getCharacterSet().count(pChallenge->requiredCharacter()) > 0)
             ;

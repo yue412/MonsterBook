@@ -23,6 +23,8 @@ public:
     bool enableSkill() { return m_bEnableSkill; }
     bool calcFlag() { return m_bCalcFlag; }
     std::wstring requiredCharacter() { return  m_sCharacter; }
+    bool OnlyAll() { return m_bOnlyAll; };
+    void setOnlyAll(bool bOnlyAll) { m_bOnlyAll = bOnlyAll; };
 private:
     std::wstring m_sName;
 	int m_nMin;
@@ -31,6 +33,7 @@ private:
     double m_nRequired[EF_ALL];
     bool m_bEnableSkill;
     bool m_bCalcFlag;
+    bool m_bOnlyAll;
     EnElementClass m_nClass;
     std::wstring m_sCharacter;
 };

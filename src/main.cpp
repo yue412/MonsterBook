@@ -121,6 +121,7 @@ void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge&
     oChallenge.m_nClass = oParamsMap.find(L"class") == oParamsMap.end() ? EC_ALL : Name2Class(oParamsMap[L"class"]);
     oChallenge.m_bEnableSkill = oParamsMap.find(L"enable_skill") == oParamsMap.end() ? true : oParamsMap[L"enable_skill"] == L"true";
     oChallenge.m_sCharacter = oParamsMap.find(L"character") == oParamsMap.end() ? L"" : oParamsMap[L"character"];
+    oChallenge.m_bOnlyAll = oParamsMap.find(L"only_all") == oParamsMap.end() ? false : true;
 	for (int i = 0; i < EF_ALL; i++)
 	{
 		oChallenge.m_nRequired[i] = oParamsMap.find(g_sFeatureShortNames[i]) == oParamsMap.end() ? 0 : std::stoi(oParamsMap[g_sFeatureShortNames[i]]);
