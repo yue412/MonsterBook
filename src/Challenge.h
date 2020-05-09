@@ -9,6 +9,7 @@ class CChallenge
 {
 	friend class CConfig;
 	friend void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge& oChallenge);
+    friend int main(int argc, char* argv[]);
 public:
     CChallenge();
     ~CChallenge();
@@ -20,6 +21,7 @@ public:
 	double* featuresRequired() { return m_nRequired; }
     EnElementClass requiredClass() { return m_nClass; }
     bool enableSkill() { return m_bEnableSkill; }
+    bool calcFlag() { return m_bCalcFlag; }
     std::wstring requiredCharacter() { return  m_sCharacter; }
 private:
     std::wstring m_sName;
@@ -28,6 +30,7 @@ private:
     int m_nTotal;
     double m_nRequired[EF_ALL];
     bool m_bEnableSkill;
+    bool m_bCalcFlag;
     EnElementClass m_nClass;
     std::wstring m_sCharacter;
 };

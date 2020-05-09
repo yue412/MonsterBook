@@ -83,6 +83,30 @@ void CResult::add(CTeamPtr pTeam, double* dFeatures, double* dRequiredFeatures)
 	//g_result_mutex.unlock();
 }
 
+void CResult::add(CTeamPtr pTeam, double * dFeatures)
+{
+    CResultItem oNewItem;
+    initItem(pTeam, dFeatures, nullptr, oNewItem);
+    for (auto itr = m_oTeamList.begin(); itr != m_oTeamList.end(); )
+    {
+        auto nResult = compare(*itr, oNewItem);
+        if (nResult > 0)
+        {
+            // 已经有大的了，不用添加
+            return;
+        }
+        else if (nResult < 0)
+        {
+            itr = m_oTeamList.erase(itr); //返回下一个有效的迭代器，无需+1
+        }
+        else
+        {
+            ++itr;
+        }
+    }
+    m_oTeamList.push_back(oNewItem);
+}
+
 void CResult::changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset)
 {
     removeOrder(nType);
@@ -90,6 +114,14 @@ void CResult::changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset)
         m_oOrderList.push_back(std::make_pair(nType, nAscOrDesc));
     else
         m_oOrderList.insert(m_oOrderList.begin() + nOffset, std::make_pair(nType, nAscOrDesc));
+}
+
+void CResult::merge(const CResult & oResult)
+{
+    for each (auto oItem in oResult.m_oTeamList)
+    {
+        this->add(oItem.pTeam, oItem.dFeatures);
+    }
 }
 
 void CResult::merge(const CResult & oResult, double* dRequiredFeatures)
@@ -148,4 +180,18 @@ bool CResult::compare(int nAscOrDesc, double dVal1, double dVal2, bool & bResult
         return false;
     bResult = nAscOrDesc == MB_ASC ? dVal1 < dVal2 : dVal1 > dVal2;
     return true;
+}
+
+int CResult::compare(const CResultItem & oItem1, const CResultItem & oItem2)
+{
+    bool bBig = false;
+    bool bSmall = false;
+    for (int i = 0; i < EF_ALL; i++)
+    {
+        if (oItem1.dFeatures[i] > oItem2.dFeatures[i] + g_dEpsilon)
+            bBig = true;
+        else if (oItem1.dFeatures[i] < oItem2.dFeatures[i] - g_dEpsilon)
+            bSmall = true;
+    }
+    return bBig == bSmall ? 0 : (bBig ? 1 : -1);
 }

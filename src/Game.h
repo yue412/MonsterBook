@@ -27,8 +27,10 @@ public:
     void simulator(std::vector<std::wstring>& oMonsterList, int* nResult);
 	void exclude(std::vector<std::wstring>& oMonsterList);
     void disable_exclude_group(std::vector<std::wstring>& oList);
+    static bool success(double* dChallengeRequired, double* dTeam);
     int m_nCount;
 	bool m_bExportFailedInfo;
+    std::vector<CMonster*> m_oMonsterList;
 private:
     // ÃÙ’Ω“ªπÿ
     void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, CResult& oResult, CResult& oFailedResult);
@@ -39,7 +41,6 @@ private:
     void clear();
     std::vector<CChallenge*> m_oChallengeList;
     std::vector<std::vector<CChallenge*>> m_oChallengeGroupList;
-    std::vector<CMonster*> m_oMonsterList;
 	std::vector<CSoulBead*> m_oSoulBeadList;
     std::vector<CFate*> m_oFateList;
     std::vector<std::wstring> m_oExcludeMonsters;

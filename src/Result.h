@@ -42,7 +42,9 @@ public:
 public:
     void setTop(int nNum) { m_nNum = nNum; }
     void add(CTeamPtr pTeam, double* dFeatures, double* dRequiredFeatures);
-	void changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset);
+    void add(CTeamPtr pTeam, double* dFeatures);
+    void changeOrder(EnResultOrderType nType, int nAscOrDesc, int nOffset);
+    void merge(const CResult& oResult);
     void merge(const CResult& oResult, double* dRequiredFeatures);
     int size() { return (int)m_oTeamList.size(); }
     std::list<CResultItem>& getTeamList() { return m_oTeamList; }
@@ -50,6 +52,7 @@ private:
 	void removeOrder(EnResultOrderType nType);
 	void initItem(CTeamPtr pTeam, double* dFeatures, double* dRequiredFeatures, CResultItem& oItem);
     bool compare(int nAscOrDesc, double dVal1, double dVal2, bool& bResult);
+    int compare(const CResultItem& oItem1, const CResultItem& oItem2);
     int m_nNum;
     std::list<CResultItem> m_oTeamList;
     char m_nFeatureSet;

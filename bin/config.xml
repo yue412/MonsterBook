@@ -4013,6 +4013,27 @@
 				</Skill>	
 			</Skills>
 		</Monster>			
+		<Monster name="无双小狮妹" class="暗">
+			<Features>174,605,186,215,537,132</Features>
+			<Character>神秘|猫咪|妹纸|吉祥</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>力</Feature>
+					<Value>200</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>魅</Feature>
+					<Value>2</Value>
+				</Skill>				
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.3</Value>
+				</Skill>				
+			</Skills>
+		</Monster>			
 		<Monster name="蛮力客" class="暗">
 			<Features>162,58,79,54,79,108</Features>
 			<Character>娇小|呆萌|神勇</Character>

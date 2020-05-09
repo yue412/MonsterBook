@@ -21,7 +21,7 @@ struct CStageInfo
     CChallenge* pChallenge;
     std::vector<CMonster*>* pMonsterList;
     int nCount;
-    std::vector<int> oHitCounts;
+    std::vector<__int64> oHitCounts;
     std::vector<int> oTimeList;
 	bool bExportFailedInfo;
 };
@@ -31,7 +31,7 @@ class CGame_Thread
 public:
     static void calc(CTeam& oTeam, bool bEnableSkill, double* oResult);
     static bool success(double* dChallengeRequired, double* dTeam);
-    static void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, CResult& oFailedResult, int& nHitCount, bool bExportFailedInfo);
+    static void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, CResult& oFailedResult, __int64& nHitCount, bool bExportFailedInfo);
     static bool getStartIndex(std::vector<std::vector<int>>* pStartIndexList, std::vector<int>& nStartIndex);
     static void play_thread(std::vector<std::vector<int>>* pStartIndexList, CResult* pResult, CResult* pFailedResult, CStageInfo* pInfo);
 public:
@@ -97,24 +97,39 @@ bool CGame_Thread::success(double* dChallengeRequired, double* dTeam)
 	return true;
 }
 
-void CGame_Thread::play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, CResult& oFailedResult, int& nHitCount, bool bExportFailedInfo)
+void CGame_Thread::play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, CResult& oFailedResult, __int64& nHitCount, bool bExportFailedInfo)
 {
     if (nStartIndex >= (int)oMonsterList.size() || nCount <= 0)
         return;
     for (int i = nStartIndex; i < (int)oMonsterList.size(); i++)
     {
+        if (pChallenge->requiredClass() == EC_ALL)
+        {
+            auto sName = oMonsterList[i]->getName();
+            auto itr = std::find_if(oTeam.begin(), oTeam.end(), [sName](CMonster* pMonster) { return pMonster->getName() == sName; });
+            if (itr != oTeam.end())
+                continue; // 有重复名称的Monster，幻化
+        }
         oTeam.push_back(oMonsterList[i]);
         if (oTeam.size() >= pChallenge->getMin())
         {
             double oTotal[EF_ALL];
             calc(oTeam, pChallenge->enableSkill(), oTotal);
             ++nHitCount;
-            if (success(pChallenge->featuresRequired(), oTotal))
-                oResult.add(CTeamPtr(new CTeam(oTeam)), oTotal, nullptr);
+            if (!pChallenge->calcFlag())
+            {
+                if (success(pChallenge->featuresRequired(), oTotal))
+                    oResult.add(CTeamPtr(new CTeam(oTeam)), oTotal, nullptr);
+                else
+                {
+                    if (oResult.size() == 0 && bExportFailedInfo)
+                        oFailedResult.add(CTeamPtr(new CTeam(oTeam)), oTotal, pChallenge->featuresRequired());
+                    play(pChallenge, oMonsterList, i + 1, nCount - 1, oTeam, oResult, oFailedResult, nHitCount, bExportFailedInfo);
+                }
+            }
             else
             {
-                if (oResult.size() == 0 && bExportFailedInfo)
-                    oFailedResult.add(CTeamPtr(new CTeam(oTeam)), oTotal, pChallenge->featuresRequired());
+                oResult.add(CTeamPtr(new CTeam(oTeam)), oTotal);
                 play(pChallenge, oMonsterList, i + 1, nCount - 1, oTeam, oResult, oFailedResult, nHitCount, bExportFailedInfo);
             }
         }
@@ -142,23 +157,39 @@ void CGame_Thread::play_thread(std::vector<std::vector<int>>* pStartIndexList, C
 	while (getStartIndex(pStartIndexList, nStartIndex))
 	{
         auto nTime = GetTickCount();
-        int nHitCount = 0;
+        __int64 nHitCount = 0;
         CTeam oTeam;
         for each (auto i in nStartIndex)
         {
             oTeam.push_back((*pInfo->pMonsterList)[i]);
+        }
+        if (pInfo->pChallenge->requiredClass() == EC_ALL)
+        {
+            std::sort(oTeam.begin(), oTeam.end(), [](CMonster* pMonster1, CMonster* pMonster2) { return pMonster1->getName().compare(pMonster2->getName()); });
+            auto itr = std::unique(oTeam.begin(), oTeam.end());
+            if (itr != oTeam.end())
+                continue;
         }
         if (oTeam.size() >= pInfo->pChallenge->getMin())
         {
             double oTotal[EF_ALL];
             calc(oTeam, pInfo->pChallenge->enableSkill(), oTotal);
             ++nHitCount;
-            if (success(pInfo->pChallenge->featuresRequired(), oTotal))
-                pResult->add(CTeamPtr(new CTeam(oTeam)), oTotal, nullptr);
+            if (!pInfo->pChallenge->calcFlag())
+            {
+                if (success(pInfo->pChallenge->featuresRequired(), oTotal))
+                    pResult->add(CTeamPtr(new CTeam(oTeam)), oTotal, nullptr);
+                else
+                {
+                    if (pResult->size() == 0 && pInfo->bExportFailedInfo)
+                        pFailedResult->add(CTeamPtr(new CTeam(oTeam)), oTotal, pInfo->pChallenge->featuresRequired());
+                    if (nStartIndex.size() == pInfo->nCount)
+                        play(pInfo->pChallenge, *pInfo->pMonsterList, nStartIndex.back() + 1, pInfo->pChallenge->getMax() - pInfo->nCount, oTeam, *pResult, *pFailedResult, nHitCount, pInfo->bExportFailedInfo);
+                }
+            }
             else
             {
-                if (pResult->size() == 0 && pInfo->bExportFailedInfo)
-                    pFailedResult->add(CTeamPtr(new CTeam(oTeam)), oTotal, pInfo->pChallenge->featuresRequired());
+                pResult->add(CTeamPtr(new CTeam(oTeam)), oTotal);
                 if (nStartIndex.size() == pInfo->nCount)
                     play(pInfo->pChallenge, *pInfo->pMonsterList, nStartIndex.back() + 1, pInfo->pChallenge->getMax() - pInfo->nCount, oTeam, *pResult, *pFailedResult, nHitCount, pInfo->bExportFailedInfo);
             }
@@ -187,14 +218,18 @@ void CGame::exclude(std::vector<std::wstring>& oMonsterList)
 {
 	for each (auto sName in oMonsterList)
 	{
-		auto itr = std::find_if(m_oMonsterList.begin(), m_oMonsterList.end(), [sName](CMonster* pMonster) {
-			return pMonster->getName() == sName;
-		});
-		if (itr != m_oMonsterList.end())
-		{
-			delete *itr;
-			m_oMonsterList.erase(itr);
-		}
+        for (auto itr = m_oMonsterList.begin(); itr != m_oMonsterList.end(); )
+        {
+            if ((*itr)->getName() == sName)
+            {
+                delete *itr;
+                itr = m_oMonsterList.erase(itr);
+            }
+            else
+            {
+                itr++;
+            }
+        }
 	}
 }
 
@@ -204,6 +239,11 @@ void CGame::disable_exclude_group(std::vector<std::wstring>& oList)
     {
         this->m_oDisableExcludeGroupList.push_back(std::stoi(str));
     }
+}
+
+bool CGame::success(double * dChallengeRequired, double * dTeam)
+{
+    return CGame_Thread::success(dChallengeRequired, dTeam);
 }
 
 void CGame::play(std::vector<CSolutionPtr>& oSolutionList, std::vector<int>& oChallengeGroupIndexList, std::map<std::wstring, CResult>& oFailedMap)
@@ -301,12 +341,19 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
 	{
 		oThreadList[i].join();
 	}
-    int nTotalHitCount = 0;
+    __int64 nTotalHitCount = 0;
     for (int i = 0; i < nThreadCount; i++)
     {
-        oResult.merge(oResultList[i], pChallenge->featuresRequired());
-        oFailedResult.merge(oFailedResultList[i], pChallenge->featuresRequired());
-        nTotalHitCount += std::accumulate(oInfoList[i].oHitCounts.begin(), oInfoList[i].oHitCounts.end(), 0);
+        if (pChallenge->calcFlag())
+        {
+            oResult.merge(oResultList[i]);
+        }
+        else
+        {
+            oResult.merge(oResultList[i], pChallenge->featuresRequired());
+            oFailedResult.merge(oFailedResultList[i], pChallenge->featuresRequired());
+        }
+        nTotalHitCount += std::accumulate(oInfoList[i].oHitCounts.begin(), oInfoList[i].oHitCounts.end(), 0i64);
         /*
         std::cout << "thread:\t";
         int nTotalHitCount = 0;
