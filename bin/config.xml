@@ -50,15 +50,25 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="荆棘弓" class="木">
-			<Features>125,153,436,96,132,384</Features>
-			<Character>神秘|善良</Character>
+		<Monster name="心云猎手" class="木">
+			<Features>174,215,605,132,186,537</Features>
+			<Character>神秘|善良|飞翔|温柔</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>技</Feature>
-					<Value>80</Value>
+					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>技</Feature>
+					<Value>2</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>								
 			</Skills>
 		</Monster>		
 		<Monster name="零号机" class="木">
@@ -1159,9 +1169,9 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="五杠队长" class="火">
-			<Features>57,289,57,57,57,57</Features>
-			<Character>法器|谋略|人形</Character>
+		<Monster name="震天" class="火">
+			<Features>79,395,79,79,79,79</Features>
+			<Character>法器|谋略|人形|奇特</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
@@ -1171,7 +1181,7 @@
 				<Skill name="IncreaseSelfFeatureByCharacter">
 					<Character>人形</Character>
 					<Features>智</Features>
-					<Value>80</Value>
+					<Value>120</Value>
 				</Skill>						
 				<Skill name="Artifact" />
 			</Skills>
@@ -2319,6 +2329,17 @@
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>技</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="行者武松" class="光">
+			<Features>221,62,70,94,78,118</Features>
+			<Character>小眼睛|猫咪|神勇</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
 					<Value>30</Value>
 				</Skill>
 			</Skills>
@@ -4899,7 +4920,7 @@
 			<FeaturesRequired feature="技" limit="2500"/>
 		</Challenge>
 		-->
-		<!--荆棘弓[木],赑屃[木],摩呼罗迦[木],三文鱼[木],离卷[木],九纹龙史进[木]-->
+		<!--心云猎手[木],赑屃[木],摩呼罗迦[木],三文鱼[木],离卷[木],九纹龙史进[木]-->
 		<!--
 		<Challenge name="龙生九子-囚牛6" min="0" max="6" class="地">
 			<FeaturesRequired feature="运" limit="4600"/>
@@ -5319,7 +5340,7 @@
 			太白金星,银河
 		</Exclude>
 		<Exclude>
-			荆棘弓,拳王,白翼佣兵沃尔坎,八仙韩湘子,晋文公,龙王敖广,灵山宫主,三三幽鬼灯,
+			心云猎手,拳王,白翼佣兵沃尔坎,八仙韩湘子,晋文公,龙王敖广,灵山宫主,三三幽鬼灯,
 			昭烈刘玄德,增长天王,火火崩地儿,文昌帝君,讹兽,九霄,谜画偶灵,贞珠,
 			八仙铁拐李,竹马王子,厚皮老牛,佛跳墙,陶安公,苍老师,扑天雕李应,跨年娃,
 			混江龙李俊,金吒,电母,南极老人星,金角大王,白无常,持国天王,银角大王,
