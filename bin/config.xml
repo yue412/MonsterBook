@@ -758,6 +758,17 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
+		<Monster name="狐妮" class="火">
+			<Features>50,94,94,66,195,168</Features>
+			<Character>妖怪|人形</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
+				</Skill>				
+			</Skills>
+		</Monster>		
 		<Monster name="龙王敖钦" class="火">
 			<Features>324,108,88,136,108,324</Features>
 			<Character>美食|龙族|神仙|奇特</Character>
@@ -2934,9 +2945,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="敖顺" class="光">
-			<Features>120,282,102,128,76,282</Features>
-			<Character>邪恶|龙族|神仙</Character>
+		<Monster name="龙王敖顺" class="光">
+			<Features>132,310,112,140,84,310</Features>
+			<Character>邪恶|龙族|神仙|机械</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>水</ElementClass>
@@ -2946,7 +2957,7 @@
 				<Skill name="IncreaseSelfFeatureByCharacter">
 					<Character>龙族</Character>
 					<Features>力|速|运</Features>
-					<Value>88</Value>
+					<Value>128</Value>
 				</Skill>				
 			</Skills>
 		</Monster>	
@@ -5335,7 +5346,6 @@
 			碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
 			八仙曹国舅,八仙汉钟离,喜儿,豚燕,觜火猴,尾火虎,藏犬屋,蜡祭狮,
 			金童,八仙蓝采和,上联仔,秋香,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
-			灶神,玉兔,广目天王,笔仙,镰鼬,魔音,敖顺,南七宿朱雀,
 			古琴仔,洪玉儿,轮滑小子,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
 			太白金星,银河
 		</Exclude>
