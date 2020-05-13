@@ -369,10 +369,10 @@ void logHistory(CChallenge* pChallenge, bool bSuccess, CResult& oResult)
         if (itr != oHistoryList.end())
             oHistoryList.erase(itr);
         oHistoryList.insert(oHistoryList.begin(), oNew);
-        if (oHistoryList.size() > 20)
-        {
-            oHistoryList.resize(20);
-        }
+        //if (oHistoryList.size() > 20)
+        //{
+        //    oHistoryList.resize(20);
+        //}
         saveHistoryList(oHistoryList);
     }
 }
