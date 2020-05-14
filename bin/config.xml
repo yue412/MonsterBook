@@ -3343,6 +3343,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="咬春灵童" class="地">
+			<Features>275,327,112,138,116,96</Features>
+			<Character>美食|呆萌</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>力</Feature>
+					<Value>160</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="青面兽杨志" class="地">
 			<Features>157,78,94,198,62,54</Features>
 			<Character>呆萌|人形|小眼睛</Character>
