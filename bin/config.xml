@@ -3343,15 +3343,20 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="咬春灵童" class="地">
-			<Features>275,327,112,138,116,96</Features>
-			<Character>美食|呆萌</Character>
+		<Monster name="春卷杀手" class="地">
+			<Features>358,414,146,181,152,123</Features>
+			<Character>美食|呆萌|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
-					<Value>160</Value>
+					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.6</Value>
+				</Skill>				
 			</Skills>
 		</Monster>		
 		<Monster name="青面兽杨志" class="地">
@@ -5334,7 +5339,7 @@
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
-			<Features>60,60,150,150,60,60</Features>
+			<Features>150,60,150,150,60,60</Features>
 		</SoulBead>
 		<SoulBead class="地">
 			<Features>0,60,60,60,60,60</Features>

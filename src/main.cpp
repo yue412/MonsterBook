@@ -359,7 +359,7 @@ void LoadResultList(const std::wstring& sFileName, CResult& oResult, CGame* pGam
 void logHistory(CChallenge* pChallenge, bool bSuccess, CResult& oResult)
 {
     //if (isSetChallenge(oParamsMap))
-    if (pChallenge)
+    if (pChallenge && oResult.size() > 0)
     {
         std::vector<CHistoryItem> oHistoryList;
         getHistroyList(oHistoryList);
