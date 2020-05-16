@@ -2020,9 +2020,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="猪刚鬣" class="水">
-			<Features>165,146,143,417,388,98</Features>
-			<Character>呆萌|妖怪|邪恶</Character>
+		<Monster name="猪刚鬣.变" class="水">
+			<Features>181,174,164,510,441,115</Features>
+			<Character>呆萌|妖怪|邪恶|人形</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
@@ -2032,7 +2032,7 @@
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>			
@@ -5339,7 +5339,7 @@
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
-			<Features>150,60,150,150,60,60</Features>
+			<Features>150,150,150,150,60,60</Features>
 		</SoulBead>
 		<SoulBead class="地">
 			<Features>0,60,60,60,60,60</Features>
@@ -5363,10 +5363,11 @@
 			八仙曹国舅,八仙汉钟离,喜儿,豚燕,觜火猴,尾火虎,藏犬屋,蜡祭狮,
 			金童,八仙蓝采和,上联仔,秋香,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 			古琴仔,洪玉儿,轮滑小子,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
+			苍老师,观世音,渔常在,二饼,湿罗刹,醋母,王潮,尾姬,
 			太白金星,银河
 		</Exclude>
 		<Exclude>
-			心云猎手,拳王,白翼佣兵沃尔坎,八仙韩湘子,晋文公,龙王敖广,灵山宫主,三三幽鬼灯,
+			紫霜,小李广花容,白翼佣兵沃尔坎,八仙韩湘子,晋文公,龙王敖广,灵山宫主,三三幽鬼灯,
 			昭烈刘玄德,增长天王,火火崩地儿,文昌帝君,讹兽,九霄,谜画偶灵,贞珠,
 			八仙铁拐李,竹马王子,厚皮老牛,佛跳墙,陶安公,苍老师,扑天雕李应,跨年娃,
 			混江龙李俊,金吒,电母,南极老人星,金角大王,白无常,持国天王,银角大王,
