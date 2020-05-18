@@ -4061,6 +4061,17 @@
 				</Skill>	
 			</Skills>
 		</Monster>			
+		<Monster name="寒子" class="暗">
+			<Features>109,135,266,113,300,100</Features>
+			<Character>善良|人形</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>智</Feature>
+					<Value>160</Value>
+				</Skill>
+			</Skills>
+		</Monster>			
 		<Monster name="无双小狮妹" class="暗">
 			<Features>174,605,186,215,537,132</Features>
 			<Character>神秘|猫咪|妹纸|吉祥</Character>
@@ -5342,7 +5353,7 @@
 			<Features>150,150,150,150,60,60</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>0,60,60,60,60,60</Features>
+			<Features>60,150,60,60,60,60</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>57.6,57.6,57.6,57.6,57.6,57.6</Features>
