@@ -1245,6 +1245,13 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
+		<Monster name="八条" class="火">
+			<Features>27,27,27,140,27,27</Features>
+			<Character>法器</Character>
+			<Skills>
+				<Skill name="Artifact" />
+			</Skills>
+		</Monster>
 		<Monster name="五万" class="火">
 			<Features>88,21,21,21,21,21</Features>
 			<Character>法器</Character>
@@ -5714,7 +5721,7 @@
 			摩呼罗迦,文曲星,智多星吴用,初号机,美双鱼美人,入云龙公孙胜,大三元,
 			何仙姑,谋士荀彧,忍海,美女西施,地狱盐王,
 			萌萌小乔,托塔天王,秦王,横批仔,混沌,神算诸葛亮,
-			刺客荆轲,八仙张果老,某海龙王,哪吒,紧那罗,金光雷公,
+			刺客荆轲,八仙张果老,某海龙王,紧那罗,金光雷公,
 			粉红马卡龙,房曰兔己,下联仔,法海,聂小倩,
 			急先锋索超,鹦螺号,乹毷,飞头撩,
 			爪虎,
