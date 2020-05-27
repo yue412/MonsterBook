@@ -59,6 +59,7 @@
 					<Feature>运</Feature>
 					<Value>1.3</Value>
 				</Skill>
+			</Skills>
 		</Monster>		
 		<Monster name="心云猎手" class="木">
 			<Features>174,215,605,132,186,537</Features>
