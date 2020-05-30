@@ -39,6 +39,17 @@
 				</Skill>
 			</Skills>
 		</Monster>			
+		<Monster name="飞燕姬" class="木">
+			<Features>139,112,74,262,188,94</Features>
+			<Character>自然|妹纸|妹纸</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>魅</Feature>
+					<Value>50</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="玉女" class="木">
 			<Features>162,108,85,108,325,96</Features>
 			<Character>吉祥|人形|妹纸</Character>
@@ -799,6 +810,22 @@
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
 					<Value>1.6</Value>
+				</Skill>				
+			</Skills>
+		</Monster>		
+		<Monster name="粉鹳君" class="火">
+			<Features>90,108,318,126,72,272</Features>
+			<Character>呆萌|善良|奥运</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.6</Value>
+				</Skill>				
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.3</Value>
 				</Skill>				
 			</Skills>
 		</Monster>		
@@ -3142,15 +3169,20 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="乹毷" class="光">
-			<Features>63,102,256,88,291,83</Features>
-			<Character>娇小|冰冷</Character>
+		<Monster name="寒鹿" class="光">
+			<Features>82,129,326,113,367,104</Features>
+			<Character>娇小|冰冷|呆萌</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>运</Feature>
 					<Value>160</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>光</Feature>
+					<Value>1.3</Value>
+				</Skill>					
 			</Skills>
 		</Monster>	
 		<Monster name="牛金牛" class="光">
@@ -4298,6 +4330,33 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
+		<Monster name="皇豆" class="地">
+			<Features>172,92,138,344,113,229</Features>
+			<Character>自然|美食|人形|呆萌</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>技</Feature>
+					<Value>2.5</Value>
+				</Skill>				
+			</Skills>
+		</Monster>		
+		<Monster name="龙子狻猊" class="地">
+			<Features>356,121,144,178,87,200</Features>
+			<Character>小眼睛|美食|龙族|武器</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>龙族</Character>
+					<Features>力|速|运</Features>
+					<Value>88</Value>
+				</Skill>				
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>力</Feature>
+					<Value>2</Value>
+				</Skill>				
+			</Skills>
+		</Monster>		
 		<Monster name="木牛" class="地">
 			<Features>189,70,50,60,70,100</Features>
 			<Character>自然|善良|机械</Character>
@@ -4384,6 +4443,44 @@
 					<Feature>全</Feature>
 					<Value>5</Value>
 				</Skill>	
+			</Skills>
+		</Monster>			
+		<Monster name="软心" class="暗">
+			<Features>44,103,34,23,25,61</Features>
+			<Character>美食</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.3</Value>
+				</Skill>				
+			</Skills>
+		</Monster>			
+		<Monster name="角木蛟" class="暗">
+			<Features>315,108,270,126,72,98</Features>
+			<Character>乐器|人形|神勇</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>2</Value>
+				</Skill>				
+			</Skills>
+		</Monster>			
+		<Monster name="毒尾" class="暗">
+			<Features>170,551,193,122,490,157</Features>
+			<Character>神秘|邪恶|人形</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>智</Feature>
+					<Value>150</Value>
+				</Skill>								
 			</Skills>
 		</Monster>			
 		<Monster name="大寒天子" class="暗">
@@ -5857,7 +5954,7 @@
 			萌萌小乔,托塔天王,秦王,横批仔,混沌,神算诸葛亮,
 			刺客荆轲,八仙张果老,某海龙王,紧那罗,金光雷公,
 			粉红马卡龙,房曰兔己,下联仔,法海,聂小倩,
-			急先锋索超,鹦螺号,乹毷,飞头撩,
+			急先锋索超,鹦螺号,寒鹿,飞头撩,
 			爪虎,
 			黄豆娘,
 			木牛,
