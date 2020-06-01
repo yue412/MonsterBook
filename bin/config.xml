@@ -50,6 +50,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="蟹粉汤包" class="木">
+			<Features>436,153,125,96,384,132</Features>
+			<Character>神秘|美食</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>智</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="玉女" class="木">
 			<Features>162,108,85,108,325,96</Features>
 			<Character>吉祥|人形|妹纸</Character>
@@ -810,6 +821,17 @@
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
 					<Value>1.6</Value>
+				</Skill>				
+			</Skills>
+		</Monster>		
+		<Monster name="大司马" class="火">
+			<Features>141,122,112,188,329,94</Features>
+			<Character>神器|自然|妹纸</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>2</Value>
 				</Skill>				
 			</Skills>
 		</Monster>		
@@ -3180,8 +3202,24 @@
 				</Skill>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
-					<Feature>光</Feature>
+					<Feature>运</Feature>
 					<Value>1.3</Value>
+				</Skill>					
+			</Skills>
+		</Monster>	
+		<Monster name="丑牛小侍者" class="光">
+			<Features>349,152,125,96,297,133</Features>
+			<Character>生肖|小眼睛</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>					
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
 				</Skill>					
 			</Skills>
 		</Monster>	
@@ -4445,14 +4483,14 @@
 				</Skill>	
 			</Skills>
 		</Monster>			
-		<Monster name="软心" class="暗">
-			<Features>44,103,34,23,25,61</Features>
-			<Character>美食</Character>
+		<Monster name="魔少" class="暗">
+			<Features>131,304,100,70,80,182</Features>
+			<Character>美食|邪恶|人形</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>智</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>				
 			</Skills>
 		</Monster>			
@@ -4902,16 +4940,21 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="圆方" class="暗">
-			<Features>19,60,48,119,31,140</Features>
-			<Character>神秘</Character>
+		<Monster name="龙子睚眦" class="暗">
+			<Features>50,152,142,306,80,356</Features>
+			<Character>神秘|人形|龙族</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<Trigger>4</Trigger>
 					<ElementClass>暗</ElementClass>
 					<Feature>全</Feature>
-					<Value>30</Value>
+					<Value>100</Value>
 				</Skill>	
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>龙族</Character>
+					<Features>力|速|运</Features>
+					<Value>88</Value>
+				</Skill>				
 			</Skills>
 		</Monster>	
 		<Monster name="天马" class="暗">
@@ -4986,37 +5029,37 @@
 				<Skill name="Artifact" />	
 			</Skills>
 		</Monster>	
-		<Monster name="诗童" class="暗">
-			<Features>43,223,43,43,43,43</Features>
-			<Character>法器|人形</Character>
+		<Monster name="七绝散人" class="暗">
+			<Features>65,329,65,65,65,65</Features>
+			<Character>法器|人形|谋略</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
-					<ElementClass>暗</ElementClass>
+					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
-					<Value>50</Value>
+					<Value>160</Value>
 				</Skill>
 				<Skill name="Artifact" />	
 			</Skills>
 		</Monster>	
-		<Monster name="白板" class="暗">
-			<Features>46,94,56,69,94,56</Features>
-			<Character>神器</Character>
+		<Monster name="无名劫匪" class="暗">
+			<Features>144,288,172,216,0,172</Features>
+			<Character>神器|美食|娇小</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.3</Value>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="七饼" class="暗">
-			<Features>23,23,23,23,23,151</Features>
-			<Character>法器</Character>
+		<Monster name="星燃" class="暗">
+			<Features>39,39,39,39,39,244</Features>
+			<Character>法器|奇特</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>技</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
