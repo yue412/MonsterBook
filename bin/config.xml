@@ -851,25 +851,25 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="三点" class="火">
-			<Features>220,83,197,197,-38,87</Features>
-			<Character>神仙</Character>
+		<Monster name="小山贼" class="火">
+			<Features>323,111,298,292,-70,125</Features>
+			<Character>神仙|财迷</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>力</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="迷你貂" class="火">
-			<Features>36,69,42,168,27,69</Features>
-			<Character>娇小</Character>
+		<Monster name="四大美女貂蝉" class="火">
+			<Features>83,196,119,372,64,251</Features>
+			<Character>娇小|呆萌|妹纸|冰冷</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>魅</Feature>
-					<Value>1.3</Value>
+					<Value>2.5</Value>
 				</Skill>				
 			</Skills>
 		</Monster>		
@@ -1310,40 +1310,50 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="二万" class="火">
-			<Features>12,12,12,12,52,12</Features>
-			<Character>法器</Character>
+		<Monster name="彩运" class="火">
+			<Features>53,53,53,53,222,53</Features>
+			<Character>法器|财迷|吉祥</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
-					<ElementClass>光</ElementClass>
+					<ElementClass>全</ElementClass>
 					<Feature>运</Feature>
-					<Value>15</Value>
+					<Value>40</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="八条" class="火">
-			<Features>27,27,27,140,27,27</Features>
-			<Character>法器</Character>
+		<Monster name="枯蛛" class="火">
+			<Features>43,43,43,223,43,43</Features>
+			<Character>法器|自然</Character>
 			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.6</Value>
+				</Skill>				
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="九条" class="火">
-			<Features>140,27,27,27,27,27</Features>
-			<Character>法器</Character>
+		<Monster name="雨梨标" class="火">
+			<Features>223,43,43,43,43,43</Features>
+			<Character>法器|武器</Character>
 			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>全</Feature>
+					<Value>1.6</Value>
+				</Skill>				
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="五万" class="火">
-			<Features>88,21,21,21,21,21</Features>
-			<Character>法器</Character>
+		<Monster name="刺灵" class="火">
+			<Features>161,40,40,40,40,40</Features>
+			<Character>法器|武器</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>力</Feature>
-					<Value>30</Value>
+					<Value>50</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
@@ -1365,50 +1375,50 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="三饼" class="火">
-			<Features>12,12,12,12,12,52</Features>
-			<Character>法器</Character>
+		<Monster name="三灵珠仔" class="火">
+			<Features>53,53,53,53,53,222</Features>
+			<Character>法器|战士|人形</Character>
 			<Skills>
-				<Skill name="IncreaseFeature">
-					<ElementClass>火</ElementClass>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
 					<Feature>技</Feature>
-					<Value>30</Value>
+					<Value>1.3</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="五饼" class="火">
-			<Features>19,19,19,19,100,19</Features>
-			<Character>法器</Character>
+		<Monster name="福球" class="火">
+			<Features>35,35,35,35,183,35</Features>
+			<Character>法器|呆萌</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="四饼" class="火">
-			<Features>100,19,19,19,19,19</Features>
-			<Character>法器</Character>
+		<Monster name="四遁傀兵" class="火">
+			<Features>289,57,57,57,57,57</Features>
+			<Character>法器|战士|人形</Character>
 			<Skills>
 				<Skill name="ProductFeature">
-					<ElementClass>火</ElementClass>
+					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="西洋棋.白马" class="火">
-			<Features>21,7,66,-23,-23,56</Features>
-			<Character>法器</Character>
+		<Monster name="战马.波妮" class="火">
+			<Features>94,-49,224,-96,-96,188</Features>
+			<Character>法器|温柔|神速</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>技</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -5772,6 +5782,19 @@
 				<Skill name="IncreaseSelfFeature">
 					<Feature>技</Feature>
 					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Fate>
+		<Fate name="真驰名商标">
+			<Monsters>赤兔吕布|四大美女貂蝉</Monsters>
+			<Skills>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>速</Feature>
+					<Value>350</Value>
+				</Skill>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>魅</Feature>
+					<Value>350</Value>
 				</Skill>
 			</Skills>
 		</Fate>
