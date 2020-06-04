@@ -1840,14 +1840,20 @@
 				</Skill>				
 			</Skills>
 		</Monster>			
-		<Monster name="勿忘我" class="水">
-			<Features>220,92,197,55,78,83</Features>
-			<Character>十周年</Character>
+		<Monster name="离辰" class="水">
+			<Features>444,165,388,98,143,146</Features>
+			<Character>四周年|水性|娇小</Character>
 			<Skills>
+				<Skill name="IncreaseFeature">
+					<Trigger>8</Trigger>
+					<ElementClass>水</ElementClass>
+					<Feature>全</Feature>
+					<Value>150</Value>
+				</Skill>					
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>技</Feature>
-					<Value>1.3</Value>
+					<Value>2</Value>
 				</Skill>				
 			</Skills>
 		</Monster>	
@@ -1936,10 +1942,15 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="铜锣儿" class="水">
-			<Features>89,306,96,272,108,68</Features>
-			<Character>吉祥</Character>
+		<Monster name="小脑斧惊蛰儿" class="水">
+			<Features>157,551,170,490,193,122</Features>
+			<Character>吉祥|人形|神速</Character>
 			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.6</Value>
+				</Skill>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
@@ -1947,10 +1958,20 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="水瓶星" class="水">
-			<Features>89,306,96,272,108,68</Features>
-			<Character>神秘</Character>
+		<Monster name="水瓶仙子" class="水">
+			<Features>174,605,186,537,215,132</Features>
+			<Character>神秘|呆萌|妹纸|善良</Character>
 			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>智</Feature>
+					<Value>2</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>			
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
@@ -1958,14 +1979,19 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="方片9" class="水">
-			<Features>36,55,50,144,162,50</Features>
-			<Character>扑克</Character>
+		<Monster name="坑饪娘斯图亚特" class="水">
+			<Features>65,97,90,259,291,87</Features>
+			<Character>扑克|呆萌|旅人</Character>
 			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.6</Value>
+				</Skill>			
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>运</Feature>
-					<Value>15</Value>
+					<Value>60</Value>
 				</Skill>
 			</Skills>
 		</Monster>				
@@ -2078,9 +2104,9 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="何仙姑" class="水">
-			<Features>95,194,96,291,156,156</Features>
-			<Character>水性|妹纸|神仙</Character>
+		<Monster name="八仙何仙姑" class="水">
+			<Features>106,214,106,320,170,170</Features>
+			<Character>水性|妹纸|神仙|自然</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -6016,7 +6042,7 @@
 			八仙铁拐李,竹马王子,厚皮老牛,佛跳墙,陶安公,苍老师,扑天雕李应,跨年娃,
 			混江龙李俊,金吒,电母,南极老人星,金角大王,白无常,持国天王,银角大王,
 			摩呼罗迦,文曲星,智多星吴用,初号机,美双鱼美人,入云龙公孙胜,大三元,
-			何仙姑,谋士荀彧,忍海,美女西施,地狱盐王,
+			八仙何仙姑,谋士荀彧,忍海,美女西施,地狱盐王,
 			萌萌小乔,托塔天王,秦王,横批仔,混沌,神算诸葛亮,
 			刺客荆轲,八仙张果老,某海龙王,紧那罗,金光雷公,
 			粉红马卡龙,房曰兔己,下联仔,法海,聂小倩,
