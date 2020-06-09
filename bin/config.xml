@@ -50,15 +50,25 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="蟹粉汤包" class="木">
-			<Features>436,153,125,96,384,132</Features>
-			<Character>神秘|美食</Character>
+		<Monster name="巨蟹小当家" class="木">
+			<Features>605,215,174,132,537,186</Features>
+			<Character>神秘|美食|妹纸|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
 					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>运</Feature>
+					<Value>2</Value>
+				</Skill>				
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>				
 			</Skills>
 		</Monster>		
 		<Monster name="玉女" class="木">
@@ -906,9 +916,9 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="狐妮" class="火">
-			<Features>50,94,94,66,195,168</Features>
-			<Character>妖怪|人形</Character>
+		<Monster name="婴宁" class="火">
+			<Features>74,139,139,98,290,247</Features>
+			<Character>妖怪|人形|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
@@ -1794,7 +1804,29 @@
 					<Value>1</Value>
 				</Skill>
 			</Skills>
-		</Monster>			
+		</Monster>		
+		<Monster name="厚皮老牛" class="水">
+			<Features>174,186,605,215,537,132</Features>
+			<Character>神秘|呆萌|人形|魁梧</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>速</Feature>
+					<Value>2</Value>
+				</Skill>	
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
+
 		<Monster name="忍海" class="水">
 			<Features>156,123,104,289,82,114</Features>
 			<Character>自然|人形|妹纸</Character>
@@ -3253,19 +3285,24 @@
 				</Skill>					
 			</Skills>
 		</Monster>	
-		<Monster name="丑牛小侍者" class="光">
-			<Features>349,152,125,96,297,133</Features>
-			<Character>生肖|小眼睛</Character>
+		<Monster name="财宝守护者米诺陶诺斯" class="光">
+			<Features>489,215,173,133,436,187</Features>
+			<Character>生肖|小眼睛|魁梧|财迷</Character>
 			<Skills>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>生肖</Character>
+					<Features>力|速|运|魅|技|智</Features>
+					<Value>128</Value>
+				</Skill>				
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>力</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>					
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>					
 			</Skills>
 		</Monster>	
@@ -3955,15 +3992,20 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="洪玉儿" class="地">
-			<Features>125,160,160,125,479,459</Features>
+		<Monster name="双戟洪少侠" class="地">
+			<Features>140,176,176,140,537,510</Features>
 			<Character>武器|妹纸|战士</Character>
 			<Skills>
-				<Skill name="IncreaseFeature">
+				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>魅</Feature>
-					<Value>50</Value>
-				</Skill>
+					<Value>1.3</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
+				</Skill>	
 			</Skills>
 		</Monster>			
 		<Monster name="陶安公" class="地">
@@ -5930,6 +5972,16 @@
 				</Skill>	
 			</Skills>
 		</Fate>		
+		<Fate name="妖狐之恋">
+			<Monsters>王子服|婴宁</Monsters>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>运</Feature>
+					<Value>50</Value>
+				</Skill>	
+			</Skills>
+		</Fate>				
 		<Fate name="倩女幽魂">
 			<Monsters>聂小倩|宁采臣</Monsters>
 			<Skills>
@@ -6041,7 +6093,7 @@
 			<Features>57.6,57.6,0,57.6,57.6,57.6</Features>
 		</SoulBead>
 		<SoulBead class="光">
-			<Features>168,67.2,67.2,67.2,168,168</Features>
+			<Features>174,69.6,69.6,69.6,174,174</Features>
 		</SoulBead>
 		<SoulBead class="暗">
 			<Features>62.4,62.4,156,62.4,62.4,156</Features>
