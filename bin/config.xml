@@ -4860,14 +4860,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="特急海盗" class="暗">
-			<Features>53,152,46,33,132,43</Features>
-			<Character>扑克|魁梧</Character>
+		<Monster name="巨锚船长" class="暗">
+			<Features>67,191,59,42,170,54</Features>
+			<Character>扑克|魁梧|旅人|神勇</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCharacter">
 					<Character>旅人</Character>
 					<Features>力|速|运|技|魅|智</Features>
-					<Value>400</Value>
+					<Value>800</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -5982,6 +5982,16 @@
 				</Skill>	
 			</Skills>
 		</Fate>				
+		<Fate name="玩偶旅团">
+			<Monsters>巨锚船长|黄风特工|嘤嘤牧师|翠谷骑士|蒸汽驱动型自走主坦</Monsters>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>全</Feature>
+					<Value>600</Value>
+				</Skill>	
+			</Skills>
+		</Fate>				
 		<Fate name="倩女幽魂">
 			<Monsters>聂小倩|宁采臣</Monsters>
 			<Skills>
@@ -6087,10 +6097,10 @@
 			<Features>60,150,60,60,150,60</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>57.6,57.6,57.6,57.6,57.6,57.6</Features>
+			<Features>60,60,60,60,60,60</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>57.6,57.6,0,57.6,57.6,57.6</Features>
+			<Features>60,60,0,60,60,60</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>174,69.6,69.6,69.6,174,174</Features>
