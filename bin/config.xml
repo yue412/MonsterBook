@@ -2370,9 +2370,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="吕洞宾" class="水">
-			<Features>293,163,230,82,81,137</Features>
-			<Character>武器|神仙|战士</Character>
+		<Monster name="八仙吕洞宾" class="水">
+			<Features>324,182,252,90,90,150</Features>
+			<Character>武器|神仙|战士|飞翔</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>水</ElementClass>
@@ -5992,6 +5992,16 @@
 				</Skill>	
 			</Skills>
 		</Fate>				
+		<Fate name="真八仙过海">
+			<Monsters>八仙何仙姑|八仙吕洞宾|八仙张果老|八仙曹国舅|八仙汉钟离|八仙蓝采和|八仙铁拐李|八仙韩湘子</Monsters>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>全</Feature>
+					<Value>328</Value>
+				</Skill>	
+			</Skills>
+		</Fate>				
 		<Fate name="倩女幽魂">
 			<Monsters>聂小倩|宁采臣</Monsters>
 			<Skills>
@@ -6094,10 +6104,10 @@
 			<Features>150,150,150,150,60,60</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>60,150,60,60,150,60</Features>
+			<Features>60,150,150,60,150,60</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>60,60,60,60,60,60</Features>
+			<Features>60,60,60,150,60,60</Features>
 		</SoulBead>
 		<SoulBead class="水">
 			<Features>60,60,0,60,60,60</Features>
@@ -6135,7 +6145,7 @@
 			战龙,海兔娘,零号机,
 			祝英台,寻金锁,娄金狗,
 			翼火蛇,夜神月,
-			多闻天王,仁山,稳重斯基,吕洞宾,破军星,壁咚老爷,短命二郎阮小五,
+			多闻天王,仁山,稳重斯基,八仙吕洞宾,破军星,壁咚老爷,短命二郎阮小五,
 			酱军,拿破仑,雪怪,牛郎,口角兽
 		</Exclude>
 	</ExcludeGroup>
