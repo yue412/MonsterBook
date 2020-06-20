@@ -1079,14 +1079,24 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="粉红马卡龙" class="火">
-			<Features>125,96,132,436,153,384</Features>
-			<Character>神秘|美食</Character>
+		<Monster name="魔法少女小甜甜" class="火">
+			<Features>174,132,186,605,215,537</Features>
+			<Character>神秘|美食|人形|机械</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>技</Feature>
 					<Value>200</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.3</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -3810,6 +3820,17 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="败履" class="地">
+			<Features>92,37,68,75,184,84</Features>
+			<Character>奇特|人形|邪恶</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>运</Feature>
+					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
 		<Monster name="秋蚊杀手" class="地">
 			<Features>157,170,551,193,490,122</Features>
 			<Character>呆萌|妹纸|战士</Character>
@@ -3932,9 +3953,9 @@
 				</Skill>				
 			</Skills>
 		</Monster>			
-		<Monster name="圆福" class="地">
-			<Features>125,384,436,153,132,96</Features>
-			<Character>娇小|飞翔</Character>
+		<Monster name="萌耳福娘" class="地">
+			<Features>157,490,551,193,170,122</Features>
+			<Character>娇小|飞翔|邪恶</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
@@ -3946,6 +3967,11 @@
 					<Feature>速</Feature>
 					<Value>200</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.6</Value>
+				</Skill>					
 			</Skills>
 		</Monster>			
 		<Monster name="赶集娘" class="地">
@@ -4319,14 +4345,19 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="糖一炳" class="地">
-			<Features>122,157,500,442,122,157</Features>
+		<Monster name="六味地糖丸" class="地">
+			<Features>140,176,558,493,140,176</Features>
 			<Character>善良|人形|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>智</Feature>
 					<Value>2</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.3</Value>
 				</Skill>	
 			</Skills>
 		</Monster>	
@@ -4576,15 +4607,21 @@
 				</Skill>	
 			</Skills>
 		</Monster>			
-		<Monster name="魔少" class="暗">
-			<Features>131,304,100,70,80,182</Features>
-			<Character>美食|邪恶|人形</Character>
+		<Monster name="魔皇子" class="暗">
+			<Features>146,338,112,78,90,202</Features>
+			<Character>美食|邪恶|人形|妖怪</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>智</Feature>
-					<Value>1.6</Value>
-				</Skill>				
+					<Value>2</Value>
+				</Skill>	
+				<Skill name="IncreaseFeature">
+					<Trigger>4</Trigger>
+					<ElementClass>暗</ElementClass>
+					<Feature>全</Feature>
+					<Value>30</Value>
+				</Skill>	
 			</Skills>
 		</Monster>			
 		<Monster name="角木蛟" class="暗">
@@ -6110,7 +6147,7 @@
 			<Features>62.4,62.4,62.4,156,62.4,62.4</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>60,60,60,60,60,60</Features>
+			<Features>60,150,60,60,60,60</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>174,69.6,174,69.6,174,174</Features>
@@ -6137,7 +6174,7 @@
 			八仙何仙姑,谋士荀彧,忍海,美女西施,地狱盐王,
 			萌萌小乔,托塔天王,秦王,横批仔,混沌,神算诸葛亮,
 			刺客荆轲,八仙张果老,某海龙王,紧那罗,金光雷公,
-			粉红马卡龙,房曰兔己,下联仔,法海,聂小倩,
+			魔法少女小甜甜,房曰兔己,下联仔,法海,聂小倩,
 			急先锋索超,鹦螺号,寒鹿,飞头撩,
 			爪虎,
 			黄豆娘,
