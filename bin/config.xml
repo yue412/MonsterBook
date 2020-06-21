@@ -3580,8 +3580,8 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="李白" class="光">
-			<Features>122,439,157,157,132,497</Features>
+		<Monster name="心剑合一李小白" class="光">
+			<Features>136,490,174,174,150,555</Features>
 			<Character>武器|人形|谋略</Character>
 			<Skills>
 				<Skill name="ProductFeature">
@@ -6147,13 +6147,13 @@
 			<Features>62.4,62.4,62.4,156,62.4,62.4</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>60,150,60,60,60,60</Features>
+			<Features>62.4,156,62.4,62.4,62.4,62.4</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>174,69.6,174,69.6,174,174</Features>
 		</SoulBead>
 		<SoulBead class="暗">
-			<Features>162,64.8,162,64.8,64.8,162</Features>
+			<Features>168,67.2,168,67.2,67.2,168</Features>
 		</SoulBead>
 	</SoulBeads>
 	<ExcludeGroup>
