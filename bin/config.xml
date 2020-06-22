@@ -2661,14 +2661,19 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="羽秤仔" class="光">
-			<Features>551,122,170,490,193,157</Features>
-			<Character>奇特|魁梧|战士</Character>
+		<Monster name="光翼战神沃尔坎" class="光">
+			<Features>605,132,186,537,215,174</Features>
+			<Character>奇特|魁梧|战士|飞翔</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>魅</Feature>
 					<Value>1.3</Value>
+				</Skill>			
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>2</Value>
 				</Skill>			
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
