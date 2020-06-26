@@ -523,8 +523,8 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="碧水独角兽" class="木">
-			<Features>555,150,136,174,174,490</Features>
+		<Monster name="炼狱碧水独角魔王" class="木">
+			<Features>663,180,164,211,211,589</Features>
 			<Character>小眼睛|吉祥|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
@@ -537,6 +537,11 @@
 					<Feature>运</Feature>
 					<Value>50</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>魅</Feature>
+					<Value>2</Value>
+				</Skill>				
 			</Skills>
 		</Monster>	
 		<Monster name="饕餮" class="木">
