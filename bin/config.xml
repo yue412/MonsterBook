@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MonsterBook>
 	<Monsters>
-		<Monster name="粽仔" class="木">
-			<Features>61,18,25,25,18,25</Features>
-			<Character>美食</Character>
+		<Monster name="小鲜肉" class="木">
+			<Features>102,36,46,46,28,46</Features>
+			<Character>美食|小眼睛</Character>
 		</Monster>				
-		<Monster name="粽妮" class="木">
-			<Features>25,18,25,61,18,25</Features>
-			<Character>美食</Character>
+		<Monster name="白白" class="木">
+			<Features>38,38,47,105,30,47</Features>
+			<Character>美食|善良</Character>
 		</Monster>				
 		<Monster name="小青" class="木">
 			<Features>48,48,90,138,168,48</Features>
@@ -737,9 +737,9 @@
 				</Skill>
 			</Skills>
 		</Monster>			
-		<Monster name="离卷" class="木">
-			<Features>46,107,30,77,61,88</Features>
-			<Character>谋略</Character>
+		<Monster name="骚年" class="木">
+			<Features>74,168,48,138,98,137</Features>
+			<Character>谋略|人形</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCount">
 					<ElementClass>木</ElementClass>
@@ -6164,7 +6164,7 @@
 	<ExcludeGroup>
 		<Exclude>
 			碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
-			八仙曹国舅,八仙汉钟离,喜儿,豚燕,觜火猴,尾火虎,藏犬屋,蜡祭狮,
+			苍老师,观世音,渔常在,二饼,湿罗刹,醋母,王潮,尾姬,
 			金童,八仙蓝采和,上联仔,秋香,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 			古琴仔,洪玉儿,菱绢,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
 			游瓦虾,蟹将,
@@ -6192,6 +6192,6 @@
 		</Exclude>
 	</ExcludeGroup>
 <!--
-			苍老师,观世音,渔常在,二饼,湿罗刹,醋母,王潮,尾姬,
+			八仙曹国舅,八仙汉钟离,喜儿,豚燕,觜火猴,尾火虎,藏犬屋,蜡祭狮,
 	-->
 </MonsterBook>
