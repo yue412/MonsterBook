@@ -742,14 +742,15 @@
 				</Skill>
 			</Skills>
 		</Monster>			
-		<Monster name="骚年" class="木">
-			<Features>74,168,48,138,98,137</Features>
-			<Character>谋略|人形</Character>
+		<Monster name="御龙屈原" class="木">
+			<Features>119,273,80,226,162,226</Features>
+			<Character>谋略|人形|水性|美食</Character>
 			<Skills>
-				<Skill name="IncreaseSelfFeatureByCount">
+				<Skill name="IncreaseFeature">
+					<Trigger>4</Trigger>
 					<ElementClass>木</ElementClass>
-					<Feature>全</Feature>
-					<Value>10</Value>
+					<Feature>速</Feature>
+					<Value>200</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
@@ -6154,7 +6155,7 @@
 			<Features>62.4,156,156,62.4,156,62.4</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>62.4,62.4,62.4,156,62.4,62.4</Features>
+			<Features>64.8,64.8,64.8,162,64.8,64.8</Features>
 		</SoulBead>
 		<SoulBead class="水">
 			<Features>62.4,156,62.4,62.4,62.4,62.4</Features>
