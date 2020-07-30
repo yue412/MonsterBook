@@ -1859,7 +1859,17 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-
+		<Monster name="乾达婆" class="水">
+			<Features>47,118,165,344,145,165</Features>
+			<Character>呆萌|妹纸|乐器</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.5</Value>
+				</Skill>	
+			</Skills>
+		</Monster>				
 		<Monster name="忍海" class="水">
 			<Features>156,123,104,289,82,114</Features>
 			<Character>自然|人形|妹纸</Character>
@@ -2691,6 +2701,17 @@
 					<ElementClass>光</ElementClass>
 					<Feature>技</Feature>
 					<Value>30</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="黄牛" class="光">
+			<Features>282,120,162,96,63,162</Features>
+			<Character>美食|人形|神勇</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>50</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -6256,13 +6277,13 @@
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
-			<Features>156,156,156,156,62.4,62.4</Features>
+			<Features>162,162,162,162,64.8,64.8</Features>
 		</SoulBead>
 		<SoulBead class="地">
 			<Features>64.8,162,162,64.8,162,64.8</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>64.8,64.8,64.8,162,64.8,64.8</Features>
+			<Features>64.8,64.8,64.8,162,162,162</Features>
 		</SoulBead>
 		<SoulBead class="水">
 			<Features>64.8,162,64.8,64.8,64.8,64.8</Features>
@@ -6279,7 +6300,8 @@
 			碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
 			苍老师,观世音,渔常在,二饼,湿罗刹,醋母,王潮,尾姬,
 			金童,八仙蓝采和,上联仔,秋香,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
-			古琴仔,洪玉儿,菱绢,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
+			古琴仔,蠢朋克,迦罗逻,王昭君,龙子囚牛,乾达婆,鼓妖,巨门星,
+			八万,九饼,暗象,暗士,西洋棋.白后,光相,星燃,雨梨标,
 			太白金星,银河
 		</Exclude>
 		<Exclude>
@@ -6304,6 +6326,7 @@
 		</Exclude>
 	</ExcludeGroup>
 <!--
+			古琴仔,洪玉儿,菱绢,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
 			八仙曹国舅,八仙汉钟离,喜儿,豚燕,觜火猴,尾火虎,藏犬屋,蜡祭狮,
 	-->
 </MonsterBook>
