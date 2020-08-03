@@ -2775,6 +2775,17 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="齐天小圣" class="光">
+			<Features>108,174,439,153,493,143</Features>
+			<Character>呆萌|神速|神仙</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>2</Value>
+				</Skill>			
+			</Skills>
+		</Monster>	
 		<Monster name="光翼战神沃尔坎" class="光">
 			<Features>605,132,186,537,215,174</Features>
 			<Character>奇特|魁梧|战士|飞翔</Character>
