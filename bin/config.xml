@@ -3416,8 +3416,8 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="神算诸葛亮" class="光">
-			<Features>136,174,490,174,555,150</Features>
+		<Monster name="运筹帷幄卧龙诸葛孔明" class="光">
+			<Features>164,211,589,211,663,180</Features>
 			<Character>呆萌|人形|谋略|飞翔</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
@@ -3425,11 +3425,17 @@
 					<Feature>智</Feature>
 					<Value>50</Value>
 				</Skill>
-				<Skill name="IncreaseSelfFeatureByCount">
+				<Skill name="IncreaseFeature">
+					<Trigger>4</Trigger>
 					<ElementClass>光</ElementClass>
 					<Feature>全</Feature>
 					<Value>60</Value>
-				</Skill>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>2</Value>
+				</Skill>					
 			</Skills>
 		</Monster>
 		<Monster name="混沌" class="光">
@@ -6417,7 +6423,7 @@
 			<Features>64.8,64.8,64.8,162,162,162</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>64.8,162,64.8,64.8,64.8,64.8</Features>
+			<Features>64.8,162,64.8,64.8,162,64.8</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>174,69.6,174,69.6,174,174</Features>
