@@ -39,6 +39,22 @@
 				</Skill>
 			</Skills>
 		</Monster>			
+		<Monster name="胡萝卜大亨" class="木">
+			<Features>67,41,59,191,54,170</Features>
+			<Character>生肖|神速|谋略</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>技</Feature>
+					<Value>50</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>魅</Feature>
+					<Value>80</Value>
+				</Skill>
+			</Skills>
+		</Monster>			
 		<Monster name="飞燕姬" class="木">
 			<Features>139,112,74,262,188,94</Features>
 			<Character>自然|妹纸|妹纸</Character>
@@ -6417,19 +6433,19 @@
 			<Features>162,162,162,162,64.8,64.8</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>64.8,162,162,64.8,162,64.8</Features>
+			<Features>64.8,162,162,162,162,64.8</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>64.8,64.8,64.8,162,162,162</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>64.8,162,64.8,64.8,162,64.8</Features>
+			<Features>64.8,162,64.8,162,162,64.8</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>174,69.6,174,69.6,174,174</Features>
 		</SoulBead>
 		<SoulBead class="暗">
-			<Features>168,67.2,168,67.2,67.2,168</Features>
+			<Features>168,168,168,67.2,67.2,168</Features>
 		</SoulBead>
 	</SoulBeads>
 	<ExcludeGroup>
