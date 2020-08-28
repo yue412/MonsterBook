@@ -29,7 +29,7 @@ struct CStageInfo
 class CGame_Thread
 {
 public:
-    static void calc(CTeam& oTeam, bool bEnableSkill, double* oResult);
+    static void calc(CTeam& oTeam, bool bEnableSkill, bool bEnablePercent, double* oResult);
     static bool success(double* dChallengeRequired, double* dTeam);
     static void play(CChallenge* pChallenge, const std::vector<CMonster*>& oMonsterList, int nStartIndex, int nCount, CTeam& oTeam, CResult& oResult, CResult& oFailedResult, __int64& nHitCount, bool bExportFailedInfo);
     static bool getStartIndex(std::vector<std::vector<int>>* pStartIndexList, std::vector<int>& nStartIndex);
@@ -44,7 +44,7 @@ std::mutex CGame_Thread::m_oStageMutex;
 std::vector<CFate*>* CGame_Thread::m_pFateList = nullptr;
 int CGame_Thread::m_nIndex = 0;
 
-void CGame_Thread::calc(CTeam& oTeam, bool bEnableSkill, double* oResult)
+void CGame_Thread::calc(CTeam& oTeam, bool bEnableSkill, bool bEnablePercent, double* oResult)
 {
 	//if (oTeam.size() == 8 && oTeam[7]->getName() == L"÷«∂‡–«Œ‚”√")
 	//{
@@ -63,6 +63,7 @@ void CGame_Thread::calc(CTeam& oTeam, bool bEnableSkill, double* oResult)
         for (int i = 0; i < nCount; i++)
         {
             double incV[EF_ALL];
+            pMonster->getSkill(i)->setEnablePercent(bEnablePercent);
             pMonster->getSkill(i)->affect(oTeam, incV);
             addVec(oResult, incV, oResult);
         }
@@ -79,6 +80,7 @@ void CGame_Thread::calc(CTeam& oTeam, bool bEnableSkill, double* oResult)
 			for (int i = 0; i < pFate->getSkillCount(); i++)
 			{
 				double incV[EF_ALL];
+                pFate->getSkill(i)->setEnablePercent(bEnablePercent);
 				pFate->getSkill(i)->affect(oTeam, incV);
 				addVec(oResult, incV, oResult);
 			}
@@ -114,7 +116,7 @@ void CGame_Thread::play(CChallenge* pChallenge, const std::vector<CMonster*>& oM
         if (oTeam.size() >= pChallenge->getMin())
         {
             double oTotal[EF_ALL];
-            calc(oTeam, pChallenge->enableSkill(), oTotal);
+            calc(oTeam, pChallenge->enableSkill(), pChallenge->enablePercent(), oTotal);
             ++nHitCount;
             if (!pChallenge->calcFlag())
             {
@@ -182,7 +184,7 @@ void CGame_Thread::play_thread(std::vector<std::vector<int>>* pStartIndexList, C
         if (oTeam.size() >= pInfo->pChallenge->getMin())
         {
             double oTotal[EF_ALL];
-            calc(oTeam, pInfo->pChallenge->enableSkill(), oTotal);
+            calc(oTeam, pInfo->pChallenge->enableSkill(), pInfo->pChallenge->enablePercent(), oTotal);
             ++nHitCount;
             if (!pInfo->pChallenge->calcFlag())
             {
@@ -300,7 +302,7 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
     std::vector<CMonster*> oMonsters;
     std::vector<CMonster*> oTempMonsters;
     std::copy_if(oMonsterList.begin(), oMonsterList.end(), std::back_inserter(oTempMonsters), [pChallenge, nFeatureSet](CMonster* pMonster) {
-        return !pMonster->ignore() && 
+        return /*pChallenge->requiredCharacter().empty() && */!pMonster->ignore() &&
             (!pChallenge->OnlyAll() || pMonster->isAffectAll()) &&
             (pChallenge->requiredClass() == EC_ALL && pMonster->hasSpeciality(nFeatureSet) || pMonster->getClass() == pChallenge->requiredClass()) &&
             (pChallenge->requiredCharacter().empty() || pMonster->getCharacterSet().count(pChallenge->requiredCharacter()) > 0)
@@ -406,7 +408,7 @@ void CGame::simulator(std::vector<std::wstring>& oMonsterList, int * nResult)
     }
     double oTotal[EF_ALL];
     CGame_Thread::m_pFateList = &m_oFateList;
-    CGame_Thread::calc(oTeam, true, oTotal);
+    CGame_Thread::calc(oTeam, true, true, oTotal);
     for (int i = 0; i < EF_ALL; i++)
     {
         nResult[i] = roundEx(oTotal[i]);

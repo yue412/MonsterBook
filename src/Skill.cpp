@@ -35,6 +35,8 @@ void CIncreaseFeatureSkill::affect(const CTeam & oTeam, double* oResult)
 void CProductFeatureSkill::affect(const CTeam & oTeam, double* oResult)
 {
 	fill(oResult, 0.0);
+    if (!m_bEnablePercent)
+        return;
 	for each (auto pMonster in oTeam)
 	{
 		if (m_nClass == EC_ALL || pMonster->getClass() == m_nClass)
@@ -90,6 +92,8 @@ void CIncreaseSelfFeatureByCharacterSkill::affect(const CTeam & oTeam, double * 
 void CProductSelfFeatureByCharacterSkill::affect(const CTeam & oTeam, double * oResult)
 {
     fill(oResult, 0.0);
+    if (!m_bEnablePercent)
+        return;
     auto nCount = std::count_if(oTeam.begin(), oTeam.end(), [this](CMonster* pMonster) {
         return pMonster->getCharacterSet().count(this->m_sCharacter) > 0;
     });

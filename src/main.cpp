@@ -120,6 +120,7 @@ void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge&
     oChallenge.m_nTotal = oParamsMap.find(L"total") == oParamsMap.end() ? 50 : std::stoi(oParamsMap[L"total"]);
     oChallenge.m_nClass = oParamsMap.find(L"class") == oParamsMap.end() ? EC_ALL : Name2Class(oParamsMap[L"class"]);
     oChallenge.m_bEnableSkill = oParamsMap.find(L"enable_skill") == oParamsMap.end() ? true : oParamsMap[L"enable_skill"] == L"true";
+    oChallenge.m_bEnablePercent = oParamsMap.find(L"enable_percent") == oParamsMap.end() ? true : oParamsMap[L"enable_percent"] == L"true";
     oChallenge.m_sCharacter = oParamsMap.find(L"character") == oParamsMap.end() ? L"" : oParamsMap[L"character"];
     oChallenge.m_bOnlyAll = oParamsMap.find(L"only_all") == oParamsMap.end() ? false : true;
 	for (int i = 0; i < EF_ALL; i++)
@@ -211,6 +212,8 @@ std::wstring getChallengeStr(CChallenge* pChallenge)
         sResult += L"class=" + g_sClassNames[pChallenge->requiredClass()] + L" ";
     if (!pChallenge->enableSkill())
         sResult += L"enable_skill=false ";
+    if (!pChallenge->enablePercent())
+        sResult += L"enable_percent=false ";
     if (!pChallenge->requiredCharacter().empty())
         sResult += L"character=" + pChallenge->requiredCharacter() + L" ";
     for (int i = 0; i < EF_ALL; i++)
@@ -534,6 +537,65 @@ int main(int argc, char* argv[])
             logHistory(&oChallenge, oResultList.size() > 0, (oResultList.size() > 0) ? oResultList : oFailedResultList);
         }
         else if (str == L"calc")
+        {
+            if (oParamsMap.find(L"class") == oParamsMap.end())
+            {
+                std::cout << "Need param 'class'!" << std::endl;
+                continue;
+            }
+                
+            int i =  Name2Class(oParamsMap[L"class"]);
+            //for (int i = 0; i < EC_ALL; i++)
+            {
+                CChallenge oChallenge;
+                oChallenge.m_sName = g_sClassNames[i];
+                oChallenge.m_nClass = (EnElementClass)i;
+                oChallenge.m_bCalcFlag = true;
+                oChallenge.m_nTotal = 1024;
+                for (int i = 0; i < EF_ALL; i++)
+                {
+                    oChallenge.m_nRequired[i] = 1.0;
+                }
+                CResult oResultList;
+                CResult oFailedResultList;
+                auto nTime = GetTickCount();
+                oGame.play(&oChallenge, oResultList, oFailedResultList);
+                std::cout << "result_count: " << oResultList.size() << std::endl;
+                saveResultList(getFullPath(g_sClassNames[i] + L".csv"), oResultList);
+                std::cout << "play: " << GetTickCount() - nTime << std::endl;
+            }
+        }
+        else if (str == L"calc_c")
+        {
+            if (oParamsMap.find(L"character") == oParamsMap.end())
+            {
+                std::cout << "Need param 'character'!" << std::endl;
+                continue;
+            }
+
+            auto sCharacter = oParamsMap[L"character"];
+            //for (int i = 0; i < EC_ALL; i++)
+            {
+                CChallenge oChallenge;
+                oChallenge.m_sName = sCharacter;//g_sClassNames[i];
+                oChallenge.m_nClass = EC_ALL;
+                oChallenge.m_bCalcFlag = true;
+                oChallenge.m_nTotal = 1024;
+                oChallenge.m_sCharacter = sCharacter;
+                for (int i = 0; i < EF_ALL; i++)
+                {
+                    oChallenge.m_nRequired[i] = 1.0;
+                }
+                CResult oResultList;
+                CResult oFailedResultList;
+                auto nTime = GetTickCount();
+                oGame.play(&oChallenge, oResultList, oFailedResultList);
+                std::cout << "result_count: " << oResultList.size() << std::endl;
+                saveResultList(getFullPath(sCharacter + L".csv"), oResultList);
+                std::cout << "play: " << GetTickCount() - nTime << std::endl;
+            }
+        }
+        else if (str == L"calc_all")
         {
             for (int i = 0; i < EC_ALL; i++)
             {

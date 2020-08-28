@@ -10,13 +10,15 @@ class CMonster;
 class CSkill
 {
 public:
-    CSkill(): m_pOwner(nullptr) {}
+    CSkill(): m_pOwner(nullptr), m_bEnablePercent(true){}
     virtual ~CSkill();
     virtual void affect(const CTeam& oTeam, double* oResult) = 0;
     virtual int getAffectFeature();
     virtual void setOwner(CMonster* pOwner) { m_pOwner = pOwner; }
+    void setEnablePercent(bool bValue) { m_bEnablePercent = bValue; }
 protected:
     CMonster* m_pOwner;
+    bool m_bEnablePercent;
 };
 
 class CIncreaseFeatureSkill: public CSkill
@@ -24,7 +26,7 @@ class CIncreaseFeatureSkill: public CSkill
 public:
     CIncreaseFeatureSkill(EnElementClass nClass, EnFeatures nFeature, int nValue, int nTrigger = 0): m_nClass(nClass), m_nFeature(nFeature), m_nValue(nValue), m_nTrigger(nTrigger){}
 	virtual void affect(const CTeam& oTeam, double* oResult);
-    virtual int getAffectFeature() { return m_nFeature == EF_ALL ? 0 : 1 << m_nFeature; }
+    virtual int getAffectFeature() { return m_nFeature == EF_ALL ? (1 << EF_ALL) - 1 : 1 << m_nFeature; }
     int getValue() { return m_nValue; }
     EnElementClass getClass() { return m_nClass; }
 private:
@@ -39,7 +41,7 @@ class CProductFeatureSkill : public CSkill
 public:
     CProductFeatureSkill(EnElementClass nClass, EnFeatures nFeature, double dValue) : m_nClass(nClass), m_nFeature(nFeature), m_dValue(dValue) {}
 	virtual void affect(const CTeam& oTeam, double* oResult);
-    virtual int getAffectFeature() { return m_nFeature == EF_ALL ? 0 : 1 << m_nFeature; }
+    virtual int getAffectFeature() { return m_nFeature == EF_ALL ? (1 << EF_ALL) - 1 : 1 << m_nFeature; }
     EnElementClass getClass() { return m_nClass; }
 private:
     EnElementClass m_nClass;
@@ -52,7 +54,7 @@ class CIncreaseSelfFeatureByCountSkill : public CSkill
 public:
 	CIncreaseSelfFeatureByCountSkill(EnElementClass nClass, EnFeatures nFeature, double dValue) : m_nClass(nClass), m_nFeature(nFeature), m_dValue(dValue) {}
 	virtual void affect(const CTeam& oTeam, double* oResult);
-    virtual int getAffectFeature() { return m_nFeature == EF_ALL ? 0 : 1 << m_nFeature; }
+    virtual int getAffectFeature() { return m_nFeature == EF_ALL ? (1 << EF_ALL) - 1 : 1 << m_nFeature; }
 private:
 	EnElementClass m_nClass;
 	EnFeatures m_nFeature;
@@ -64,7 +66,7 @@ class CIncreaseSelfFeatureSkill : public CSkill
 public:
     CIncreaseSelfFeatureSkill(EnFeatures nFeature, double dValue) : m_nFeature(nFeature), m_dValue(dValue) {}
     virtual void affect(const CTeam& oTeam, double* oResult);
-    virtual int getAffectFeature() { return m_nFeature == EF_ALL ? 0 : 1 << m_nFeature; }
+    virtual int getAffectFeature() { return m_nFeature == EF_ALL ? (1 << EF_ALL) - 1 : 1 << m_nFeature; }
 private:
     EnFeatures m_nFeature;
     double m_dValue;

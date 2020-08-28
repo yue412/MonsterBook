@@ -78,6 +78,7 @@ void CConfig::init(CGame * pGame)
 				pChallengeNode->Attribute("max", &pChallenge->m_nMax);
                 pChallengeNode->Attribute("total", &pChallenge->m_nTotal);
                 pChallengeNode->QueryBoolAttribute("enable_skill", &pChallenge->m_bEnableSkill);
+                pChallengeNode->QueryBoolAttribute("enable_percent", &pChallenge->m_bEnablePercent);
                 auto sCharacter = pChallengeNode->Attribute("character");
                 if (sCharacter != nullptr)
                     pChallenge->m_sCharacter = Utf8ToUnicode(sCharacter);

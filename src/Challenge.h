@@ -21,6 +21,7 @@ public:
 	double* featuresRequired() { return m_nRequired; }
     EnElementClass requiredClass() { return m_nClass; }
     bool enableSkill() { return m_bEnableSkill; }
+    bool enablePercent() { return m_bEnablePercent; }
     bool calcFlag() { return m_bCalcFlag; }
     std::wstring requiredCharacter() { return  m_sCharacter; }
     bool OnlyAll() { return m_bOnlyAll; };
@@ -32,6 +33,7 @@ private:
     int m_nTotal;
     double m_nRequired[EF_ALL];
     bool m_bEnableSkill;
+    bool m_bEnablePercent;
     bool m_bCalcFlag;
     bool m_bOnlyAll;
     EnElementClass m_nClass;
