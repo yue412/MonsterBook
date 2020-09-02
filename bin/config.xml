@@ -98,17 +98,6 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="东风" class="木">
-			<Features>39,52,79,48,140,60</Features>
-			<Character>神器</Character>
-			<Skills>
-				<Skill name="ProductFeature">
-					<ElementClass>木</ElementClass>
-					<Feature>运</Feature>
-					<Value>1.3</Value>
-				</Skill>
-			</Skills>
-		</Monster>		
 		<Monster name="心云猎手" class="木">
 			<Features>174,215,605,132,186,537</Features>
 			<Character>神秘|善良|飞翔|温柔</Character>
@@ -494,14 +483,31 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="六轮传音" class="木">
-			<Features>57,57,289,57,57,57</Features>
-			<Character>法器</Character>
+		<Monster name="东方之神句芒" class="木">
+			<Features>104,134,208,124,364,156</Features>
+			<Character>神器|自然|飞翔|神仙</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>运</Feature>
+					<Value>2</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<Trigger>8</Trigger>
+					<ElementClass>木</ElementClass>
+					<Feature>全</Feature>
+					<Value>150</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="法器-六轮传音" class="木">
+			<Features>131,131,308,131,131,131</Features>
+			<Character>法器|呆萌|人形|神速</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>速</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
@@ -948,13 +954,18 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="小山贼" class="火">
-			<Features>323,111,298,292,-70,125</Features>
-			<Character>神仙|财迷</Character>
+		<Monster name="至尊宝.真" class="火">
+			<Features>573,190,441,436,-116,197</Features>
+			<Character>神仙|财迷|人形|神勇</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
 					<Feature>力</Feature>
+					<Value>2</Value>
+				</Skill>				
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
 					<Value>1.6</Value>
 				</Skill>				
 			</Skills>
@@ -4004,6 +4015,17 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
+		<Monster name="创世伏羲" class="地">
+			<Features>130,74,150,63,185,280</Features>
+			<Character>自然|人形|神仙</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
+				</Skill>			
+			</Skills>
+		</Monster>		
 		<Monster name="司秋" class="地">
 			<Features>337,106,96,114,192,143</Features>
 			<Character>神器|自然|善良</Character>
@@ -4860,6 +4882,43 @@
 					<ElementClass>暗</ElementClass>
 					<Feature>全</Feature>
 					<Value>30</Value>
+				</Skill>	
+			</Skills>
+		</Monster>			
+		<Monster name="宇宙海贼双子星" class="暗">
+			<Features>537,174,132,215,186,605</Features>
+			<Character>神秘|美食|水性|神勇</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>2</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>技</Feature>
+					<Value>200</Value>
+				</Skill>					
+			</Skills>
+		</Monster>			
+		<Monster name="源石气功猴" class="暗">
+			<Features>317,81,129,113,104,277</Features>
+			<Character>生肖|奇特|神勇</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.6</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
 				</Skill>	
 			</Skills>
 		</Monster>			
@@ -6331,6 +6390,16 @@
 				</Skill>	
 			</Skills>
 		</Fate>				
+		<Fate name="一万年">
+			<Monsters>至尊宝.真|紫霞</Monsters>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>全</Feature>
+					<Value>200</Value>
+				</Skill>	
+			</Skills>
+		</Fate>				
 		<Fate name="真端午传说">
 			<Monsters>御龙屈原|腹黑仔|白美甜</Monsters>
 			<Skills>
@@ -6368,6 +6437,21 @@
 				</Skill>	
 			</Skills>
 		</Fate>				
+		<Fate name="创世夫妇">
+			<Monsters>创世伏羲|创世女娲</Monsters>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+			</Skills>
+		</Fate>			
 		<Fate name="倩女幽魂">
 			<Monsters>聂小倩|宁采臣</Monsters>
 			<Skills>
