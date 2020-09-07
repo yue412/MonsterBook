@@ -66,7 +66,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="巨蟹小当家" class="木">
+		<Monster name="巨蟹小当家" class="木" is_gold="true">
 			<Features>605,215,174,132,537,186</Features>
 			<Character>神秘|美食|妹纸|善良</Character>
 			<Skills>
@@ -87,7 +87,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="玉女" class="木">
+		<Monster name="玉女" class="木" is_gold="true">
 			<Features>162,108,85,108,325,96</Features>
 			<Character>吉祥|人形|妹纸</Character>
 			<Skills>
@@ -98,7 +98,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="心云猎手" class="木">
+		<Monster name="心云猎手" class="木" is_gold="true">
 			<Features>174,215,605,132,186,537</Features>
 			<Character>神秘|善良|飞翔|温柔</Character>
 			<Skills>
@@ -119,7 +119,7 @@
 				</Skill>								
 			</Skills>
 		</Monster>		
-		<Monster name="秋老虎旅行版" class="木">
+		<Monster name="秋老虎旅行版" class="木" is_gold="true">
 			<Features>551,193,490,122,157,170</Features>
 			<Character>猫咪|人形|神速</Character>
 			<Skills>
@@ -135,7 +135,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="林黛玉" class="木">
+		<Monster name="林黛玉" class="木" is_gold="true">
 			<Features>-1,242,96,361,47,242</Features>
 			<Character>自然|冰冷|妹纸</Character>
 			<Skills>
@@ -190,7 +190,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="穗儿姑娘" class="木">
+		<Monster name="穗儿姑娘" class="木" is_gold="true">
 			<Features>551,193,490,122,157,170</Features>
 			<Character>自然|奇特|妹纸</Character>
 			<Skills>
@@ -239,7 +239,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="龙子赑屃" class="木">
+		<Monster name="龙子赑屃" class="木" is_gold="true">
 			<Features>200,180,50,130,160,360</Features>
 			<Character>自然|机械|龙族|魁梧</Character>
 			<Skills>
@@ -268,7 +268,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="白咩咩和小白白" class="木">
+		<Monster name="白咩咩和小白白" class="木" is_gold="true">
 			<Features>605,215,537,132,174,186</Features>
 			<Character>神秘|娇小|呆萌|神速</Character>
 			<Skills>
@@ -289,7 +289,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="雪舞姬" class="木">
+		<Monster name="雪舞姬" class="木" is_gold="true">
 			<Features>551,193,490,122,157,170</Features>
 			<Character>善良|呆萌|吉祥</Character>
 			<Skills>
@@ -451,7 +451,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="龙王敖闰" class="木">
+		<Monster name="龙王敖闰" class="木" is_gold="true">
 			<Features>130,92,112,140,308,308</Features>
 			<Character>奇特|龙族|神仙|自然</Character>
 			<Skills>
@@ -483,7 +483,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="东方之神句芒" class="木">
+		<Monster name="东方之神句芒" class="木" is_gold="true">
 			<Features>104,134,208,124,364,156</Features>
 			<Character>神器|自然|飞翔|神仙</Character>
 			<Skills>
@@ -512,7 +512,7 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="昊天金阙无上至尊自然妙有弥罗至真玉皇大帝" class="木">
+		<Monster name="昊天金阙无上至尊自然妙有弥罗至真玉皇大帝" class="木" is_gold="true">
 			<Features>72,300,72,300,136,108</Features>
 			<Character>善良|吉祥|神仙</Character>
 			<Skills>
@@ -539,7 +539,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="箭神后羿" class="木">
+		<Monster name="箭神后羿" class="木" is_gold="true">
 			<Features>280,118,280,102,84,126</Features>
 			<Character>呆萌|神勇|神仙</Character>
 			<Skills>
@@ -561,7 +561,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="炼狱碧水独角魔王" class="木">
+		<Monster name="炼狱碧水独角魔王" class="木" is_gold="true">
 			<Features>663,180,164,211,211,589</Features>
 			<Character>小眼睛|吉祥|神仙</Character>
 			<Skills>
@@ -582,7 +582,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>	
-		<Monster name="饕餮" class="木">
+		<Monster name="饕餮" class="木" is_gold="true">
 			<Features>240,90,120,100,120,109</Features>
 			<Character>美食|妖怪|神秘</Character>
 			<Skills>
@@ -615,7 +615,7 @@
 				</Skill>
 			</Skills>
 		</Monster>			
-		<Monster name="小娜迦" class="木">
+		<Monster name="小娜迦" class="木" is_gold="true">
 			<Features>92,56,138,288,346,68</Features>
 			<Character>娇小|妖怪|妹纸</Character>
 			<Skills>
@@ -769,7 +769,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="八仙铁拐李" class="木">
+		<Monster name="八仙铁拐李" class="木" is_gold="true">
 			<Features>100,78,356,122,144,290</Features>
 			<Character>神仙|神速|老人家|神速</Character>
 			<Skills>
@@ -780,7 +780,7 @@
 				</Skill>
 			</Skills>
 		</Monster>			
-		<Monster name="御龙屈原" class="木">
+		<Monster name="御龙屈原" class="木" is_gold="true">
 			<Features>119,273,80,226,162,226</Features>
 			<Character>谋略|人形|水性|美食</Character>
 			<Skills>
@@ -851,7 +851,7 @@
 			<Features>68,61,100,187,62,62</Features>
 			<Character>自然|人形|妹纸</Character>
 		</Monster>
-		<Monster name="圣炎女皇朱迪斯" class="火">
+		<Monster name="圣炎女皇朱迪斯" class="火" is_gold="true">
 			<Features>551,157,170,193,490,122</Features>
 			<Character>扑克|正义|温柔</Character>
 			<Skills>
@@ -872,7 +872,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>
-		<Monster name="秋麦郎" class="火">
+		<Monster name="秋麦郎" class="火" is_gold="true">
 			<Features>157,490,170,551,193,122</Features>
 			<Character>呆萌|善良|神速</Character>
 			<Skills>
@@ -921,7 +921,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="南方之神祝融" class="火">
+		<Monster name="南方之神祝融" class="火" is_gold="true">
 			<Features>156,134,124,208,364,104</Features>
 			<Character>神器|自然|妹纸|神仙</Character>
 			<Skills>
@@ -938,7 +938,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="粉鹳君" class="火">
+		<Monster name="粉鹳君" class="火" is_gold="true">
 			<Features>90,108,318,126,72,272</Features>
 			<Character>呆萌|善良|奥运</Character>
 			<Skills>
@@ -954,7 +954,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="至尊宝.真" class="火">
+		<Monster name="至尊宝.真" class="火" is_gold="true">
 			<Features>573,190,441,436,-116,197</Features>
 			<Character>神仙|财迷|人形|神勇</Character>
 			<Skills>
@@ -970,7 +970,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="四大美女貂蝉" class="火">
+		<Monster name="四大美女貂蝉" class="火" is_gold="true">
 			<Features>83,196,119,372,64,251</Features>
 			<Character>娇小|呆萌|妹纸|冰冷</Character>
 			<Skills>
@@ -981,7 +981,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="落樱缤纷.楔" class="火">
+		<Monster name="落樱缤纷.楔" class="火" is_gold="true">
 			<Features>181,442,164,115,174,545</Features>
 			<Character>四周年|飞翔|呆萌|善良</Character>
 			<Skills>
@@ -998,7 +998,7 @@
 				</Skill>								
 			</Skills>
 		</Monster>		
-		<Monster name="魑魅" class="火">
+		<Monster name="魑魅" class="火" is_gold="true">
 			<Features>90,252,100,304,120,120</Features>
 			<Character>邪恶|妹纸|美食</Character>
 			<Skills>
@@ -1009,7 +1009,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="婴宁" class="火">
+		<Monster name="婴宁" class="火" is_gold="true">
 			<Features>74,139,139,98,290,247</Features>
 			<Character>妖怪|人形|妹纸</Character>
 			<Skills>
@@ -1020,7 +1020,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="龙王敖钦" class="火">
+		<Monster name="龙王敖钦" class="火" is_gold="true">
 			<Features>324,108,88,136,108,324</Features>
 			<Character>美食|龙族|神仙|奇特</Character>
 			<Skills>
@@ -1047,7 +1047,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="圣诞老人" class="火">
+		<Monster name="圣诞老人" class="火"> is_gold="true"
 			<Features>67,91,130,270,91,232</Features>
 			<Character>呆萌|善良|老人家</Character>
 			<Skills>
@@ -1074,7 +1074,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="秦王" class="火">
+		<Monster name="秦王" class="火" is_gold="true">
 			<Features>286,92,82,286,122,122</Features>
 			<Character>自然|神秘|谋略</Character>
 			<Skills>
@@ -1133,7 +1133,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="龙子囚牛" class="火">
+		<Monster name="龙子囚牛" class="火" is_gold="true">
 			<Features>300,54,108,164,122,340</Features>
 			<Character>乐器|人形|龙族</Character>
 			<Skills>
@@ -1150,7 +1150,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>
-		<Monster name="八仙曹国舅" class="火">
+		<Monster name="八仙曹国舅" class="火" is_gold="true">
 			<Features>324,80,60,162,272,192</Features>
 			<Character>神仙|善良|老人家|水性</Character>
 			<Skills>
@@ -1172,7 +1172,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="魔法少女小甜甜" class="火">
+		<Monster name="魔法少女小甜甜" class="火" is_gold="true">
 			<Features>174,132,186,605,215,537</Features>
 			<Character>神秘|美食|人形|机械</Character>
 			<Skills>
@@ -1193,7 +1193,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="火火崩地儿" class="火">
+		<Monster name="火火崩地儿" class="火" is_gold="true">
 			<Features>157,490,170,551,193,122</Features>
 			<Character>自然|神秘|神勇</Character>
 			<Skills>
@@ -1209,7 +1209,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="灵山宫主" class="火">
+		<Monster name="灵山宫主" class="火" is_gold="true">
 			<Features>245,129,81,328,104,113</Features>
 			<Character>娇小|妹纸|老人家</Character>
 			<Skills>
@@ -1230,7 +1230,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="金童" class="火">
+		<Monster name="金童" class="火" is_gold="true">
 			<Features>102,122,81,152,256,173</Features>
 			<Character>吉祥|人形|善良</Character>
 			<Skills>
@@ -1440,7 +1440,7 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="枯蛛" class="火">
+		<Monster name="枯蛛" class="火" is_gold="true">
 			<Features>43,43,43,223,43,43</Features>
 			<Character>法器|自然</Character>
 			<Skills>
@@ -1452,7 +1452,7 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="雨梨标" class="火">
+		<Monster name="雨梨标" class="火" is_gold="true">
 			<Features>223,43,43,43,43,43</Features>
 			<Character>法器|武器</Character>
 			<Skills>
@@ -1545,7 +1545,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="爱心觉罗" class="火">
+		<Monster name="爱心觉罗" class="火" is_gold="true">
 			<Features>94,122,112,104,264,187</Features>
 			<Character>呆萌|人形|奇特</Character>
 			<Skills>
@@ -1578,7 +1578,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="贾宝玉" class="火">
+		<Monster name="贾宝玉" class="火" is_gold="true">
 			<Features>98,245,78,294,145,128</Features>
 			<Character>自然|人形|神秘</Character>
 			<Skills>
@@ -1616,7 +1616,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="南七宿朱雀" class="火">
+		<Monster name="南七宿朱雀" class="火" is_gold="true">
 			<Features>192,116,138,128,298,116</Features>
 			<Character>自然|人形|神仙</Character>
 			<Skills>
@@ -1649,7 +1649,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="九灵太真无极圣母瑶池大圣西王金母" class="火">
+		<Monster name="九灵太真无极圣母瑶池大圣西王金母" class="火" is_gold="true">
 			<Features>95,119,119,241,351,156</Features>
 			<Character>善良|妹纸|神仙|飞翔</Character>
 			<Skills>
@@ -1709,7 +1709,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="八仙汉钟离" class="火">
+		<Monster name="八仙汉钟离" class="火" is_gold="true">
 			<Features>52,146,252,104,220,314</Features>
 			<Character>小眼睛|神仙|老人家|飞翔</Character>
 			<Skills>
@@ -1731,7 +1731,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="牛郎" class="火">
+		<Monster name="牛郎" class="火" is_gold="true">
 			<Features>296,103,158,84,136,209</Features>
 			<Character>美食|人形|邪恶</Character>
 			<Skills>
@@ -1774,7 +1774,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="龙子狴犴" class="火">
+		<Monster name="龙子狴犴" class="火" is_gold="true">
 			<Features>216,132,156,144,108,336</Features>
 			<Character>善良|龙族|谋略|神秘</Character>
 			<Skills>
@@ -1795,7 +1795,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="东方零败" class="火">
+		<Monster name="东方零败" class="火" is_gold="true">
 			<Features>132,88,266,310,69,124</Features>
 			<Character>神秘|妹纸|神速</Character>
 			<Skills>
@@ -1823,7 +1823,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="姻缘掌事月佬" class="火">
+		<Monster name="姻缘掌事月佬" class="火" is_gold="true">
 			<Features>58,142,81,356,259,190</Features>
 			<Character>吉祥|妖怪|人形|神仙</Character>
 			<Skills>
@@ -1850,7 +1850,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="龙子螭吻" class="火">
+		<Monster name="龙子螭吻" class="火" is_gold="true">
 			<Features>352,100,188,150,112,188</Features>
 			<Character>美食|龙族|神勇|魁梧</Character>
 			<Skills>
@@ -1871,7 +1871,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="春分十里小燕几" class="火">
+		<Monster name="春分十里小燕几" class="火" is_gold="true">
 			<Features>157,490,170,551,193,122</Features>
 			<Character>小眼睛|呆萌|飞翔</Character>
 			<Skills>
@@ -1887,7 +1887,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>				
-		<Monster name="驭汤仙人" class="火">
+		<Monster name="驭汤仙人" class="火" is_gold="true">
 			<Features>145,352,408,176,142,133</Features>
 			<Character>吉祥|美食|神仙</Character>
 			<Skills>
@@ -1913,7 +1913,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="西洋棋.白后" class="水">
+		<Monster name="西洋棋.白后" class="水" is_gold="true">
 			<Features>-126,242,247,242,-140,242</Features>
 			<Character>法器</Character>
 			<Skills>
@@ -1945,7 +1945,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="乾达婆" class="水">
+		<Monster name="乾达婆" class="水" is_gold="true">
 			<Features>47,118,165,344,145,165</Features>
 			<Character>呆萌|妹纸|乐器</Character>
 			<Skills>
@@ -1989,7 +1989,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="龙子嘲风" class="水">
+		<Monster name="龙子嘲风" class="水" is_gold="true">
 			<Features>152,152,334,124,190,134</Features>
 			<Character>奇特|人形|龙族|飞翔</Character>
 			<Skills>
@@ -2006,7 +2006,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>			
-		<Monster name="星辰之花.勿忘我" class="水">
+		<Monster name="星辰之花.勿忘我" class="水" is_gold="true">
 			<Features>545,181,442,115,164,174</Features>
 			<Character>四周年|水性|娇小|温柔</Character>
 			<Skills>
@@ -2034,7 +2034,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>	
-		<Monster name="创世女娲" class="水">
+		<Monster name="创世女娲" class="水" is_gold="true">
 			<Features>114,140,122,70,175,264</Features>
 			<Character>自然|妹纸|神仙</Character>
 			<Skills>
@@ -2067,7 +2067,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="擘水青龙" class="水">
+		<Monster name="擘水青龙" class="水" is_gold="true">
 			<Features>156,551,194,490,169,123</Features>
 			<Character>水性|龙族|神仙</Character>
 			<Skills>
@@ -2088,7 +2088,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>	
-		<Monster name="参水猿" class="水">
+		<Monster name="参水猿" class="水" is_gold="true">
 			<Features>490,170,193,157,551,122</Features>
 			<Character>自然|战士|邪恶</Character>
 			<Skills>
@@ -2109,7 +2109,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="美双鱼美人" class="水">
+		<Monster name="美双鱼美人" class="水" is_gold="true">
 			<Features>174,605,186,537,215,132</Features>
 			<Character>神秘|水性|妹纸|邪恶</Character>
 			<Skills>
@@ -2130,7 +2130,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="小脑斧惊蛰儿" class="水">
+		<Monster name="小脑斧惊蛰儿" class="水" is_gold="true">
 			<Features>157,551,170,490,193,122</Features>
 			<Character>吉祥|人形|神速</Character>
 			<Skills>
@@ -2146,7 +2146,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="水瓶仙子" class="水">
+		<Monster name="水瓶仙子" class="水" is_gold="true">
 			<Features>174,605,186,537,215,132</Features>
 			<Character>神秘|呆萌|妹纸|善良</Character>
 			<Skills>
@@ -2194,7 +2194,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="白翼佣兵沃尔坎" class="水">
+		<Monster name="白翼佣兵沃尔坎" class="水" is_gold="true">
 			<Features>537,132,186,605,215,174</Features>
 			<Character>神秘|娇小|温柔|神勇</Character>
 			<Skills>
@@ -2281,7 +2281,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="八仙蓝采和" class="水">
+		<Monster name="八仙蓝采和" class="水" is_gold="true">
 			<Features>70,180,110,250,180,300</Features>
 			<Character>妹纸|吉祥|神仙|善良</Character>
 			<Skills>
@@ -2292,7 +2292,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="八仙何仙姑" class="水">
+		<Monster name="八仙何仙姑" class="水" is_gold="true">
 			<Features>106,214,106,320,170,170</Features>
 			<Character>水性|妹纸|神仙|自然</Character>
 			<Skills>
@@ -2478,7 +2478,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="猪刚鬣.变" class="水">
+		<Monster name="猪刚鬣.变" class="水" is_gold="true">
 			<Features>181,174,164,510,441,115</Features>
 			<Character>呆萌|妖怪|邪恶|人形</Character>
 			<Skills>
@@ -2494,7 +2494,7 @@
 				</Skill>
 			</Skills>
 		</Monster>			
-		<Monster name="白露姬" class="水">
+		<Monster name="白露姬" class="水" is_gold="true">
 			<Features>157,551,170,490,193,122</Features>
 			<Character>娇小|神秘|温柔</Character>
 			<Skills>
@@ -2510,7 +2510,7 @@
 				</Skill>
 			</Skills>
 		</Monster>			
-		<Monster name="八仙韩湘子" class="水">
+		<Monster name="八仙韩湘子" class="水" is_gold="true">
 			<Features>88,218,188,318,118,158</Features>
 			<Character>妹纸|乐器|神仙|冰冷</Character>
 			<Skills>
@@ -2521,7 +2521,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="八仙吕洞宾" class="水">
+		<Monster name="八仙吕洞宾" class="水" is_gold="true">
 			<Features>324,182,252,90,90,150</Features>
 			<Character>武器|神仙|战士|飞翔</Character>
 			<Skills>
@@ -2532,7 +2532,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="苍老师" class="水">
+		<Monster name="苍老师" class="水" is_gold="true">
 			<Features>86,86,218,272,108,218</Features>
 			<Character>神秘|妹纸|神仙</Character>
 			<Skills>
@@ -2553,7 +2553,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="芒父芒儿" class="水">
+		<Monster name="芒父芒儿" class="水" is_gold="true">
 			<Features>157,551,170,490,193,122</Features>
 			<Character>自然|善良|谋略</Character>
 			<Skills>
@@ -2569,7 +2569,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="观世音" class="水">
+		<Monster name="观世音" class="水" is_gold="true">
 			<Features>58,197,58,318,158,197</Features>
 			<Character>善良|妹纸|神仙</Character>
 			<Skills>
@@ -2585,7 +2585,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="晋文公" class="水">
+		<Monster name="晋文公" class="水" is_gold="true">
 			<Features>134,338,124,156,134,202</Features>
 			<Character>美食|自然|人形|谋略</Character>
 			<Skills>
@@ -2631,7 +2631,7 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="北风" class="水">
+		<Monster name="北风" class="水" is_gold="true">
 			<Features>48,79,60,39,140,52</Features>
 			<Character>神器</Character>
 			<Skills>
@@ -2670,7 +2670,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>
-		<Monster name="时空少女一娃" class="水">
+		<Monster name="时空少女一娃" class="水" is_gold="true">
 			<Features>200,200,200,200,200,200</Features>
 			<Character>神秘|呆萌|机械|妹纸</Character>
 			<Skills>
@@ -2708,7 +2708,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="魍魉" class="水">
+		<Monster name="魍魉" class="水" is_gold="true">
 			<Features>100,120,90,304,252,120</Features>
 			<Character>邪恶|财迷|妖怪</Character>
 			<Skills>
@@ -2719,7 +2719,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="龙王敖广" class="水">
+		<Monster name="龙王敖广" class="水" is_gold="true">
 			<Features>304,92,304,138,100,148</Features>
 			<Character>邪恶|龙族|神仙|水性</Character>
 			<Skills>
@@ -2768,7 +2768,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="王子服" class="水">
+		<Monster name="王子服" class="水" is_gold="true">
 			<Features>149,266,78,78,310,106</Features>
 			<Character>财迷|人形|吉祥</Character>
 			<Skills>
@@ -2812,7 +2812,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="黄牛" class="光">
+		<Monster name="黄牛" class="光" is_gold="true">
 			<Features>282,120,162,96,63,162</Features>
 			<Character>美食|人形|神勇</Character>
 			<Skills>
@@ -2823,7 +2823,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="齐天大圣" class="光">
+		<Monster name="齐天大圣" class="光" is_gold="true">
 			<Features>122,193,490,170,551,157</Features>
 			<Character>呆萌|神速|神仙</Character>
 			<Skills>
@@ -2834,7 +2834,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>	
-		<Monster name="光翼战神沃尔坎" class="光">
+		<Monster name="光翼战神沃尔坎" class="光" is_gold="true">
 			<Features>605,132,186,537,215,174</Features>
 			<Character>奇特|魁梧|战士|飞翔</Character>
 			<Skills>
@@ -2888,7 +2888,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="薛宝钗" class="光">
+		<Monster name="薛宝钗" class="光" is_gold="true">
 			<Features>108,269,90,279,134,108</Features>
 			<Character>自然|吉祥|妹纸</Character>
 			<Skills>
@@ -2954,7 +2954,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>
-		<Monster name="光百合" class="光">
+		<Monster name="光百合" class="光" is_gold="true">
 			<Features>388,145,144,444,165,98</Features>
 			<Character>四周年|谋略|自然</Character>
 			<Skills>
@@ -2971,7 +2971,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>
-		<Monster name="新郎宁采臣" class="光">
+		<Monster name="新郎宁采臣" class="光" is_gold="true">
 			<Features>90,304,80,120,110,284</Features>
 			<Character>娇小|人形|善良</Character>
 			<Skills>
@@ -2982,7 +2982,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="新娘聂小倩" class="光">
+		<Monster name="新娘聂小倩" class="光" is_gold="true">
 			<Features>74,110,120,352,278,53</Features>
 			<Character>神秘|妹纸|善良</Character>
 			<Skills>
@@ -2993,7 +2993,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="圣骑士奥吉尔" class="光">
+		<Monster name="圣骑士奥吉尔" class="光" is_gold="true">
 			<Features>122,193,490,170,551,157</Features>
 			<Character>扑克|正义|奇特</Character>
 			<Skills>
@@ -3042,7 +3042,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="发财" class="光">
+		<Monster name="发财" class="光" is_gold="true">
 			<Features>36,71,44,54,164,44</Features>
 			<Character>神器</Character>
 			<Skills>
@@ -3053,7 +3053,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="光相" class="光">
+		<Monster name="光相" class="光" is_gold="true">
 			<Features>-54,156,-54,-28,131,52</Features>
 			<Character>法器</Character>
 			<Skills>
@@ -3064,7 +3064,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="千阳逐日女王" class="光">
+		<Monster name="千阳逐日女王" class="光" is_gold="true">
 			<Features>-137,341,-69,410,-137,136</Features>
 			<Character>法器|善良|神秘|妹纸</Character>
 			<Skills>
@@ -3081,7 +3081,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="喵小白" class="光">
+		<Monster name="喵小白" class="光" is_gold="true">
 			<Features>65,65,329,65,65,65</Features>
 			<Character>法器|猫咪|神速</Character>
 			<Skills>
@@ -3093,7 +3093,7 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>		
-		<Monster name="三步一杀仕" class="光">
+		<Monster name="三步一杀仕" class="光" is_gold="true">
 			<Features>-137,-137,-69,410,341,136</Features>
 			<Character>法器|娇小|战士|武器</Character>
 			<Skills>
@@ -3109,7 +3109,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="三三幽鬼灯" class="光">
+		<Monster name="三三幽鬼灯" class="光" is_gold="true">
 			<Features>122,193,490,170,551,157</Features>
 			<Character>妖怪|老人家|谋略</Character>
 			<Skills>
@@ -3147,7 +3147,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="金角大王" class="光">
+		<Monster name="金角大王" class="光" is_gold="true">
 			<Features>96,200,64,96,88,240</Features>
 			<Character>自然|人形|奇特</Character>
 			<Skills>
@@ -3229,7 +3229,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="一雪一杀士" class="光">
+		<Monster name="一雪一杀士" class="光" is_gold="true">
 			<Features>176,343,133,145,142,398</Features>
 			<Character>呆萌|妹纸|冰冷</Character>
 			<Skills>
@@ -3245,7 +3245,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="人形兵器风间樱" class="光">
+		<Monster name="人形兵器风间樱" class="光" is_gold="true">
 			<Features>605,187,538,133,215,173</Features>
 			<Character>神秘|美食|人形|冰冷</Character>
 			<Skills>
@@ -3266,7 +3266,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="冰箱哈姆鼠妹" class="光">
+		<Monster name="冰箱哈姆鼠妹" class="光" is_gold="true">
 			<Features>122,193,490,170,551,157</Features>
 			<Character>神速|娇小|奇特</Character>
 			<Skills>
@@ -3304,7 +3304,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="圣人椰酥" class="光">
+		<Monster name="圣人椰酥" class="光" is_gold="true">
 			<Features>72,318,82,318,90,108</Features>
 			<Character>自然|神仙|善良</Character>
 			<Skills>
@@ -3321,7 +3321,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="金吒" class="光">
+		<Monster name="金吒" class="光" is_gold="true">
 			<Features>120,282,102,128,76,282</Features>
 			<Character>财迷|邪恶|人形</Character>
 			<Skills>
@@ -3469,7 +3469,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="运筹帷幄卧龙诸葛孔明" class="光">
+		<Monster name="运筹帷幄卧龙诸葛孔明" class="光" is_gold="true">
 			<Features>164,211,589,211,663,180</Features>
 			<Character>呆萌|人形|谋略|飞翔</Character>
 			<Skills>
@@ -3540,7 +3540,7 @@
 				</Skill>					
 			</Skills>
 		</Monster>	
-		<Monster name="财宝守护者米诺陶诺斯" class="光">
+		<Monster name="财宝守护者米诺陶诺斯" class="光" is_gold="true">
 			<Features>489,215,173,133,436,187</Features>
 			<Character>生肖|小眼睛|魁梧|财迷</Character>
 			<Skills>
@@ -3561,7 +3561,7 @@
 				</Skill>					
 			</Skills>
 		</Monster>	
-		<Monster name="牛金牛" class="光">
+		<Monster name="牛金牛" class="光" is_gold="true">
 			<Features>122,193,490,170,551,157</Features>
 			<Character>财迷|小眼睛|奇特</Character>
 			<Skills>
@@ -3582,7 +3582,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="虚日鼠" class="光">
+		<Monster name="虚日鼠" class="光" is_gold="true">
 			<Features>157,551,193,490,170,122</Features>
 			<Character>小眼睛|妖怪|吉祥</Character>
 			<Skills>
@@ -3603,7 +3603,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="龙王敖顺" class="光">
+		<Monster name="龙王敖顺" class="光" is_gold="true">
 			<Features>132,310,112,140,84,310</Features>
 			<Character>邪恶|龙族|神仙|机械</Character>
 			<Skills>
@@ -3663,7 +3663,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="囝囝可欸克" class="光">
+		<Monster name="囝囝可欸克" class="光" is_gold="true">
 			<Features>132,215,537,186,605,174</Features>
 			<Character>善良|呆萌|吉祥|人形</Character>
 			<Skills>
@@ -3695,7 +3695,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="太白金星" class="光">
+		<Monster name="太白金星" class="光" is_gold="true">
 			<Features>82,184,92,316,184,129</Features>
 			<Character>神秘|老人家|神仙</Character>
 			<Skills>
@@ -3738,7 +3738,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>	
-		<Monster name="超级赛亚罗" class="光">
+		<Monster name="超级赛亚罗" class="光" is_gold="true">
 			<Features>122,193,490,170,551,157</Features>
 			<Character>战士|彩蛋|机械</Character>
 			<Skills>
@@ -3759,7 +3759,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>	
-		<Monster name="汪年" class="光">
+		<Monster name="汪年" class="光" is_gold="true">
 			<Features>168,126,100,150,294,252</Features>
 			<Character>自然|猫咪|美食|神仙</Character>
 			<Skills>
@@ -3830,7 +3830,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="心剑合一李小白" class="光">
+		<Monster name="心剑合一李小白" class="光" is_gold="true">
 			<Features>136,490,174,174,150,555</Features>
 			<Character>武器|人形|谋略</Character>
 			<Skills>
@@ -3852,7 +3852,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="帝释天" class="光">
+		<Monster name="帝释天" class="光" is_gold="true">
 			<Features>348,118,47,147,157,167</Features>
 			<Character>神仙|人形|神勇</Character>
 			<Skills>
@@ -3863,7 +3863,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="妖狐妲己" class="光">
+		<Monster name="妖狐妲己" class="光" is_gold="true">
 			<Features>50,150,302,354,80,150</Features>
 			<Character>冰冷|妹纸|妖怪|财迷</Character>
 			<Skills>
@@ -3889,7 +3889,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="如来佛祖" class="光">
+		<Monster name="如来佛祖" class="光" is_gold="true">
 			<Features>129,176,487,176,548,167</Features>
 			<Character>呆萌|人形|神仙</Character>
 			<Skills>
@@ -3905,7 +3905,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="鹿王本生" class="光">
+		<Monster name="鹿王本生" class="光" is_gold="true">
 			<Features>90,164,108,272,318,136</Features>
 			<Character>自然|呆萌|奇特|神仙</Character>
 			<Skills>
@@ -3921,7 +3921,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="迦罗逻" class="光">
+		<Monster name="迦罗逻" class="光" is_gold="true">
 			<Features>92,56,346,288,67,137</Features>
 			<Character>呆萌|飞翔|乐器</Character>
 			<Skills>
@@ -3954,7 +3954,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="包公" class="光">
+		<Monster name="包公" class="光" is_gold="true">
 			<Features>140,280,74,112,91,185</Features>
 			<Character>善良|人形|谋略</Character>
 			<Skills>
@@ -3979,7 +3979,7 @@
 		<Monster name="鼠魅娘" class="地">
 			<Features>53,124,143,53,60,104</Features>
 		</Monster>	
-		<Monster name="沃芬.斗神" class="地">
+		<Monster name="沃芬.斗神" class="地" is_gold="true">
 			<Features>262,-310,326,-164,-238,262</Features>
 			<Character>法器|谋略|妖怪|神勇</Character>
 			<Skills>
@@ -4015,7 +4015,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="创世伏羲" class="地">
+		<Monster name="创世伏羲" class="地" is_gold="true">
 			<Features>130,74,150,63,185,280</Features>
 			<Character>自然|人形|神仙</Character>
 			<Skills>
@@ -4026,7 +4026,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="司秋" class="地">
+		<Monster name="司秋" class="地" is_gold="true">
 			<Features>337,106,96,114,192,143</Features>
 			<Character>神器|自然|善良</Character>
 			<Skills>
@@ -4037,7 +4037,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="三界轮回.海芋" class="地">
+		<Monster name="三界轮回.海芋" class="地" is_gold="true">
 			<Features>164,174,181,442,115,545</Features>
 			<Character>四周年|战士|呆萌|魁梧</Character>
 			<Skills>
@@ -4054,7 +4054,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="古琴仔" class="地">
+		<Monster name="古琴仔" class="地" is_gold="true">
 			<Features>43,223,43,43,43,43</Features>
 			<Character>法器|乐器</Character>
 			<Skills>
@@ -4092,7 +4092,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="秋蚊杀手" class="地">
+		<Monster name="秋蚊杀手" class="地" is_gold="true">
 			<Features>157,170,551,193,490,122</Features>
 			<Character>呆萌|妹纸|战士</Character>
 			<Skills>
@@ -4108,7 +4108,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="春卷杀手" class="地">
+		<Monster name="春卷杀手" class="地" is_gold="true">
 			<Features>358,414,146,181,152,123</Features>
 			<Character>美食|呆萌|人形</Character>
 			<Skills>
@@ -4151,7 +4151,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="烈昂白虎" class="地">
+		<Monster name="烈昂白虎" class="地" is_gold="true">
 			<Features>551,156,490,169,194,123</Features>
 			<Character>妖怪|猫咪|战士</Character>
 			<Skills>
@@ -4172,7 +4172,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>	
-		<Monster name="风沙君王尤利乌斯" class="地">
+		<Monster name="风沙君王尤利乌斯" class="地" is_gold="true">
 			<Features>157,122,170,193,490,551</Features>
 			<Character>扑克|正义|神勇</Character>
 			<Skills>
@@ -4193,7 +4193,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="无双小狮妹" class="地">
+		<Monster name="无双小狮妹" class="地" is_gold="true">
 			<Features>174,605,186,215,537,132</Features>
 			<Character>神秘|猫咪|妹纸|吉祥</Character>
 			<Skills>
@@ -4214,7 +4214,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>			
-		<Monster name="萌耳福娘" class="地">
+		<Monster name="萌耳福娘" class="地" is_gold="true">
 			<Features>157,490,551,193,170,122</Features>
 			<Character>娇小|飞翔|邪恶</Character>
 			<Skills>
@@ -4279,19 +4279,19 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="双戟洪少侠" class="地">
-			<Features>140,176,176,140,537,510</Features>
-			<Character>武器|妹纸|战士</Character>
+		<Monster name="烈火焚天洪小仙" class="地" is_gold="true">
+			<Features>167,215,215,167,643,611</Features>
+			<Character>武器|妹纸|战士|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>魅</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>	
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>	
 			</Skills>
 		</Monster>			
@@ -4323,7 +4323,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="东门吹雪" class="地">
+		<Monster name="东门吹雪" class="地" is_gold="true">
 			<Features>157,170,551,193,490,122</Features>
 			<Character>自然|妹纸|冰冷</Character>
 			<Skills>
@@ -4366,7 +4366,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="厚皮老牛" class="地">
+		<Monster name="厚皮老牛" class="地" is_gold="true">
 			<Features>174,186,605,215,537,132</Features>
 			<Character>神秘|呆萌|人形|魁梧</Character>
 			<Skills>
@@ -4387,7 +4387,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="八仙张果老" class="地">
+		<Monster name="八仙张果老" class="地" is_gold="true">
 			<Features>324,96,238,86,172,172</Features>
 			<Character>奇特|呆萌|神仙|神速</Character>
 			<Skills>
@@ -4414,7 +4414,7 @@
 				</Skill>
 			</Skills>
 		</Monster>				
-		<Monster name="拳王" class="地">
+		<Monster name="拳王" class="地" is_gold="true">
 			<Features>280,96,159,112,63,280</Features>
 			<Character>善良|神勇|奥运</Character>
 			<Skills>
@@ -4606,7 +4606,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="六味地糖丸" class="地">
+		<Monster name="六味地糖丸" class="地" is_gold="true">
 			<Features>140,176,558,493,140,176</Features>
 			<Character>善良|人形|神仙</Character>
 			<Skills>
@@ -4644,7 +4644,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="蠢朋克" class="地">
+		<Monster name="蠢朋克" class="地" is_gold="true">
 			<Features>0,412,0,0,0,0</Features>
 			<Character>奇特|乐器|彩蛋</Character>
 			<Skills>
@@ -4704,7 +4704,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="阿修罗" class="地">
+		<Monster name="阿修罗" class="地" is_gold="true">
 			<Features>346,56,288,138,68,92</Features>
 			<Character>自然|人形|神勇</Character>
 			<Skills>
@@ -4720,7 +4720,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="龙子蒲牢" class="地">
+		<Monster name="龙子蒲牢" class="地" is_gold="true">
 			<Features>84,146,52,156,336,314</Features>
 			<Character>呆萌|妖怪|龙族|谋略</Character>
 			<Skills>
@@ -4737,7 +4737,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="西瓜小太郎" class="地">
+		<Monster name="西瓜小太郎" class="地" is_gold="true">
 			<Features>157,170,551,193,490,122</Features>
 			<Character>自然|呆萌|人形</Character>
 			<Skills>
@@ -4753,7 +4753,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="皇豆" class="地">
+		<Monster name="皇豆" class="地" is_gold="true">
 			<Features>172,92,138,344,113,229</Features>
 			<Character>自然|美食|人形|呆萌</Character>
 			<Skills>
@@ -4764,7 +4764,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="龙子狻猊" class="地">
+		<Monster name="龙子狻猊" class="地" is_gold="true">
 			<Features>356,121,144,178,87,200</Features>
 			<Character>小眼睛|美食|龙族|武器</Character>
 			<Skills>
@@ -4885,7 +4885,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>			
-		<Monster name="宇宙海贼双子星" class="暗">
+		<Monster name="宇宙海贼双子星" class="暗" is_gold="true">
 			<Features>537,174,132,215,186,605</Features>
 			<Character>神秘|美食|水性|神勇</Character>
 			<Skills>
@@ -4944,7 +4944,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>			
-		<Monster name="角木蛟" class="暗">
+		<Monster name="角木蛟" class="暗" is_gold="true">
 			<Features>315,108,270,126,72,98</Features>
 			<Character>乐器|人形|神勇</Character>
 			<Skills>
@@ -4955,7 +4955,7 @@
 				</Skill>				
 			</Skills>
 		</Monster>			
-		<Monster name="封喉教主" class="暗">
+		<Monster name="封喉教主" class="暗" is_gold="true">
 			<Features>186,605,215,132,537,174</Features>
 			<Character>神秘|邪恶|人形|老人家</Character>
 			<Skills>
@@ -4976,7 +4976,7 @@
 				</Skill>								
 			</Skills>
 		</Monster>			
-		<Monster name="大寒天子" class="暗">
+		<Monster name="大寒天子" class="暗" is_gold="true">
 			<Features>140,176,343,138,409,131</Features>
 			<Character>善良|人形|吉祥</Character>
 			<Skills>
@@ -5035,7 +5035,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="八哥" class="暗">
+		<Monster name="八哥" class="暗" is_gold="true">
 			<Features>0,-100,0,0,0,300</Features>
 			<Character>彩蛋</Character>
 			<Skills>
@@ -5045,7 +5045,7 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="星宿鬼金羊" class="暗">
+		<Monster name="星宿鬼金羊" class="暗" is_gold="true">
 			<Features>115,144,96,154,289,289</Features>
 			<Character>美食|神秘|人形|妹纸</Character>
 			<Skills>
@@ -5061,7 +5061,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="魅影夫人" class="暗">
+		<Monster name="魅影夫人" class="暗" is_gold="true">
 			<Features>90,302,100,354,70,172</Features>
 			<Character>娇小|呆萌|妹纸|善良</Character>
 			<Skills>
@@ -5077,7 +5077,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="聂小倩" class="暗">
+		<Monster name="聂小倩" class="暗" is_gold="true">
 			<Features>67,102,109,300,255,50</Features>
 			<Character>神秘|妹纸|善良</Character>
 			<Skills>
@@ -5148,7 +5148,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>
-		<Monster name="煤球王" class="暗">
+		<Monster name="煤球王" class="暗" is_gold="true">
 			<Features>490,157,122,193,170,551</Features>
 			<Character>娇小|彩蛋|神勇</Character>
 			<Skills>
@@ -5180,7 +5180,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>			
-		<Monster name="喵夕" class="暗">
+		<Monster name="喵夕" class="暗" is_gold="true">
 			<Features>98,130,164,164,246,286</Features>
 			<Character>自然|猫咪|美食|神仙</Character>
 			<Skills>
@@ -5196,7 +5196,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="暗域领主" class="暗">
+		<Monster name="暗域领主" class="暗" is_gold="true">
 			<Features>122,157,490,193,551,170</Features>
 			<Character>扑克|神秘|律法</Character>
 			<Skills>
@@ -5228,7 +5228,7 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="黑客公鸡" class="暗">
+		<Monster name="黑客公鸡" class="暗" is_gold="true">
 			<Features>0,0,0,-301,-301,400</Features>
 			<Character>彩蛋</Character>
 			<Skills>
@@ -5250,7 +5250,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="宁采臣" class="暗">
+		<Monster name="宁采臣" class="暗" is_gold="true">
 			<Features>0,300,80,120,110,280</Features>
 			<Character>娇小|人形|冰冷</Character>
 			<Skills>
@@ -5261,7 +5261,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="赤兔吕布" class="暗">
+		<Monster name="赤兔吕布" class="暗" is_gold="true">
 			<Features>366,72,274,136,72,164</Features>
 			<Character>善良|战士|神勇|财迷</Character>
 			<Skills>
@@ -5272,7 +5272,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="魔道师" class="暗">
+		<Monster name="魔道师" class="暗" is_gold="true">
 			<Features>76,145,145,302,60,258</Features>
 			<Character>呆萌|善良|妹纸</Character>
 			<Skills>
@@ -5332,7 +5332,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>
-		<Monster name="母夜叉" class="暗">
+		<Monster name="母夜叉" class="暗" is_gold="true">
 			<Features>212,51,212,319,63,128</Features>
 			<Character>邪恶|妹纸|妖怪</Character>
 			<Skills>
@@ -5348,7 +5348,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>
-		<Monster name="枭雄曹操" class="暗">
+		<Monster name="枭雄曹操" class="暗" is_gold="true">
 			<Features>45,137,321,137,72,276</Features>
 			<Character>邪恶|人形|神速</Character>
 			<Skills>
@@ -5368,7 +5368,7 @@
 			<Features>176,58,88,88,69,64</Features>
 			<Character>自然|人形|美食</Character>
 		</Monster>
-		<Monster name="古灵精怪神速夕" class="暗">
+		<Monster name="古灵精怪神速夕" class="暗" is_gold="true">
 			<Features>155,131,428,200,143,102</Features>
 			<Character>呆萌|人形|邪恶</Character>
 			<Skills>
@@ -5395,7 +5395,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="龙子睚眦" class="暗">
+		<Monster name="龙子睚眦" class="暗" is_gold="true">
 			<Features>50,152,142,306,80,356</Features>
 			<Character>神秘|人形|龙族</Character>
 			<Skills>
@@ -5423,7 +5423,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="大暑" class="暗">
+		<Monster name="大暑" class="暗" is_gold="true">
 			<Features>490,157,122,193,170,551</Features>
 			<Character>善良|神勇|自然</Character>
 			<Skills>
@@ -5484,7 +5484,7 @@
 				<Skill name="Artifact" />	
 			</Skills>
 		</Monster>	
-		<Monster name="七绝散人" class="暗">
+		<Monster name="七绝散人" class="暗" is_gold="true">
 			<Features>65,329,65,65,65,65</Features>
 			<Character>法器|人形|谋略</Character>
 			<Skills>
@@ -5496,7 +5496,7 @@
 				<Skill name="Artifact" />	
 			</Skills>
 		</Monster>	
-		<Monster name="暗士" class="暗">
+		<Monster name="暗士" class="暗" is_gold="true">
 			<Features>-54,-54,-28,156,131,52</Features>
 			<Character>法器</Character>
 			<Skills>
@@ -5507,7 +5507,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="暗象" class="暗">
+		<Monster name="暗象" class="暗" is_gold="true">
 			<Features>-54,156,-54,-28,131,52</Features>
 			<Character>法器</Character>
 			<Skills>
@@ -5518,7 +5518,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="九饼" class="暗">
+		<Monster name="九饼" class="暗" is_gold="true">
 			<Features>151,23,23,23,23,23</Features>
 			<Character>法器</Character>
 			<Skills>
@@ -5530,7 +5530,7 @@
 				<Skill name="Artifact" />	
 			</Skills>
 		</Monster>	
-		<Monster name="无名劫匪" class="暗">
+		<Monster name="无名劫匪" class="暗" is_gold="true">
 			<Features>144,288,172,216,0,172</Features>
 			<Character>神器|美食|娇小</Character>
 			<Skills>
@@ -5541,7 +5541,7 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="星燃" class="暗">
+		<Monster name="星燃" class="暗" is_gold="true">
 			<Features>39,39,39,39,39,244</Features>
 			<Character>法器|奇特</Character>
 			<Skills>
@@ -5565,7 +5565,7 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>			
-		<Monster name="九天玄老" class="暗">
+		<Monster name="九天玄老" class="暗" is_gold="true">
 			<Features>65,329,65,65,65,65</Features>
 			<Character>法器|谋略|神仙</Character>
 			<Skills>
@@ -5611,7 +5611,7 @@
 				<Skill name="Artifact" />	
 			</Skills>
 		</Monster>
-		<Monster name="地狱盐王" class="暗">
+		<Monster name="地狱盐王" class="暗" is_gold="true">
 			<Features>296,120,44,242,98,87</Features>
 			<Character>小眼睛|人形|神仙</Character>
 			<Skills>
@@ -5698,7 +5698,7 @@
 				</Skill>					
 			</Skills>
 		</Monster>		
-		<Monster name="亭亭玉莉" class="暗">
+		<Monster name="亭亭玉莉" class="暗" is_gold="true">
 			<Features>490,157,122,193,170,551</Features>
 			<Character>神秘|美食|谋略</Character>
 			<Skills>
@@ -5813,7 +5813,7 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="囡囡可欸可" class="暗">
+		<Monster name="囡囡可欸可" class="暗" is_gold="true">
 			<Features>537,174,132,215,186,605</Features>
 			<Character>善良|呆萌|妹纸|人形</Character>
 			<Skills>
@@ -6554,7 +6554,7 @@
 			<Features>162,162,162,162,64.8,64.8</Features>
 		</SoulBead>
 		<SoulBead class="地">
-			<Features>64.8,162,162,162,162,64.8</Features>
+			<Features>67.2,168,168,168,168,67.2</Features>
 		</SoulBead>
 		<SoulBead class="火">
 			<Features>64.8,64.8,64.8,162,162,162</Features>
@@ -6563,7 +6563,7 @@
 			<Features>64.8,162,64.8,162,162,64.8</Features>
 		</SoulBead>
 		<SoulBead class="光">
-			<Features>174,69.6,174,69.6,174,174</Features>
+			<Features>180,72,180,72,180,180</Features>
 		</SoulBead>
 		<SoulBead class="暗">
 			<Features>180,180,180,72,72,180</Features>
