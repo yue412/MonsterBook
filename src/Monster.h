@@ -32,6 +32,7 @@ public:
     std::set<std::wstring>& getCharacterSet() { return m_oCharacterSet; }
     bool ignore() { return m_bIgnore; }
     bool isAffectAll() { return m_bIsAffectAll; }
+    bool isGold() { return m_bIsGold; }
     double getFactor() { return m_dFactor; }
 private:
     std::wstring m_sName;
@@ -44,6 +45,7 @@ private:
     std::set<std::wstring> m_oCharacterSet;
     bool m_bIgnore;
     bool m_bIsAffectAll;
+    bool m_bIsGold;
     double m_dFactor;
 };
 

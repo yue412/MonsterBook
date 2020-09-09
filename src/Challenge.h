@@ -25,6 +25,7 @@ public:
     bool calcFlag() { return m_bCalcFlag; }
     std::wstring requiredCharacter() { return  m_sCharacter; }
     bool OnlyAll() { return m_bOnlyAll; };
+    bool NotGold() { return m_bNotGold; };
     void setOnlyAll(bool bOnlyAll) { m_bOnlyAll = bOnlyAll; };
 private:
     std::wstring m_sName;
@@ -36,6 +37,7 @@ private:
     bool m_bEnablePercent;
     bool m_bCalcFlag;
     bool m_bOnlyAll;
+    bool m_bNotGold;
     EnElementClass m_nClass;
     std::wstring m_sCharacter;
 };

@@ -123,6 +123,7 @@ void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge&
     oChallenge.m_bEnablePercent = oParamsMap.find(L"enable_percent") == oParamsMap.end() ? true : oParamsMap[L"enable_percent"] == L"true";
     oChallenge.m_sCharacter = oParamsMap.find(L"character") == oParamsMap.end() ? L"" : oParamsMap[L"character"];
     oChallenge.m_bOnlyAll = oParamsMap.find(L"only_all") == oParamsMap.end() ? false : true;
+    oChallenge.m_bNotGold = oParamsMap.find(L"not_gold") == oParamsMap.end() ? false : true;
 	for (int i = 0; i < EF_ALL; i++)
 	{
 		oChallenge.m_nRequired[i] = oParamsMap.find(g_sFeatureShortNames[i]) == oParamsMap.end() ? 0 : std::stoi(oParamsMap[g_sFeatureShortNames[i]]);
@@ -214,6 +215,8 @@ std::wstring getChallengeStr(CChallenge* pChallenge)
         sResult += L"enable_skill=false ";
     if (!pChallenge->enablePercent())
         sResult += L"enable_percent=false ";
+    if (pChallenge->NotGold())
+        sResult += L"not_gold=true ";
     if (!pChallenge->requiredCharacter().empty())
         sResult += L"character=" + pChallenge->requiredCharacter() + L" ";
     for (int i = 0; i < EF_ALL; i++)

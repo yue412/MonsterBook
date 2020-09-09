@@ -43,6 +43,7 @@ void CConfig::init(CGame * pGame)
                 pMonster->m_nId.setBit(nIndex, 1); ++nIndex;
 				pMonster->m_sName = Utf8ToUnicode(pMonsterNode->Attribute("name"));
 				pMonster->m_nClass = Name2Class(Utf8ToUnicode(pMonsterNode->Attribute("class")));
+                pMonsterNode->QueryBoolAttribute("is_gold", &pMonster->m_bIsGold);
                 pMonsterNode->QueryBoolAttribute("ignore", &pMonster->m_bIgnore);
                 auto pCharacterNode = pMonsterNode->FirstChildElement("Character");
                 if (pCharacterNode)

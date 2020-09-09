@@ -305,7 +305,8 @@ void CGame::play(CChallenge * pChallenge, const std::vector<CMonster*>& oMonster
         return /*pChallenge->requiredCharacter().empty() && */!pMonster->ignore() &&
             (!pChallenge->OnlyAll() || pMonster->isAffectAll()) &&
             (pChallenge->requiredClass() == EC_ALL && pMonster->hasSpeciality(nFeatureSet) || pMonster->getClass() == pChallenge->requiredClass()) &&
-            (pChallenge->requiredCharacter().empty() || pMonster->getCharacterSet().count(pChallenge->requiredCharacter()) > 0)
+            (pChallenge->requiredCharacter().empty() || pMonster->getCharacterSet().count(pChallenge->requiredCharacter()) > 0) &&
+            (!pChallenge->NotGold() || !pMonster->isGold())
             ;
     });
 
