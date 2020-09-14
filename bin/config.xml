@@ -395,10 +395,20 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="一条" class="木">
-			<Features>12,12,12,12,52,12</Features>
-			<Character>法器</Character>
+		<Monster name="林仙" class="木">
+			<Features>75,75,75,75,316,75</Features>
+			<Character>法器|自然|老人家|神仙</Character>
 			<Skills>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>老人家</Character>
+					<Features>运</Features>
+					<Value>80</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>				
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
@@ -1913,9 +1923,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="西洋棋.白后" class="水" is_gold="true">
-			<Features>-126,242,247,242,-140,242</Features>
-			<Character>法器</Character>
+		<Monster name="尼露" class="水" is_gold="true">
+			<Features>-265,379,463,379,-304,379</Features>
+			<Character>法器|猫咪|温柔</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCharacter">
 					<Character>法器</Character>
@@ -1924,6 +1934,27 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
+		<Monster name="壁水貐" class="水" is_gold="true">
+			<Features>157,551,490,170,193,122</Features>
+			<Character>水性|呆萌|妹纸</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.6</Value>
+				</Skill>	
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>力</Feature>
+					<Value>200</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>技</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Monster>				
 		<Monster name="厚皮老牛" class="水">
 			<Features>174,186,605,215,537,132</Features>
 			<Character>神秘|呆萌|人形|魁梧</Character>
@@ -2602,15 +2633,15 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="二饼" class="水">
-			<Features>12,52,12,12,12,12</Features>
-			<Character>法器</Character>
+		<Monster name="二眼书童" class="水">
+			<Features>53,222,53,53,53,53</Features>
+			<Character>法器|呆萌|谋略</Character>
 			<Skills>
-				<Skill name="IncreaseFeature">
-					<ElementClass>水</ElementClass>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
-					<Value>30</Value>
-				</Skill>	
+					<Value>1.3</Value>
+				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
@@ -2631,14 +2662,14 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="北风" class="水" is_gold="true">
-			<Features>48,79,60,39,140,52</Features>
-			<Character>神器</Character>
+		<Monster name="帝孙" class="水" is_gold="true">
+			<Features>75,128,96,63,224,82</Features>
+			<Character>神器|水性</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.3</Value>
+					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -2926,14 +2957,14 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="三万" class="光">
-			<Features>12,12,12,52,12,12</Features>
-			<Character>法器</Character>
+		<Monster name="三彩" class="光">
+			<Features>31,31,31,127,31,31</Features>
+			<Character>法器|自然</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>魅</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
@@ -3042,23 +3073,23 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="发财" class="光" is_gold="true">
-			<Features>36,71,44,54,164,44</Features>
-			<Character>神器</Character>
+		<Monster name="聚宝盆" class="光" is_gold="true">
+			<Features>86,174,104,130,392,104</Features>
+			<Character>神器|财迷|小眼睛</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.3</Value>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="光相" class="光" is_gold="true">
-			<Features>-54,156,-54,-28,131,52</Features>
-			<Character>法器</Character>
+		<Monster name="签帽" class="光" is_gold="true">
+			<Features>-85,252,-85,-44,210,84</Features>
+			<Character>法器|神秘</Character>
 			<Skills>
 				<Skill name="ProductFeature">
-					<ElementClass>光</ElementClass>
+					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
 					<Value>1.6</Value>
 				</Skill>
@@ -4026,15 +4057,21 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="司秋" class="地" is_gold="true">
-			<Features>337,106,96,114,192,143</Features>
-			<Character>神器|自然|善良</Character>
+		<Monster name="西方之神薅收" class="地" is_gold="true">
+			<Features>370,116,106,126,212,158</Features>
+			<Character>神器|自然|善良|龙族</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>运</Feature>
 					<Value>2</Value>
 				</Skill>			
+				<Skill name="IncreaseFeature">
+					<Trigger>8</Trigger>
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>150</Value>
+				</Skill>	
 			</Skills>
 		</Monster>		
 		<Monster name="三界轮回.海芋" class="地" is_gold="true">
@@ -4868,6 +4905,17 @@
 				</Skill>	
 			</Skills>
 		</Monster>			
+		<Monster name="奶瓶皇后" class="暗">
+			<Features>-97,-97,-50,328,-35,-67</Features>
+			<Character>彩蛋|妹纸|邪恶</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>彩蛋</Character>
+					<Features>力|速|运|技|魅|智</Features>
+					<Value>-50</Value>
+				</Skill>
+			</Skills>
+		</Monster>			
 		<Monster name="魔皇子" class="暗">
 			<Features>146,338,112,78,90,202</Features>
 			<Character>美食|邪恶|人形|妖怪</Character>
@@ -5496,36 +5544,36 @@
 				<Skill name="Artifact" />	
 			</Skills>
 		</Monster>	
-		<Monster name="暗士" class="暗" is_gold="true">
-			<Features>-54,-54,-28,156,131,52</Features>
-			<Character>法器</Character>
+		<Monster name="熊纹" class="暗" is_gold="true">
+			<Features>-85,-85,-44,252,210,84</Features>
+			<Character>法器|娇小</Character>
 			<Skills>
 				<Skill name="ProductFeature">
-					<ElementClass>暗</ElementClass>
+					<ElementClass>全</ElementClass>
 					<Feature>魅</Feature>
 					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="暗象" class="暗" is_gold="true">
-			<Features>-54,156,-54,-28,131,52</Features>
-			<Character>法器</Character>
+		<Monster name="签盒" class="暗" is_gold="true">
+			<Features>-85,252,-85,-44,210,84</Features>
+			<Character>法器|神秘</Character>
 			<Skills>
 				<Skill name="ProductFeature">
-					<ElementClass>暗</ElementClass>
+					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
 					<Value>1.6</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="九饼" class="暗" is_gold="true">
-			<Features>151,23,23,23,23,23</Features>
-			<Character>法器</Character>
+		<Monster name="九星道师" class="暗" is_gold="true">
+			<Features>360,60,60,60,60,60</Features>
+			<Character>法器|神仙|神勇</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
-					<Feature>力</Feature>
-					<Value>1.6</Value>
+					<Feature>全</Feature>
+					<Value>2</Value>
 				</Skill>
 				<Skill name="Artifact" />	
 			</Skills>
@@ -5638,13 +5686,18 @@
 				</Skill>	
 			</Skills>
 		</Monster>
-		<Monster name="瞎进" class="暗">
-			<Features>235,-48,-96,94,283,-96</Features>
-			<Character>法器|武器|战士</Character>
+		<Monster name="千里鸡枪卒" class="暗">
+			<Features>266,-54,-107,106,320,-107</Features>
+			<Character>法器|武器|战士|人形</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>运</Feature>
+					<Value>1.6</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
 					<Value>1.3</Value>
 				</Skill>
 			</Skills>
@@ -6572,11 +6625,11 @@
 	<ExcludeGroup>
 		<Exclude>
 			碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
-			苍老师,观世音,渔常在,二饼,湿罗刹,醋母,王潮,尾姬,
+			苍老师,观世音,渔常在,二眼书童,湿罗刹,醋母,王潮,尾姬,
 			金童,八仙蓝采和,上联仔,秋香,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 			古琴仔,蠢朋克,迦罗逻,王昭君,龙子囚牛,乾达婆,鼓妖,巨门星,
-			喵小白,九饼,暗象,暗士,西洋棋.白后,光相,星燃,雨梨标,
-			太白金星,银河
+			喵小白,九星道师,签盒,熊纹,尼露,签帽,星燃,雨梨标,
+			拳王,创世伏羲,菱绢,赶集娘,青面兽杨志,姜子牙,陈皮妹,柳土獐,
 		</Exclude>
 		<Exclude>
 			紫霜,小李广花容,白翼佣兵沃尔坎,八仙韩湘子,晋文公,龙王敖广,灵山宫主,三三幽鬼灯,
@@ -6602,5 +6655,6 @@
 <!--
 			古琴仔,洪玉儿,菱绢,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
 			八仙曹国舅,八仙汉钟离,喜儿,豚燕,觜火猴,尾火虎,藏犬屋,蜡祭狮,
+			太白金星,银河
 	-->
 </MonsterBook>
