@@ -1923,6 +1923,27 @@
 				</Skill>
 			</Skills>
 		</Monster>		
+		<Monster name="巨蟹小当家" class="水">
+			<Features>605,215,174,132,537,186</Features>
+			<Character>神秘|美食|妹纸|善良</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>智</Feature>
+					<Value>200</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>运</Feature>
+					<Value>2</Value>
+				</Skill>				
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>				
+			</Skills>
+		</Monster>		
 		<Monster name="尼露" class="水" is_gold="true">
 			<Features>-265,379,463,379,-304,379</Features>
 			<Character>法器|猫咪|温柔</Character>
@@ -6626,9 +6647,9 @@
 		<Exclude>
 			碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
 			苍老师,观世音,渔常在,二眼书童,湿罗刹,醋母,王潮,尾姬,
-			金童,八仙蓝采和,上联仔,秋香,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 			古琴仔,蠢朋克,迦罗逻,王昭君,龙子囚牛,乾达婆,鼓妖,巨门星,
 			喵小白,九星道师,签盒,熊纹,尼露,签帽,星燃,雨梨标,
+			玉女,八仙蓝采和,九灵太真无极圣母瑶池大圣西王金母,烈火焚天洪小仙,壁水貐,东方零败,四大美女貂蝉,创世女娲,
 			拳王,创世伏羲,菱绢,赶集娘,青面兽杨志,姜子牙,陈皮妹,柳土獐,
 		</Exclude>
 		<Exclude>
@@ -6653,6 +6674,7 @@
 		</Exclude>
 	</ExcludeGroup>
 <!--
+			金童,八仙蓝采和,上联仔,秋香,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
 			古琴仔,洪玉儿,菱绢,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
 			八仙曹国舅,八仙汉钟离,喜儿,豚燕,觜火猴,尾火虎,藏犬屋,蜡祭狮,
 			太白金星,银河
