@@ -3006,9 +3006,9 @@
 				</Skill>				
 			</Skills>
 		</Monster>
-		<Monster name="光百合" class="光" is_gold="true">
-			<Features>388,145,144,444,165,98</Features>
-			<Character>四周年|谋略|自然</Character>
+		<Monster name="圣光使者.光百合" class="光" is_gold="true">
+			<Features>442,172,166,545,181,115</Features>
+			<Character>四周年|谋略|自然|神秘</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
@@ -5330,14 +5330,19 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="赤兔吕布" class="暗" is_gold="true">
-			<Features>366,72,274,136,72,164</Features>
+		<Monster name="无双将神吕奉先" class="暗" is_gold="true">
+			<Features>662,157,531,243,157,273</Features>
 			<Character>善良|战士|神勇|财迷</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>力</Feature>
 					<Value>2.5</Value>
+				</Skill>	
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.6</Value>
 				</Skill>	
 			</Skills>
 		</Monster>		
@@ -6348,6 +6353,23 @@
 				<Skill name="IncreaseSelfFeature">
 					<Feature>魅</Feature>
 					<Value>350</Value>
+				</Skill>
+			</Skills>
+		</Fate>
+		<Fate name="跨界合作">
+			<Monsters>无双将神吕奉先|四大美女貂蝉|魅影夫人</Monsters>
+			<Skills>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>力</Feature>
+					<Value>360</Value>
+				</Skill>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>速</Feature>
+					<Value>360</Value>
+				</Skill>
+				<Skill name="IncreaseSelfFeature">
+					<Feature>魅</Feature>
+					<Value>360</Value>
 				</Skill>
 			</Skills>
 		</Fate>
