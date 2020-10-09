@@ -228,9 +228,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="弃斧" class="木">
-			<Features>86,39,34,39,25,67</Features>
-			<Character>武器</Character>
+		<Monster name="良友吴刚" class="木">
+			<Features>220,106,88,106,70,175</Features>
+			<Character>武器|人形|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -327,9 +327,9 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="泥垢" class="木">
-			<Features>18,19,36,23,19,56</Features>
-			<Character>呆萌</Character>
+		<Monster name="月鸣娃" class="木">
+			<Features>56,62,112,73,62,174</Features>
+			<Character>呆萌|乐器|娇小</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>木</ElementClass>
@@ -861,6 +861,27 @@
 			<Features>68,61,100,187,62,62</Features>
 			<Character>自然|人形|妹纸</Character>
 		</Monster>
+		<Monster name="心云猎手" class="火">
+			<Features>174,215,605,132,186,537</Features>
+			<Character>神秘|善良|飞翔|温柔</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>技</Feature>
+					<Value>200</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>技</Feature>
+					<Value>2</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>								
+			</Skills>
+		</Monster>		
 		<Monster name="圣炎女皇朱迪斯" class="火" is_gold="true">
 			<Features>551,157,170,193,490,122</Features>
 			<Character>扑克|正义|温柔</Character>
@@ -1527,14 +1548,14 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="四遁傀兵" class="火">
-			<Features>289,57,57,57,57,57</Features>
-			<Character>法器|战士|人形</Character>
+		<Monster name="法器-四遁傀兵" class="火">
+			<Features>308,131,131,131,131,131</Features>
+			<Character>法器|战士|人形|神勇</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
@@ -1563,6 +1584,22 @@
 					<ElementClass>火</ElementClass>
 					<Feature>运</Feature>
 					<Value>1.6</Value>
+				</Skill>
+			</Skills>
+		</Monster>	
+		<Monster name="素纱禅衣-辛追" class="火">
+			<Features>113,81,129,317,277,104</Features>
+			<Character>奇特|妖怪|珍奇</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
+				</Skill>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>魅</Feature>
+					<Value>80</Value>
 				</Skill>
 			</Skills>
 		</Monster>	
@@ -5597,14 +5634,14 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="九星道师" class="暗" is_gold="true">
-			<Features>360,60,60,60,60,60</Features>
-			<Character>法器|神仙|神勇</Character>
+		<Monster name="法器-九星道师" class="暗" is_gold="true">
+			<Features>364,143,143,143,143,143</Features>
+			<Character>法器|神仙|神勇|谋略</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
 					<Feature>全</Feature>
-					<Value>2</Value>
+					<Value>2.5</Value>
 				</Skill>
 				<Skill name="Artifact" />	
 			</Skills>
@@ -6672,21 +6709,21 @@
 	</SoulBeads>
 	<ExcludeGroup>
 		<Exclude>
-			碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,泥垢,
-			苍老师,观世音,渔常在,二眼书童,湿罗刹,醋母,王潮,尾姬,
+			碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,月鸣娃,
 			古琴仔,蠢朋克,迦罗逻,王昭君,龙子囚牛,乾达婆,鼓妖,巨门星,
-			喵小白,九星道师,签盒,一念刺客,尼露,签帽,星燃,雨梨标,
-			玉女,八仙蓝采和,九灵太真无极圣母瑶池大圣西王金母,烈火焚天洪小仙,壁水貐,东方零败,四大美女貂蝉,创世女娲,
-			拳王,创世伏羲,菱绢,赶集娘,青面兽杨志,姜子牙,陈皮妹,柳土獐,
+			喵小白,法器-九星道师,签盒,一念刺客,尼露,签帽,星燃,雨梨标,
+			尾姬,
+			腹黑仔,
+			菱绢
 		</Exclude>
 		<Exclude>
 			紫霜,小李广花容,白翼佣兵沃尔坎,八仙韩湘子,晋文公,龙王敖广,灵山宫主,三三幽鬼灯,
 			昭烈刘玄德,增长天王,火火崩地儿,文昌帝君,讹兽,九霄,谜画偶灵,贞珠,
-			八仙铁拐李,竹马王子,厚皮老牛,佛跳墙,陶安公,苍老师,扑天雕李应,跨年娃,
+			八仙铁拐李,竹马王子,厚皮老牛,佛跳墙,扑天雕李应,跨年娃,
 			混江龙李俊,金吒,电母,南极老人星,金角大王,白无常,持国天王,银角大王,
 			摩呼罗迦,文曲星,智多星吴用,初号机,美双鱼美人,入云龙公孙胜,大三元,
 			八仙何仙姑,谋士荀彧,忍海,美女西施,地狱盐王,
-			萌萌小乔,托塔天王,秦王,横批仔,混沌,神算诸葛亮,
+			萌萌小乔,托塔天王,菊爷,混沌,神算诸葛亮,
 			刺客荆轲,八仙张果老,某海龙王,紧那罗,金光雷公,
 			魔法少女小甜甜,房曰兔己,下联仔,法海,聂小倩,
 			急先锋索超,鹦螺号,寒鹿,飞头撩,
