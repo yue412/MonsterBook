@@ -105,3 +105,19 @@ CSkill * CArtifactSkillFactroy::create(TiXmlElement * pSkillNode)
 {
     return new CArtifactSkill();
 }
+
+CSkill * CProductFeatureByCharacterSkillFactroy::create(TiXmlElement * pSkillNode)
+{
+    auto pNode = pSkillNode->FirstChildElement("ElementClass");
+    auto nClass = pNode ? Name2Class(Utf8ToUnicode(pNode->GetText())) : EC_ALL;
+    pNode = pSkillNode->FirstChildElement("Feature");
+    auto nFeature = pNode ? Name2Feature(Utf8ToUnicode(pNode->GetText())) : EF_ALL;
+    pNode = pSkillNode->FirstChildElement("Value");
+    auto dValue = std::stod(pNode->GetText());
+    pNode = pSkillNode->FirstChildElement("Trigger");
+    auto nTrigger = pNode ? std::stoi(pNode->GetText()) : 0;
+    pNode = pSkillNode->FirstChildElement("Character");
+    auto sCharacter = pNode ? Utf8ToUnicode(pNode->GetText()) : L"";
+
+    return new CProductFeatureByCharacterSkill(nTrigger, sCharacter, nClass, nFeature, dValue);
+}

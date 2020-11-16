@@ -22,6 +22,7 @@ public:
     EnElementClass requiredClass() { return m_nClass; }
     bool enableSkill() { return m_bEnableSkill; }
     bool enablePercent() { return m_bEnablePercent; }
+    bool enableSoul() { return m_bEnableSoul; }
     bool calcFlag() { return m_bCalcFlag; }
     std::wstring requiredCharacter() { return  m_sCharacter; }
     bool OnlyAll() { return m_bOnlyAll; };
@@ -35,6 +36,7 @@ private:
     double m_nRequired[EF_ALL];
     bool m_bEnableSkill;
     bool m_bEnablePercent;
+    bool m_bEnableSoul;
     bool m_bCalcFlag;
     bool m_bOnlyAll;
     bool m_bNotGold;

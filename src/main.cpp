@@ -121,6 +121,7 @@ void initChallenge(std::map<std::wstring, std::wstring>& oParamsMap, CChallenge&
     oChallenge.m_nClass = oParamsMap.find(L"class") == oParamsMap.end() ? EC_ALL : Name2Class(oParamsMap[L"class"]);
     oChallenge.m_bEnableSkill = oParamsMap.find(L"enable_skill") == oParamsMap.end() ? true : oParamsMap[L"enable_skill"] == L"true";
     oChallenge.m_bEnablePercent = oParamsMap.find(L"enable_percent") == oParamsMap.end() ? true : oParamsMap[L"enable_percent"] == L"true";
+    oChallenge.m_bEnableSoul = oParamsMap.find(L"enable_soul") == oParamsMap.end() ? true : oParamsMap[L"enable_soul"] == L"true";
     oChallenge.m_sCharacter = oParamsMap.find(L"character") == oParamsMap.end() ? L"" : oParamsMap[L"character"];
     oChallenge.m_bOnlyAll = oParamsMap.find(L"only_all") == oParamsMap.end() ? false : true;
     oChallenge.m_bNotGold = oParamsMap.find(L"not_gold") == oParamsMap.end() ? false : true;
@@ -215,6 +216,8 @@ std::wstring getChallengeStr(CChallenge* pChallenge)
         sResult += L"enable_skill=false ";
     if (!pChallenge->enablePercent())
         sResult += L"enable_percent=false ";
+    if (!pChallenge->enableSoul())
+        sResult += L"enable_soul=false ";
     if (pChallenge->NotGold())
         sResult += L"not_gold=true ";
     if (!pChallenge->requiredCharacter().empty())

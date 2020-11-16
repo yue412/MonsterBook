@@ -116,6 +116,23 @@ private:
     double m_dValue;
 };
 
+class CProductFeatureByCharacterSkill : public CSkill
+{
+public:
+    CProductFeatureByCharacterSkill(int nTrigger, const std::wstring& sCharacter, EnElementClass nClass, EnFeatures nFeature, double dValue) 
+        : m_nTrigger(nTrigger), m_sCharacter(sCharacter), m_nClass(nClass), m_nFeature(nFeature), m_dValue(dValue) {}
+    virtual void affect(const CTeam& oTeam, double* oResult);
+    virtual int getAffectFeature() { return m_nFeature == EF_ALL ? (1 << EF_ALL) - 1 : 1 << m_nFeature; }
+    EnElementClass getClass() { return m_nClass; }
+private:
+    std::wstring m_sCharacter;
+    EnElementClass m_nClass;
+    EnFeatures m_nFeature;
+    double m_dValue;
+    int m_nTrigger;
+};
+
+
 // ·¨Æ÷»¥³â
 class CArtifactSkill : public CSkill
 {

@@ -412,15 +412,20 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="西洋棋.白车" class="木">
-			<Features>93,-39,-20,-39,111,37</Features>
-			<Character>法器</Character>
+		<Monster name="羊突飞猛进.巨佬" class="木">
+			<Features>315,-254,-131,-254,365,149</Features>
+			<Character>法器|神速|机械|善良</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>力</Feature>
-					<Value>40</Value>
+					<Value>160</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>木</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.6</Value>
+				</Skill>					
 			</Skills>
 		</Monster>
 		<Monster name="文曲星" class="木">
@@ -880,6 +885,71 @@
 					<Feature>力</Feature>
 					<Value>1.3</Value>
 				</Skill>								
+			</Skills>
+		</Monster>		
+		<Monster name="趴趴猪" class="火" is_gold="true">
+			<Features>52,160,56,180,64,40</Features>
+			<Character>财迷|呆萌</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>智</Feature>
+					<Value>200</Value>
+				</Skill>
+			</Skills>
+		</Monster>
+		<Monster name="糖太宗" class="火" is_gold="true">
+			<Features>92,113,138,172,344,229</Features>
+			<Character>吉祥|狗狗|人形|飞翔</Character>
+			<Skills>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>狗狗</Character>
+					<Features>速</Features>
+					<Value>500</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>运</Feature>
+					<Value>2</Value>
+				</Skill>					
+			</Skills>
+		</Monster>		
+		<Monster name="红忠" class="火" is_gold="true">
+			<Features>212,106,116,126,158,370</Features>
+			<Character>神器|呆萌|小眼睛|老人家</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>技</Feature>
+					<Value>2</Value>
+				</Skill>
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>财迷</Character>
+					<Features>力|智|速|魅|运|技</Features>
+					<Value>128</Value>
+				</Skill>								
+			</Skills>
+		</Monster>
+		<Monster name="喔喔鸡" class="火">
+			<Features>23,14,64,57,19,20</Features>
+			<Character>生肖|善良</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>火</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.3</Value>
+				</Skill>				
+			</Skills>
+		</Monster>
+		<Monster name="羊妮" class="火">
+			<Features>27,11,33,-12,-6,-12</Features>
+			<Character>法器|奇特</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>40</Value>
+				</Skill>
 			</Skills>
 		</Monster>		
 		<Monster name="圣炎女皇朱迪斯" class="火" is_gold="true">
@@ -1471,9 +1541,9 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="枯蛛" class="火" is_gold="true">
+		<Monster name="络新妇" class="火" is_gold="true">
 			<Features>43,43,43,223,43,43</Features>
-			<Character>法器|自然</Character>
+			<Character>法器|自然|妹纸</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
@@ -1483,9 +1553,9 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="雨梨标" class="火" is_gold="true">
+		<Monster name="曼青侠" class="火" is_gold="true">
 			<Features>223,43,43,43,43,43</Features>
-			<Character>法器|武器</Character>
+			<Character>法器|武器|神勇</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>火</ElementClass>
@@ -1495,9 +1565,9 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="刺灵" class="火">
+		<Monster name="剑舞" class="火">
 			<Features>161,40,40,40,40,40</Features>
-			<Character>法器|武器</Character>
+			<Character>法器|武器|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>火</ElementClass>
@@ -1981,15 +2051,49 @@
 				</Skill>				
 			</Skills>
 		</Monster>		
-		<Monster name="尼露" class="水" is_gold="true">
-			<Features>-265,379,463,379,-304,379</Features>
-			<Character>法器|猫咪|温柔</Character>
+		<Monster name="雪男" class="水" is_gold="true">
+			<Features>64,52,160,40,180,56</Features>
+			<Character>人形|神速</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>100</Value>
+				</Skill>
+			</Skills>
+		</Monster>		
+		<Monster name="火箭少女可可" class="水" is_gold="true">
+			<Features>378,123,125,123,153,436</Features>
+			<Character>妖怪|飞翔|谋略</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>技</Feature>
+					<Value>1.6</Value>
+				</Skill>				
+				<Skill name="ProductFeature">
+					<ElementClass>水</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.6</Value>
+				</Skill>				
+			</Skills>
+		</Monster>		
+		<Monster name="神迹尼露.黎明之光" class="水" is_gold="true">
+			<Features>-329,436,524,436,-384,436</Features>
+			<Character>法器|猫咪|温柔|神秘</Character>
 			<Skills>
 				<Skill name="IncreaseSelfFeatureByCharacter">
 					<Character>法器</Character>
 					<Features>智|速|技</Features>
 					<Value>-100</Value>
-				</Skill>				
+				</Skill>	
+				<Skill name="ProductFeatureByCharacter">
+					<Trigger>8</Trigger>
+					<Character>法器</Character>
+					<ElementClass>全</ElementClass>
+					<Feature>全</Feature>
+					<Value>1.8</Value>
+				</Skill>								
 			</Skills>
 		</Monster>		
 		<Monster name="壁水貐" class="水" is_gold="true">
@@ -2720,14 +2824,14 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="帝孙" class="水" is_gold="true">
-			<Features>75,128,96,63,224,82</Features>
-			<Character>神器|水性</Character>
+		<Monster name="幼年禺疆" class="水" is_gold="true">
+			<Features>112,188,141,94,329,122</Features>
+			<Character>神器|水性|吉祥</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>水</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 			</Skills>
 		</Monster>
@@ -2912,6 +3016,56 @@
 				</Skill>
 			</Skills>
 		</Monster>	
+		<Monster name="御风蛟" class="光" is_gold="true">
+			<Features>12,9,52,22,45,24</Features>
+			<Character>自然|龙族</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<Trigger>4</Trigger>
+					<ElementClass>光</ElementClass>
+					<Feature>速</Feature>
+					<Value>50</Value>
+				</Skill>	
+			</Skills>
+		</Monster>			
+		<Monster name="姮娥" class="光" is_gold="true">
+			<Features>14,12,15,36,30,18</Features>
+			<Character>善良|妹纸</Character>
+			<Skills>
+				<Skill name="IncreaseFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>魅</Feature>
+					<Value>15</Value>
+				</Skill>
+			</Skills>
+		</Monster>			
+		<Monster name="守财炉" class="光" is_gold="true">
+			<Features>180,64,52,40,160,56</Features>
+			<Character>神秘|人形</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>	
+		<Monster name="大天狗" class="光" is_gold="true">
+			<Features>204,152,306,122,605,306</Features>
+			<Character>狗狗|美食|神速|飞翔</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>速</Feature>
+					<Value>2</Value>
+				</Skill>	
+				<Skill name="IncreaseSelfFeatureByCharacter">
+					<Character>妹纸</Character>
+					<Features>运</Features>
+					<Value>111</Value>
+				</Skill>							
+			</Skills>
+		</Monster>	
 		<Monster name="齐天大圣" class="光" is_gold="true">
 			<Features>122,193,490,170,551,157</Features>
 			<Character>呆萌|神速|神仙</Character>
@@ -2923,7 +3077,7 @@
 				</Skill>			
 			</Skills>
 		</Monster>	
-		<Monster name="光翼战神沃尔坎" class="光" is_gold="true">
+		<Monster name="光翼战神沃尔坎" class="光">
 			<Features>605,132,186,537,215,174</Features>
 			<Character>奇特|魁梧|战士|飞翔</Character>
 			<Skills>
@@ -2988,9 +3142,9 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="金盔" class="光">
+		<Monster name="光进" class="光">
 			<Features>135,-28,-56,54,162,-56</Features>
-			<Character>法器|武器</Character>
+			<Character>法器|武器|战士</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
@@ -3015,9 +3169,21 @@
 				</Skill>
 			</Skills>
 		</Monster>
-		<Monster name="三彩" class="光">
+		<Monster name="法器-八罐医夫" class="光" is_gold="true">
+			<Features>143,364,143,143,143,143</Features>
+			<Character>法器|人形|善良|自然</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>智</Feature>
+					<Value>2.5</Value>
+				</Skill>
+				<Skill name="Artifact" />
+			</Skills>
+		</Monster>
+		<Monster name="霓虹" class="光">
 			<Features>31,31,31,127,31,31</Features>
-			<Character>法器|自然</Character>
+			<Character>法器|自然|妹纸</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
@@ -3103,9 +3269,9 @@
 				</Skill>				
 			</Skills>
 		</Monster>	
-		<Monster name="武仔" class="光">
+		<Monster name="唐龙" class="光">
 			<Features>183,35,35,35,35,35</Features>
-			<Character>法器|人形</Character>
+			<Character>法器|人形|战士</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
@@ -3142,15 +3308,20 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="签帽" class="光" is_gold="true">
-			<Features>-85,252,-85,-44,210,84</Features>
-			<Character>法器|神秘</Character>
+		<Monster name="谋士" class="光" is_gold="true">
+			<Features>-126,373,-126,-63,310,124</Features>
+			<Character>法器|神秘|谋略</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>光</ElementClass>
+					<Feature>力</Feature>
+					<Value>1.3</Value>
+				</Skill>				
 			</Skills>
 		</Monster>		
 		<Monster name="千阳逐日女王" class="光" is_gold="true">
@@ -3580,7 +3751,7 @@
 				</Skill>					
 			</Skills>
 		</Monster>
-		<Monster name="混沌" class="光">
+		<Monster name="混沌" class="光" is_gold="true">
 			<Features>272,218,108,108,94,190</Features>
 			<Character>美食|神勇|邪恶</Character>
 			<Skills>
@@ -4104,6 +4275,28 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
+		<Monster name="千里江山.图灵" class="地" is_gold="true">
+			<Features>173,133,489,215,436,187</Features>
+			<Character>妖怪|呆萌|人形|珍奇</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>速</Feature>
+					<Value>2</Value>
+				</Skill>			
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.6</Value>
+				</Skill>	
+				<Skill name="IncreaseFeature">
+					<Trigger>4</Trigger>
+					<ElementClass>地</ElementClass>
+					<Feature>全</Feature>
+					<Value>60</Value>
+				</Skill>							
+			</Skills>
+		</Monster>		
 		<Monster name="创世伏羲" class="地" is_gold="true">
 			<Features>130,74,150,63,185,280</Features>
 			<Character>自然|人形|神仙</Character>
@@ -4149,9 +4342,31 @@
 				</Skill>			
 			</Skills>
 		</Monster>		
-		<Monster name="古琴仔" class="地" is_gold="true">
+		<Monster name="氪鼎" class="地">
+			<Features>27,85,100,37,35,43</Features>
+			<Character>妖怪|小眼睛</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.3</Value>
+				</Skill>			
+			</Skills>
+		</Monster>		
+		<Monster name="哈奇" class="地">
+			<Features>15,10,10,31,12,8</Features>
+			<Character>美食|狗狗</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>地</ElementClass>
+					<Feature>魅</Feature>
+					<Value>1.6</Value>
+				</Skill>			
+			</Skills>
+		</Monster>		
+		<Monster name="司马相如" class="地" is_gold="true">
 			<Features>43,223,43,43,43,43</Features>
-			<Character>法器|乐器</Character>
+			<Character>法器|乐器|谋略</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
@@ -4701,8 +4916,8 @@
 				</Skill>	
 			</Skills>
 		</Monster>		
-		<Monster name="六味地糖丸" class="地" is_gold="true">
-			<Features>140,176,558,493,140,176</Features>
+		<Monster name="大日如来六味糖皇丸" class="地" is_gold="true">
+			<Features>167,211,666,592,167,211</Features>
 			<Character>善良|人形|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
@@ -4713,7 +4928,7 @@
 				<Skill name="ProductFeature">
 					<ElementClass>地</ElementClass>
 					<Feature>速</Feature>
-					<Value>1.3</Value>
+					<Value>2</Value>
 				</Skill>	
 			</Skills>
 		</Monster>	
@@ -4991,6 +5206,56 @@
 				</Skill>	
 			</Skills>
 		</Monster>			
+		<Monster name="死灵之石" class="暗" is_gold="true">
+			<Features>23,34,34,160,23,17</Features>
+			<Character>妖怪|邪恶|狗狗</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>速</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+			</Skills>
+		</Monster>			
+		<Monster name="万辉印月王子" class="暗" is_gold="true">
+			<Features>-137,341,-69,410,-137,136</Features>
+			<Character>法器|善良|神秘|妹纸</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>全</Feature>
+					<Value>2</Value>
+				</Skill>	
+				<Skill name="IncreaseFeature">
+					<Trigger>8</Trigger>
+					<ElementClass>暗</ElementClass>
+					<Feature>全</Feature>
+					<Value>200</Value>
+				</Skill>				
+			</Skills>
+		</Monster>			
+		<Monster name="迷麋" class="暗">
+			<Features>9,16,35,13,40,12</Features>
+			<Character>神秘|神秘</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>运</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+			</Skills>
+		</Monster>			
+		<Monster name="黯狐" class="暗">
+			<Features>120,180,-85,160,120,-95</Features>
+			<Character>法器|娇小</Character>
+			<Skills>
+				<Skill name="ProductFeature">
+					<ElementClass>全</ElementClass>
+					<Feature>智</Feature>
+					<Value>1.3</Value>
+				</Skill>	
+			</Skills>
+		</Monster>			
 		<Monster name="宇宙海贼双子星" class="暗" is_gold="true">
 			<Features>537,174,132,215,186,605</Features>
 			<Character>神秘|美食|水性|神勇</Character>
@@ -5205,9 +5470,9 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="马仔" class="暗">
+		<Monster name="马达" class="暗">
 			<Features>172,-70,207,68,-36,-70</Features>
-			<Character>法器|神速</Character>
+			<Character>法器|神速|战士</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
@@ -5243,9 +5508,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="魔象" class="暗">
+		<Monster name="怨念主教" class="暗">
 			<Features>143,-55,-29,-55,53,117</Features>
-			<Character>法器|妖怪</Character>
+			<Character>法器|妖怪|魁梧</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
@@ -5583,9 +5848,9 @@
 				</Skill>	
 			</Skills>
 		</Monster>	
-		<Monster name="六万" class="暗">
+		<Monster name="喵溜" class="暗">
 			<Features>21,21,88,21,21,21</Features>
-			<Character>法器</Character>
+			<Character>法器|猫咪</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -5623,13 +5888,18 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="签盒" class="暗" is_gold="true">
-			<Features>-85,252,-85,-44,210,84</Features>
-			<Character>法器|神秘</Character>
+		<Monster name="奇谋百象师" class="暗" is_gold="true">
+			<Features>-137,410,-137,-69,341,136</Features>
+			<Character>法器|神秘|谋略|人形</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>智</Feature>
+					<Value>2.5</Value>
+				</Skill>
+				<Skill name="ProductFeature">
+					<ElementClass>暗</ElementClass>
+					<Feature>力</Feature>
 					<Value>1.6</Value>
 				</Skill>
 			</Skills>
@@ -5657,9 +5927,9 @@
 				</Skill>
 			</Skills>
 		</Monster>	
-		<Monster name="星燃" class="暗" is_gold="true">
+		<Monster name="七星术士" class="暗" is_gold="true">
 			<Features>39,39,39,39,39,244</Features>
-			<Character>法器|奇特</Character>
+			<Character>法器|奇特|人形</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>暗</ElementClass>
@@ -5669,9 +5939,9 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>			
-		<Monster name="漆风" class="暗">
+		<Monster name="万一君" class="暗">
 			<Features>31,31,31,31,31,127</Features>
-			<Character>法器|人形</Character>
+			<Character>法器|人形|奇特</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>暗</ElementClass>
@@ -6644,7 +6914,7 @@
 					<Value>2</Value>
 				</Skill>	
 				<Skill name="ProductFeature">
-					<ElementClass>全</ElementClass>
+					<ElementClass>光</ElementClass>
 					<Feature>力</Feature>
 					<Value>2</Value>
 				</Skill>	
@@ -6654,7 +6924,7 @@
 					<Value>2</Value>
 				</Skill>	
 				<Skill name="ProductFeature">
-					<ElementClass>全</ElementClass>
+					<ElementClass>光</ElementClass>
 					<Feature>技</Feature>
 					<Value>2</Value>
 				</Skill>	
@@ -6689,16 +6959,16 @@
 	<SoulBeads>
 		<!--力，智，速，魅，运，技-->
 		<SoulBead class="木">
-			<Features>162,162,162,162,64.8,64.8</Features>
+			<Features>180,180,180,180,72,72</Features>
 		</SoulBead>
 		<SoulBead class="地">
 			<Features>72,180,180,180,180,72</Features>
 		</SoulBead>
 		<SoulBead class="火">
-			<Features>64.8,64.8,64.8,162,162,162</Features>
+			<Features>180,72,72,180,180,180</Features>
 		</SoulBead>
 		<SoulBead class="水">
-			<Features>64.8,162,64.8,162,162,64.8</Features>
+			<Features>72,180,72,180,180,180</Features>
 		</SoulBead>
 		<SoulBead class="光">
 			<Features>180,72,180,72,180,180</Features>
@@ -6710,8 +6980,8 @@
 	<ExcludeGroup>
 		<Exclude>
 			碧池长老,圣诞树,孔融,哦,墨角兽,梁山伯,魁剑客,月鸣娃,
-			古琴仔,蠢朋克,迦罗逻,王昭君,龙子囚牛,乾达婆,鼓妖,巨门星,
-			喵小白,法器-九星道师,签盒,一念刺客,尼露,签帽,星燃,雨梨标,
+			司马相如,蠢朋克,迦罗逻,王昭君,龙子囚牛,乾达婆,鼓妖,巨门星,
+			喵小白,法器-九星道师,签盒,一念刺客,神迹尼露.黎明之光,谋士,七星术士,曼青侠,
 			尾姬,
 			腹黑仔,
 			菱绢
@@ -6739,7 +7009,7 @@
 	</ExcludeGroup>
 <!--
 			金童,八仙蓝采和,上联仔,秋香,紫薇大帝,光留鼎,魂安鼎,蚊避鼎,
-			古琴仔,洪玉儿,菱绢,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
+			司马相如,洪玉儿,菱绢,赶集娘,青面兽杨志,姜子牙,菊爷,柳土獐,
 			八仙曹国舅,八仙汉钟离,喜儿,豚燕,觜火猴,尾火虎,藏犬屋,蜡祭狮,
 			太白金星,银河
 	-->

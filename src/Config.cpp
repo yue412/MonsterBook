@@ -19,7 +19,8 @@ std::vector<CSkillFactoryPtr> g_oSkillFactory = {
     CSkillFactoryPtr(new CIncreaseSelfFeatureSkillFactroy),
     CSkillFactoryPtr(new CIncreaseSelfFeatureByCharacterSkillFactroy),
     CSkillFactoryPtr(new CArtifactSkillFactroy),
-    CSkillFactoryPtr(new CProductSelfFeatureByCharacterSkillFactroy)
+    CSkillFactoryPtr(new CProductSelfFeatureByCharacterSkillFactroy),
+    CSkillFactoryPtr(new CProductFeatureByCharacterSkillFactroy)
 };
 
 void CConfig::init(CGame * pGame)
@@ -80,6 +81,7 @@ void CConfig::init(CGame * pGame)
                 pChallengeNode->Attribute("total", &pChallenge->m_nTotal);
                 pChallengeNode->QueryBoolAttribute("enable_skill", &pChallenge->m_bEnableSkill);
                 pChallengeNode->QueryBoolAttribute("enable_percent", &pChallenge->m_bEnablePercent);
+                pChallengeNode->QueryBoolAttribute("enable_soul", &pChallenge->m_bEnableSoul);
                 auto sCharacter = pChallengeNode->Attribute("character");
                 if (sCharacter != nullptr)
                     pChallenge->m_sCharacter = Utf8ToUnicode(sCharacter);

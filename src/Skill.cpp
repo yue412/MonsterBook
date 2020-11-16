@@ -120,3 +120,25 @@ void CArtifactSkill::affect(const CTeam & oTeam, double * oResult)
         }
     }
 }
+
+void CProductFeatureByCharacterSkill::affect(const CTeam & oTeam, double * oResult)
+{
+    fill(oResult, 0.0);
+    if (!m_bEnablePercent)
+        return;
+    auto nCount = std::count_if(oTeam.begin(), oTeam.end(), [this](CMonster* pMonster) {
+        return pMonster->getCharacterSet().count(this->m_sCharacter) > 0;
+    });
+    if (nCount < m_nTrigger)
+        return;
+    for each (auto pMonster in oTeam)
+    {
+        if (m_nClass == EC_ALL || pMonster->getClass() == m_nClass)
+        {
+            for (int i = 0; i < EF_ALL; i++)
+            {
+                oResult[i] += m_nFeature == EF_ALL || m_nFeature == i ? pMonster->getFeature((EnFeatures)i) * (m_dValue - 1) : 0.0;
+            }
+        }
+    }
+}
