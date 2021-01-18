@@ -1652,14 +1652,14 @@
 				<Skill name="Artifact" />
 			</Skills>
 		</Monster>
-		<Monster name="五福仙子" class="火">
-			<Features>57,57,57,57,289,57</Features>
-			<Character>法器|呆萌|妹纸</Character>
+		<Monster name="法器-五福仙子" class="火">
+			<Features>131,131,131,131,308,131</Features>
+			<Character>法器|呆萌|妹纸|神仙</Character>
 			<Skills>
 				<Skill name="ProductFeature">
 					<ElementClass>全</ElementClass>
 					<Feature>运</Feature>
-					<Value>1.6</Value>
+					<Value>2</Value>
 				</Skill>
 				<Skill name="Artifact" />
 			</Skills>
@@ -3582,14 +3582,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="兔类" class="光">
-			<Features>30,84,36,36,30,84</Features>
-			<Character>小眼睛</Character>
+		<Monster name="兔掌柜" class="光">
+			<Features>54,154,66,66,54,154</Features>
+			<Character>小眼睛|财迷</Character>
 			<Skills>
 				<Skill name="IncreaseFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>智</Feature>
-					<Value>15</Value>
+					<Value>30</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
