@@ -45,7 +45,7 @@ std::wstring getTeamStr(CTeamPtr& pTeam)
     std::wstring sResult;
     for each (auto pMonster in *pTeam)
     {
-        sResult += pMonster->getName() + L"["  + g_sClassNames[pMonster->getClass()] + L"],";
+        sResult += pMonster->getName() + L"["  + g_sClassNames[pMonster->getClass()] + L"]|";
     }
     return sResult;
 }
@@ -291,10 +291,11 @@ void saveResultList(const std::wstring& sFileName, CResult& oResult)
         for each (auto oItem in oResult.getTeamList())
         {
             std::wstring sName;
-            for (auto itr = oItem.pTeam->begin(); itr != oItem.pTeam->end(); ++itr)
-            {
-                sName += (*itr)->getName() + L"|";
-            }
+            sName = getTeamStr(oItem.pTeam);
+            //for (auto itr = oItem.pTeam->begin(); itr != oItem.pTeam->end(); ++itr)
+            //{
+            //    sName += (*itr)->getName() + L"|";
+            //}
             out << ToString(sName);
 
             for (int i = 0; i < EF_ALL; i++)
