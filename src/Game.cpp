@@ -178,7 +178,10 @@ void CGame_Thread::play_thread(std::vector<std::vector<int>>* pStartIndexList, C
                 return nResult;
             });
 //            std::cout << "2" << std::endl;
-            auto itr = std::unique(oTeam.begin(), oTeam.end());
+            auto itr = std::unique(oTeam.begin(), oTeam.end(), [](CMonster* pMonster1, CMonster* pMonster2) {
+                auto nResult = pMonster1->getName().compare(pMonster2->getName()) == 0;
+                return nResult;
+            });
             if (itr != oTeam.end())
                 continue;
         }

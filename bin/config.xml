@@ -3582,14 +3582,14 @@
 				</Skill>
 			</Skills>
 		</Monster>		
-		<Monster name="兔掌柜" class="光">
-			<Features>54,154,66,66,54,154</Features>
-			<Character>小眼睛|财迷</Character>
+		<Monster name="兔管家" class="光">
+			<Features>66,186,78,78,66,186</Features>
+			<Character>小眼睛|财迷|邪恶</Character>
 			<Skills>
-				<Skill name="IncreaseFeature">
+				<Skill name="ProductFeature">
 					<ElementClass>光</ElementClass>
 					<Feature>智</Feature>
-					<Value>30</Value>
+					<Value>1.3</Value>
 				</Skill>
 			</Skills>
 		</Monster>		
